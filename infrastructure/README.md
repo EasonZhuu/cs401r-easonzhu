@@ -37,6 +37,20 @@ Each module contains **only** its designated resources — that is graded.
 grep -rn '"northstar-dev"' infrastructure/modules/
 ```
 
-and expects nothing. Build names from `var.project` and `var.environment`
-(`"${var.project}-${var.environment}-data"`), and give every variable a
-`description` — that is also graded.
+and expects nothing. Build names from `var.project` and `var.environment`,
+and give every variable a `description` — that is also graded.
+
+The data bucket is the one name that also needs the account ID, because S3
+bucket names are global and thirty students deploy this same code. Read it
+from the caller inside `modules/storage`:
+
+```hcl
+data "aws_caller_identity" "current" {}
+
+locals {
+  bucket_name = "${var.project}-${var.environment}-data-${data.aws_caller_identity.current.account_id}"
+}
+```
+
+The same line yields `northstar-dev-data-<your account>` on AWS and
+`northstar-local-data-000000000000` on LocalStack with no special-casing.
