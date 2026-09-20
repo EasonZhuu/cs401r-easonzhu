@@ -17,4 +17,48 @@
 # and the security group from modules/vpc; both arrive as variables. See the
 # module call in environments/dev/main.tf.
 
-# TODO: implement the two resources above.
+locals {
+  name_prefix = "${var.project}-${var.environment}"
+}
+
+resource "aws_sagemaker_domain" "this" {
+  domain_name             = "${local.name_prefix}-domain"
+  auth_mode               = "IAM"
+  vpc_id                  = var.vpc_id
+  subnet_ids              = var.subnet_ids
+  app_network_access_type = "PublicInternetOnly"
+
+  default_user_settings {
+    execution_role  = var.execution_role_arn
+    security_groups = var.security_group_ids
+
+    sharing_settings {
+      notebook_output_option = "Disabled"
+    }
+
+    # AWS returns this optional block as an empty default on the Domain.
+    # Declaring it keeps Terraform plans stable without enabling any portal
+    # restrictions or changing the Studio experience.
+    studio_web_portal_settings {}
+
+    kernel_gateway_app_settings {
+      default_resource_spec {
+        instance_type = var.instance_type
+      }
+    }
+  }
+
+  retention_policy {
+    home_efs_file_system = "Delete"
+  }
+}
+
+resource "aws_sagemaker_user_profile" "ml_engineer" {
+  domain_id         = aws_sagemaker_domain.this.id
+  user_profile_name = "MLEngineer"
+
+  user_settings {
+    execution_role  = var.execution_role_arn
+    security_groups = var.security_group_ids
+  }
+}

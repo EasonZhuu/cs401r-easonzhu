@@ -9,6 +9,9 @@
 INFRA_DIR   ?= infrastructure
 LOCAL_ENV    = $(INFRA_DIR)/environments/local
 LOCAL_OUT    = docs/lab1b-localstack-output.txt
+# Windows/Git Bash's installed awscli-local segfaulted on this machine; the
+# checked-in wrapper still sends every command only to LocalStack on localhost.
+AWSLOCAL     = bash scripts/awslocal
 
 .PHONY: local-validate local-destroy local-clean
 
@@ -26,21 +29,21 @@ local-validate:
 	  terraform -chdir=$(LOCAL_ENV) apply -auto-approve -input=false -no-color; \
 	  echo; \
 	  echo "== awslocal sts get-caller-identity =="; \
-	  awslocal sts get-caller-identity; \
+	  $(AWSLOCAL) sts get-caller-identity; \
 	  echo; \
 	  BUCKET=$$(terraform -chdir=$(LOCAL_ENV) output -raw s3_bucket_name 2>/dev/null) \
 	    || { echo "ERROR: output s3_bucket_name is not defined in $(LOCAL_ENV)/outputs.tf — uncomment it"; exit 1; }; \
 	  echo "== awslocal s3 ls s3://$$BUCKET/ --recursive  (name from: terraform output s3_bucket_name) =="; \
-	  awslocal s3 ls s3://$$BUCKET/ --recursive; \
+	  $(AWSLOCAL) s3 ls s3://$$BUCKET/ --recursive; \
 	  echo; \
 	  echo "== awslocal iam list-roles (northstar*) =="; \
-	  awslocal iam list-roles --query 'Roles[?starts_with(RoleName, `northstar`)].RoleName'; \
+	  $(AWSLOCAL) iam list-roles --query 'Roles[?starts_with(RoleName, `northstar`)].RoleName'; \
 	  echo; \
 	  echo "== awslocal ec2 describe-vpcs =="; \
-	  awslocal ec2 describe-vpcs --query 'Vpcs[*].{Id:VpcId,CIDR:CidrBlock}'; \
+	  $(AWSLOCAL) ec2 describe-vpcs --query 'Vpcs[*].{Id:VpcId,CIDR:CidrBlock}'; \
 	  echo; \
 	  echo "== awslocal ec2 describe-subnets =="; \
-	  awslocal ec2 describe-subnets --query 'Subnets[*].{Id:SubnetId,AZ:AvailabilityZone,CIDR:CidrBlock}'; \
+	  $(AWSLOCAL) ec2 describe-subnets --query 'Subnets[*].{Id:SubnetId,AZ:AvailabilityZone,CIDR:CidrBlock}'; \
 	} 2>&1 | tee $(LOCAL_OUT)
 	@echo
 	@echo "Saved to $(LOCAL_OUT) — commit it."
