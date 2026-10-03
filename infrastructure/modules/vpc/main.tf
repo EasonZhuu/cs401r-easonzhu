@@ -44,12 +44,46 @@ resource "aws_subnet" "public" {
   }
 }
 
+resource "aws_subnet" "private" {
+  vpc_id                  = aws_vpc.this.id
+  cidr_block              = var.private_subnet_cidr
+  availability_zone       = var.availability_zone
+  map_public_ip_on_launch = false
+
+  tags = {
+    Name = "${local.name_prefix}-private-1"
+  }
+}
+
 resource "aws_internet_gateway" "this" {
   vpc_id = aws_vpc.this.id
 
   tags = {
     Name = "${local.name_prefix}-igw"
   }
+}
+
+resource "aws_eip" "nat" {
+  count  = var.enable_nat_gateway ? 1 : 0
+  domain = "vpc"
+
+  tags = {
+    Name = "${local.name_prefix}-eip"
+  }
+}
+
+resource "aws_nat_gateway" "this" {
+  count = var.enable_nat_gateway ? 1 : 0
+
+  allocation_id     = aws_eip.nat[0].id
+  subnet_id         = aws_subnet.public.id
+  connectivity_type = "public"
+
+  tags = {
+    Name = "${local.name_prefix}-nat"
+  }
+
+  depends_on = [aws_internet_gateway.this]
 }
 
 resource "aws_route_table" "public" {
@@ -65,9 +99,30 @@ resource "aws_route_table" "public" {
   }
 }
 
+resource "aws_route_table" "private" {
+  vpc_id = aws_vpc.this.id
+
+  tags = {
+    Name = "${local.name_prefix}-private-rt"
+  }
+}
+
+resource "aws_route" "private_nat" {
+  count = var.enable_nat_gateway ? 1 : 0
+
+  route_table_id         = aws_route_table.private.id
+  destination_cidr_block = "0.0.0.0/0"
+  nat_gateway_id         = aws_nat_gateway.this[0].id
+}
+
 resource "aws_route_table_association" "public" {
   subnet_id      = aws_subnet.public.id
   route_table_id = aws_route_table.public.id
+}
+
+resource "aws_route_table_association" "private" {
+  subnet_id      = aws_subnet.private.id
+  route_table_id = aws_route_table.private.id
 }
 
 resource "aws_security_group" "sagemaker" {

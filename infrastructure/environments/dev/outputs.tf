@@ -21,6 +21,11 @@ output "ml_engineer_role_arn" {
   description = "ARN of the MLEngineer role"
   value       = module.iam.ml_engineer_role_arn
 }
+
+output "data_engineer_role_arn" {
+  description = "ARN of the DataEngineer role"
+  value       = module.iam.data_engineer_role_arn
+}
 output "sagemaker_domain_id" {
   description = "ID of the SageMaker Domain"
   value       = module.sagemaker.domain_id

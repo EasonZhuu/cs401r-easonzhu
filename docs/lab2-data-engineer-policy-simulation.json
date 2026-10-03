@@ -1,0 +1,234 @@
+{
+  "verification": "AWS IAM SimulateCustomPolicy",
+  "scope": "One rendered identity policy; no IAM role was created or attached",
+  "parameter_source": "Verified AWS account ID and current dev defaults",
+  "template": "infrastructure/modules/iam/policies/data_engineer.json.tftpl",
+  "policy_characters_without_whitespace": 4288,
+  "aws_api_calls": 9,
+  "checks": [
+    {
+      "label": "Read raw data",
+      "action": "s3:GetObject",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/raw/customers/sample.csv",
+      "expected": "allowed",
+      "actual": "allowed",
+      "passed": true
+    },
+    {
+      "label": "Write processed data",
+      "action": "s3:PutObject",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/processed/customers/part.parquet",
+      "expected": "allowed",
+      "actual": "allowed",
+      "passed": true
+    },
+    {
+      "label": "Write feature data",
+      "action": "s3:PutObject",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/features/customers/part.parquet",
+      "expected": "allowed",
+      "actual": "allowed",
+      "passed": true
+    },
+    {
+      "label": "Delete feature output for overwrite",
+      "action": "s3:DeleteObject",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/features/customers/part.parquet",
+      "expected": "allowed",
+      "actual": "allowed",
+      "passed": true
+    },
+    {
+      "label": "Read Glue script",
+      "action": "s3:GetObject",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/artifacts/glue/transform.py",
+      "expected": "allowed",
+      "actual": "allowed",
+      "passed": true
+    },
+    {
+      "label": "Cannot overwrite Glue script",
+      "action": "s3:PutObject",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/artifacts/glue/transform.py",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot write model artifact",
+      "action": "s3:PutObject",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/artifacts/models/model.tar.gz",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot read model artifact",
+      "action": "s3:GetObject",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/artifacts/models/model.tar.gz",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot write another bucket",
+      "action": "s3:PutObject",
+      "resource": "arn:aws:s3:::unrelated-data-bucket/raw/sample.csv",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Feature Store bucket ACL check",
+      "action": "s3:GetBucketAcl",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686",
+      "expected": "allowed",
+      "actual": "allowed",
+      "passed": true
+    },
+    {
+      "label": "Feature Store object ACL write",
+      "action": "s3:PutObjectAcl",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/features/customers/part.parquet",
+      "expected": "allowed",
+      "actual": "allowed",
+      "passed": true
+    },
+    {
+      "label": "Cannot change raw object ACL",
+      "action": "s3:PutObjectAcl",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/raw/customers/sample.csv",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Create project Feature Group",
+      "action": "sagemaker:CreateFeatureGroup",
+      "resource": "arn:aws:sagemaker:us-east-1:173506956686:feature-group/northstar-dev-customer-features",
+      "expected": "allowed",
+      "actual": "allowed",
+      "passed": true
+    },
+    {
+      "label": "Write project feature records",
+      "action": "sagemaker:PutRecord",
+      "resource": "arn:aws:sagemaker:us-east-1:173506956686:feature-group/northstar-dev-customer-features",
+      "expected": "allowed",
+      "actual": "allowed",
+      "passed": true
+    },
+    {
+      "label": "Cannot write another Feature Group",
+      "action": "sagemaker:PutRecord",
+      "resource": "arn:aws:sagemaker:us-east-1:173506956686:feature-group/unrelated-features",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot start SageMaker training",
+      "action": "sagemaker:CreateTrainingJob",
+      "resource": "arn:aws:sagemaker:us-east-1:173506956686:training-job/northstar-dev-test",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Read project Glue connection",
+      "action": "glue:GetConnection",
+      "resource": "arn:aws:glue:us-east-1:173506956686:connection/northstar-dev-private",
+      "expected": "allowed",
+      "actual": "allowed",
+      "passed": true
+    },
+    {
+      "label": "Pass own role to glue.amazonaws.com",
+      "action": "iam:PassRole",
+      "resource": "arn:aws:iam::173506956686:role/northstar-dev-DataEngineer",
+      "expected": "allowed",
+      "actual": "allowed",
+      "passed": true
+    },
+    {
+      "label": "Cannot pass other role to glue.amazonaws.com",
+      "action": "iam:PassRole",
+      "resource": "arn:aws:iam::173506956686:role/unrelated-role",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Pass own role to sagemaker.amazonaws.com",
+      "action": "iam:PassRole",
+      "resource": "arn:aws:iam::173506956686:role/northstar-dev-DataEngineer",
+      "expected": "allowed",
+      "actual": "allowed",
+      "passed": true
+    },
+    {
+      "label": "Cannot pass other role to sagemaker.amazonaws.com",
+      "action": "iam:PassRole",
+      "resource": "arn:aws:iam::173506956686:role/unrelated-role",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Pass own role to lambda.amazonaws.com",
+      "action": "iam:PassRole",
+      "resource": "arn:aws:iam::173506956686:role/northstar-dev-DataEngineer",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot pass other role to lambda.amazonaws.com",
+      "action": "iam:PassRole",
+      "resource": "arn:aws:iam::173506956686:role/unrelated-role",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "ENI tag key aws-glue-service-resource",
+      "action": "ec2:CreateTags",
+      "resource": "arn:aws:ec2:us-east-1:173506956686:network-interface/eni-0123456789abcdef0",
+      "expected": "allowed",
+      "actual": "allowed",
+      "passed": true
+    },
+    {
+      "label": "Cannot tag security group with aws-glue-service-resource",
+      "action": "ec2:CreateTags",
+      "resource": "arn:aws:ec2:us-east-1:173506956686:security-group/sg-0123456789abcdef0",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "ENI tag key Project",
+      "action": "ec2:CreateTags",
+      "resource": "arn:aws:ec2:us-east-1:173506956686:network-interface/eni-0123456789abcdef0",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot tag security group with Project",
+      "action": "ec2:CreateTags",
+      "resource": "arn:aws:ec2:us-east-1:173506956686:security-group/sg-0123456789abcdef0",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Missing tag keys are rejected",
+      "action": "ec2:CreateTags",
+      "resource": "arn:aws:ec2:us-east-1:173506956686:network-interface/eni-0123456789abcdef0",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    }
+  ]
+}
