@@ -1,0 +1,447 @@
+{
+  "verification": "AWS IAM SimulateCustomPolicy",
+  "generated_at_utc": "2026-10-03T02:03:01.1892385Z",
+  "scope": "One rendered identity policy; no IAM role was created or attached",
+  "limitations": [
+    "Service trust policy and deployed effective permissions were not evaluated",
+    "CloudWatch Logs stream actions use log-group resource ARNs in this simulator; concrete log-stream ARNs were rejected even with Resource set to *; no live log write was performed"
+  ],
+  "parameter_source": "Verified AWS account ID and current dev defaults",
+  "template": "infrastructure/modules/iam/policies/model_monitor.json.tftpl",
+  "policy_characters_without_whitespace": 1464,
+  "aws_api_calls": 12,
+  "checks": [
+    {
+      "label": "Object read: raw/sample.csv",
+      "action": "s3:GetObject",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/raw/sample.csv",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot mutate object: raw/sample.csv via s3:PutObject",
+      "action": "s3:PutObject",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/raw/sample.csv",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot mutate object: raw/sample.csv via s3:DeleteObject",
+      "action": "s3:DeleteObject",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/raw/sample.csv",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot mutate object: raw/sample.csv via s3:PutObjectAcl",
+      "action": "s3:PutObjectAcl",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/raw/sample.csv",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Object read: processed/part.parquet",
+      "action": "s3:GetObject",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/processed/part.parquet",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot mutate object: processed/part.parquet via s3:PutObject",
+      "action": "s3:PutObject",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/processed/part.parquet",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot mutate object: processed/part.parquet via s3:DeleteObject",
+      "action": "s3:DeleteObject",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/processed/part.parquet",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot mutate object: processed/part.parquet via s3:PutObjectAcl",
+      "action": "s3:PutObjectAcl",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/processed/part.parquet",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Object read: features/part.parquet",
+      "action": "s3:GetObject",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/features/part.parquet",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot mutate object: features/part.parquet via s3:PutObject",
+      "action": "s3:PutObject",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/features/part.parquet",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot mutate object: features/part.parquet via s3:DeleteObject",
+      "action": "s3:DeleteObject",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/features/part.parquet",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot mutate object: features/part.parquet via s3:PutObjectAcl",
+      "action": "s3:PutObjectAcl",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/features/part.parquet",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Object read: artifacts/models/model.tar.gz",
+      "action": "s3:GetObject",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/artifacts/models/model.tar.gz",
+      "expected": "allowed",
+      "actual": "allowed",
+      "passed": true
+    },
+    {
+      "label": "Cannot mutate object: artifacts/models/model.tar.gz via s3:PutObject",
+      "action": "s3:PutObject",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/artifacts/models/model.tar.gz",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot mutate object: artifacts/models/model.tar.gz via s3:DeleteObject",
+      "action": "s3:DeleteObject",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/artifacts/models/model.tar.gz",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot mutate object: artifacts/models/model.tar.gz via s3:PutObjectAcl",
+      "action": "s3:PutObjectAcl",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/artifacts/models/model.tar.gz",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Object read: artifacts/glue/transform.py",
+      "action": "s3:GetObject",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/artifacts/glue/transform.py",
+      "expected": "allowed",
+      "actual": "allowed",
+      "passed": true
+    },
+    {
+      "label": "Cannot mutate object: artifacts/glue/transform.py via s3:PutObject",
+      "action": "s3:PutObject",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/artifacts/glue/transform.py",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot mutate object: artifacts/glue/transform.py via s3:DeleteObject",
+      "action": "s3:DeleteObject",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/artifacts/glue/transform.py",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot mutate object: artifacts/glue/transform.py via s3:PutObjectAcl",
+      "action": "s3:PutObjectAcl",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/artifacts/glue/transform.py",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Object read: datacapture/sample.json",
+      "action": "s3:GetObject",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/datacapture/sample.json",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot mutate object: datacapture/sample.json via s3:PutObject",
+      "action": "s3:PutObject",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/datacapture/sample.json",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot mutate object: datacapture/sample.json via s3:DeleteObject",
+      "action": "s3:DeleteObject",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/datacapture/sample.json",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot mutate object: datacapture/sample.json via s3:PutObjectAcl",
+      "action": "s3:PutObjectAcl",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686/datacapture/sample.json",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot read artifacts in unrelated bucket",
+      "action": "s3:GetObject",
+      "resource": "arn:aws:s3:::unrelated-data-bucket/artifacts/model.tar.gz",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Bucket list prefix [artifacts/]",
+      "action": "s3:ListBucket",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686",
+      "expected": "allowed",
+      "actual": "allowed",
+      "passed": true
+    },
+    {
+      "label": "Bucket list prefix [artifacts/models/]",
+      "action": "s3:ListBucket",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686",
+      "expected": "allowed",
+      "actual": "allowed",
+      "passed": true
+    },
+    {
+      "label": "Bucket list prefix [raw/]",
+      "action": "s3:ListBucket",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Bucket list prefix []",
+      "action": "s3:ListBucket",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Read artifact bucket location",
+      "action": "s3:GetBucketLocation",
+      "resource": "arn:aws:s3:::northstar-dev-data-173506956686",
+      "expected": "allowed",
+      "actual": "allowed",
+      "passed": true
+    },
+    {
+      "label": "cloudwatch:PutMetricData in us-east-1",
+      "action": "cloudwatch:PutMetricData",
+      "resource": "*",
+      "expected": "allowed",
+      "actual": "allowed",
+      "passed": true
+    },
+    {
+      "label": "cloudwatch:GetMetricStatistics in us-east-1",
+      "action": "cloudwatch:GetMetricStatistics",
+      "resource": "*",
+      "expected": "allowed",
+      "actual": "allowed",
+      "passed": true
+    },
+    {
+      "label": "sagemaker:ListProcessingJobs in us-east-1",
+      "action": "sagemaker:ListProcessingJobs",
+      "resource": "*",
+      "expected": "allowed",
+      "actual": "allowed",
+      "passed": true
+    },
+    {
+      "label": "cloudwatch:PutMetricData in us-west-2",
+      "action": "cloudwatch:PutMetricData",
+      "resource": "*",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "cloudwatch:GetMetricStatistics in us-west-2",
+      "action": "cloudwatch:GetMetricStatistics",
+      "resource": "*",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "sagemaker:ListProcessingJobs in us-west-2",
+      "action": "sagemaker:ListProcessingJobs",
+      "resource": "*",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Project alarm: cloudwatch:PutMetricAlarm",
+      "action": "cloudwatch:PutMetricAlarm",
+      "resource": "arn:aws:cloudwatch:us-east-1:173506956686:alarm:northstar-dev-drift",
+      "expected": "allowed",
+      "actual": "allowed",
+      "passed": true
+    },
+    {
+      "label": "Unrelated alarm: cloudwatch:PutMetricAlarm",
+      "action": "cloudwatch:PutMetricAlarm",
+      "resource": "arn:aws:cloudwatch:us-east-1:173506956686:alarm:unrelated-drift",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Project alarm: cloudwatch:DescribeAlarms",
+      "action": "cloudwatch:DescribeAlarms",
+      "resource": "arn:aws:cloudwatch:us-east-1:173506956686:alarm:northstar-dev-drift",
+      "expected": "allowed",
+      "actual": "allowed",
+      "passed": true
+    },
+    {
+      "label": "Unrelated alarm: cloudwatch:DescribeAlarms",
+      "action": "cloudwatch:DescribeAlarms",
+      "resource": "arn:aws:cloudwatch:us-east-1:173506956686:alarm:unrelated-drift",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot delete project alarm",
+      "action": "cloudwatch:DeleteAlarms",
+      "resource": "arn:aws:cloudwatch:us-east-1:173506956686:alarm:northstar-dev-drift",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Describe project processing job",
+      "action": "sagemaker:DescribeProcessingJob",
+      "resource": "arn:aws:sagemaker:us-east-1:173506956686:processing-job/northstar-dev-drift",
+      "expected": "allowed",
+      "actual": "allowed",
+      "passed": true
+    },
+    {
+      "label": "Cannot describe unrelated processing job",
+      "action": "sagemaker:DescribeProcessingJob",
+      "resource": "arn:aws:sagemaker:us-east-1:173506956686:processing-job/unrelated-drift",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot start processing job",
+      "action": "sagemaker:CreateProcessingJob",
+      "resource": "arn:aws:sagemaker:us-east-1:173506956686:processing-job/northstar-dev-drift",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot stop processing job",
+      "action": "sagemaker:StopProcessingJob",
+      "resource": "arn:aws:sagemaker:us-east-1:173506956686:processing-job/northstar-dev-drift",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot invoke endpoint",
+      "action": "sagemaker:InvokeEndpoint",
+      "resource": "arn:aws:sagemaker:us-east-1:173506956686:endpoint/northstar-dev-churn",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot create model",
+      "action": "sagemaker:CreateModel",
+      "resource": "arn:aws:sagemaker:us-east-1:173506956686:model/northstar-dev-churn",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot delete model",
+      "action": "sagemaker:DeleteModel",
+      "resource": "arn:aws:sagemaker:us-east-1:173506956686:model/northstar-dev-churn",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot update endpoint",
+      "action": "sagemaker:UpdateEndpoint",
+      "resource": "arn:aws:sagemaker:us-east-1:173506956686:endpoint/northstar-dev-churn",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Create SageMaker log group",
+      "action": "logs:CreateLogGroup",
+      "resource": "arn:aws:logs:us-east-1:173506956686:log-group:/aws/sagemaker/ProcessingJobs",
+      "expected": "allowed",
+      "actual": "allowed",
+      "passed": true
+    },
+    {
+      "label": "Create SageMaker log stream (simulator log-group resource)",
+      "action": "logs:CreateLogStream",
+      "resource": "arn:aws:logs:us-east-1:173506956686:log-group:/aws/sagemaker/ProcessingJobs",
+      "expected": "allowed",
+      "actual": "allowed",
+      "passed": true
+    },
+    {
+      "label": "Write SageMaker log events (simulator log-group resource)",
+      "action": "logs:PutLogEvents",
+      "resource": "arn:aws:logs:us-east-1:173506956686:log-group:/aws/sagemaker/ProcessingJobs",
+      "expected": "allowed",
+      "actual": "allowed",
+      "passed": true
+    },
+    {
+      "label": "Cannot write unrelated Lambda logs",
+      "action": "logs:PutLogEvents",
+      "resource": "arn:aws:logs:us-east-1:173506956686:log-group:/aws/lambda/unrelated",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    },
+    {
+      "label": "Cannot pass execution roles",
+      "action": "iam:PassRole",
+      "resource": "arn:aws:iam::173506956686:role/northstar-dev-ModelMonitor",
+      "expected": "implicitDeny",
+      "actual": "implicitDeny",
+      "passed": true
+    }
+  ]
+}

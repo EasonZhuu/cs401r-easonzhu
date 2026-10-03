@@ -3,6 +3,31 @@
 Task B5 hands you one command. Read this so you know what it verifies and what
 its output means. Later labs assume you can read this output without help.
 
+## Lab 2 validation
+
+Lab 2 uses the same modules and adds DataEngineer, ModelMonitor, and a private
+subnet. This environment disables NAT and S3 lifecycle rules, and still omits
+SageMaker. Those components require separate validation against real AWS.
+
+With the course Makefile, save Lab 2 evidence using:
+
+```bash
+make local-validate LOCAL_OUT=docs/lab2-localstack-output.txt
+```
+
+On Windows PowerShell without `make`, use the equivalent script from the repo
+root, with Docker Desktop running and Terraform and AWS CLI available:
+
+```powershell
+.\scripts\validate-lab2-local.ps1
+```
+
+The PowerShell script checks a saved plan before applying it and stops if the
+plan includes deletion or replacement. It then verifies three roles with
+attached policies, the VPC, both subnets, and the absence of NAT gateways.
+It saves the output to `docs/lab2-localstack-output.txt`.
+LocalStack and its resources remain running after validation.
+
 ## The command sequence
 
 ```bash
@@ -35,7 +60,7 @@ is why this environment omits the `sagemaker` module.
 ## 2. Apply the Terraform
 
 `environments/local` calls the same `vpc`, `storage`, and `iam` modules as
-`environments/dev`. The only differences are in `versions.tf`:
+`environments/dev`. The provider differences are in `versions.tf`:
 
 - `endpoints { ... = "http://localhost:4566" }` routes every API call to
   LocalStack instead of AWS.
@@ -47,8 +72,9 @@ is why this environment omits the `sagemaker` module.
 - `environment = "local"` so every resource name reads `northstar-local-*`
   and can never collide with `northstar-dev-*`.
 
-If `apply` fails here, your module code is wrong, not the emulator. Fix it
-before you spend money running it against AWS.
+If `apply` fails here, inspect both the module configuration and the emulator's
+service support. A local failure can come from either; investigate it before
+running against AWS.
 
 ## 3. `awslocal`
 
@@ -100,7 +126,9 @@ returns. Reading it left to right:
 | `[?starts_with(RoleName, `northstar`)]` | keep elements whose `RoleName` starts with `northstar` |
 | `.RoleName` | project just that field |
 
-Expected: `["northstar-local-MLEngineer"]`. The backticks around `northstar`
+Lab 1 expects `["northstar-local-MLEngineer"]`. Lab 2 also includes
+`northstar-local-DataEngineer` and `northstar-local-ModelMonitor`.
+The backticks around `northstar`
 are JMESPath string literals, which is why the whole expression sits in single
 quotes.
 

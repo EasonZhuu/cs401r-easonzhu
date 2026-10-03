@@ -1,0 +1,82 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "RegionalMetrics",
+      "Effect": "Allow",
+      "Action": [
+        "cloudwatch:PutMetricData",
+        "cloudwatch:GetMetricStatistics"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "aws:RequestedRegion": "${region}"
+        }
+      }
+    },
+    {
+      "Sid": "ProjectMetricAlarms",
+      "Effect": "Allow",
+      "Action": [
+        "cloudwatch:PutMetricAlarm",
+        "cloudwatch:DescribeAlarms"
+      ],
+      "Resource": "arn:aws:cloudwatch:${region}:${account_id}:alarm:${name_prefix}-*"
+    },
+    {
+      "Sid": "RegionalProcessingJobList",
+      "Effect": "Allow",
+      "Action": "sagemaker:ListProcessingJobs",
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "aws:RequestedRegion": "${region}"
+        }
+      }
+    },
+    {
+      "Sid": "ProjectProcessingJobDetails",
+      "Effect": "Allow",
+      "Action": "sagemaker:DescribeProcessingJob",
+      "Resource": "arn:aws:sagemaker:${region}:${account_id}:processing-job/${name_prefix}-*"
+    },
+    {
+      "Sid": "ArtifactBucketLocation",
+      "Effect": "Allow",
+      "Action": "s3:GetBucketLocation",
+      "Resource": "${bucket_arn}"
+    },
+    {
+      "Sid": "ListArtifactObjects",
+      "Effect": "Allow",
+      "Action": "s3:ListBucket",
+      "Resource": "${bucket_arn}",
+      "Condition": {
+        "StringLike": {
+          "s3:prefix": [
+            "artifacts",
+            "artifacts/",
+            "artifacts/*"
+          ]
+        }
+      }
+    },
+    {
+      "Sid": "ReadModelArtifacts",
+      "Effect": "Allow",
+      "Action": "s3:GetObject",
+      "Resource": "${bucket_arn}/artifacts/*"
+    },
+    {
+      "Sid": "SageMakerLogs",
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "arn:aws:logs:${region}:${account_id}:log-group:/aws/sagemaker/*"
+    }
+  ]
+}

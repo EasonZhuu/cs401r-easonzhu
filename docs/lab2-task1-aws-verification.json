@@ -1,0 +1,698 @@
+{
+  "generated_at_utc": "2026-10-03T05:32:38.6031657Z",
+  "account_id": "173506956686",
+  "region": "us-east-1",
+  "scope": "Live Task 1 AWS resources and deployed identity-policy simulations; Glue pipeline not yet created",
+  "vpc_id": "vpc-0b1abbd3ed5a46984",
+  "public_subnet_id": "subnet-0ca10969799f06e30",
+  "private_subnet_id": "subnet-0b3608a8e08757290",
+  "nat_gateway_id": "nat-0fcdf9b27a9de1ce5",
+  "domain_id": "d-zidesvgztgmj",
+  "domain_status": "InService",
+  "bucket": "northstar-dev-data-173506956686",
+  "roles": [
+    {
+      "name": "northstar-dev-MLEngineer",
+      "arn": "arn:aws:iam::173506956686:role/northstar-dev-MLEngineer",
+      "trust_services": [
+        "sagemaker.amazonaws.com"
+      ],
+      "attached_policies": [
+        {
+          "PolicyName": "northstar-dev-MLEngineerPolicy",
+          "PolicyArn": "arn:aws:iam::173506956686:policy/northstar-dev-MLEngineerPolicy"
+        }
+      ]
+    },
+    {
+      "name": "northstar-dev-DataEngineer",
+      "arn": "arn:aws:iam::173506956686:role/northstar-dev-DataEngineer",
+      "trust_services": [
+        "lambda.amazonaws.com",
+        "sagemaker.amazonaws.com",
+        "glue.amazonaws.com"
+      ],
+      "attached_policies": [
+        {
+          "PolicyName": "northstar-dev-DataEngineerPolicy",
+          "PolicyArn": "arn:aws:iam::173506956686:policy/northstar-dev-DataEngineerPolicy"
+        }
+      ]
+    },
+    {
+      "name": "northstar-dev-ModelMonitor",
+      "arn": "arn:aws:iam::173506956686:role/northstar-dev-ModelMonitor",
+      "trust_services": [
+        "sagemaker.amazonaws.com"
+      ],
+      "attached_policies": [
+        {
+          "PolicyName": "northstar-dev-ModelMonitorPolicy",
+          "PolicyArn": "arn:aws:iam::173506956686:policy/northstar-dev-ModelMonitorPolicy"
+        }
+      ]
+    }
+  ],
+  "lifecycle_rules": [
+    {
+      "Expiration": {
+        "Days": 90
+      },
+      "ID": "expire-raw-data",
+      "Filter": {
+        "Prefix": "raw/"
+      },
+      "Status": "Enabled"
+    },
+    {
+      "ID": "expire-raw-versions",
+      "Filter": {
+        "Prefix": "raw/"
+      },
+      "Status": "Enabled",
+      "NoncurrentVersionExpiration": {
+        "NoncurrentDays": 30
+      }
+    },
+    {
+      "ID": "expire-processed-versions",
+      "Filter": {
+        "Prefix": "processed/"
+      },
+      "Status": "Enabled",
+      "NoncurrentVersionExpiration": {
+        "NoncurrentDays": 30
+      }
+    },
+    {
+      "ID": "expire-feature-versions",
+      "Filter": {
+        "Prefix": "features/"
+      },
+      "Status": "Enabled",
+      "NoncurrentVersionExpiration": {
+        "NoncurrentDays": 60
+      }
+    },
+    {
+      "Expiration": {
+        "Days": 7
+      },
+      "ID": "expire-datacapture",
+      "Filter": {
+        "Prefix": "datacapture/"
+      },
+      "Status": "Enabled"
+    }
+  ],
+  "checks": [
+    {
+      "label": "VPC available with CIDR 10.0.0.0/16",
+      "passed": true
+    },
+    {
+      "label": "Public subnet assigns public IPs",
+      "passed": true
+    },
+    {
+      "label": "Private subnet does not assign public IPs",
+      "passed": true
+    },
+    {
+      "label": "NAT Available in public subnet",
+      "passed": true
+    },
+    {
+      "label": "Private default route points to available NAT",
+      "passed": true
+    },
+    {
+      "label": "Public default route points to Internet Gateway",
+      "passed": true
+    },
+    {
+      "label": "Domain InService and VpcOnly",
+      "passed": true
+    },
+    {
+      "label": "Domain uses project VPC and private subnet",
+      "passed": true
+    },
+    {
+      "label": "Domain uses MLEngineer execution role",
+      "passed": true
+    },
+    {
+      "label": "MLEngineer user profile InService",
+      "passed": true
+    },
+    {
+      "label": "northstar-dev-MLEngineer service trust",
+      "passed": true
+    },
+    {
+      "label": "northstar-dev-MLEngineer scoped policy attached",
+      "passed": true
+    },
+    {
+      "label": "northstar-dev-DataEngineer service trust",
+      "passed": true
+    },
+    {
+      "label": "northstar-dev-DataEngineer scoped policy attached",
+      "passed": true
+    },
+    {
+      "label": "northstar-dev-ModelMonitor service trust",
+      "passed": true
+    },
+    {
+      "label": "northstar-dev-ModelMonitor scoped policy attached",
+      "passed": true
+    },
+    {
+      "label": "Exactly five lifecycle rules applied",
+      "passed": true
+    },
+    {
+      "label": "expire-raw-data retention",
+      "passed": true
+    },
+    {
+      "label": "expire-raw-versions retention",
+      "passed": true
+    },
+    {
+      "label": "expire-processed-versions retention",
+      "passed": true
+    },
+    {
+      "label": "expire-feature-versions retention",
+      "passed": true
+    },
+    {
+      "label": "expire-datacapture retention",
+      "passed": true
+    },
+    {
+      "label": "S3 versioning enabled",
+      "passed": true
+    },
+    {
+      "label": "DataEngineer cannot write model artifacts",
+      "passed": true
+    },
+    {
+      "label": "DataEngineer cannot overwrite Glue scripts",
+      "passed": true
+    },
+    {
+      "label": "DataEngineer can read Glue scripts",
+      "passed": true
+    },
+    {
+      "label": "DataEngineer can write raw data",
+      "passed": true
+    },
+    {
+      "label": "DataEngineer can write feature data",
+      "passed": true
+    },
+    {
+      "label": "ModelMonitor can read model artifacts",
+      "passed": true
+    },
+    {
+      "label": "ModelMonitor cannot write model.tar.gz",
+      "passed": true
+    },
+    {
+      "label": "ModelMonitor cannot delete model.tar.gz",
+      "passed": true
+    },
+    {
+      "label": "ModelMonitor cannot write transform.py",
+      "passed": true
+    },
+    {
+      "label": "ModelMonitor cannot delete transform.py",
+      "passed": true
+    },
+    {
+      "label": "ModelMonitor cannot write sample.csv",
+      "passed": true
+    },
+    {
+      "label": "ModelMonitor cannot delete sample.csv",
+      "passed": true
+    },
+    {
+      "label": "ModelMonitor cannot write sample.parquet",
+      "passed": true
+    },
+    {
+      "label": "ModelMonitor cannot delete sample.parquet",
+      "passed": true
+    }
+  ],
+  "iam_simulations": [
+    {
+      "role": "DataEngineer",
+      "evaluations": [
+        {
+          "EvalActionName": "s3:GetObject",
+          "EvalResourceName": "arn:aws:s3:::${BucketName}/${KeyName}",
+          "EvalDecision": "implicitDeny",
+          "MatchedStatements": [
+            {
+              "SourcePolicyId": "northstar-dev-DataEngineerPolicy",
+              "SourcePolicyType": "IAM Policy",
+              "StartPosition": {
+                "Line": 1,
+                "Column": 216
+              },
+              "EndPosition": {
+                "Line": 1,
+                "Column": 557
+              }
+            },
+            {
+              "SourcePolicyId": "northstar-dev-DataEngineerPolicy",
+              "SourcePolicyType": "IAM Policy",
+              "StartPosition": {
+                "Line": 1,
+                "Column": 702
+              },
+              "EndPosition": {
+                "Line": 1,
+                "Column": 848
+              }
+            }
+          ],
+          "MissingContextValues": [
+            "aws:TagKeys",
+            "iam:PassedToService"
+          ],
+          "EvalDecisionDetails": {},
+          "ResourceSpecificResults": [
+            {
+              "EvalResourceName": "arn:aws:s3:::northstar-dev-data-173506956686/artifacts/models/model.tar.gz",
+              "EvalResourceDecision": "implicitDeny",
+              "MissingContextValues": [
+                "aws:TagKeys",
+                "iam:PassedToService"
+              ]
+            },
+            {
+              "EvalResourceName": "arn:aws:s3:::northstar-dev-data-173506956686/artifacts/glue/transform.py",
+              "EvalResourceDecision": "allowed",
+              "MatchedStatements": [
+                {
+                  "SourcePolicyId": "northstar-dev-DataEngineerPolicy",
+                  "SourcePolicyType": "IAM Policy",
+                  "StartPosition": {
+                    "Line": 1,
+                    "Column": 702
+                  },
+                  "EndPosition": {
+                    "Line": 1,
+                    "Column": 848
+                  }
+                }
+              ]
+            },
+            {
+              "EvalResourceName": "arn:aws:s3:::northstar-dev-data-173506956686/raw/customers/sample.csv",
+              "EvalResourceDecision": "allowed",
+              "MatchedStatements": [
+                {
+                  "SourcePolicyId": "northstar-dev-DataEngineerPolicy",
+                  "SourcePolicyType": "IAM Policy",
+                  "StartPosition": {
+                    "Line": 1,
+                    "Column": 216
+                  },
+                  "EndPosition": {
+                    "Line": 1,
+                    "Column": 557
+                  }
+                }
+              ]
+            },
+            {
+              "EvalResourceName": "arn:aws:s3:::northstar-dev-data-173506956686/features/customers/sample.parquet",
+              "EvalResourceDecision": "allowed",
+              "MatchedStatements": [
+                {
+                  "SourcePolicyId": "northstar-dev-DataEngineerPolicy",
+                  "SourcePolicyType": "IAM Policy",
+                  "StartPosition": {
+                    "Line": 1,
+                    "Column": 216
+                  },
+                  "EndPosition": {
+                    "Line": 1,
+                    "Column": 557
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "EvalActionName": "s3:PutObject",
+          "EvalResourceName": "arn:aws:s3:::${BucketName}/${KeyName}",
+          "EvalDecision": "implicitDeny",
+          "MatchedStatements": [
+            {
+              "SourcePolicyId": "northstar-dev-DataEngineerPolicy",
+              "SourcePolicyType": "IAM Policy",
+              "StartPosition": {
+                "Line": 1,
+                "Column": 216
+              },
+              "EndPosition": {
+                "Line": 1,
+                "Column": 557
+              }
+            }
+          ],
+          "MissingContextValues": [
+            "aws:TagKeys",
+            "iam:PassedToService"
+          ],
+          "EvalDecisionDetails": {},
+          "ResourceSpecificResults": [
+            {
+              "EvalResourceName": "arn:aws:s3:::northstar-dev-data-173506956686/artifacts/models/model.tar.gz",
+              "EvalResourceDecision": "implicitDeny",
+              "MissingContextValues": [
+                "aws:TagKeys",
+                "iam:PassedToService"
+              ]
+            },
+            {
+              "EvalResourceName": "arn:aws:s3:::northstar-dev-data-173506956686/artifacts/glue/transform.py",
+              "EvalResourceDecision": "implicitDeny",
+              "MissingContextValues": [
+                "aws:TagKeys",
+                "iam:PassedToService"
+              ]
+            },
+            {
+              "EvalResourceName": "arn:aws:s3:::northstar-dev-data-173506956686/raw/customers/sample.csv",
+              "EvalResourceDecision": "allowed",
+              "MatchedStatements": [
+                {
+                  "SourcePolicyId": "northstar-dev-DataEngineerPolicy",
+                  "SourcePolicyType": "IAM Policy",
+                  "StartPosition": {
+                    "Line": 1,
+                    "Column": 216
+                  },
+                  "EndPosition": {
+                    "Line": 1,
+                    "Column": 557
+                  }
+                }
+              ]
+            },
+            {
+              "EvalResourceName": "arn:aws:s3:::northstar-dev-data-173506956686/features/customers/sample.parquet",
+              "EvalResourceDecision": "allowed",
+              "MatchedStatements": [
+                {
+                  "SourcePolicyId": "northstar-dev-DataEngineerPolicy",
+                  "SourcePolicyType": "IAM Policy",
+                  "StartPosition": {
+                    "Line": 1,
+                    "Column": 216
+                  },
+                  "EndPosition": {
+                    "Line": 1,
+                    "Column": 557
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "EvalActionName": "s3:DeleteObject",
+          "EvalResourceName": "arn:aws:s3:::${BucketName}/${KeyName}",
+          "EvalDecision": "implicitDeny",
+          "MatchedStatements": [
+            {
+              "SourcePolicyId": "northstar-dev-DataEngineerPolicy",
+              "SourcePolicyType": "IAM Policy",
+              "StartPosition": {
+                "Line": 1,
+                "Column": 216
+              },
+              "EndPosition": {
+                "Line": 1,
+                "Column": 557
+              }
+            }
+          ],
+          "MissingContextValues": [
+            "aws:TagKeys",
+            "iam:PassedToService"
+          ],
+          "EvalDecisionDetails": {},
+          "ResourceSpecificResults": [
+            {
+              "EvalResourceName": "arn:aws:s3:::northstar-dev-data-173506956686/artifacts/models/model.tar.gz",
+              "EvalResourceDecision": "implicitDeny",
+              "MissingContextValues": [
+                "aws:TagKeys",
+                "iam:PassedToService"
+              ]
+            },
+            {
+              "EvalResourceName": "arn:aws:s3:::northstar-dev-data-173506956686/artifacts/glue/transform.py",
+              "EvalResourceDecision": "implicitDeny",
+              "MissingContextValues": [
+                "aws:TagKeys",
+                "iam:PassedToService"
+              ]
+            },
+            {
+              "EvalResourceName": "arn:aws:s3:::northstar-dev-data-173506956686/raw/customers/sample.csv",
+              "EvalResourceDecision": "allowed",
+              "MatchedStatements": [
+                {
+                  "SourcePolicyId": "northstar-dev-DataEngineerPolicy",
+                  "SourcePolicyType": "IAM Policy",
+                  "StartPosition": {
+                    "Line": 1,
+                    "Column": 216
+                  },
+                  "EndPosition": {
+                    "Line": 1,
+                    "Column": 557
+                  }
+                }
+              ]
+            },
+            {
+              "EvalResourceName": "arn:aws:s3:::northstar-dev-data-173506956686/features/customers/sample.parquet",
+              "EvalResourceDecision": "allowed",
+              "MatchedStatements": [
+                {
+                  "SourcePolicyId": "northstar-dev-DataEngineerPolicy",
+                  "SourcePolicyType": "IAM Policy",
+                  "StartPosition": {
+                    "Line": 1,
+                    "Column": 216
+                  },
+                  "EndPosition": {
+                    "Line": 1,
+                    "Column": 557
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "role": "ModelMonitor",
+      "evaluations": [
+        {
+          "EvalActionName": "s3:GetObject",
+          "EvalResourceName": "arn:aws:s3:::${BucketName}/${KeyName}",
+          "EvalDecision": "implicitDeny",
+          "MatchedStatements": [
+            {
+              "SourcePolicyId": "northstar-dev-ModelMonitorPolicy",
+              "SourcePolicyType": "IAM Policy",
+              "StartPosition": {
+                "Line": 1,
+                "Column": 1107
+              },
+              "EndPosition": {
+                "Line": 1,
+                "Column": 1247
+              }
+            }
+          ],
+          "MissingContextValues": [
+            "aws:RequestedRegion",
+            "s3:prefix"
+          ],
+          "EvalDecisionDetails": {},
+          "ResourceSpecificResults": [
+            {
+              "EvalResourceName": "arn:aws:s3:::northstar-dev-data-173506956686/artifacts/models/model.tar.gz",
+              "EvalResourceDecision": "allowed",
+              "MatchedStatements": [
+                {
+                  "SourcePolicyId": "northstar-dev-ModelMonitorPolicy",
+                  "SourcePolicyType": "IAM Policy",
+                  "StartPosition": {
+                    "Line": 1,
+                    "Column": 1107
+                  },
+                  "EndPosition": {
+                    "Line": 1,
+                    "Column": 1247
+                  }
+                }
+              ]
+            },
+            {
+              "EvalResourceName": "arn:aws:s3:::northstar-dev-data-173506956686/artifacts/glue/transform.py",
+              "EvalResourceDecision": "allowed",
+              "MatchedStatements": [
+                {
+                  "SourcePolicyId": "northstar-dev-ModelMonitorPolicy",
+                  "SourcePolicyType": "IAM Policy",
+                  "StartPosition": {
+                    "Line": 1,
+                    "Column": 1107
+                  },
+                  "EndPosition": {
+                    "Line": 1,
+                    "Column": 1247
+                  }
+                }
+              ]
+            },
+            {
+              "EvalResourceName": "arn:aws:s3:::northstar-dev-data-173506956686/raw/customers/sample.csv",
+              "EvalResourceDecision": "implicitDeny",
+              "MissingContextValues": [
+                "aws:RequestedRegion",
+                "s3:prefix"
+              ]
+            },
+            {
+              "EvalResourceName": "arn:aws:s3:::northstar-dev-data-173506956686/features/customers/sample.parquet",
+              "EvalResourceDecision": "implicitDeny",
+              "MissingContextValues": [
+                "aws:RequestedRegion",
+                "s3:prefix"
+              ]
+            }
+          ]
+        },
+        {
+          "EvalActionName": "s3:PutObject",
+          "EvalResourceName": "arn:aws:s3:::${BucketName}/${KeyName}",
+          "EvalDecision": "implicitDeny",
+          "MatchedStatements": [],
+          "MissingContextValues": [
+            "aws:RequestedRegion",
+            "s3:prefix"
+          ],
+          "EvalDecisionDetails": {},
+          "ResourceSpecificResults": [
+            {
+              "EvalResourceName": "arn:aws:s3:::northstar-dev-data-173506956686/artifacts/models/model.tar.gz",
+              "EvalResourceDecision": "implicitDeny",
+              "MissingContextValues": [
+                "aws:RequestedRegion",
+                "s3:prefix"
+              ]
+            },
+            {
+              "EvalResourceName": "arn:aws:s3:::northstar-dev-data-173506956686/artifacts/glue/transform.py",
+              "EvalResourceDecision": "implicitDeny",
+              "MissingContextValues": [
+                "aws:RequestedRegion",
+                "s3:prefix"
+              ]
+            },
+            {
+              "EvalResourceName": "arn:aws:s3:::northstar-dev-data-173506956686/raw/customers/sample.csv",
+              "EvalResourceDecision": "implicitDeny",
+              "MissingContextValues": [
+                "aws:RequestedRegion",
+                "s3:prefix"
+              ]
+            },
+            {
+              "EvalResourceName": "arn:aws:s3:::northstar-dev-data-173506956686/features/customers/sample.parquet",
+              "EvalResourceDecision": "implicitDeny",
+              "MissingContextValues": [
+                "aws:RequestedRegion",
+                "s3:prefix"
+              ]
+            }
+          ]
+        },
+        {
+          "EvalActionName": "s3:DeleteObject",
+          "EvalResourceName": "arn:aws:s3:::${BucketName}/${KeyName}",
+          "EvalDecision": "implicitDeny",
+          "MatchedStatements": [],
+          "MissingContextValues": [
+            "aws:RequestedRegion",
+            "s3:prefix"
+          ],
+          "EvalDecisionDetails": {},
+          "ResourceSpecificResults": [
+            {
+              "EvalResourceName": "arn:aws:s3:::northstar-dev-data-173506956686/artifacts/models/model.tar.gz",
+              "EvalResourceDecision": "implicitDeny",
+              "MissingContextValues": [
+                "aws:RequestedRegion",
+                "s3:prefix"
+              ]
+            },
+            {
+              "EvalResourceName": "arn:aws:s3:::northstar-dev-data-173506956686/artifacts/glue/transform.py",
+              "EvalResourceDecision": "implicitDeny",
+              "MissingContextValues": [
+                "aws:RequestedRegion",
+                "s3:prefix"
+              ]
+            },
+            {
+              "EvalResourceName": "arn:aws:s3:::northstar-dev-data-173506956686/raw/customers/sample.csv",
+              "EvalResourceDecision": "implicitDeny",
+              "MissingContextValues": [
+                "aws:RequestedRegion",
+                "s3:prefix"
+              ]
+            },
+            {
+              "EvalResourceName": "arn:aws:s3:::northstar-dev-data-173506956686/features/customers/sample.parquet",
+              "EvalResourceDecision": "implicitDeny",
+              "MissingContextValues": [
+                "aws:RequestedRegion",
+                "s3:prefix"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "No end-to-end network traffic or service AssumeRole execution was tested",
+    "IAM simulations do not exercise a live Glue or Feature Store job"
+  ]
+}

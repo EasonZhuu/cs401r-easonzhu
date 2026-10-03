@@ -29,6 +29,15 @@ resource "aws_iam_role" "ml_engineer" {
           Service = "sagemaker.amazonaws.com"
         }
         Action = "sts:AssumeRole"
+        # Validate source metadata when SageMaker supplies it
+        Condition = {
+          StringEqualsIfExists = {
+            "aws:SourceAccount" = data.aws_caller_identity.current.account_id
+          }
+          ArnLikeIfExists = {
+            "aws:SourceArn" = "arn:aws:sagemaker:${data.aws_region.current.name}:${data.aws_caller_identity.current.account_id}:*"
+          }
+        }
       }
     ]
   })
