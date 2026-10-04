@@ -1,0 +1,94 @@
+{
+  "VerifiedUtc": "2026-10-04T04:25:53.306376+00:00",
+  "Passed": 8,
+  "Failed": 0,
+  "Checks": {
+    "DomainStillInService": true,
+    "DomainVpcOnlyPrivateSubnet": true,
+    "DomainUsesSharedGroup": true,
+    "ConnectionNameAndType": true,
+    "ConnectionUsesPrivateSubnetAndSharedGroup": true,
+    "SharedGroupHasAllProtocolSelfIngress": true,
+    "BothJobsUseNewConnection": true,
+    "LegacyConnectionPreservedUnused": true
+  },
+  "Connection": {
+    "Name": "northstar-dev-vpc-connection",
+    "Description": "Run Glue workers in the NorthStar private subnet",
+    "ConnectionType": "NETWORK",
+    "ConnectionProperties": {},
+    "PhysicalConnectionRequirements": {
+      "SubnetId": "subnet-0b3608a8e08757290",
+      "SecurityGroupIdList": [
+        "sg-0d782cba60d177ff0"
+      ],
+      "AvailabilityZone": "us-east-1a"
+    },
+    "CreationTime": "2026-10-03T22:13:46.635000-06:00",
+    "LastUpdatedTime": "2026-10-03T22:13:46.635000-06:00",
+    "LastUpdatedBy": "user/cs401_admin",
+    "ConnectionSchemaVersion": 1
+  },
+  "SharedGroup": {
+    "GroupId": "sg-0d782cba60d177ff0",
+    "IpPermissionsEgress": [
+      {
+        "IpProtocol": "-1",
+        "UserIdGroupPairs": [],
+        "IpRanges": [
+          {
+            "Description": "Allow all outbound traffic",
+            "CidrIp": "0.0.0.0/0"
+          }
+        ],
+        "Ipv6Ranges": [],
+        "PrefixListIds": []
+      }
+    ],
+    "Tags": [
+      {
+        "Key": "Environment",
+        "Value": "dev"
+      },
+      {
+        "Key": "Name",
+        "Value": "northstar-dev-sagemaker-sg"
+      },
+      {
+        "Key": "ManagedBy",
+        "Value": "terraform"
+      },
+      {
+        "Key": "Project",
+        "Value": "northstar"
+      }
+    ],
+    "VpcId": "vpc-0b1abbd3ed5a46984",
+    "SecurityGroupArn": "arn:aws:ec2:us-east-1:173506956686:security-group/sg-0d782cba60d177ff0",
+    "OwnerId": "173506956686",
+    "GroupName": "northstar-dev-sagemaker-sg",
+    "Description": "Security group for the SageMaker Domain",
+    "IpPermissions": [
+      {
+        "IpProtocol": "-1",
+        "UserIdGroupPairs": [
+          {
+            "Description": "Allow all traffic between SageMaker and Glue group members",
+            "UserId": "173506956686",
+            "GroupId": "sg-0d782cba60d177ff0"
+          }
+        ],
+        "IpRanges": [
+          {
+            "Description": "Allow all traffic from inside the VPC",
+            "CidrIp": "10.0.0.0/16"
+          }
+        ],
+        "Ipv6Ranges": [],
+        "PrefixListIds": []
+      }
+    ]
+  },
+  "JobsRerunAfterNetworkChange": false,
+  "AWSMutationsPerformedByThisCheck": false
+}

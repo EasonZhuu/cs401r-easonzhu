@@ -138,6 +138,14 @@ resource "aws_security_group" "sagemaker" {
     cidr_blocks = [var.vpc_cidr]
   }
 
+  ingress {
+    description = "Allow all traffic between SageMaker and Glue group members"
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    self        = true
+  }
+
   egress {
     description = "Allow all outbound traffic"
     from_port   = 0

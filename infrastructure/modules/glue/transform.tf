@@ -1,5 +1,5 @@
-resource "aws_glue_connection" "private_network" {
-  name            = "${local.name_prefix}-private-network"
+resource "aws_glue_connection" "vpc_network" {
+  name            = "${local.name_prefix}-vpc-connection"
   description     = "Run Glue workers in the NorthStar private subnet"
   connection_type = "NETWORK"
 
@@ -7,6 +7,25 @@ resource "aws_glue_connection" "private_network" {
     availability_zone      = var.availability_zone
     subnet_id              = var.private_subnet_id
     security_group_id_list = [var.glue_security_group_id]
+  }
+}
+
+# Preserve the previously deployed connection until approved lab teardown
+# The moved block changes its state address without deleting the AWS object
+moved {
+  from = aws_glue_connection.private_network
+  to   = aws_glue_connection.legacy_private_network
+}
+
+resource "aws_glue_connection" "legacy_private_network" {
+  name            = "${local.name_prefix}-private-network"
+  description     = "Run Glue workers in the NorthStar private subnet"
+  connection_type = "NETWORK"
+
+  physical_connection_requirements {
+    availability_zone      = var.availability_zone
+    subnet_id              = var.private_subnet_id
+    security_group_id_list = [var.legacy_glue_security_group_id]
   }
 }
 
@@ -27,7 +46,7 @@ resource "aws_glue_job" "transform" {
   number_of_workers = 2
   timeout           = 10
   max_retries       = 0
-  connections       = [aws_glue_connection.private_network.name]
+  connections       = [aws_glue_connection.vpc_network.name]
 
   command {
     name            = "glueetl"

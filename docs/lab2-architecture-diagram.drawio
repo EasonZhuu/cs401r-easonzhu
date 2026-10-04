@@ -414,16 +414,16 @@
         <mxCell id="text-22" value="northstar-dev-domain · VpcOnly · profile MLEngineer" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=18;fontStyle=0;fontColor=#20324A;spacing=0;" vertex="1" parent="1">
           <mxGeometry x="1051" y="720.0" width="430.984375" height="27.400000000000002" as="geometry" />
         </mxCell>
-        <mxCell id="text-23" value="SG: northstar-dev-sagemaker-sg (Lab 1)" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=18;fontStyle=0;fontColor=#20324A;spacing=0;" vertex="1" parent="1">
+        <mxCell id="text-23" value="Shared SG: northstar-dev-sagemaker-sg" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=18;fontStyle=0;fontColor=#20324A;spacing=0;" vertex="1" parent="1">
           <mxGeometry x="1051" y="741.96" width="327.96875" height="27.400000000000002" as="geometry" />
         </mxCell>
         <mxCell id="text-24" value="Glue ETL workers · NEW" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=22;fontStyle=1;fontColor=#20324A;spacing=0;" vertex="1" parent="1">
           <mxGeometry x="1097" y="794.0" width="259.0" height="32.6" as="geometry" />
         </mxCell>
-        <mxCell id="text-25" value="NETWORK connection → private subnet + Glue SG" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=19;fontStyle=0;fontColor=#20324A;spacing=0;" vertex="1" parent="1">
+        <mxCell id="text-25" value="NETWORK connection → private subnet + shared SG" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=19;fontStyle=0;fontColor=#20324A;spacing=0;" vertex="1" parent="1">
           <mxGeometry x="1051" y="838.0" width="435.0" height="28.7" as="geometry" />
         </mxCell>
-        <mxCell id="text-26" value="Glue SG requires self-referencing all-port ingress" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=19;fontStyle=0;fontColor=#20324A;spacing=0;" vertex="1" parent="1">
+        <mxCell id="text-26" value="Shared SG: self ingress, all protocols / ports" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=19;fontStyle=0;fontColor=#20324A;spacing=0;" vertex="1" parent="1">
           <mxGeometry x="1051" y="861.18" width="424.984375" height="28.7" as="geometry" />
         </mxCell>
         <mxCell id="text-27" value="Public route table · Lab 1" style="text;html=0;whiteSpace=nowrap;overflow=visible;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=24;fontStyle=1;fontColor=#20324A;spacing=0;" vertex="1" parent="1">

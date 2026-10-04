@@ -24,7 +24,12 @@ variable "private_subnet_id" {
 }
 
 variable "glue_security_group_id" {
-  description = "Security group allowing self-referencing TCP traffic for Glue workers"
+  description = "Shared SageMaker security group with all-protocol self ingress for Glue"
+  type        = string
+}
+
+variable "legacy_glue_security_group_id" {
+  description = "Earlier Glue group retained with its unused connection until approved teardown"
   type        = string
 }
 

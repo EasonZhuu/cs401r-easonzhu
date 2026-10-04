@@ -29,7 +29,7 @@ and writer identities. Editable draw.io sources are available for the
 | `infrastructure/environments/dev/` | Connects all six modules for real AWS deployment |
 | `infrastructure/environments/local/` | LocalStack checks of VPC, storage and IAM; excludes Glue and SageMaker and disables NAT/lifecycle rules |
 | `glue-scripts/transform.py` | Type/date conversion, missing-value imputation and transaction deduplication |
-| `glue-scripts/feature_engineer.py` | Customer aggregation, loyalty tier, churn proxy, holdout label and Feature Store ingestion |
+| `glue-scripts/feature_engineer.py` | Customer aggregation, loyalty tier, churn proxy, outcome-window label and Feature Store ingestion |
 | `scripts/verify-lab2.sh` | AWS resource checks and data-quality checks on downloaded Parquet |
 | `scripts/audit-lab2-parquet.py` | Full local snapshot comparison against an independent raw-CSV reference, including offline Feature Store records |
 | `scripts/teardown-lab2.sh` | Course cleanup script for Terraform resources and service-created leftovers |
@@ -40,6 +40,11 @@ Resource names are derived from `project` and `environment`. Defaults are
 Glue ETL workers run in the private subnet and use the DataEngineer role. The
 crawler also uses DataEngineer. Feature Store assumes that role for offline
 S3 writes. Manual raw-data uploads use the operator's authenticated IAM identity.
+
+Both Glue jobs use the NETWORK connection `northstar-dev-vpc-connection`.
+It selects the private subnet and the existing SageMaker security group,
+`northstar-dev-sagemaker-sg`, shared with the Domain. This group allows
+self-referencing ingress with `protocol = "-1"` for worker communication.
 
 ## Prerequisites
 
@@ -103,7 +108,8 @@ For this pipeline, `enable_nat_gateway` must be `true`; check ignored local
 real AWS resources and uploads both Glue scripts to `artifacts/glue/`:
 
 ```bash
-terraform -chdir=infrastructure/environments/dev apply "$PLAN_FILE"
+terraform -chdir=infrastructure/environments/dev apply "$PLAN_FILE" \
+  2>&1 | tee -a docs/lab2-extend-output.txt
 ```
 
 The starter backend's `dynamodb_table` setting can produce a deprecation warning
@@ -196,7 +202,8 @@ form the Feature Group's 16 definitions.
 - Features use purchases on or before **T = 2026-04-01**
 - The label uses purchases in **(2026-04-01, 2026-06-30]** only
 - `churn_label = 1` means no purchase in that outcome window; otherwise it is 0
-- The label comes from the holdout, not from thresholding `churn_risk_score`
+- The label comes from the outcome window, called `holdout` in the starter code;
+  it does not come from thresholding `churn_risk_score`
 
 Both jobs overwrite their output prefixes and have bookmarks disabled. Do not
 read a prefix while its producer is writing it. Re-running the feature job also
@@ -282,6 +289,11 @@ git push origin lab2-submit
 Submit your repository URL in Canvas. The TA grades `lab2-submit`; later commits
 for the next lab do not update that tag.
 
+The October 3 Canvas announcement requires `docs/lab2-verify-output.txt` in
+the tagged commit while both jobs have succeeded and the resources still exist.
+Console screenshots are not required for Lab 2. Append every infrastructure
+apply transcript to `docs/lab2-extend-output.txt`, preserving the Domain creation.
+
 NAT Gateway and its public IPv4 allocation can accrue charges while idle; Glue
 is billed when jobs run. Closing the Console does not stop infrastructure costs.
 The course requires teardown after validation and submission, including
@@ -293,10 +305,17 @@ the account and the resources it would target before using it. After that
 review and explicit approval to delete the lab resources, the course command is:
 
 ```bash
-bash scripts/teardown-lab2.sh
+bash scripts/teardown-lab2.sh 2>&1 | tee docs/lab2-destroy-output.txt
+git add docs/lab2-destroy-output.txt
+git commit -m "Record Lab 2 teardown evidence"
+git push origin main
 ```
 
 Plain `terraform destroy` does not handle every service-created leftover. Save
 cleanup evidence, verify live AWS APIs, and follow the course instructions for
 recording post-submission teardown evidence. Keep the remote-state backend
 available to rebuild the platform for Lab 3.
+
+Teardown evidence belongs on `main` after the submission tag. Keep
+`lab2-submit` fixed; do not move it to the teardown commit. Every final
+teardown check must report `OK`, with no `CHECK FAILED` or `STILL PRESENT`.

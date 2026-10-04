@@ -16,10 +16,17 @@ submission instructions, see the [repository README](../README.md).
 | `modules/feature_store/` | SageMaker customer Feature Group and its online/offline configuration |
 
 `environments/dev/main.tf` connects these modules through inputs and outputs.
-For example, VPC provides the private subnet and Glue security group, IAM
+For example, VPC provides the private subnet and shared SageMaker/Glue security group, IAM
 provides the DataEngineer role, and storage provides the data bucket. Glue owns
 the Catalog database; Feature Store's offline configuration uses that database
 and asks SageMaker to create its managed table there.
+
+The existing SageMaker group is attached to the Domain and the Glue NETWORK
+connection, with all-protocol self ingress. The earlier dedicated Glue group
+and its NETWORK connection are retained unused until approved lab teardown;
+neither is attached to an ETL job after the final network update. A Terraform
+`moved` block preserves ownership of the old connection while the jobs switch
+to the new connection, avoiding any resource deletion during this update.
 
 ## Environments
 

@@ -19,6 +19,11 @@ output "security_group_id" {
 }
 
 output "glue_security_group_id" {
-  description = "ID of the security group for private Glue Spark workers"
+  description = "ID of the shared SageMaker and Glue worker security group"
+  value       = aws_security_group.sagemaker.id
+}
+
+output "legacy_glue_security_group_id" {
+  description = "Unused earlier Glue group retained until approved teardown"
   value       = aws_security_group.glue.id
 }

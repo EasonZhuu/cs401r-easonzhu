@@ -10,7 +10,7 @@ output "raw_crawler_name" {
 
 output "private_connection_name" {
   description = "Name of the Glue connection to the private subnet"
-  value       = aws_glue_connection.private_network.name
+  value       = aws_glue_connection.vpc_network.name
 }
 
 output "transform_job_name" {

@@ -15,7 +15,7 @@ resource "aws_glue_job" "feature_engineer" {
   number_of_workers = 2
   timeout           = 30
   max_retries       = 0
-  connections       = [aws_glue_connection.private_network.name]
+  connections       = [aws_glue_connection.vpc_network.name]
 
   command {
     name            = "glueetl"

@@ -106,3 +106,168 @@ public_subnet_id = "subnet-0ca10969799f06e30"
 s3_bucket_name = "northstar-dev-data-173506956686"
 sagemaker_domain_id = "d-zidesvgztgmj"
 vpc_id = "vpc-0b1abbd3ed5a46984"
+
+=== Recovered Task 2 crawler creation (original recorded CLI transcript) ===
+
+Warning: Deprecated Parameter
+
+The parameter "dynamodb_table" is deprecated. Use parameter "use_lockfile"
+instead.
+module.glue.aws_glue_catalog_database.this: Creating...
+module.glue.aws_glue_catalog_database.this: Creation complete after 5s [id=173506956686:northstar_dev]
+module.glue.aws_glue_crawler.raw: Creating...
+module.glue.aws_glue_crawler.raw: Creation complete after 0s [id=northstar-dev-raw-crawler]
+
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+data_engineer_role_arn = "arn:aws:iam::173506956686:role/northstar-dev-DataEngineer"
+glue_database_name = "northstar_dev"
+ml_engineer_role_arn = "arn:aws:iam::173506956686:role/northstar-dev-MLEngineer"
+model_monitor_role_arn = "arn:aws:iam::173506956686:role/northstar-dev-ModelMonitor"
+public_subnet_id = "subnet-0ca10969799f06e30"
+raw_crawler_name = "northstar-dev-raw-crawler"
+s3_bucket_name = "northstar-dev-data-173506956686"
+sagemaker_domain_id = "d-zidesvgztgmj"
+vpc_id = "vpc-0b1abbd3ed5a46984"
+
+=== Recovered Task 2 catalog adjustment (user terminal, 2026-10-03T20:40:51Z) ===
+
+Midnight@Midnights MINGW64 /d/A study/BYU/05 26 Fall/CS 401
+$ cd "/d/A study/BYU/05 26 Fall/CS 401/cs401r-easonzhu"
+TF="../.tools/terraform/terraform.exe"
+AWS="/c/Program Files/Amazon/AWSCLIV2/aws.exe"
+
+"$TF" -chdir=infrastructure/environments/dev apply "D:/A study/BYU/05 26 Fall/CS 401/.tools/dev-validation/lab2-crawler-user.tfplan"
+╷
+│ Warning: Deprecated Parameter
+│
+│ The parameter "dynamodb_table" is deprecated. Use parameter "use_lockfile" instead.
+╵
+module.glue.aws_glue_catalog_database.this: Modifying... [id=173506956686:northstar_dev]
+module.glue.aws_glue_catalog_database.this: Modifications complete after 1s [id=173506956686:northstar_dev]
+
+Apply complete! Resources: 0 added, 1 changed, 0 destroyed.
+
+Outputs:
+
+data_engineer_role_arn = "arn:aws:iam::173506956686:role/northstar-dev-DataEngineer"
+glue_database_name = "northstar_dev"
+ml_engineer_role_arn = "arn:aws:iam::173506956686:role/northstar-dev-MLEngineer"
+model_monitor_role_arn = "arn:aws:iam::173506956686:role/northstar-dev-ModelMonitor"
+public_subnet_id = "subnet-0ca10969799f06e30"
+raw_crawler_name = "northstar-dev-raw-crawler"
+s3_bucket_name = "northstar-dev-data-173506956686"
+sagemaker_domain_id = "d-zidesvgztgmj"
+vpc_id = "vpc-0b1abbd3ed5a46984"
+
+Midnight@Midnights MINGW64 /d/A study/BYU/05 26 Fall/CS 401/cs401r-easonzhu (main)
+$
+
+=== Recovered Task 3 feature-job creation (user terminal, 2026-10-04T00:15:48Z) ===
+
+Midnight@Midnights MINGW64 /d/A study/BYU/05 26 Fall/CS 401/cs401r-easonzhu (main)
+$ cd "/d/A study/BYU/05 26 Fall/CS 401/cs401r-easonzhu"
+TF="../.tools/terraform/terraform.exe"
+
+"$TF" -chdir=infrastructure/environments/dev apply "D:/A study/BYU/05 26 Fall/CS 401/.tools/dev-validation/lab2-feature-engineer-user.tfplan"
+╷
+│ Warning: Deprecated Parameter
+│
+│ The parameter "dynamodb_table" is deprecated. Use parameter "use_lockfile" instead.
+╵
+module.glue.aws_s3_object.feature_engineer_script: Creating...
+module.glue.aws_s3_object.feature_engineer_script: Creation complete after 0s [id=artifacts/glue/feature_engineer.py]
+module.glue.aws_glue_job.feature_engineer: Creating...
+module.glue.aws_glue_job.feature_engineer: Creation complete after 1s [id=northstar-dev-feature-engineer]
+
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+data_engineer_role_arn = "arn:aws:iam::173506956686:role/northstar-dev-DataEngineer"
+feature_engineer_job_name = "northstar-dev-feature-engineer"
+feature_group_arn = "arn:aws:sagemaker:us-east-1:173506956686:feature-group/northstar-dev-customer-features"
+feature_group_name = "northstar-dev-customer-features"
+feature_store_offline_s3_uri = "s3://northstar-dev-data-173506956686/features/offline-store/"
+glue_connection_name = "northstar-dev-private-network"
+glue_database_name = "northstar_dev"
+ml_engineer_role_arn = "arn:aws:iam::173506956686:role/northstar-dev-MLEngineer"
+model_monitor_role_arn = "arn:aws:iam::173506956686:role/northstar-dev-ModelMonitor"
+public_subnet_id = "subnet-0ca10969799f06e30"
+raw_crawler_name = "northstar-dev-raw-crawler"
+s3_bucket_name = "northstar-dev-data-173506956686"
+sagemaker_domain_id = "d-zidesvgztgmj"
+transform_job_name = "northstar-dev-transform"
+vpc_id = "vpc-0b1abbd3ed5a46984"
+
+=== Final latest-guide network alignment; plan: 1 add, 4 change, 0 destroy ===
+
+
+Warning: Deprecated Parameter
+
+The parameter "dynamodb_table" is deprecated. Use parameter "use_lockfile"
+instead.
+module.vpc.aws_security_group.sagemaker: Modifying... [id=sg-0d782cba60d177ff0]
+module.vpc.aws_security_group.sagemaker: Modifications complete after 1s [id=sg-0d782cba60d177ff0]
+module.glue.aws_glue_connection.vpc_network: Creating...
+module.glue.aws_s3_object.feature_engineer_script: Modifying... [id=artifacts/glue/feature_engineer.py]
+module.glue.aws_s3_object.feature_engineer_script: Modifications complete after 0s [id=artifacts/glue/feature_engineer.py]
+module.glue.aws_glue_connection.vpc_network: Creation complete after 0s [id=173506956686:northstar-dev-vpc-connection]
+module.glue.aws_glue_job.feature_engineer: Modifying... [id=northstar-dev-feature-engineer]
+module.glue.aws_glue_job.transform: Modifying... [id=northstar-dev-transform]
+module.glue.aws_glue_job.transform: Modifications complete after 1s [id=northstar-dev-transform]
+module.glue.aws_glue_job.feature_engineer: Modifications complete after 1s [id=northstar-dev-feature-engineer]
+
+Apply complete! Resources: 1 added, 4 changed, 0 destroyed.
+
+Outputs:
+
+data_engineer_role_arn = "arn:aws:iam::173506956686:role/northstar-dev-DataEngineer"
+feature_engineer_job_name = "northstar-dev-feature-engineer"
+feature_group_arn = "arn:aws:sagemaker:us-east-1:173506956686:feature-group/northstar-dev-customer-features"
+feature_group_name = "northstar-dev-customer-features"
+feature_store_offline_s3_uri = "s3://northstar-dev-data-173506956686/features/offline-store/"
+glue_connection_name = "northstar-dev-vpc-connection"
+glue_database_name = "northstar_dev"
+ml_engineer_role_arn = "arn:aws:iam::173506956686:role/northstar-dev-MLEngineer"
+model_monitor_role_arn = "arn:aws:iam::173506956686:role/northstar-dev-ModelMonitor"
+public_subnet_id = "subnet-0ca10969799f06e30"
+raw_crawler_name = "northstar-dev-raw-crawler"
+s3_bucket_name = "northstar-dev-data-173506956686"
+sagemaker_domain_id = "d-zidesvgztgmj"
+transform_job_name = "northstar-dev-transform"
+vpc_id = "vpc-0b1abbd3ed5a46984"
+
+=== Final LF source-format synchronization; plan: 0 add, 2 change, 0 destroy ===
+
+
+Warning: Deprecated Parameter
+
+The parameter "dynamodb_table" is deprecated. Use parameter "use_lockfile"
+instead.
+module.glue.aws_s3_object.feature_engineer_script: Modifying... [id=artifacts/glue/feature_engineer.py]
+module.glue.aws_s3_object.transform_script: Modifying... [id=artifacts/glue/transform.py]
+module.glue.aws_s3_object.transform_script: Modifications complete after 0s [id=artifacts/glue/transform.py]
+module.glue.aws_s3_object.feature_engineer_script: Modifications complete after 0s [id=artifacts/glue/feature_engineer.py]
+
+Apply complete! Resources: 0 added, 2 changed, 0 destroyed.
+
+Outputs:
+
+data_engineer_role_arn = "arn:aws:iam::173506956686:role/northstar-dev-DataEngineer"
+feature_engineer_job_name = "northstar-dev-feature-engineer"
+feature_group_arn = "arn:aws:sagemaker:us-east-1:173506956686:feature-group/northstar-dev-customer-features"
+feature_group_name = "northstar-dev-customer-features"
+feature_store_offline_s3_uri = "s3://northstar-dev-data-173506956686/features/offline-store/"
+glue_connection_name = "northstar-dev-vpc-connection"
+glue_database_name = "northstar_dev"
+ml_engineer_role_arn = "arn:aws:iam::173506956686:role/northstar-dev-MLEngineer"
+model_monitor_role_arn = "arn:aws:iam::173506956686:role/northstar-dev-ModelMonitor"
+public_subnet_id = "subnet-0ca10969799f06e30"
+raw_crawler_name = "northstar-dev-raw-crawler"
+s3_bucket_name = "northstar-dev-data-173506956686"
+sagemaker_domain_id = "d-zidesvgztgmj"
+transform_job_name = "northstar-dev-transform"
+vpc_id = "vpc-0b1abbd3ed5a46984"

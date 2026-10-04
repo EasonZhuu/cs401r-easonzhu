@@ -5,9 +5,9 @@
 - [完整架构图](lab2-architecture-diagram.png)
 - [可编辑 draw.io 文件](lab2-architecture-diagram.drawio)
 - [矢量 SVG](lab2-architecture-diagram.svg)
-- 来源：[Canvas Lab 2](https://byu.instructure.com/courses/38938/assignments/1476008)、[Full Guide](https://byu.instructure.com/courses/38938/files/13861988?wrap=1)
+- 来源：[Canvas Lab 2](https://byu.instructure.com/courses/38938/assignments/1476008)、[Full Guide](https://byu.instructure.com/courses/38938/files/13967678?wrap=1)，按 2026-10-03 的最新要求核对
 
-图表示目标设计；部署是否成功需要之后的 Terraform、Glue job run 和 Feature Store 查询证据确认。
+图表示最终设计；部署、Glue job run 和 Feature Store 查询的实际验收证据见 `lab2-final-validation.md`。
 
 ## 1. 上半部分：程序在哪里运行、怎么联网
 
@@ -34,7 +34,7 @@ Studio / Glue worker
 
 NAT 允许资源主动建立连接并接收返回流量。外网不能经这个 NAT 主动发起连接到私有资源。图中 ECR、CloudWatch 的虚线表达逻辑服务访问，实际出站仍经过上述路径。
 
-SageMaker 沿用 Lab 1 的安全组。Glue 作业通过 NETWORK connection 绑定私有子网和 Glue 安全组；Glue 安全组需要引用自身的全端口入站规则，供 worker 之间通信。安全组控制网络通信，IAM 控制 API 操作，两者都要配置。
+SageMaker 和 Glue 共用 Lab 1 的 `northstar-dev-sagemaker-sg`。两个 Glue 作业通过 `northstar-dev-vpc-connection` 这个 NETWORK connection 绑定私有子网和共享安全组；共享组加入 `protocol = "-1"`、`self = true` 的入站规则，允许组内 worker 互通。安全组控制网络通信，IAM 控制 API 操作，两者都要配置。早期独立 Glue 安全组暂时保留但不再使用，等待提交后的统一销毁。
 
 ## 2. 中间部分：数据如何变成训练特征
 
@@ -118,4 +118,4 @@ ModelMonitor 是观察角色。后续 Lab 的漂移分析执行角色 `ModelMoni
 | `modules/glue/` | Catalog database、Crawler、两个 ETL jobs、网络连接及脚本对象 |
 | `modules/feature_store/` | Feature Group、16 项定义、online/offline 配置 |
 
-架构图这一步完成后，下一步是修改 `modules/vpc/`。网络先配置好，后续 Studio 和 Glue 才能使用私有子网。
+按图可以追踪三个问题：计算在哪里运行、数据由谁写入、每一步使用哪些权限。完整作业的验收结果和提交后的清理步骤见仓库 README。

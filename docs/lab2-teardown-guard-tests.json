@@ -1,0 +1,33 @@
+{
+  "LatestOfficialScriptSHA256": "47dca2e3ea2ac480c0650488330822bb7d841d8c898107ceccfa2159493d6003",
+  "AWSCallsStubbed": true,
+  "ResourceDeletionPerformed": false,
+  "Passed": 4,
+  "Failed": 0,
+  "Cases": [
+    {
+      "Case": "authentication-failure",
+      "Passed": true,
+      "ExitCode": 1,
+      "Output": "==> ERROR: AWS CLI is not authenticated (aws sts get-caller-identity failed).\n    Check AWS_PROFILE / credentials and re-run. Nothing was deleted."
+    },
+    {
+      "Case": "aws-check-failure",
+      "Passed": true,
+      "ExitCode": 1,
+      "Output": "Test resource          CHECK FAILED (AWS call errored; credentials/region?)"
+    },
+    {
+      "Case": "resource-still-present",
+      "Passed": true,
+      "ExitCode": 1,
+      "Output": "Test resource          STILL PRESENT: 5"
+    },
+    {
+      "Case": "zero-resources",
+      "Passed": true,
+      "ExitCode": 0,
+      "Output": "Test resource          OK"
+    }
+  ]
+}

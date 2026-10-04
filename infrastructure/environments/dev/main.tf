@@ -39,18 +39,19 @@ module "sagemaker" {
 }
 
 module "glue" {
-  source                       = "../../modules/glue"
-  project                      = var.project
-  environment                  = var.environment
-  bucket_name                  = module.storage.bucket_name
-  data_engineer_role_arn       = module.iam.data_engineer_role_arn
-  private_subnet_id            = module.vpc.private_subnet_id
-  glue_security_group_id       = module.vpc.glue_security_group_id
-  availability_zone            = var.availability_zone
-  transform_script_path        = abspath("${path.root}/../../../glue-scripts/transform.py")
-  feature_engineer_script_path = abspath("${path.root}/../../../glue-scripts/feature_engineer.py")
-  feature_group_name           = module.feature_store.feature_group_name
-  aws_region                   = var.aws_region
+  source                        = "../../modules/glue"
+  project                       = var.project
+  environment                   = var.environment
+  bucket_name                   = module.storage.bucket_name
+  data_engineer_role_arn        = module.iam.data_engineer_role_arn
+  private_subnet_id             = module.vpc.private_subnet_id
+  glue_security_group_id        = module.vpc.glue_security_group_id
+  legacy_glue_security_group_id = module.vpc.legacy_glue_security_group_id
+  availability_zone             = var.availability_zone
+  transform_script_path         = abspath("${path.root}/../../../glue-scripts/transform.py")
+  feature_engineer_script_path  = abspath("${path.root}/../../../glue-scripts/feature_engineer.py")
+  feature_group_name            = module.feature_store.feature_group_name
+  aws_region                    = var.aws_region
 
   # Wait for attached IAM permissions and the private subnet outbound route
   depends_on = [module.iam, module.vpc]

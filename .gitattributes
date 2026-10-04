@@ -1,0 +1,3 @@
+# Keep Bash scripts executable after a fresh Windows checkout
+*.sh text eol=lf
+*.py text eol=lf

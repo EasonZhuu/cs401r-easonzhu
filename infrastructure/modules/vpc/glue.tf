@@ -1,3 +1,4 @@
+# Retained until approved lab teardown; ETL jobs use the shared SageMaker group
 resource "aws_security_group" "glue" {
   name        = "${local.name_prefix}-glue-sg"
   description = "Private communication between Glue Spark workers"

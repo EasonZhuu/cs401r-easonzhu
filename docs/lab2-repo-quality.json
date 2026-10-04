@@ -1,5 +1,5 @@
 {
-  "VerifiedAtUtc": "2026-10-04T03:14:59.380934+00:00",
+  "VerifiedAtUtc": "2026-10-04T04:26:28.984655+00:00",
   "Checks": [
     {
       "Name": "Glue resources belong to modules/glue",
@@ -12,20 +12,20 @@
       "Detail": null
     },
     {
-      "Name": "Expected data resources defined once per intended resource",
+      "Name": "Expected data resources plus retained legacy connection",
       "Passed": true,
       "Detail": {
         "aws_sagemaker_feature_group": 1,
         "aws_glue_job": 2,
         "aws_glue_catalog_database": 1,
         "aws_glue_crawler": 1,
-        "aws_glue_connection": 1
+        "aws_glue_connection": 2
       }
     },
     {
       "Name": "New module resource names use expressions",
       "Passed": true,
-      "Detail": 8
+      "Detail": 9
     },
     {
       "Name": "No hardcoded northstar-dev/local names in new modules",
@@ -35,7 +35,7 @@
     {
       "Name": "All new module variables have descriptions",
       "Passed": true,
-      "Detail": 16
+      "Detail": 17
     },
     {
       "Name": "Apply evidence contains successful apply and SageMaker Domain",
@@ -56,7 +56,7 @@
       "Name": "Working tree tracked/untracked candidate credential scan clean",
       "Passed": true,
       "Detail": {
-        "ScannedFiles": 123,
+        "ScannedFiles": 129,
         "Findings": []
       }
     },
@@ -106,7 +106,12 @@
     },
     {
       "Type": "aws_glue_connection",
-      "Identifier": "private_network",
+      "Identifier": "vpc_network",
+      "File": "infrastructure/modules/glue/transform.tf"
+    },
+    {
+      "Type": "aws_glue_connection",
+      "Identifier": "legacy_private_network",
       "File": "infrastructure/modules/glue/transform.tf"
     },
     {
@@ -145,6 +150,12 @@
       "File": "main.tf",
       "Attribute": "database_name",
       "Expression": "aws_glue_catalog_database.this.name"
+    },
+    {
+      "Module": "glue",
+      "File": "transform.tf",
+      "Attribute": "name",
+      "Expression": "\"${local.name_prefix}-vpc-connection\""
     },
     {
       "Module": "glue",
@@ -194,6 +205,11 @@
     {
       "Module": "glue",
       "Name": "glue_security_group_id",
+      "HasDescription": true
+    },
+    {
+      "Module": "glue",
+      "Name": "legacy_glue_security_group_id",
       "HasDescription": true
     },
     {

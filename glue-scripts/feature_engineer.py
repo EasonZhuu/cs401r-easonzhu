@@ -255,7 +255,7 @@ def ingest_to_feature_store(rows, feature_group_name, region, event_time):
     """PutRecord each customer into the online store.
 
     Runs on the driver against a collected list. That is acceptable here
-    because the output is one row per customer (~2k records) - at production
+    because the output is one row per customer (~10k records) - at production
     scale this would be a foreachPartition with a client per partition.
     """
     client = boto3.client("sagemaker-featurestore-runtime", region_name=region)
@@ -263,8 +263,8 @@ def ingest_to_feature_store(rows, feature_group_name, region, event_time):
     for r in rows:
         record = [
             {"FeatureName": "customer_id", "ValueAsString": str(r["customer_id"])},
-            # event_time is Fractional: send epoch seconds as a numeric string.
-            # An ISO 8601 timestamp here is accepted and then silently dropped.
+            # event_time is Fractional: send epoch seconds as a numeric string
+            # A mismatched value is rejected and fails the Glue job
             {"FeatureName": "event_time", "ValueAsString": str(event_time)},
         ] + [
             {"FeatureName": name, "ValueAsString": str(r[name])}

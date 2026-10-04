@@ -8,6 +8,12 @@ Contract version: **v1**
 - A customer may have many transactions; `customer_id` is a grouping/join key, not the dataset's unique key
 - Scope: the Lab 2 synthetic transaction dataset, covering 2025-04-01 through 2026-06-30
 
+### Grain
+
+One row per transaction, uniquely identified by `transaction_id`. Multiple
+transactions can share a `customer_id`; customer identity is the aggregation
+and join key used by the downstream feature job.
+
 ### Producer
 
 Team / process: NorthStar Data Engineering / Glue ETL job `northstar-dev-transform`

@@ -1,0 +1,32 @@
+{
+  "ReadAtUtc": "2026-10-04T04:25:01.029314+00:00",
+  "Source": "AWS CloudTrail event history",
+  "Records": [
+    {
+      "ResourceName": "northstar-dev-feature-engineer",
+      "EventName": "CreateJob",
+      "EventTime": "2026-10-03T18:11:01-06:00",
+      "Region": "us-east-1",
+      "UserAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.16.2 (+https://www.terraform.io) terraform-provider-aws/5.100.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/windows lang/go#1.23.10 md/GOOS#windows md/GOARCH#amd64 api/glue#1.113.0 m/n",
+      "Succeeded": true
+    },
+    {
+      "ResourceName": "northstar-dev-transform",
+      "EventName": "CreateJob",
+      "EventTime": "2026-10-03T16:00:29-06:00",
+      "Region": "us-east-1",
+      "UserAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.16.2 (+https://www.terraform.io) terraform-provider-aws/5.100.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/windows lang/go#1.23.10 md/GOOS#windows md/GOARCH#amd64 api/glue#1.113.0 m/n",
+      "Succeeded": true
+    },
+    {
+      "ResourceName": "northstar-dev-customer-features",
+      "EventName": "CreateFeatureGroup",
+      "EventTime": "2026-10-03T17:56:38-06:00",
+      "Region": "us-east-1",
+      "UserAgent": "APN/1.0 HashiCorp/1.0 Terraform/1.16.2 (+https://www.terraform.io) terraform-provider-aws/5.100.0 (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go-v2/1.36.3 ua/2.1 os/windows lang/go#1.23.10 md/GOOS#windows md/GOARCH#amd64 api/sagemaker#1.195.0 m/n",
+      "Succeeded": true
+    }
+  ],
+  "Scope": "Creation API events only; not a replacement for a Terraform apply transcript",
+  "SensitiveIdentityAndNetworkFieldsOmitted": true
+}

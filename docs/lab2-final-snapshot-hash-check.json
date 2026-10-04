@@ -1,0 +1,7 @@
+{
+  "VerifiedUtc": "2026-10-04T04:26:26.023541+00:00",
+  "ParquetFilesChecked": 60,
+  "RawCsvMatchesRepository": true,
+  "Passed": true,
+  "ReferenceAudit": "lab2-parquet-audit.json"
+}

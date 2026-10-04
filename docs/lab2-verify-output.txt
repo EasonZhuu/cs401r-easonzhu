@@ -34,7 +34,7 @@ Data quality - processed and features (Tasks 2 and 3)
   PASS  features: label not trivially separable by recency   churner min recency 0 vs active max 315
   PASS  features: all 4 loyalty tiers present                Bronze, Gold, Platinum, Silver
   PASS  features: churn score non-degenerate                 181 distinct
-Verification downloads retained: /d/A study/BYU/05 26 Fall/CS 401/.tools/parquet-validation/verify-tmp/tmp.foRYQ55Gaq
+Verification downloads retained: /d/A study/BYU/05 26 Fall/CS 401/.tools/parquet-validation/verify-tmp/tmp.kw1E4SiQwF
 
 Task 3 - Feature Store (20 pts)
   PASS  feature group Created                                northstar-dev-customer-features
