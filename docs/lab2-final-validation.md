@@ -85,6 +85,8 @@ updated script, then commit `docs/lab2-destroy-output.txt` on `main` and push.
 Every final check must be `OK`, with no `CHECK FAILED` or `STILL PRESENT`.
 Missing valid teardown evidence caps Task 1 at half its points.
 
-No Canvas submission or resource teardown is included in this preparation.
-The NAT and other deployed resources still exist; their idle billing ends
-only after the relevant resources are removed.
+This preparation report describes the deployed resources before submission.
+Canvas submission and the subsequently authorized teardown are now complete.
+See [post-submission cleanup](lab2-post-submission-cleanup.md) for the real
+destroy output, final ten successful checks and preserved state resources.
+The grading tag remains fixed at the pre-teardown submission commit.

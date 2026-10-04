@@ -1,0 +1,77 @@
+{
+  "Account": "173506956686",
+  "Region": "us-east-1",
+  "FinalVerifierExitCode": 0,
+  "Passed": 10,
+  "Failed": 0,
+  "FinalChecks": [
+    {
+      "Name": "NAT gateways",
+      "Status": "OK"
+    },
+    {
+      "Name": "Elastic IPs",
+      "Status": "OK"
+    },
+    {
+      "Name": "SageMaker domains",
+      "Status": "OK"
+    },
+    {
+      "Name": "Feature groups",
+      "Status": "OK"
+    },
+    {
+      "Name": "EFS filesystems",
+      "Status": "OK"
+    },
+    {
+      "Name": "Glue jobs",
+      "Status": "OK"
+    },
+    {
+      "Name": "NorthStar VPCs",
+      "Status": "OK"
+    },
+    {
+      "Name": "Lineage contexts",
+      "Status": "OK"
+    },
+    {
+      "Name": "Lineage artifacts",
+      "Status": "OK"
+    },
+    {
+      "Name": "Glue databases",
+      "Status": "OK"
+    }
+  ],
+  "TerraformPreflightResources": 42,
+  "TerraformActuallyDestroyed": 36,
+  "S3VersionsDeletedBeforeTerraform": 82,
+  "RefreshedMissingS3Objects": 6,
+  "SupplementalLineageAssociationsDeleted": 3,
+  "SupplementalLineageContextsDeleted": 3,
+  "SupplementalLineageArtifactsDeleted": 1,
+  "Scope": "Current NorthStar dev VPC and Lab 2 data resources",
+  "SourceScriptSHA256": "47dca2e3ea2ac480c0650488330822bb7d841d8c898107ceccfa2159493d6003",
+  "ExternalScopedScriptSHA256": "1b495a77d26828cda87d39bbd52ad17cf99b388629648a0c20b16891a7631816",
+  "Preservation": {
+    "VerifiedAtUtc": "2026-10-04T04:52:12.0906493Z",
+    "StateBucketPreserved": true,
+    "LockTableStatus": "ACTIVE",
+    "DefaultVpcOldSecurityGroups": [
+      {
+        "Id": "sg-0747d871beab1c3fe",
+        "Vpc": "vpc-0f4d2ff191ec9e78f"
+      },
+      {
+        "Id": "sg-067b9872e2b4e5282",
+        "Vpc": "vpc-0f4d2ff191ec9e78f"
+      }
+    ],
+    "TerraformManagedResourcesRemaining": 0,
+    "GradingTagCommit": "97280b6b10da839c82dbc86c82ca24e3fd41b49f"
+  },
+  "Evidence": "lab2-destroy-output.txt"
+}
