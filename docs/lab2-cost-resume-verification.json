@@ -1,0 +1,131 @@
+{
+  "VerifiedAtUtc": "2026-10-03T19:55:56.4220477Z",
+  "Account": "173506956686",
+  "Region": "us-east-1",
+  "Nat": {
+    "CreateTime": "2026-10-03T13:52:45-06:00",
+    "NatGatewayAddresses": [
+      {
+        "AllocationId": "eipalloc-076c9c227646368ea",
+        "NetworkInterfaceId": "eni-071f51fbfbd13be4e",
+        "PrivateIp": "10.0.100.156",
+        "PublicIp": "54.90.73.72",
+        "AssociationId": "eipassoc-093ce7d5f75aaa4da",
+        "IsPrimary": true,
+        "Status": "succeeded"
+      }
+    ],
+    "NatGatewayId": "nat-0e659a71352bfd549",
+    "State": "available",
+    "SubnetId": "subnet-0ca10969799f06e30",
+    "VpcId": "vpc-0b1abbd3ed5a46984",
+    "Tags": [
+      {
+        "Key": "Project",
+        "Value": "northstar"
+      },
+      {
+        "Key": "Environment",
+        "Value": "dev"
+      },
+      {
+        "Key": "ManagedBy",
+        "Value": "terraform"
+      },
+      {
+        "Key": "Name",
+        "Value": "northstar-dev-nat"
+      }
+    ],
+    "ConnectivityType": "public",
+    "AvailabilityMode": "zonal",
+    "AttachedAppliances": []
+  },
+  "Address": {
+    "AllocationId": "eipalloc-076c9c227646368ea",
+    "AssociationId": "eipassoc-093ce7d5f75aaa4da",
+    "Domain": "vpc",
+    "NetworkInterfaceId": "eni-071f51fbfbd13be4e",
+    "NetworkInterfaceOwnerId": "173506956686",
+    "PrivateIpAddress": "10.0.100.156",
+    "Tags": [
+      {
+        "Key": "Environment",
+        "Value": "dev"
+      },
+      {
+        "Key": "ManagedBy",
+        "Value": "terraform"
+      },
+      {
+        "Key": "Name",
+        "Value": "northstar-dev-eip"
+      },
+      {
+        "Key": "Project",
+        "Value": "northstar"
+      }
+    ],
+    "PublicIpv4Pool": "amazon",
+    "NetworkBorderGroup": "us-east-1",
+    "PublicIp": "54.90.73.72"
+  },
+  "PrivateDefaultRoute": [
+    {
+      "DestinationCidrBlock": "0.0.0.0/0",
+      "NatGatewayId": "nat-0e659a71352bfd549",
+      "Origin": "CreateRoute",
+      "State": "active"
+    }
+  ],
+  "Domain": {
+    "Subnets": [
+      "subnet-0b3608a8e08757290"
+    ],
+    "NetworkAccess": "VpcOnly",
+    "Id": "d-zidesvgztgmj",
+    "Status": "InService"
+  },
+  "Checks": [
+    {
+      "Passed": true,
+      "Name": "Expected AWS account"
+    },
+    {
+      "Passed": true,
+      "Name": "NAT is available"
+    },
+    {
+      "Passed": true,
+      "Name": "NAT belongs to original VPC"
+    },
+    {
+      "Passed": true,
+      "Name": "NAT is in public subnet"
+    },
+    {
+      "Passed": true,
+      "Name": "NAT uses restored Elastic IP"
+    },
+    {
+      "Passed": true,
+      "Name": "Elastic IP is associated"
+    },
+    {
+      "Passed": true,
+      "Name": "Private default route targets restored NAT"
+    },
+    {
+      "Passed": true,
+      "Name": "SageMaker domain remains InService"
+    },
+    {
+      "Passed": true,
+      "Name": "SageMaker remains private"
+    }
+  ],
+  "Result": {
+    "Passed": 9,
+    "Total": 9
+  }
+}

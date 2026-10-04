@@ -1,0 +1,24 @@
+{
+  "ValidationSource": "Independent cleaned-CSV reference using customer set intersection and difference; not execution of PySpark attach_churn_label",
+  "FeatureCutoff": "2026-04-01",
+  "Snapshot": "2026-06-30",
+  "ReferenceFeatureCustomers": 9999,
+  "ReferenceHoldoutTransactionRows": 27438,
+  "ReferenceDistinctHoldoutCustomers": 7799,
+  "ReferenceLabelCounts": {
+    "0": 7799,
+    "1": 2200
+  },
+  "ReferenceChurnRate": 0.22002200220022003,
+  "MatchesRubricChurnRate15To30Percent": true,
+  "ReferenceHoldoutOnlyCustomersExcluded": 0,
+  "ReferenceChurnersWithPurchaseWithin30DaysBeforeCutoff": 773,
+  "ReferenceExampleRecentChurner": {
+    "customer_id": "CUST-10000016",
+    "days_since_last_purchase": 4,
+    "churn_label": 1
+  },
+  "PythonSyntaxValid": true,
+  "AllFiveFunctionsHaveImplementations": true,
+  "SparkExecutionVerified": false
+}

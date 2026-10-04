@@ -1,0 +1,254 @@
+{
+  "VerifiedAtUtc": "2026-10-04T03:14:59.380934+00:00",
+  "Checks": [
+    {
+      "Name": "Glue resources belong to modules/glue",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "Feature Group belongs to modules/feature_store",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "Expected data resources defined once per intended resource",
+      "Passed": true,
+      "Detail": {
+        "aws_sagemaker_feature_group": 1,
+        "aws_glue_job": 2,
+        "aws_glue_catalog_database": 1,
+        "aws_glue_crawler": 1,
+        "aws_glue_connection": 1
+      }
+    },
+    {
+      "Name": "New module resource names use expressions",
+      "Passed": true,
+      "Detail": 8
+    },
+    {
+      "Name": "No hardcoded northstar-dev/local names in new modules",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "All new module variables have descriptions",
+      "Passed": true,
+      "Detail": 16
+    },
+    {
+      "Name": "Apply evidence contains successful apply and SageMaker Domain",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "README describes both modules and ordered pipeline",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "Submission candidates exclude credentials, state and plans",
+      "Passed": true,
+      "Detail": []
+    },
+    {
+      "Name": "Working tree tracked/untracked candidate credential scan clean",
+      "Passed": true,
+      "Detail": {
+        "ScannedFiles": 123,
+        "Findings": []
+      }
+    },
+    {
+      "Name": "Course all-revision secret scanner passes",
+      "Passed": true,
+      "Detail": {
+        "ExitCode": 0
+      }
+    },
+    {
+      "Name": "Ignore rule protects .env",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "Ignore rule protects terraform.tfvars",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "Ignore rule protects infrastructure/environments/dev/cost-pause.auto.tfvars",
+      "Passed": true,
+      "Detail": null
+    }
+  ],
+  "NewModuleResources": [
+    {
+      "Type": "aws_sagemaker_feature_group",
+      "Identifier": "customers",
+      "File": "infrastructure/modules/feature_store/main.tf"
+    },
+    {
+      "Type": "aws_glue_job",
+      "Identifier": "feature_engineer",
+      "File": "infrastructure/modules/glue/feature_engineer.tf"
+    },
+    {
+      "Type": "aws_glue_catalog_database",
+      "Identifier": "this",
+      "File": "infrastructure/modules/glue/main.tf"
+    },
+    {
+      "Type": "aws_glue_crawler",
+      "Identifier": "raw",
+      "File": "infrastructure/modules/glue/main.tf"
+    },
+    {
+      "Type": "aws_glue_connection",
+      "Identifier": "private_network",
+      "File": "infrastructure/modules/glue/transform.tf"
+    },
+    {
+      "Type": "aws_glue_job",
+      "Identifier": "transform",
+      "File": "infrastructure/modules/glue/transform.tf"
+    }
+  ],
+  "NameExpressions": [
+    {
+      "Module": "glue",
+      "File": "feature_engineer.tf",
+      "Attribute": "name",
+      "Expression": "\"${local.name_prefix}-feature-engineer\""
+    },
+    {
+      "Module": "glue",
+      "File": "main.tf",
+      "Attribute": "database_name",
+      "Expression": "replace(local.name_prefix, \"-\", \"_\")"
+    },
+    {
+      "Module": "glue",
+      "File": "main.tf",
+      "Attribute": "name",
+      "Expression": "local.database_name"
+    },
+    {
+      "Module": "glue",
+      "File": "main.tf",
+      "Attribute": "name",
+      "Expression": "\"${local.name_prefix}-raw-crawler\""
+    },
+    {
+      "Module": "glue",
+      "File": "main.tf",
+      "Attribute": "database_name",
+      "Expression": "aws_glue_catalog_database.this.name"
+    },
+    {
+      "Module": "glue",
+      "File": "transform.tf",
+      "Attribute": "name",
+      "Expression": "\"${local.name_prefix}-private-network\""
+    },
+    {
+      "Module": "glue",
+      "File": "transform.tf",
+      "Attribute": "name",
+      "Expression": "\"${local.name_prefix}-transform\""
+    },
+    {
+      "Module": "feature_store",
+      "File": "main.tf",
+      "Attribute": "feature_group_name",
+      "Expression": "\"${local.name_prefix}-customer-features\""
+    }
+  ],
+  "VariableDescriptions": [
+    {
+      "Module": "glue",
+      "Name": "project",
+      "HasDescription": true
+    },
+    {
+      "Module": "glue",
+      "Name": "environment",
+      "HasDescription": true
+    },
+    {
+      "Module": "glue",
+      "Name": "bucket_name",
+      "HasDescription": true
+    },
+    {
+      "Module": "glue",
+      "Name": "data_engineer_role_arn",
+      "HasDescription": true
+    },
+    {
+      "Module": "glue",
+      "Name": "private_subnet_id",
+      "HasDescription": true
+    },
+    {
+      "Module": "glue",
+      "Name": "glue_security_group_id",
+      "HasDescription": true
+    },
+    {
+      "Module": "glue",
+      "Name": "availability_zone",
+      "HasDescription": true
+    },
+    {
+      "Module": "glue",
+      "Name": "transform_script_path",
+      "HasDescription": true
+    },
+    {
+      "Module": "glue",
+      "Name": "feature_engineer_script_path",
+      "HasDescription": true
+    },
+    {
+      "Module": "glue",
+      "Name": "feature_group_name",
+      "HasDescription": true
+    },
+    {
+      "Module": "glue",
+      "Name": "aws_region",
+      "HasDescription": true
+    },
+    {
+      "Module": "feature_store",
+      "Name": "project",
+      "HasDescription": true
+    },
+    {
+      "Module": "feature_store",
+      "Name": "environment",
+      "HasDescription": true
+    },
+    {
+      "Module": "feature_store",
+      "Name": "bucket_name",
+      "HasDescription": true
+    },
+    {
+      "Module": "feature_store",
+      "Name": "glue_database_name",
+      "HasDescription": true
+    },
+    {
+      "Module": "feature_store",
+      "Name": "data_engineer_role_arn",
+      "HasDescription": true
+    }
+  ],
+  "Summary": {
+    "Passed": 14,
+    "Failed": 0
+  }
+}

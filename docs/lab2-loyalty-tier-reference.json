@@ -1,0 +1,49 @@
+{
+  "ValidationSource": "Independent CSV/RFM reference categorized with bisect_right; not execution of PySpark assign_loyalty_tier",
+  "ThresholdsUSD": {
+    "TIER_BRONZE_MAX": 500.0,
+    "TIER_SILVER_MAX": 2000.0,
+    "TIER_GOLD_MAX": 5000.0
+  },
+  "ReferenceCustomerCount": 9999,
+  "ReferenceTierCounts": {
+    "Bronze": 3529,
+    "Silver": 3862,
+    "Gold": 1664,
+    "Platinum": 944
+  },
+  "ReferenceAllFourTiersPresent": true,
+  "BoundaryExamples": [
+    {
+      "LifetimeValue": 499.99,
+      "ReferenceTier": "Bronze"
+    },
+    {
+      "LifetimeValue": 500.0,
+      "ReferenceTier": "Silver"
+    },
+    {
+      "LifetimeValue": 1999.99,
+      "ReferenceTier": "Silver"
+    },
+    {
+      "LifetimeValue": 2000.0,
+      "ReferenceTier": "Gold"
+    },
+    {
+      "LifetimeValue": 4999.99,
+      "ReferenceTier": "Gold"
+    },
+    {
+      "LifetimeValue": 5000.0,
+      "ReferenceTier": "Platinum"
+    }
+  ],
+  "ReferenceSampleCustomer": {
+    "customer_id": "CUST-10000000",
+    "total_lifetime_value": 1706.99,
+    "loyalty_tier": "Silver"
+  },
+  "PythonSyntaxValid": true,
+  "SparkExecutionVerified": false
+}

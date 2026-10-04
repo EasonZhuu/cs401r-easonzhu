@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Lab 2 data lineage" id="northstar-lab2-lineage">
+    <mxGraphModel grid="0" page="1" pageScale="1" pageWidth="2000" pageHeight="1680" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="NORTHSTAR RETAIL AI | Lab 2 Data Lineage" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=38;fontColor=#20324A;fontStyle=1;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="55" y="24" width="1890" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="AWS us-east-1 | S3 bucket: northstar-dev-data-173506956686" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=24;fontColor=#54677E;fontStyle=0;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="57" y="98" width="1880" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="GREEN: data records     DASHED GRAY: schema / location metadata     DE: northstar-dev-DataEngineer" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=22;fontColor=#54677E;fontStyle=0;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="57" y="151" width="1880" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="source" value="" style="rounded=0;arcSize=6;html=0;fillColor=#F5F7FA;strokeColor=#9AAABC;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="70" y="270" width="330" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="source-title" value="Source system" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=26;fontColor=#20324A;fontStyle=1;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="84" y="280" width="304" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="source-body" value="northstar-raw-sample.csv&#10;Synthetic transaction events&#10;163,255 input rows" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=22;fontColor=#20324A;fontStyle=0;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="84" y="358" width="302" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="crawler" value="" style="rounded=0;arcSize=6;html=0;fillColor=none;strokeColor=none;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="570" y="270" width="350" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="crawler-icon" value="" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.glue;fillColor=#8C4FFF;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="584" y="284" width="48" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="crawler-title" value="Glue Crawler" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=26;fontColor=#20324A;fontStyle=1;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="644" y="280" width="264" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="crawler-body" value="northstar-dev-raw-crawler&#10;Infers CSV schema&#10;Execution role: DE" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=22;fontColor=#20324A;fontStyle=0;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="584" y="358" width="322" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog" value="" style="rounded=0;arcSize=6;html=0;fillColor=none;strokeColor=none;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="270" width="350" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog-icon" value="" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.glue;fillColor=#8C4FFF;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1134" y="284" width="48" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog-title" value="Glue Data Catalog" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=26;fontColor=#20324A;fontStyle=1;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1194" y="280" width="264" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="catalog-body" value="northstar_dev.customers&#10;Column types + S3 location&#10;Contains metadata" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=22;fontColor=#20324A;fontStyle=0;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1134" y="358" width="322" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="raw" value="" style="rounded=1;arcSize=6;html=0;fillColor=#FFFFFF;strokeColor=#81A96A;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="70" y="660" width="330" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="raw-icon" value="" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;fillColor=#7AA116;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="84" y="674" width="48" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="raw-title" value="S3 raw/" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=26;fontColor=#20324A;fontStyle=1;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="144" y="670" width="244" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="raw-body" value="raw/customers/&#10;CSV transaction rows&#10;Original input batch" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=22;fontColor=#20324A;fontStyle=0;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="84" y="748" width="302" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="transform" value="" style="rounded=0;arcSize=6;html=0;fillColor=none;strokeColor=none;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="570" y="630" width="350" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="transform-icon" value="" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.glue;fillColor=#8C4FFF;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="584" y="644" width="48" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="transform-title" value="Glue Transform" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=26;fontColor=#20324A;fontStyle=1;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="644" y="640" width="264" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="transform-body" value="northstar-dev-transform&#10;Cast + parse + impute&#10;Deduplicate transaction_id&#10;Execution role: DE" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=22;fontColor=#20324A;fontStyle=0;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="584" y="718" width="322" height="172" as="geometry" />
+        </mxCell>
+        <mxCell id="processed" value="" style="rounded=1;arcSize=6;html=0;fillColor=#FFFFFF;strokeColor=#81A96A;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="650" width="350" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="processed-icon" value="" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;fillColor=#7AA116;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1134" y="664" width="48" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="processed-title" value="S3 processed/" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=26;fontColor=#20324A;fontStyle=1;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1194" y="660" width="264" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="processed-body" value="processed/customers/&#10;Snappy Parquet&#10;157,627 transaction rows&#10;Data contract: v1" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=22;fontColor=#20324A;fontStyle=0;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1134" y="738" width="322" height="152" as="geometry" />
+        </mxCell>
+        <mxCell id="featurejob" value="" style="rounded=0;arcSize=6;html=0;fillColor=none;strokeColor=none;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1610" y="630" width="340" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="featurejob-icon" value="" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.glue;fillColor=#8C4FFF;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1624" y="644" width="48" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="featurejob-title" value="Glue Feature Engineer" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=26;fontColor=#20324A;fontStyle=1;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1684" y="640" width="254" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="featurejob-body" value="northstar-dev-feature-engineer&#10;Aggregate by customer_id&#10;Compute features + label&#10;Execution role: DE" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=22;fontColor=#20324A;fontStyle=0;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1624" y="718" width="312" height="172" as="geometry" />
+        </mxCell>
+        <mxCell id="features" value="" style="rounded=1;arcSize=6;html=0;fillColor=#FFFFFF;strokeColor=#81A96A;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="1110" width="400" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="features-icon" value="" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;fillColor=#7AA116;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1064" y="1124" width="48" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="features-title" value="S3 features/" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=26;fontColor=#20324A;fontStyle=1;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1124" y="1120" width="314" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="features-body" value="features/customers/&#10;Snappy Parquet&#10;9,999 customer rows&#10;13 features + churn label" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=22;fontColor=#20324A;fontStyle=0;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1064" y="1198" width="372" height="152" as="geometry" />
+        </mxCell>
+        <mxCell id="featuregroup" value="" style="rounded=0;arcSize=6;html=0;fillColor=none;strokeColor=none;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1570" y="1110" width="400" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="featuregroup-icon" value="" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sagemaker;fillColor=#01A88D;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1584" y="1124" width="48" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="featuregroup-title" value="SageMaker Feature Store" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=26;fontColor=#20324A;fontStyle=1;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1644" y="1120" width="314" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="featuregroup-body" value="northstar-dev-customer-features&#10;Online store enabled&#10;Record ID: customer_id&#10;Event time: event_time&#10;9,999 records ingested" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=22;fontColor=#20324A;fontStyle=0;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1584" y="1198" width="372" height="152" as="geometry" />
+        </mxCell>
+        <mxCell id="offline" value="" style="rounded=1;arcSize=6;html=0;fillColor=#FFFFFF;strokeColor=#81A96A;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1570" y="1470" width="400" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="offline-icon" value="" style="shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;fillColor=#7AA116;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1584" y="1484" width="48" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="offline-title" value="S3 offline store" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=26;fontColor=#20324A;fontStyle=1;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1644" y="1480" width="314" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="offline-body" value="features/offline-store/&#10;Service-managed Parquet&#10;Asynchronous persistence" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=22;fontColor=#20324A;fontStyle=0;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1584" y="1558" width="372" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="upload" value="" style="edgeStyle=none;html=0;rounded=0;strokeColor=#087E63;strokeWidth=3;endArrow=block;endFill=1;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="source" target="raw">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="upload-label" value="CSV upload&#10;IAM user: cs401_admin" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=20;fontColor=#087E63;fontStyle=0;spacing=2;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="85" y="520" width="300" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="scan" value="" style="edgeStyle=none;html=0;rounded=0;strokeColor=#758397;strokeWidth=3;endArrow=block;endFill=1;exitX=1.0;exitY=0.19047619047619047;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;dashed=1;" edge="1" parent="1" source="raw" target="crawler">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="460" y="700" />
+              <mxPoint x="460" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="scan-label" value="CSV schema scan&#10;Read role: DE" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=20;fontColor=#758397;fontStyle=0;spacing=2;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="412" y="477" width="155" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="register" value="" style="edgeStyle=none;html=0;rounded=0;strokeColor=#758397;strokeWidth=3;endArrow=block;endFill=1;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;dashed=1;" edge="1" parent="1" source="crawler" target="catalog">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="register-label" value="Catalog metadata&#10;Write role: DE" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=20;fontColor=#758397;fontStyle=0;spacing=2;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="935" y="286" width="170" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="schema" value="" style="edgeStyle=none;html=0;rounded=0;strokeColor=#758397;strokeWidth=3;endArrow=block;endFill=1;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;dashed=1;" edge="1" parent="1" source="catalog" target="transform">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1295" y="540" />
+              <mxPoint x="745" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="schema-label" value="Table schema + S3 location&#10;Read role: DE" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=20;fontColor=#758397;fontStyle=0;spacing=2;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="800" y="497" width="400" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="raw-read" value="" style="edgeStyle=none;html=0;rounded=0;strokeColor=#087E63;strokeWidth=3;endArrow=block;endFill=1;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" edge="1" parent="1" source="raw" target="transform">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="raw-read-label" value="CSV&#10;Read role: DE" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=20;fontColor=#087E63;fontStyle=0;spacing=2;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="411" y="690" width="148" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="processed-write" value="" style="edgeStyle=none;html=0;rounded=0;strokeColor=#087E63;strokeWidth=3;endArrow=block;endFill=1;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.46;entryPerimeter=0;" edge="1" parent="1" source="transform" target="processed">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="processed-write-label" value="Parquet&#10;Write role: DE" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=20;fontColor=#087E63;fontStyle=0;spacing=2;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="936" y="690" width="168" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="processed-read" value="" style="edgeStyle=none;html=0;rounded=0;strokeColor=#087E63;strokeWidth=3;endArrow=block;endFill=1;exitX=1.0;exitY=0.46;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" edge="1" parent="1" source="processed" target="featurejob">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="processed-read-label" value="Parquet&#10;Read role: DE" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=20;fontColor=#087E63;fontStyle=0;spacing=2;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="1474" y="690" width="132" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="feature-write" value="" style="edgeStyle=none;html=0;rounded=0;strokeColor=#087E63;strokeWidth=3;endArrow=block;endFill=1;exitX=0.3235294117647059;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="featurejob" target="features">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1720" y="990" />
+              <mxPoint x="1250" y="990" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="feature-write-label" value="Parquet customer features&#10;Write role: DE" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=20;fontColor=#087E63;fontStyle=0;spacing=2;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="1270" y="945" width="420" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="put-record" value="" style="edgeStyle=none;html=0;rounded=0;strokeColor=#087E63;strokeWidth=3;endArrow=block;endFill=1;exitX=0.6470588235294118;exitY=1.0;exitPerimeter=0;entryX=0.65;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="featurejob" target="featuregroup">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="put-record-label" value="Feature Store records&#10;PutRecord | Write role: DE" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=20;fontColor=#087E63;fontStyle=0;spacing=2;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="1728" y="981" width="262" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="offline-write" value="" style="edgeStyle=none;html=0;rounded=0;strokeColor=#087E63;strokeWidth=3;endArrow=block;endFill=1;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" edge="1" parent="1" source="featuregroup" target="offline">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="offline-write-label" value="Parquet | Write role: DE&#10;SageMaker assumes DE" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=20;fontColor=#087E63;fontStyle=0;spacing=2;fillColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="1555" y="1384" width="430" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="metadata-note" value="Crawler / Catalog describe the data; they do not copy transaction rows.&#10;The transform reads the raw CSV at the Catalog table's S3 location." style="text;html=0;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=24;fontColor=#54677E;fontStyle=0;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1100" width="860" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="time-note" value="Feature cutoff T = 2026-04-01&#10;Features use purchases on or before T&#10;Churn label uses (T, 2026-06-30]&#10;Label 1: no purchase in the outcome window" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=24;fontColor=#20324A;fontStyle=0;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1250" width="860" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="role-note" value="Writer identities&#10;Upload: IAM user cs401_admin&#10;Glue jobs and Catalog writes: DE&#10;Feature Store offline writes: SageMaker service with DE" style="text;html=0;whiteSpace=wrap;overflow=hidden;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=23;fontColor=#B34674;fontStyle=0;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1440" width="1400" height="195" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

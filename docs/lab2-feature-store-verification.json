@@ -1,0 +1,97 @@
+{
+  "FeatureGroupArn": "arn:aws:sagemaker:us-east-1:173506956686:feature-group/northstar-dev-customer-features",
+  "FeatureGroupName": "northstar-dev-customer-features",
+  "RecordIdentifierFeatureName": "customer_id",
+  "EventTimeFeatureName": "event_time",
+  "FeatureDefinitions": [
+    {
+      "FeatureName": "avg_basket_size_6m",
+      "FeatureType": "Fractional"
+    },
+    {
+      "FeatureName": "avg_order_value",
+      "FeatureType": "Fractional"
+    },
+    {
+      "FeatureName": "category_diversity_score",
+      "FeatureType": "Fractional"
+    },
+    {
+      "FeatureName": "churn_label",
+      "FeatureType": "Integral"
+    },
+    {
+      "FeatureName": "churn_risk_score",
+      "FeatureType": "Fractional"
+    },
+    {
+      "FeatureName": "customer_id",
+      "FeatureType": "String"
+    },
+    {
+      "FeatureName": "customer_tenure_days",
+      "FeatureType": "Fractional"
+    },
+    {
+      "FeatureName": "days_since_last_purchase",
+      "FeatureType": "Fractional"
+    },
+    {
+      "FeatureName": "event_time",
+      "FeatureType": "Fractional"
+    },
+    {
+      "FeatureName": "loyalty_tier",
+      "FeatureType": "String"
+    },
+    {
+      "FeatureName": "online_to_store_ratio",
+      "FeatureType": "Fractional"
+    },
+    {
+      "FeatureName": "purchase_frequency_180d",
+      "FeatureType": "Fractional"
+    },
+    {
+      "FeatureName": "purchase_frequency_30d",
+      "FeatureType": "Fractional"
+    },
+    {
+      "FeatureName": "purchase_frequency_90d",
+      "FeatureType": "Fractional"
+    },
+    {
+      "FeatureName": "total_lifetime_value",
+      "FeatureType": "Fractional"
+    },
+    {
+      "FeatureName": "total_spend_90d",
+      "FeatureType": "Fractional"
+    }
+  ],
+  "CreationTime": "2026-10-03T17:56:37.784-06:00",
+  "OnlineStoreConfig": {
+    "EnableOnlineStore": true,
+    "StorageType": "Standard"
+  },
+  "OfflineStoreConfig": {
+    "S3StorageConfig": {
+      "S3Uri": "s3://northstar-dev-data-173506956686/features/offline-store/",
+      "ResolvedOutputS3Uri": "s3://northstar-dev-data-173506956686/features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data"
+    },
+    "DisableGlueTableCreation": false,
+    "DataCatalogConfig": {
+      "TableName": "northstar_dev_customer_features",
+      "Catalog": "AwsDataCatalog",
+      "Database": "northstar_dev"
+    },
+    "TableFormat": "Glue"
+  },
+  "ThroughputConfig": {
+    "ThroughputMode": "OnDemand"
+  },
+  "RoleArn": "arn:aws:iam::173506956686:role/northstar-dev-DataEngineer",
+  "FeatureGroupStatus": "Created",
+  "Description": "Customer features from historical transactions and a holdout churn label",
+  "OnlineStoreTotalSizeBytes": 0
+}

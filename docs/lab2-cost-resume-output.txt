@@ -1,0 +1,37 @@
+
+Warning: Deprecated Parameter
+
+The parameter "dynamodb_table" is deprecated. Use parameter "use_lockfile"
+instead.
+module.vpc.aws_eip.nat[0]: Creating...
+module.vpc.aws_eip.nat[0]: Creation complete after 3s [id=eipalloc-076c9c227646368ea]
+module.vpc.aws_nat_gateway.this[0]: Creating...
+module.vpc.aws_nat_gateway.this[0]: Still creating... [00m10s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [00m20s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [00m30s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [00m40s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [00m50s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [01m00s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [01m10s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [01m20s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [01m30s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [01m40s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [01m50s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still creating... [02m00s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Creation complete after 2m5s [id=nat-0e659a71352bfd549]
+module.vpc.aws_route.private_nat[0]: Creating...
+module.vpc.aws_route.private_nat[0]: Creation complete after 1s [id=r-rtb-0a6acce5acd5d1e3b1080289494]
+
+Apply complete! Resources: 3 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+data_engineer_role_arn = "arn:aws:iam::173506956686:role/northstar-dev-DataEngineer"
+glue_database_name = "northstar_dev"
+ml_engineer_role_arn = "arn:aws:iam::173506956686:role/northstar-dev-MLEngineer"
+model_monitor_role_arn = "arn:aws:iam::173506956686:role/northstar-dev-ModelMonitor"
+public_subnet_id = "subnet-0ca10969799f06e30"
+raw_crawler_name = "northstar-dev-raw-crawler"
+s3_bucket_name = "northstar-dev-data-173506956686"
+sagemaker_domain_id = "d-zidesvgztgmj"
+vpc_id = "vpc-0b1abbd3ed5a46984"

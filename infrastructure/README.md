@@ -1,56 +1,52 @@
-# infrastructure/ — Lab 1 Part B Terraform skeleton
+# infrastructure/ — NorthStar Lab 2 Terraform
 
-Skeleton for Task B1. **It is empty on purpose**: every file declares its
-variables and outputs, and `main.tf` lists the resources you owe, but no
-resources are written for you.
+This directory contains the implemented Lab 1 platform and Lab 2 extensions.
+For prerequisites, AWS deployment, pipeline execution, validation evidence and
+submission instructions, see the [repository README](../README.md).
 
-Verify it starts clean before you add anything:
+## Module ownership
+
+| Module | Owned resources |
+|--------|-----------------|
+| `modules/vpc/` | VPC, subnets, Internet Gateway, NAT Gateway/EIP, route tables/associations, SageMaker and Glue security groups |
+| `modules/storage/` | Data bucket, public-access block, versioning, encryption, lifecycle rules and initial prefix markers |
+| `modules/iam/` | MLEngineer, DataEngineer and ModelMonitor IAM roles, policies and attachments |
+| `modules/sagemaker/` | SageMaker Domain and user profile |
+| `modules/glue/` | Catalog database, crawler, NETWORK connection, both job-script S3 objects and both Glue jobs |
+| `modules/feature_store/` | SageMaker customer Feature Group and its online/offline configuration |
+
+`environments/dev/main.tf` connects these modules through inputs and outputs.
+For example, VPC provides the private subnet and Glue security group, IAM
+provides the DataEngineer role, and storage provides the data bucket. Glue owns
+the Catalog database; Feature Store's offline configuration uses that database
+and asks SageMaker to create its managed table there.
+
+## Environments
+
+- **dev:** real AWS in `us-east-1` by default; all six modules; SageMaker and Glue
+  compute use the private subnet and require NAT for outbound access
+- **local:** LocalStack VPC/storage/IAM checks; excludes SageMaker and Glue,
+  disables NAT and S3 lifecycle rules; see the [local guide](environments/local/README.md)
+
+The dev remote backend uses a separate S3 state bucket and DynamoDB lock table.
+Bootstrap them before the first `terraform init`. A new AWS account must use
+its own backend bucket; the root README shows the account-derived override.
+
+## Naming and validation
+
+Resource names are built from `var.project` and `var.environment`; the storage
+bucket additionally includes the authenticated account ID. Pass names and ARNs
+between modules instead of repeating resource definitions. Feature names,
+Catalog table names and S3 prefix conventions describe the data schema/layout.
+
+From the repository root, after initializing the relevant environments:
 
 ```bash
-cd environments/dev
-terraform init
-terraform fmt -check -recursive ../..   # no output = pass
-terraform validate                      # exits 0
+terraform fmt -check -recursive infrastructure
+terraform -chdir=infrastructure/environments/dev validate
+terraform -chdir=infrastructure/environments/local validate
 ```
 
-Both must still pass when you submit — that is 5 of the 15 points in B1.
-
-## Layout
-
-```
-modules/vpc/        aws_vpc, aws_subnet (public only), aws_internet_gateway,
-                    aws_route_table, aws_route_table_association, aws_security_group
-modules/storage/    aws_s3_bucket + public_access_block, versioning,
-                    server_side_encryption_configuration, aws_s3_object x4
-modules/iam/        one aws_iam_role (MLEngineer trust), one aws_iam_policy,
-                    one aws_iam_role_policy_attachment
-modules/sagemaker/  aws_sagemaker_domain, aws_sagemaker_user_profile
-```
-
-Each module contains **only** its designated resources — that is graded.
-
-## The rule that catches people
-
-**No hardcoded names.** The rubric runs:
-
-```bash
-grep -rn '"northstar-dev"' infrastructure/modules/
-```
-
-and expects nothing. Build names from `var.project` and `var.environment`,
-and give every variable a `description` — that is also graded.
-
-The data bucket is the one name that also needs the account ID, because S3
-bucket names are global and thirty students deploy this same code. Read it
-from the caller inside `modules/storage`:
-
-```hcl
-data "aws_caller_identity" "current" {}
-
-locals {
-  bucket_name = "${var.project}-${var.environment}-data-${data.aws_caller_identity.current.account_id}"
-}
-```
-
-The same line yields `northstar-dev-data-<your account>` on AWS and
-`northstar-local-data-000000000000` on LocalStack with no special-casing.
+Formatting and configuration validation do not deploy resources or execute
+the data pipeline. Use a reviewed plan and apply for real AWS changes, then run
+the crawler, transform and feature job in the order documented in the root README.

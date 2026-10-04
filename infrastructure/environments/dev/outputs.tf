@@ -36,3 +36,43 @@ output "sagemaker_domain_id" {
   description = "ID of the SageMaker Domain"
   value       = module.sagemaker.domain_id
 }
+
+output "glue_database_name" {
+  description = "Name of the Glue Catalog database"
+  value       = module.glue.database_name
+}
+
+output "raw_crawler_name" {
+  description = "Name of the raw customer transaction crawler"
+  value       = module.glue.raw_crawler_name
+}
+
+output "glue_connection_name" {
+  description = "Name of the private Glue network connection"
+  value       = module.glue.private_connection_name
+}
+
+output "transform_job_name" {
+  description = "Name of the Glue transaction transform job"
+  value       = module.glue.transform_job_name
+}
+
+output "feature_engineer_job_name" {
+  description = "Name of the customer feature engineering Glue job"
+  value       = module.glue.feature_engineer_job_name
+}
+
+output "feature_group_name" {
+  description = "Name of the customer Feature Group"
+  value       = module.feature_store.feature_group_name
+}
+
+output "feature_group_arn" {
+  description = "ARN of the customer Feature Group"
+  value       = module.feature_store.feature_group_arn
+}
+
+output "feature_store_offline_s3_uri" {
+  description = "S3 prefix for Feature Store offline records"
+  value       = module.feature_store.offline_store_s3_uri
+}

@@ -1,0 +1,263 @@
+{
+  "VerifiedAtUtc": "2026-10-03T19:52:57.4417512Z",
+  "Account": "173506956686",
+  "Region": "us-east-1",
+  "Source": {
+    "Bytes": 13582469,
+    "File": "northstar-raw-sample.csv",
+    "SHA256": "38B19325C00EE0D5E05B4588066D16AA124A8CC822C3362709D6145E0BA612B2"
+  },
+  "S3": {
+    "Bucket": "northstar-dev-data-173506956686",
+    "Key": "raw/customers/northstar-raw-sample.csv",
+    "ReadbackSHA256": "38B19325C00EE0D5E05B4588066D16AA124A8CC822C3362709D6145E0BA612B2",
+    "HeadObject": {
+      "AcceptRanges": "bytes",
+      "Expiration": "expiry-date=\"Sat, 02 Jan 2027 00:00:00 GMT\", rule-id=\"expire-raw-data\"",
+      "LastModified": "2026-10-02T23:52:09-06:00",
+      "ContentLength": 13582469,
+      "ChecksumCRC64NVME": "/DkEXgRoUAE=",
+      "ChecksumType": "FULL_OBJECT",
+      "ETag": "\"e224c9d7555fe3bd382043d0f8229220-2\"",
+      "VersionId": "sDEN5Fug7P44NnCHtNL71JHzbuwM66rB",
+      "ContentType": "application/vnd.ms-excel",
+      "ServerSideEncryption": "AES256",
+      "Metadata": {}
+    }
+  },
+  "Database": {
+    "Name": "northstar_dev",
+    "Description": "NorthStar raw and processed data catalog",
+    "CreateTime": "2026-10-02T23:53:05-06:00",
+    "CreateTableDefaultPermissions": [
+      {
+        "Principal": {
+          "DataLakePrincipalIdentifier": "IAM_ALLOWED_PRINCIPALS"
+        },
+        "Permissions": [
+          "ALL"
+        ]
+      }
+    ],
+    "CatalogId": "173506956686"
+  },
+  "Crawler": {
+    "Name": "northstar-dev-raw-crawler",
+    "Role": "northstar-dev-DataEngineer",
+    "Targets": {
+      "S3Targets": [
+        {
+          "Path": "s3://northstar-dev-data-173506956686/raw/customers/",
+          "Exclusions": []
+        }
+      ],
+      "JdbcTargets": [],
+      "MongoDBTargets": [],
+      "DynamoDBTargets": [],
+      "CatalogTargets": [],
+      "DeltaTargets": [],
+      "IcebergTargets": [],
+      "HudiTargets": []
+    },
+    "DatabaseName": "northstar_dev",
+    "Description": "Discover the raw customer transaction CSV schema",
+    "Classifiers": [],
+    "RecrawlPolicy": {
+      "RecrawlBehavior": "CRAWL_EVERYTHING"
+    },
+    "SchemaChangePolicy": {
+      "UpdateBehavior": "UPDATE_IN_DATABASE",
+      "DeleteBehavior": "LOG"
+    },
+    "LineageConfiguration": {
+      "CrawlerLineageSettings": "DISABLE"
+    },
+    "State": "READY",
+    "CrawlElapsedTime": 0,
+    "CreationTime": "2026-10-02T23:53:06-06:00",
+    "LastUpdated": "2026-10-02T23:53:06-06:00",
+    "LastCrawl": {
+      "Status": "SUCCEEDED",
+      "LogGroup": "/aws-glue/crawlers",
+      "LogStream": "northstar-dev-raw-crawler",
+      "MessagePrefix": "3805b16a-3429-435a-b46b-e34332c5344c",
+      "StartTime": "2026-10-02T23:53:08-06:00"
+    },
+    "Version": 1,
+    "LakeFormationConfiguration": {
+      "UseLakeFormationCredentials": false,
+      "AccountId": ""
+    }
+  },
+  "Table": {
+    "Name": "customers",
+    "DatabaseName": "northstar_dev",
+    "Owner": "owner",
+    "CreateTime": "2026-10-02T23:53:46-06:00",
+    "UpdateTime": "2026-10-02T23:53:46-06:00",
+    "LastAccessTime": "2026-10-02T23:53:46-06:00",
+    "Retention": 0,
+    "StorageDescriptor": {
+      "Columns": [
+        {
+          "Name": "transaction_id",
+          "Type": "string"
+        },
+        {
+          "Name": "customer_id",
+          "Type": "string"
+        },
+        {
+          "Name": "purchase_date",
+          "Type": "string"
+        },
+        {
+          "Name": "order_value",
+          "Type": "double"
+        },
+        {
+          "Name": "num_items",
+          "Type": "bigint"
+        },
+        {
+          "Name": "payment_method",
+          "Type": "string"
+        },
+        {
+          "Name": "channel",
+          "Type": "string"
+        },
+        {
+          "Name": "store_id",
+          "Type": "string"
+        },
+        {
+          "Name": "product_category",
+          "Type": "string"
+        }
+      ],
+      "Location": "s3://northstar-dev-data-173506956686/raw/customers/",
+      "InputFormat": "org.apache.hadoop.mapred.TextInputFormat",
+      "OutputFormat": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+      "Compressed": false,
+      "NumberOfBuckets": -1,
+      "SerdeInfo": {
+        "SerializationLibrary": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+        "Parameters": {
+          "field.delim": ","
+        }
+      },
+      "BucketColumns": [],
+      "SortColumns": [],
+      "Parameters": {
+        "skip.header.line.count": "1",
+        "sizeKey": "13582469",
+        "objectCount": "1",
+        "UPDATED_BY_CRAWLER": "northstar-dev-raw-crawler",
+        "recordCount": "149257",
+        "CrawlerSchemaSerializerVersion": "1.0",
+        "averageRecordSize": "91",
+        "compressionType": "none",
+        "CrawlerSchemaDeserializerVersion": "1.0",
+        "classification": "csv",
+        "columnsOrdered": "true",
+        "delimiter": ",",
+        "areColumnsQuoted": "false",
+        "CRAWL_RUN_ID": "3805b16a-3429-435a-b46b-e34332c5344c",
+        "typeOfData": "file"
+      },
+      "StoredAsSubDirectories": false
+    },
+    "PartitionKeys": [],
+    "TableType": "EXTERNAL_TABLE",
+    "Parameters": {
+      "skip.header.line.count": "1",
+      "sizeKey": "13582469",
+      "objectCount": "1",
+      "UPDATED_BY_CRAWLER": "northstar-dev-raw-crawler",
+      "recordCount": "149257",
+      "CrawlerSchemaSerializerVersion": "1.0",
+      "averageRecordSize": "91",
+      "compressionType": "none",
+      "CrawlerSchemaDeserializerVersion": "1.0",
+      "classification": "csv",
+      "columnsOrdered": "true",
+      "delimiter": ",",
+      "areColumnsQuoted": "false",
+      "CRAWL_RUN_ID": "3805b16a-3429-435a-b46b-e34332c5344c",
+      "typeOfData": "file"
+    },
+    "CreatedBy": "arn:aws:sts::173506956686:assumed-role/northstar-dev-DataEngineer/AWS-Crawler",
+    "IsRegisteredWithLakeFormation": false,
+    "CatalogId": "173506956686",
+    "VersionId": "0",
+    "IsMultiDialectView": false,
+    "IsMaterializedView": false
+  },
+  "Checks": [
+    {
+      "Passed": true,
+      "Name": "Expected AWS account"
+    },
+    {
+      "Passed": true,
+      "Name": "S3 file size matches source"
+    },
+    {
+      "Passed": true,
+      "Name": "S3 readback SHA256 matches source"
+    },
+    {
+      "Passed": true,
+      "Name": "Catalog database exists"
+    },
+    {
+      "Passed": true,
+      "Name": "Crawler is READY"
+    },
+    {
+      "Passed": true,
+      "Name": "Last crawl SUCCEEDED"
+    },
+    {
+      "Passed": true,
+      "Name": "Crawler uses DataEngineer"
+    },
+    {
+      "Passed": true,
+      "Name": "Crawler scans raw customers prefix"
+    },
+    {
+      "Passed": true,
+      "Name": "Crawler has no recurring schedule"
+    },
+    {
+      "Passed": true,
+      "Name": "Customers table belongs to correct database"
+    },
+    {
+      "Passed": true,
+      "Name": "Column names and order match CSV header"
+    },
+    {
+      "Passed": true,
+      "Name": "Table points to raw S3 data"
+    },
+    {
+      "Passed": true,
+      "Name": "Table classified as CSV"
+    },
+    {
+      "Passed": true,
+      "Name": "CSV header excluded from data"
+    },
+    {
+      "Passed": true,
+      "Name": "Table created by actual DataEngineer crawler session"
+    }
+  ],
+  "Result": {
+    "Total": 15,
+    "Passed": 15
+  }
+}

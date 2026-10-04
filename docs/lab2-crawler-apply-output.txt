@@ -1,0 +1,23 @@
+
+Warning: Deprecated Parameter
+
+The parameter "dynamodb_table" is deprecated. Use parameter "use_lockfile"
+instead.
+module.glue.aws_glue_catalog_database.this: Creating...
+module.glue.aws_glue_catalog_database.this: Creation complete after 5s [id=173506956686:northstar_dev]
+module.glue.aws_glue_crawler.raw: Creating...
+module.glue.aws_glue_crawler.raw: Creation complete after 0s [id=northstar-dev-raw-crawler]
+
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+data_engineer_role_arn = "arn:aws:iam::173506956686:role/northstar-dev-DataEngineer"
+glue_database_name = "northstar_dev"
+ml_engineer_role_arn = "arn:aws:iam::173506956686:role/northstar-dev-MLEngineer"
+model_monitor_role_arn = "arn:aws:iam::173506956686:role/northstar-dev-ModelMonitor"
+public_subnet_id = "subnet-0ca10969799f06e30"
+raw_crawler_name = "northstar-dev-raw-crawler"
+s3_bucket_name = "northstar-dev-data-173506956686"
+sagemaker_domain_id = "d-zidesvgztgmj"
+vpc_id = "vpc-0b1abbd3ed5a46984"

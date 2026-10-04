@@ -1,0 +1,51 @@
+{
+  "VerifiedAtUtc": "2026-10-03T22:25:06.1230642Z",
+  "JobRun": {
+    "Id": "jr_cfd3949dd18f4408821a937a2f5d8b01e534ecd90ebba99569b707012b455452",
+    "State": "SUCCEEDED",
+    "Started": "2026-10-03T16:12:54.184-06:00",
+    "Completed": "2026-10-03T16:17:29.795-06:00",
+    "ExecutionSeconds": 250,
+    "Error": null
+  },
+  "RawRows": 163255,
+  "RowsAfterCustomerFilter": 159990,
+  "DroppedMissingCustomerID": 3265,
+  "DuplicateTransactionsRemoved": 2363,
+  "OutputRowsReportedByGlue": 157627,
+  "ReferenceOutputRows": 157627,
+  "MatchesReferenceOutputRows": true,
+  "ParquetFileCount": 4,
+  "OutputBytes": 3856513.0,
+  "OutputObjects": [
+    {
+      "Key": "processed/customers/part-00000-e9fdf918-4d6f-4361-9915-6afc1e9e48d4-c000.snappy.parquet",
+      "Bytes": 964962,
+      "Modified": "2026-10-03T16:17:19-06:00"
+    },
+    {
+      "Key": "processed/customers/part-00001-e9fdf918-4d6f-4361-9915-6afc1e9e48d4-c000.snappy.parquet",
+      "Bytes": 965331,
+      "Modified": "2026-10-03T16:17:19-06:00"
+    },
+    {
+      "Key": "processed/customers/part-00002-e9fdf918-4d6f-4361-9915-6afc1e9e48d4-c000.snappy.parquet",
+      "Bytes": 962087,
+      "Modified": "2026-10-03T16:17:19-06:00"
+    },
+    {
+      "Key": "processed/customers/part-00003-e9fdf918-4d6f-4361-9915-6afc1e9e48d4-c000.snappy.parquet",
+      "Bytes": 964133,
+      "Modified": "2026-10-03T16:17:19-06:00"
+    }
+  ],
+  "TransformLogMessages": [
+    "[transform] read 163255 raw rows from northstar_dev.customers\n",
+    "[transform] after cast_types: 159990 rows (3265 dropped for null customer_id)\n",
+    "[transform] after impute_nulls: 159990 rows\n",
+    "[transform] after deduplicate: 157627 rows (2363 duplicate transactions removed)\n",
+    "[transform] wrote 157627 rows to s3://northstar-dev-data-173506956686/processed/customers/\n"
+  ],
+  "ValidationSource": "AWS Glue terminal status, CloudWatch stdout, and S3 object listing",
+  "ParquetContentsIndependentlyRead": false
+}

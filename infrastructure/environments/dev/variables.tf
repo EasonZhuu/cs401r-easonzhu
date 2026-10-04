@@ -45,3 +45,9 @@ variable "sagemaker_instance_type" {
   type        = string
   default     = "ml.t3.medium"
 }
+
+variable "enable_nat_gateway" {
+  description = "Create the NAT Gateway and public IP; disable during a lab break to avoid hourly charges"
+  type        = bool
+  default     = true
+}

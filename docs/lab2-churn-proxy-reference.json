@@ -1,0 +1,82 @@
+{
+  "ValidationSource": "Independent CSV/RFM reference with piecewise-linear knot interpolation; not execution of PySpark compute_churn_proxy",
+  "ReferenceCustomerCount": 9999,
+  "ReferenceBandCounts": {
+    "Low": 6032,
+    "Medium": 1974,
+    "High": 1993
+  },
+  "InterpolationKnotsDaysAndScores": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      30.0,
+      0.4
+    ],
+    [
+      60.0,
+      0.7
+    ],
+    [
+      180.0,
+      1.0
+    ]
+  ],
+  "ReferenceAllScoresFiniteAndWithinBands": true,
+  "ReferenceScoreRange": {
+    "Min": 0.0,
+    "Max": 1.0
+  },
+  "ReferenceDistinctScoreCount": 181,
+  "ReferenceExamples": [
+    {
+      "DaysSinceLastPurchase": 0,
+      "Score": 0.0
+    },
+    {
+      "DaysSinceLastPurchase": 15,
+      "Score": 0.2
+    },
+    {
+      "DaysSinceLastPurchase": 30,
+      "Score": 0.4
+    },
+    {
+      "DaysSinceLastPurchase": 45,
+      "Score": 0.55
+    },
+    {
+      "DaysSinceLastPurchase": 60,
+      "Score": 0.7
+    },
+    {
+      "DaysSinceLastPurchase": 61,
+      "Score": 0.7025
+    },
+    {
+      "DaysSinceLastPurchase": 90,
+      "Score": 0.775
+    },
+    {
+      "DaysSinceLastPurchase": 120,
+      "Score": 0.85
+    },
+    {
+      "DaysSinceLastPurchase": 180,
+      "Score": 1.0
+    },
+    {
+      "DaysSinceLastPurchase": 365,
+      "Score": 1.0
+    }
+  ],
+  "ReferenceSampleCustomer": {
+    "customer_id": "CUST-10000000",
+    "days_since_last_purchase": 14.0,
+    "churn_risk_score": 0.18666666666666668
+  },
+  "PythonSyntaxValid": true,
+  "SparkExecutionVerified": false
+}

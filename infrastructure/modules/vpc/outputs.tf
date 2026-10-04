@@ -17,3 +17,8 @@ output "security_group_id" {
   description = "ID of the SageMaker security group"
   value       = aws_security_group.sagemaker.id
 }
+
+output "glue_security_group_id" {
+  description = "ID of the security group for private Glue Spark workers"
+  value       = aws_security_group.glue.id
+}

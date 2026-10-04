@@ -1,0 +1,154 @@
+{
+  "ReviewedAtUtc": "2026-10-03T21:44:53.2002093Z",
+  "Status": "Planned, awaiting user apply",
+  "Adds": 4,
+  "Changes": 0,
+  "Deletes": 0,
+  "Addresses": [
+    "module.glue.aws_glue_connection.private_network",
+    "module.glue.aws_glue_job.transform",
+    "module.glue.aws_s3_object.transform_script",
+    "module.vpc.aws_security_group.glue"
+  ],
+  "Job": {
+    "command": [
+      {
+        "name": "glueetl",
+        "python_version": "3",
+        "script_location": "s3://northstar-dev-data-173506956686/artifacts/glue/transform.py"
+      }
+    ],
+    "connections": [
+      "northstar-dev-private-network"
+    ],
+    "default_arguments": {
+      "--TempDir": "s3://northstar-dev-data-173506956686/processed/_glue_temp/",
+      "--database_name": "northstar_dev",
+      "--job-bookmark-option": "job-bookmark-disable",
+      "--job-language": "python",
+      "--output_path": "s3://northstar-dev-data-173506956686/processed/customers/",
+      "--table_name": "customers"
+    },
+    "description": "Clean raw customer transactions and write processed Parquet",
+    "execution_class": null,
+    "execution_property": [
+      {
+        "max_concurrent_runs": 1
+      }
+    ],
+    "glue_version": "4.0",
+    "job_run_queuing_enabled": null,
+    "maintenance_window": null,
+    "max_retries": 0,
+    "name": "northstar-dev-transform",
+    "non_overridable_arguments": null,
+    "number_of_workers": 2,
+    "role_arn": "arn:aws:iam::173506956686:role/northstar-dev-DataEngineer",
+    "security_configuration": null,
+    "source_control_details": [],
+    "tags": null,
+    "tags_all": {
+      "Environment": "dev",
+      "ManagedBy": "terraform",
+      "Project": "northstar"
+    },
+    "timeout": 10,
+    "worker_type": "G.1X"
+  },
+  "NetworkConnection": {
+    "athena_properties": null,
+    "connection_properties": null,
+    "connection_type": "NETWORK",
+    "description": "Run Glue workers in the NorthStar private subnet",
+    "match_criteria": null,
+    "name": "northstar-dev-private-network",
+    "physical_connection_requirements": [
+      {
+        "availability_zone": "us-east-1a",
+        "subnet_id": "subnet-0b3608a8e08757290"
+      }
+    ],
+    "tags": null,
+    "tags_all": {
+      "Environment": "dev",
+      "ManagedBy": "terraform",
+      "Project": "northstar"
+    }
+  },
+  "SecurityGroup": {
+    "description": "Private communication between Glue Spark workers",
+    "egress": [
+      {
+        "cidr_blocks": [
+          "0.0.0.0/0"
+        ],
+        "description": "Allow outbound AWS service access through the private route",
+        "from_port": 0,
+        "ipv6_cidr_blocks": [],
+        "prefix_list_ids": [],
+        "protocol": "-1",
+        "security_groups": [],
+        "self": false,
+        "to_port": 0
+      }
+    ],
+    "ingress": [
+      {
+        "cidr_blocks": [],
+        "description": "Allow all TCP between members of this security group",
+        "from_port": 0,
+        "ipv6_cidr_blocks": [],
+        "prefix_list_ids": [],
+        "protocol": "tcp",
+        "security_groups": [],
+        "self": true,
+        "to_port": 65535
+      }
+    ],
+    "name": "northstar-dev-glue-sg",
+    "revoke_rules_on_delete": false,
+    "tags": {
+      "Name": "northstar-dev-glue-sg"
+    },
+    "tags_all": {
+      "Environment": "dev",
+      "ManagedBy": "terraform",
+      "Name": "northstar-dev-glue-sg",
+      "Project": "northstar"
+    },
+    "timeouts": null,
+    "vpc_id": "vpc-0b1abbd3ed5a46984"
+  },
+  "Script": {
+    "bucket": "northstar-dev-data-173506956686",
+    "cache_control": null,
+    "checksum_algorithm": null,
+    "content": null,
+    "content_base64": null,
+    "content_disposition": null,
+    "content_encoding": null,
+    "content_language": null,
+    "content_type": "text/x-python",
+    "force_destroy": false,
+    "key": "artifacts/glue/transform.py",
+    "metadata": null,
+    "object_lock_legal_hold_status": null,
+    "object_lock_mode": null,
+    "object_lock_retain_until_date": null,
+    "override_provider": [],
+    "source": "D:/A study/BYU/05 26 Fall/CS 401/cs401r-easonzhu/glue-scripts/transform.py",
+    "source_hash": "f8e4b8e7a764ef02a4c4b7cec2259037",
+    "tags": null,
+    "tags_all": {
+      "Environment": "dev",
+      "ManagedBy": "terraform",
+      "Project": "northstar"
+    },
+    "website_redirect": null
+  },
+  "LivePreflight": {
+    "GlueGetConnection": "allowed",
+    "ScriptGetObject": "allowed",
+    "NAT": "available"
+  }
+}

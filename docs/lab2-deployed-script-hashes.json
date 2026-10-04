@@ -1,0 +1,12 @@
+[
+  {
+    "Script": "transform.py",
+    "SHA256": "72702a14b48987a72970778790cd43784388bb042d65435bee149ff11198c28d",
+    "MatchesDeployed": true
+  },
+  {
+    "Script": "feature_engineer.py",
+    "SHA256": "1753352bab02a76d69851a2ea363fd2af43b83f88aa96740a811bdfaa6210cce",
+    "MatchesDeployed": true
+  }
+]

@@ -1,0 +1,698 @@
+{
+  "VerifiedAtUtc": "2026-10-04T02:12:35.158945+00:00",
+  "Scope": "All downloaded processed, feature and offline Parquet rows; independent raw-CSV reference",
+  "AWSMutationsPerformed": false,
+  "AllOnlineRecordsIndependentlyRead": false,
+  "Checks": [
+    {
+      "Name": "raw: downloaded CSV hash matches manifest and repository",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "processed: all listed files readable and hashes unchanged",
+      "Passed": true,
+      "Detail": "4 files, 157627 rows"
+    },
+    {
+      "Name": "features: all listed files readable and hashes unchanged",
+      "Passed": true,
+      "Detail": "2 files, 9999 rows"
+    },
+    {
+      "Name": "offline: all listed files readable and hashes unchanged",
+      "Passed": true,
+      "Detail": "54 files, 9999 rows"
+    },
+    {
+      "Name": "processed: Snappy compression",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "features: Snappy compression",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "processed: exact nine-column logical schema",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "processed: no nulls in any column",
+      "Passed": true,
+      "Detail": 0
+    },
+    {
+      "Name": "processed: unique transaction_id",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "processed: nonempty identifiers",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "processed: transaction grain preserved",
+      "Passed": true,
+      "Detail": "157627 rows / 9999 customers"
+    },
+    {
+      "Name": "processed: order_value within contract bounds",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "processed: num_items within contract bounds",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "processed: purchase_date within source version",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "processed: numeric values finite",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "processed: strings trimmed and nonempty",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "processed: output count matches independent CSV reference",
+      "Passed": true,
+      "Detail": 157627
+    },
+    {
+      "Name": "processed vs raw reference: identifier sets match",
+      "Passed": true,
+      "Detail": "157627 records"
+    },
+    {
+      "Name": "processed vs raw reference: customer_id",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0
+      }
+    },
+    {
+      "Name": "processed vs raw reference: purchase_date",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0
+      }
+    },
+    {
+      "Name": "processed vs raw reference: order_value",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0,
+        "AbsoluteTolerance": 1e-09,
+        "MaxAbsoluteDifference": 0.0
+      }
+    },
+    {
+      "Name": "processed vs raw reference: num_items",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0,
+        "AbsoluteTolerance": 1e-09,
+        "MaxAbsoluteDifference": 0.0
+      }
+    },
+    {
+      "Name": "processed vs raw reference: payment_method",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0
+      }
+    },
+    {
+      "Name": "processed vs raw reference: channel",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0
+      }
+    },
+    {
+      "Name": "processed vs raw reference: store_id",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0
+      }
+    },
+    {
+      "Name": "processed vs raw reference: product_category",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0
+      }
+    },
+    {
+      "Name": "features: exact 16-column logical schema",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "features: no nulls",
+      "Passed": true,
+      "Detail": 0
+    },
+    {
+      "Name": "features: one row per customer",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "features: all numeric values finite",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "features: risk in [0,1]",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "features: diversity and online ratio in [0,1]",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "features: four loyalty tiers",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "features: binary churn labels",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "features: churn rate 15%-30%",
+      "Passed": true,
+      "Detail": 0.22002200220022003
+    },
+    {
+      "Name": "features: non-degenerate risk score",
+      "Passed": true,
+      "Detail": 181
+    },
+    {
+      "Name": "features: positive single ingestion event time",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "features vs historical-CSV reference: identifier sets match",
+      "Passed": true,
+      "Detail": "9999 records"
+    },
+    {
+      "Name": "features vs historical-CSV reference: days_since_last_purchase",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0,
+        "AbsoluteTolerance": 0,
+        "MaxAbsoluteDifference": 0.0
+      }
+    },
+    {
+      "Name": "features vs historical-CSV reference: customer_tenure_days",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0,
+        "AbsoluteTolerance": 0,
+        "MaxAbsoluteDifference": 0.0
+      }
+    },
+    {
+      "Name": "features vs historical-CSV reference: purchase_frequency_30d",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0,
+        "AbsoluteTolerance": 0,
+        "MaxAbsoluteDifference": 0.0
+      }
+    },
+    {
+      "Name": "features vs historical-CSV reference: purchase_frequency_90d",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0,
+        "AbsoluteTolerance": 0,
+        "MaxAbsoluteDifference": 0.0
+      }
+    },
+    {
+      "Name": "features vs historical-CSV reference: purchase_frequency_180d",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0,
+        "AbsoluteTolerance": 0,
+        "MaxAbsoluteDifference": 0.0
+      }
+    },
+    {
+      "Name": "features vs historical-CSV reference: avg_order_value",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0,
+        "AbsoluteTolerance": 5.0001e-05,
+        "MaxAbsoluteDifference": 5.000000004429239e-05
+      }
+    },
+    {
+      "Name": "features vs historical-CSV reference: total_spend_90d",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0,
+        "AbsoluteTolerance": 5.0001e-05,
+        "MaxAbsoluteDifference": 9.094947017729282e-13
+      }
+    },
+    {
+      "Name": "features vs historical-CSV reference: total_lifetime_value",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0,
+        "AbsoluteTolerance": 5.0001e-05,
+        "MaxAbsoluteDifference": 3.637978807091713e-12
+      }
+    },
+    {
+      "Name": "features vs historical-CSV reference: avg_basket_size_6m",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0,
+        "AbsoluteTolerance": 5.0001e-05,
+        "MaxAbsoluteDifference": 4.81481481475754e-05
+      }
+    },
+    {
+      "Name": "features vs historical-CSV reference: category_diversity_score",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0,
+        "AbsoluteTolerance": 5.0001e-05,
+        "MaxAbsoluteDifference": 0.0
+      }
+    },
+    {
+      "Name": "features vs historical-CSV reference: online_to_store_ratio",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0,
+        "AbsoluteTolerance": 5.0001e-05,
+        "MaxAbsoluteDifference": 5.000000000000143e-05
+      }
+    },
+    {
+      "Name": "features vs historical-CSV reference: churn_risk_score",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0,
+        "AbsoluteTolerance": 1e-12,
+        "MaxAbsoluteDifference": 1.1102230246251565e-16
+      }
+    },
+    {
+      "Name": "features vs historical-CSV reference: loyalty_tier",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0
+      }
+    },
+    {
+      "Name": "features vs historical-CSV reference: churn_label",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0,
+        "AbsoluteTolerance": 1e-09,
+        "MaxAbsoluteDifference": 0.0
+      }
+    },
+    {
+      "Name": "offline: Feature Group Created / offline Active",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "offline: all feature logical types preserved",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "offline: ingestion batch complete",
+      "Passed": true,
+      "Detail": "9999 batch rows / 9999 total rows"
+    },
+    {
+      "Name": "offline: no deleted batch records",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "offline: no nulls in 16 feature fields",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "offline: unique customer within this event_time",
+      "Passed": true,
+      "Detail": null
+    },
+    {
+      "Name": "offline vs job Parquet: identifier sets match",
+      "Passed": true,
+      "Detail": "9999 records"
+    },
+    {
+      "Name": "offline vs job Parquet: days_since_last_purchase",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0,
+        "AbsoluteTolerance": 0,
+        "MaxAbsoluteDifference": 0.0
+      }
+    },
+    {
+      "Name": "offline vs job Parquet: customer_tenure_days",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0,
+        "AbsoluteTolerance": 0,
+        "MaxAbsoluteDifference": 0.0
+      }
+    },
+    {
+      "Name": "offline vs job Parquet: purchase_frequency_30d",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0,
+        "AbsoluteTolerance": 0,
+        "MaxAbsoluteDifference": 0.0
+      }
+    },
+    {
+      "Name": "offline vs job Parquet: purchase_frequency_90d",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0,
+        "AbsoluteTolerance": 0,
+        "MaxAbsoluteDifference": 0.0
+      }
+    },
+    {
+      "Name": "offline vs job Parquet: purchase_frequency_180d",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0,
+        "AbsoluteTolerance": 0,
+        "MaxAbsoluteDifference": 0.0
+      }
+    },
+    {
+      "Name": "offline vs job Parquet: avg_order_value",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0,
+        "AbsoluteTolerance": 0,
+        "MaxAbsoluteDifference": 0.0
+      }
+    },
+    {
+      "Name": "offline vs job Parquet: total_spend_90d",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0,
+        "AbsoluteTolerance": 0,
+        "MaxAbsoluteDifference": 0.0
+      }
+    },
+    {
+      "Name": "offline vs job Parquet: total_lifetime_value",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0,
+        "AbsoluteTolerance": 0,
+        "MaxAbsoluteDifference": 0.0
+      }
+    },
+    {
+      "Name": "offline vs job Parquet: avg_basket_size_6m",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0,
+        "AbsoluteTolerance": 0,
+        "MaxAbsoluteDifference": 0.0
+      }
+    },
+    {
+      "Name": "offline vs job Parquet: category_diversity_score",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0,
+        "AbsoluteTolerance": 0,
+        "MaxAbsoluteDifference": 0.0
+      }
+    },
+    {
+      "Name": "offline vs job Parquet: online_to_store_ratio",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0,
+        "AbsoluteTolerance": 0,
+        "MaxAbsoluteDifference": 0.0
+      }
+    },
+    {
+      "Name": "offline vs job Parquet: churn_risk_score",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0,
+        "AbsoluteTolerance": 0,
+        "MaxAbsoluteDifference": 0.0
+      }
+    },
+    {
+      "Name": "offline vs job Parquet: loyalty_tier",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0
+      }
+    },
+    {
+      "Name": "offline vs job Parquet: churn_label",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0,
+        "AbsoluteTolerance": 1e-09,
+        "MaxAbsoluteDifference": 0.0
+      }
+    },
+    {
+      "Name": "offline vs job Parquet: event_time",
+      "Passed": true,
+      "Detail": {
+        "Mismatches": 0,
+        "AbsoluteTolerance": 1e-09,
+        "MaxAbsoluteDifference": 0.0
+      }
+    }
+  ],
+  "Account": "173506956686",
+  "Bucket": "northstar-dev-data-173506956686",
+  "DownloadedAtUtc": "2026-10-04T02:06:47.219221+00:00",
+  "Datasets": {
+    "processed": {
+      "S3Prefix": "processed/customers/",
+      "FileCount": 4,
+      "Rows": 157627,
+      "Compression": [
+        "SNAPPY"
+      ],
+      "Schema": {
+        "transaction_id": "string",
+        "customer_id": "string",
+        "purchase_date": "date32[day]",
+        "order_value": "double",
+        "num_items": "int32",
+        "payment_method": "string",
+        "channel": "string",
+        "store_id": "string",
+        "product_category": "string"
+      },
+      "InputSHA256": [
+        "3e24c6b3fe465624230e640c29b75fbbb6bd75b3c3b288af15895fa77a62ed82",
+        "2ca1b34721b18efd8777057e704840529c272af1bd2e4180f6881b0d2a188301",
+        "3869c3fcd38843ef046ec1df7a2cb3b2ea9cd8b93cccc3a70e2a7d247e1b93de",
+        "ea02a9af88393f3324818590ace05221631ae027a571e354df19d05eaa6a0974"
+      ]
+    },
+    "features": {
+      "S3Prefix": "features/customers/",
+      "FileCount": 2,
+      "Rows": 9999,
+      "Compression": [
+        "SNAPPY"
+      ],
+      "Schema": {
+        "customer_id": "string",
+        "days_since_last_purchase": "double",
+        "customer_tenure_days": "double",
+        "purchase_frequency_30d": "double",
+        "purchase_frequency_90d": "double",
+        "purchase_frequency_180d": "double",
+        "avg_order_value": "double",
+        "total_spend_90d": "double",
+        "total_lifetime_value": "double",
+        "avg_basket_size_6m": "double",
+        "category_diversity_score": "double",
+        "online_to_store_ratio": "double",
+        "loyalty_tier": "string",
+        "churn_risk_score": "double",
+        "churn_label": "int64",
+        "event_time": "double"
+      },
+      "InputSHA256": [
+        "ae7a9bc7ee43d24ffb4f4617530c905a923170b82289998182a92e86d1b7fe1b",
+        "f6ec5888c7630b2d45e730fea1d4341e530b78c18e86711f2d4f008ec7b36344"
+      ]
+    },
+    "offline": {
+      "S3Prefix": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/",
+      "FileCount": 54,
+      "Rows": 9999,
+      "Compression": [
+        "UNCOMPRESSED"
+      ],
+      "Schema": {
+        "avg_basket_size_6m": "double",
+        "avg_order_value": "double",
+        "category_diversity_score": "double",
+        "churn_label": "int64",
+        "churn_risk_score": "double",
+        "customer_id": "string",
+        "customer_tenure_days": "double",
+        "days_since_last_purchase": "double",
+        "event_time": "double",
+        "loyalty_tier": "string",
+        "online_to_store_ratio": "double",
+        "purchase_frequency_180d": "double",
+        "purchase_frequency_30d": "double",
+        "purchase_frequency_90d": "double",
+        "total_lifetime_value": "double",
+        "total_spend_90d": "double",
+        "write_time": "timestamp[ms, tz=UTC]",
+        "api_invocation_time": "timestamp[ms, tz=UTC]",
+        "is_deleted": "bool"
+      },
+      "InputSHA256": [
+        "f598c5ce63c128a982a00f0ef289c0fee77ccbad798dccdbb3c412b21ae69fdd",
+        "fb44b786fad522c242c5ce7fdef81ccd0fc206b1e630246269c5e260e8334559",
+        "b590e927ee1ab61d774b13caa49d9bf2e1b22de4493dbae73bb05415d1bb9913",
+        "465fedde34da077d496ae10e9b8f499fd8417f14b41d4991d963b4bca05c6674",
+        "7750a98e0223b1ea70d50278908ad09b71771693a3351b7cbcf9bccfbcc9fda9",
+        "2252445206de7c2798bc3181355e45feccb1066086c2457e5348952ea29206ab",
+        "ff172972da5e8d556d869cf1f1bd95c9f18b82a2bf334ae6d35ec86bdced08cd",
+        "50b72572df9b74bacc42c985ad3a8c123f139670c61711867d74a10116bbd21b",
+        "63ab39be62603daee5fd93c7a6755fbaa9ffeeda87c5dc64b10b2a04cd45229c",
+        "cf77981f1d3713e1fd9b15d8d0700986e2b9100f31d4f61aeb17174729d67b4a",
+        "a8cd892862bbd53e2cfcc8d27c1ce5dcd55842471d59ca06a6ca7cfe0402843b",
+        "0c5f492cd7a7a028ce68fbad9996f46e1d332df8ee4758154ddda9664df5ee45",
+        "ea86378db9baf2d1d93d623e02a952dedc2f5b3027403f8ccdfdd0b8d280b851",
+        "cb570222465953a135f8f7a7a8e6f95378fcda3e6b1748da92c5bad6402284c5",
+        "1f93a3b097dfec2f3b4565702f801d984e9711e657f35acdc2902e2919fda6ee",
+        "897c12a54bd0cbe7bdcf11e182609fb39d539c32aef2fe293230ddf19fc436f5",
+        "0a05b1870f6ca9ba936765bf943fd5b723cf759b0331ce49acd08455e7b3709a",
+        "2096ab0c464bd2d31aae7605f1889e8676cb9c81b58b30a7a1a6482c8d9704e2",
+        "c008bf0f3ac6d887df79e52d02742d97dfbb2e5bc5dcdaeb7e8c3476bd2cdae0",
+        "494215243beadbdce7a7fc2a60ec3b5853baacbb221ccee16d86bce9123b80af",
+        "a7bb2f0356874cecf5e4640a87d5f26080a371d56431f81a7e929f028c19e6c1",
+        "ae3f746aba360ae753051273606816362ffec302f5f2742c753d294c9ba231f0",
+        "f682b068a174db0e77e9c2f4bb93cb7ca51858410070ffacbd8d37ac9c183c1c",
+        "62836e96d3b6c935b4761fff012c8c49b1b42db3011dd4df6eca333224eae1c6",
+        "95594094443509d478335030dbf86c10abc1d5e0b391b95322dd08d3cea617e2",
+        "3e79a9bae325ccd1ab6da82139e64605031825ba89e133923bf5c7646d332644",
+        "a2f86cfde580eba5c39659db972359b8840dcde334b9fbf2c613fc677cc5d099",
+        "8f882bc501aa3f0d5d35de762912939c6df8491ea4734494a8cb70788e169f0c",
+        "aa141a148ddf30491c0a790a8c0e0273df2280145ca5e492cda1f0ea2cb792c6",
+        "c5db0b150c69685090aff6c997fbbd9cf3fd6c0beec622a8466dfc004cb2026c",
+        "1f866d13cacd9b90e89669ce98627dacbe202c72b113a3760d1a8064f289b020",
+        "9dcba9665a9c008e0b19965cb5aaeb3fc023a5eba26eda63ff2d88246405e9da",
+        "f5f825e72e837de7c6dfcb304448e9fd12d3d577042d0ae414fba1507b0ff34e",
+        "08a12cd72b8ee764620200667226db60edabbb5127f4a1df1e4614b1e9ea6aa7",
+        "c977c4421bad43db355748a1425470d2b95323a69de0afae2efaecd39e620632",
+        "dc69b01c816e82721c0d068ccb92d6504085d6ee0ad412f79eddd96a79320ba6",
+        "933efb459868ae1ef1f84b14256be21afa1a32d890d9cd7c0e05ade866d6b6ff",
+        "5e68794eec26201fa44c66b2704372326e4f989bbd387c44621d039c77e06600",
+        "3fde33039360cafe15d0a3675a14204fc793089f708bb21d062476b60be12a01",
+        "899d8fe405d90e58e9062baba8b636c70cea4790ea409c10f21f38749c2e0cd7",
+        "8c2cd6a91c4df7674b9d107edca36627af27b239cc5c48542b2f90bf81db3068",
+        "8c0f58e401d1ad8599e65f07610bd4df013c8af9f3217bb9af34cb914a1b20c4",
+        "1d33c4e18ebab9e55eb0d0c2eeb59120e87f792b26207a397620b8cdc82cc555",
+        "59ea933d4e31ff6465d879621ff44478a3fbf71bc9d2cd8a17facc6c4a472e97",
+        "e86dcb3af612ef1c23427725646446977d7991263e4a149069ae0bb89fa39aea",
+        "9a141f44c7dd8dc6b7d5eb44e9bd5f14603332595077afb0e729fea1f0c40b81",
+        "412ded229881ebbf40af7fa4f8af21b67d42252335fd2fd83f4faa6e8639aa20",
+        "4f051b94b561d5a49e50c46e871897d64d4ca0e5883da8fdc46397fc1de38dbe",
+        "0e767431749796a9c5232ce3e335b756625eba4e8827badbade2eb921f442939",
+        "a3dc11dac735dc3acf8ca55e20e91a46cd69650fec5b16faffea5b05d2d7aadc",
+        "595bd158d0c250f8e503e6c11b7ecaf4ffd7936332dcff74f0e7f5153eb581e3",
+        "d48f4b03609fd1dd186c79e5ca000fb448446dce1851101d433d0101515c718b",
+        "a9c0bd6c0bccf0039fa35158ab6a0a79f060acb27e4f97d3efbc9d4393078ed4",
+        "4b6d40aaa44f1bb135147e4aff2150e1ae43b4869d87ef6a37e7611736511588"
+      ]
+    }
+  },
+  "RawReference": {
+    "Counts": {
+      "raw": 163255,
+      "missing_customer": 3265,
+      "after_customer_filter": 159990,
+      "deduplicated": 157627
+    },
+    "MedianFillValues": {
+      "order_value": 141.75,
+      "num_items": 5
+    }
+  },
+  "TemporalWindows": {
+    "Cutoff": "2026-04-01",
+    "Snapshot": "2026-06-30",
+    "HistoryRows": 130189,
+    "HoldoutRows": 27438,
+    "HoldoutCustomers": 7799
+  },
+  "Batch": {
+    "EventTime": 1791073484.0,
+    "FeatureRows": 9999,
+    "OfflineRowsForEventTime": 9999,
+    "ChurnLabelCounts": {
+      "0": 7799,
+      "1": 2200
+    },
+    "ChurnRate": 0.22002200220022003,
+    "LoyaltyTierCounts": {
+      "Silver": 3862,
+      "Bronze": 3529,
+      "Gold": 1664,
+      "Platinum": 944
+    },
+    "RecentChurners30Days": 773,
+    "CustomersWithoutRecent180DayOrders": 505
+  },
+  "ParquetContentsIndependentlyRead": true,
+  "Summary": {
+    "Passed": 74,
+    "Failed": 0
+  },
+  "AllChecksPassed": true
+}

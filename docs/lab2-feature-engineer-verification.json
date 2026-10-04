@@ -1,0 +1,712 @@
+{
+  "VerifiedAtUtc": "2026-10-04T00:34:30.030929+00:00",
+  "ValidationSources": [
+    "AWS Glue terminal status and CloudWatch logs",
+    "S3 feature and offline-store object listings",
+    "Two online records compared field by field with independent CSV reference"
+  ],
+  "JobRun": {
+    "Id": "jr_22fad91e80352806bd41beaeddb33443f682193624ad33e8251db77fc729a7be",
+    "Attempt": 0,
+    "JobName": "northstar-dev-feature-engineer",
+    "JobMode": "SCRIPT",
+    "JobRunQueuingEnabled": false,
+    "StartedOn": "2026-10-03T18:22:43.460000-06:00",
+    "LastModifiedOn": "2026-10-03T18:26:29.928000-06:00",
+    "CompletedOn": "2026-10-03T18:26:29.928000-06:00",
+    "JobRunState": "SUCCEEDED",
+    "PredecessorRuns": [],
+    "AllocatedCapacity": 2,
+    "ExecutionTime": 207,
+    "Timeout": 30,
+    "MaxCapacity": 2.0,
+    "WorkerType": "G.1X",
+    "NumberOfWorkers": 2,
+    "LogGroupName": "/aws-glue/jobs",
+    "GlueVersion": "4.0",
+    "DPUSeconds": 415.0
+  },
+  "FeatureLogMessages": [
+    "[features] read 157627 processed transaction rows\n",
+    "[features] observation window (<= 2026-04-01): 130189 rows\n",
+    "[features] holdout window (2026-04-01 to 2026-06-30): 27438 rows\n",
+    "[features] computed features for 9999 customers\n",
+    "[features] churn_label rate: 22.0%\n",
+    "[features] tier distribution present: ['Bronze', 'Gold', 'Platinum', 'Silver']\n",
+    "[features] wrote 9999 rows to s3://northstar-dev-data-173506956686/features/customers/\n",
+    "[features] ingested 9999 records into northstar-dev-customer-features at event_time 1791073484.0\n"
+  ],
+  "CustomerRowsReportedByGlue": 9999,
+  "RecordsIngestedReportedByGlue": 9999,
+  "ChurnRatePercentReportedByGlue": 22.0,
+  "FeatureParquetFileCount": 2,
+  "FeatureObjects": [
+    {
+      "Key": "features/customers/part-00000-268c6b12-bfdf-4303-89a5-a89481beb75b-c000.snappy.parquet",
+      "LastModified": "2026-10-04T00:24:48+00:00",
+      "ETag": "\"3aebe3b8b2755680c652458a6584bbe7-1\"",
+      "ChecksumAlgorithm": [
+        "CRC64NVME"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 158160,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/customers/part-00001-268c6b12-bfdf-4303-89a5-a89481beb75b-c000.snappy.parquet",
+      "LastModified": "2026-10-04T00:24:48+00:00",
+      "ETag": "\"2fe9931ce4373c55a410d235c6ce6d15-1\"",
+      "ChecksumAlgorithm": [
+        "CRC64NVME"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 158869,
+      "StorageClass": "STANDARD"
+    }
+  ],
+  "FeatureStoreStatus": "Created",
+  "OfflineStoreStatus": "Active",
+  "OfflineParquetFileCount": 54,
+  "OfflineObjects": [
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_034f0fc2ffcecaf8.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"4f19436887a8759294b2674ee5f01aa9\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 17066,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_121db8991cc61574.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"6338e297d8957cabd76409bb117a9ef9\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 18221,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_12964473037f3f27.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"c9ea238effff86916a84cd903a252e7f\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 19239,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_19d666a8cab4ddd7.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"dfe08e6333f590940b0462d86ec27cc9\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 19442,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_20a54f845cc260b9.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"71fb0bc1246459d93249591f52dddad6\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 18753,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_21510cb290c98864.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"7fa3fc06cbb096763952f444a935051c\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 17901,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_27c7fb6fe1e2c483.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"3dde812f1c938adb75cb7a862c429cc4\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 20013,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_2f9e578ac5eace48.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"34aec3aa9365c411791f9bc04db19beb\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 17805,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_323e9645f93d634e.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"7ff67223f62ffee7693f9aa62b960e5d\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 18665,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_35a099ffe7ba29fd.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"1f478f203e34e014d8acb723f5c763f0\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 18684,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_3c53cfa0cf44471a.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"bff200ec64e6722f93da555643aae9cf\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 19169,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_3e83e3419e57f2e7.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"7c66ea215496db7a9545f1f5a77b2344\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 18060,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_45f3e89cc023e58a.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"7167930eb9c5f211260dd23a1c9c5483\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 17620,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_47926d67ab05f129.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"2e4fdaac78879bb14fe9e25370f38eba\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 18523,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_499c280a4df64c2d.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"bcd51cbf94df5cf8caa1d884fd18cdcc\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 19295,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_4a05209ee767ab2f.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"942627b6b7cf9952bc4afcf4cd27abe4\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 18503,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_547c5035eb5c2e05.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"f28be0affe6037cc18e872360f28844c\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 17870,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_582ba787470aa313.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"2d92e3731ac6654aec93f68dafa3aaef\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 17522,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_5d1231ff46bd307f.parquet",
+      "LastModified": "2026-10-04T00:29:41+00:00",
+      "ETag": "\"22a6579c34ef57d31fcb25f57948e880\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 17911,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_67534063e843f89d.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"ce5134e9583b72693784b6daa22171b2\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 17856,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_692ad14db55cd2ba.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"15db6df62affa5b492ab013348540e6e\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 17894,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_6992d0ade823de9c.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"5ee65ee4e3b6a1ed7135bd5eaefb05dd\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 17909,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_6acb19d0815c4917.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"f3474ba4916144cf16f0519280868333\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 18045,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_6e91c10f5f1397dc.parquet",
+      "LastModified": "2026-10-04T00:29:41+00:00",
+      "ETag": "\"1ce5a9011e434253ef477c44e6cfd91d\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 18449,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_811e66f9a422bbf8.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"fb898fbc349d2fd198e59220ec525886\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 17942,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_889eb789e3553b42.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"8a853bff93ffc05ec3e9fb12c976a00f\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 19094,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_8bb9c986a2d2b6e0.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"e128996ab05c85125d81e8e90841ae99\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 18619,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_8c9926bf32915a2d.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"bd8edf4accd4ff067fafca23ded8b48d\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 18926,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_93794dc1e9205032.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"e99cf154ed828774cd72dd9a604caf81\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 18081,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_97942325450a0181.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"6070e483889023f0074f7da606178b35\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 18332,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_9f014840a60def10.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"58dcc7603e8dcf98cc4ab1ad70c7b263\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 17689,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_a2d9d6b93ad31b95.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"70738617a5fe9bb15b13fbe10d662ccf\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 18236,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_b3a6204c1bb3261b.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"6ec70777f1a3c9a96fded9253e58234c\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 17561,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_b80b219da6bf70ac.parquet",
+      "LastModified": "2026-10-04T00:29:41+00:00",
+      "ETag": "\"63c00492e554fba8ab13207f3b6d73c0\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 19004,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_baabafb23ecb24fb.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"b6692466e6c9e3314c6a92e442e31d9e\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 17384,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_bd0c22eda6e503c0.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"94f7b4ff8df3ba5fe745bcd5cda2656b\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 17645,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_c56c7762a869e7ff.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"b49a1c00e0423c651972cc5f51fd53b6\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 17559,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_c64bd50c75e9a29f.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"fbdf23e2bdb04144c84aeb5fbdcbc7e4\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 18645,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_c6b9aaa10327c48d.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"40b011256b243253e95a483817eb1a7b\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 17945,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_c8f78c518c45d213.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"5cbf8eae06462e69a60b70a8fc54d20f\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 18173,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_c90a8cfcf3156252.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"85b75cd0a8d37826808635e44f06af0e\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 18149,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_d08b5c1c4a794dc7.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"ef8523b317b67535f92f7130f0741d7a\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 16772,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_d2d6adbc82fe3df0.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"398fad0e91bf11f4054e33d2320f206b\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 18018,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_da470e5c6c2ce116.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"b4a724040bfbfeab1c26c3af94ba8f11\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 17351,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_e317912ffab94792.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"dd7826fae36f15f28c38c846f395bf3c\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 17789,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_e760131ccc713b19.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"892d7f22c212e2f4c2844288809a934f\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 17571,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_eeac4b142c1b1747.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"1468cff089f0eb4291032e71144e9e23\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 18119,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_f1100308f4f2fc80.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"70d7cd4c5b8f06b09a381bd75c2591b2\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 18363,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_f415ab35604c64ed.parquet",
+      "LastModified": "2026-10-04T00:29:41+00:00",
+      "ETag": "\"f9e9b7d189747a2afd256a8942825eb4\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 17819,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_f6e78dab32f8bf85.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"fb5055f1d43ef06c72e520523d56a3e3\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 18192,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_f8dd5512fef18bb4.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"3ada69dfaf98a5e2ccaa81f7c3462d3f\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 18753,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_f8e1b2e858af9c73.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"4c70ceb9704bca8e86cd4c2e521ea4b3\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 17486,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_fc3b479df899ab0e.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"659e6e359592c619e5ad87a227c08e30\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 17288,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1791071797/data/year=2026/month=10/day=04/hour=00/20261004T002444Z_fe2a7cc38c660c9e.parquet",
+      "LastModified": "2026-10-04T00:29:51+00:00",
+      "ETag": "\"f747584559c3d2f86a399e172713bb33\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 18450,
+      "StorageClass": "STANDARD"
+    }
+  ],
+  "OnlineSampleComparisons": {
+    "CUST-10000000": {
+      "ActualRecord": {
+        "avg_basket_size_6m": "6.0",
+        "avg_order_value": "121.9279",
+        "category_diversity_score": "0.625",
+        "churn_label": "0",
+        "churn_risk_score": "0.18666666666666668",
+        "customer_id": "CUST-10000000",
+        "customer_tenure_days": "332.0",
+        "days_since_last_purchase": "14.0",
+        "event_time": "1791073484.0",
+        "loyalty_tier": "Silver",
+        "online_to_store_ratio": "0.5714",
+        "purchase_frequency_180d": "6.0",
+        "purchase_frequency_30d": "2.0",
+        "purchase_frequency_90d": "6.0",
+        "total_lifetime_value": "1706.99",
+        "total_spend_90d": "797.21"
+      },
+      "All16FieldsMatchIndependentReference": true
+    },
+    "CUST-10000016": {
+      "ActualRecord": {
+        "avg_basket_size_6m": "9.0",
+        "avg_order_value": "54.4918",
+        "category_diversity_score": "0.375",
+        "churn_label": "1",
+        "churn_risk_score": "0.05333333333333334",
+        "customer_id": "CUST-10000016",
+        "customer_tenure_days": "361.0",
+        "days_since_last_purchase": "4.0",
+        "event_time": "1791073484.0",
+        "loyalty_tier": "Silver",
+        "online_to_store_ratio": "0.5455",
+        "purchase_frequency_180d": "1.0",
+        "purchase_frequency_30d": "1.0",
+        "purchase_frequency_90d": "1.0",
+        "total_lifetime_value": "599.41",
+        "total_spend_90d": "47.81"
+      },
+      "All16FieldsMatchIndependentReference": true
+    }
+  },
+  "ParquetContentsIndependentlyRead": false,
+  "AllOnlineRecordsIndependentlyRead": false
+}

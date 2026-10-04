@@ -1,0 +1,65 @@
+{
+  "ReviewedAtUtc": "2026-10-03T23:42:34.658496+00:00",
+  "Status": "Planned, awaiting user apply",
+  "Adds": 1,
+  "Changes": 0,
+  "Deletes": 0,
+  "Address": "module.feature_store.aws_sagemaker_feature_group.customers",
+  "FeatureGroupName": "northstar-dev-customer-features",
+  "RecordIdentifier": "customer_id",
+  "EventTimeFeature": "event_time",
+  "FeatureDefinitions": {
+    "avg_basket_size_6m": "Fractional",
+    "avg_order_value": "Fractional",
+    "category_diversity_score": "Fractional",
+    "churn_label": "Integral",
+    "churn_risk_score": "Fractional",
+    "customer_id": "String",
+    "customer_tenure_days": "Fractional",
+    "days_since_last_purchase": "Fractional",
+    "event_time": "Fractional",
+    "loyalty_tier": "String",
+    "online_to_store_ratio": "Fractional",
+    "purchase_frequency_180d": "Fractional",
+    "purchase_frequency_30d": "Fractional",
+    "purchase_frequency_90d": "Fractional",
+    "total_lifetime_value": "Fractional",
+    "total_spend_90d": "Fractional"
+  },
+  "DefinitionCount": 16,
+  "MatchesCourseGuideSchema": true,
+  "MatchesScriptIngestFieldNames": true,
+  "OnlineStore": [
+    {
+      "enable_online_store": true,
+      "security_config": [],
+      "storage_type": "Standard",
+      "ttl_duration": []
+    }
+  ],
+  "OfflineStore": {
+    "data_catalog_config": [
+      {
+        "catalog": "AwsDataCatalog",
+        "database": "northstar_dev",
+        "table_name": "northstar_dev_customer_features"
+      }
+    ],
+    "disable_glue_table_creation": false,
+    "s3_storage_config": [
+      {
+        "kms_key_id": null,
+        "s3_uri": "s3://northstar-dev-data-173506956686/features/offline-store/"
+      }
+    ],
+    "table_format": "Glue"
+  },
+  "ExecutionRoleArn": "arn:aws:iam::173506956686:role/northstar-dev-DataEngineer",
+  "LiveIAMPreflight": {
+    "S3GetBucketAcl": "allowed",
+    "S3PutObject": "allowed",
+    "S3PutObjectAcl": "allowed",
+    "GlueCreateGetUpdateTableOnCatalogDatabaseAndTable": "allowed"
+  },
+  "Applied": false
+}

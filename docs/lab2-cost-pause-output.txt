@@ -1,0 +1,9 @@
+
+Warning: Deprecated Parameter
+
+The parameter "dynamodb_table" is deprecated. Use parameter "use_lockfile"
+instead.
+module.vpc.aws_route.private_nat[0]: Destroying... [id=r-rtb-0a6acce5acd5d1e3b1080289494]
+module.vpc.aws_route.private_nat[0]: Destruction complete after 1s
+module.vpc.aws_nat_gateway.this[0]: Destroying... [id=nat-0fcdf9b27a9de1ce5]
+module.vpc.aws_nat_gateway.this[0]: Still destroying... [id=nat-0fcdf9b27a9de1ce5, 00m10s elapsed]

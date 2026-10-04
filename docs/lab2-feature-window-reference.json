@@ -1,0 +1,15 @@
+{
+  "ValidationSource": "Independent CSV reference after transform reference; not execution of PySpark split_windows or a read of S3 Parquet",
+  "FeatureCutoff": "2026-04-01",
+  "Snapshot": "2026-06-30",
+  "ReferenceProcessedRows": 157627,
+  "ReferenceHistoryRows": 130189,
+  "ReferenceHoldoutRows": 27438,
+  "ReferenceBeyondSnapshotRows": 0,
+  "ReferenceRowsOnCutoff": 374,
+  "ReferenceRowsOnSnapshot": 265,
+  "ReferenceHistoryCustomers": 9999,
+  "ReferenceHoldoutCustomers": 7799,
+  "PythonSyntaxValid": true,
+  "SparkExecutionVerified": false
+}

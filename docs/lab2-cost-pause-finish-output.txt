@@ -1,0 +1,21 @@
+
+Warning: Deprecated Parameter
+
+The parameter "dynamodb_table" is deprecated. Use parameter "use_lockfile"
+instead.
+module.vpc.aws_eip.nat[0]: Destroying... [id=eipalloc-0885332acfafb1486]
+module.vpc.aws_eip.nat[0]: Destruction complete after 0s
+
+Apply complete! Resources: 0 added, 0 changed, 1 destroyed.
+
+Outputs:
+
+data_engineer_role_arn = "arn:aws:iam::173506956686:role/northstar-dev-DataEngineer"
+glue_database_name = "northstar_dev"
+ml_engineer_role_arn = "arn:aws:iam::173506956686:role/northstar-dev-MLEngineer"
+model_monitor_role_arn = "arn:aws:iam::173506956686:role/northstar-dev-ModelMonitor"
+public_subnet_id = "subnet-0ca10969799f06e30"
+raw_crawler_name = "northstar-dev-raw-crawler"
+s3_bucket_name = "northstar-dev-data-173506956686"
+sagemaker_domain_id = "d-zidesvgztgmj"
+vpc_id = "vpc-0b1abbd3ed5a46984"

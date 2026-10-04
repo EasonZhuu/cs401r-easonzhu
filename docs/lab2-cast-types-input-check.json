@@ -1,0 +1,36 @@
+{
+  "Scope": "Python syntax check and raw CSV input audit; not Spark execution",
+  "SyntaxValid": true,
+  "SparkFunctionExecuted": false,
+  "InputCounts": {
+    "input_rows": 163255,
+    "rows_with_customer_id": 159990,
+    "ISO_dates": 155160,
+    "rows_without_customer_id": 3265,
+    "US_dates": 4830
+  },
+  "CellsWithSurroundingWhitespace": {
+    "transaction_id": 0,
+    "customer_id": 1601,
+    "purchase_date": 0,
+    "order_value": 0,
+    "num_items": 0,
+    "payment_method": 0,
+    "channel": 0,
+    "store_id": 0,
+    "product_category": 0
+  },
+  "EmptyCellsAfterTrim": {
+    "transaction_id": 0,
+    "customer_id": 3265,
+    "purchase_date": 0,
+    "order_value": 6537,
+    "num_items": 0,
+    "payment_method": 0,
+    "channel": 0,
+    "store_id": 0,
+    "product_category": 3261
+  },
+  "NonemptyInvalidNumericCellsAfterCustomerFilter": {},
+  "RemainingValidation": "Execute cast_types in Glue 4.0 when the transform job is implemented"
+}

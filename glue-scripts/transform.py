@@ -24,8 +24,8 @@ from pyspark.context import SparkContext
 from pyspark.sql import functions as F
 from pyspark.sql.window import Window
 
-# Target types for the processed zone. The crawler infers everything from CSV
-# as string, so every one of these is an explicit cast, not a no-op.
+# Target types for the processed zone; crawler-inferred types can differ
+# Explicit casts give downstream consumers a consistent schema
 SCHEMA = {
     "transaction_id": "string",
     "customer_id": "string",
@@ -63,8 +63,25 @@ def cast_types(df):
     key for every downstream feature, so a row without it cannot be
     attributed to anyone.
     """
-    # TODO: your implementation here
-    raise NotImplementedError("cast_types is not implemented")
+    # Invalid values become null so the next step can impute numeric fields
+    df.sparkSession.conf.set("spark.sql.ansi.enabled", "false")
+    df.sparkSession.conf.set("spark.sql.legacy.timeParserPolicy", "CORRECTED")
+
+    for name, target_type in SCHEMA.items():
+        trimmed = F.trim(F.col(name).cast("string"))
+        cleaned = F.when(trimmed == "", F.lit(None)).otherwise(trimmed)
+
+        if target_type == "date":
+            typed = F.coalesce(
+                F.to_date(cleaned, "yyyy-MM-dd"),
+                F.to_date(cleaned, "MM/dd/yyyy"),
+            )
+        else:
+            typed = cleaned.cast(target_type)
+
+        df = df.withColumn(name, typed)
+
+    return df.filter(F.col("customer_id").isNotNull())
 
 
 def impute_nulls(df):
@@ -79,8 +96,15 @@ def impute_nulls(df):
 
     Numeric columns: NUMERIC_COLS.  String columns: STRING_COLS.
     """
-    # TODO: your implementation here
-    raise NotImplementedError("impute_nulls is not implemented")
+    quantiles = df.approxQuantile(NUMERIC_COLS, [0.5], 0.0)
+    medians = {}
+    for name, values in zip(NUMERIC_COLS, quantiles):
+        if not values:
+            raise ValueError(f"Cannot compute a median for empty numeric column: {name}")
+        median = values[0]
+        medians[name] = int(round(median)) if SCHEMA[name] == "int" else float(median)
+
+    return df.fillna(medians).fillna({name: "unknown" for name in STRING_COLS})
 
 
 def deduplicate(df):
@@ -101,8 +125,21 @@ def deduplicate(df):
     A window function with row_number() over a partition by transaction_id
     is the idiomatic approach.
     """
-    # TODO: your implementation here
-    raise NotImplementedError("deduplicate is not implemented")
+    # Remaining columns resolve ties without relying on Spark partition order
+    tie_columns = [
+        name for name in SCHEMA
+        if name not in ("transaction_id", "purchase_date", "order_value")
+    ]
+    window = Window.partitionBy("transaction_id").orderBy(
+        F.col("purchase_date").desc_nulls_last(),
+        F.col("order_value").desc_nulls_last(),
+        *[F.col(name).desc_nulls_last() for name in tie_columns],
+    )
+    return (
+        df.withColumn("_transaction_rank", F.row_number().over(window))
+        .filter(F.col("_transaction_rank") == 1)
+        .drop("_transaction_rank")
+    )
 
 
 def main():

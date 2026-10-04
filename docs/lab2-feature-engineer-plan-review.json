@@ -1,0 +1,51 @@
+{
+  "ReviewedAtUtc": "2026-10-04T00:02:15.352737+00:00",
+  "Status": "Planned, awaiting user apply",
+  "Adds": 2,
+  "Changes": 0,
+  "Deletes": 0,
+  "Addresses": [
+    "module.glue.aws_glue_job.feature_engineer",
+    "module.glue.aws_s3_object.feature_engineer_script"
+  ],
+  "JobName": "northstar-dev-feature-engineer",
+  "ExecutionRole": "arn:aws:iam::173506956686:role/northstar-dev-DataEngineer",
+  "GlueVersion": "4.0",
+  "WorkerType": "G.1X",
+  "Workers": 2,
+  "TimeoutMinutes": 30,
+  "MaxRetries": 0,
+  "Connections": [
+    "northstar-dev-private-network"
+  ],
+  "Command": [
+    {
+      "name": "glueetl",
+      "python_version": "3",
+      "script_location": "s3://northstar-dev-data-173506956686/artifacts/glue/feature_engineer.py"
+    }
+  ],
+  "Arguments": {
+    "--TempDir": "s3://northstar-dev-data-173506956686/features/_glue_temp/",
+    "--feature_group_name": "northstar-dev-customer-features",
+    "--input_path": "s3://northstar-dev-data-173506956686/processed/customers/",
+    "--job-bookmark-option": "job-bookmark-disable",
+    "--job-language": "python",
+    "--output_path": "s3://northstar-dev-data-173506956686/features/customers/",
+    "--region": "us-east-1"
+  },
+  "Script": {
+    "bucket": "northstar-dev-data-173506956686",
+    "key": "artifacts/glue/feature_engineer.py",
+    "source": "D:/A study/BYU/05 26 Fall/CS 401/cs401r-easonzhu/glue-scripts/feature_engineer.py",
+    "source_hash": "6b0c381f6749d20f7107f53fa18f488a"
+  },
+  "Preflight": {
+    "FeatureGroupStatus": "Created",
+    "FieldCount": 16,
+    "PutRecordPolicyDecision": "allowed",
+    "ScriptReadPolicyDecision": "allowed"
+  },
+  "Applied": false,
+  "StartedJobRun": false
+}

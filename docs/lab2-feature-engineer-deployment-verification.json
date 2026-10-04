@@ -1,0 +1,41 @@
+{
+  "VerifiedAtUtc": "2026-10-04T00:16:43.9603153Z",
+  "Job": {
+    "Name": "northstar-dev-feature-engineer",
+    "Role": "arn:aws:iam::173506956686:role/northstar-dev-DataEngineer",
+    "GlueVersion": "4.0",
+    "WorkerType": "G.1X",
+    "Workers": 2,
+    "TimeoutMinutes": 30,
+    "MaxRetries": 0,
+    "Connections": {
+      "Connections": [
+        "northstar-dev-private-network"
+      ]
+    },
+    "Command": {
+      "Name": "glueetl",
+      "ScriptLocation": "s3://northstar-dev-data-173506956686/artifacts/glue/feature_engineer.py",
+      "PythonVersion": "3"
+    },
+    "Arguments": {
+      "--feature_group_name": "northstar-dev-customer-features",
+      "--region": "us-east-1",
+      "--input_path": "s3://northstar-dev-data-173506956686/processed/customers/",
+      "--job-bookmark-option": "job-bookmark-disable",
+      "--job-language": "python",
+      "--TempDir": "s3://northstar-dev-data-173506956686/features/_glue_temp/",
+      "--output_path": "s3://northstar-dev-data-173506956686/features/customers/"
+    },
+    "ExecutionProperty": {
+      "MaxConcurrentRuns": 1
+    }
+  },
+  "UploadedScript": {
+    "Bytes": 14488,
+    "ETag": "\"6b0c381f6749d20f7107f53fa18f488a\""
+  },
+  "LocalScriptMD5": "6b0c381f6749d20f7107f53fa18f488a",
+  "UploadedScriptMatchesLocal": true,
+  "RecentRuns": []
+}

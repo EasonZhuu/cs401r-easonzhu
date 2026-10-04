@@ -1,0 +1,32 @@
+{
+  "Scope": "Independent standard-library reference over source CSV; Spark functions have not been executed",
+  "SourceCSV": "northstar-raw-sample.csv",
+  "RawRows": 163255,
+  "DroppedMissingCustomerID": 3265,
+  "RowsAfterCustomerFilter": 159990,
+  "NumericMissingBeforeImputation": {
+    "order_value": 6400
+  },
+  "StringMissingBeforeImputation": {
+    "payment_method": 0,
+    "channel": 0,
+    "store_id": 0,
+    "product_category": 3192
+  },
+  "ReferenceNumericFillValues": {
+    "order_value": 141.75,
+    "num_items": 5
+  },
+  "MedianConvention": "Exact 0.5 ranked quantile; lower middle for even observation counts",
+  "ReferenceOutputRows": 157627,
+  "ReferenceDuplicateTransactionsRemoved": 2363,
+  "ReferenceUniqueCustomers": 9999,
+  "ReferenceCustomerTransactionCountRange": [
+    1,
+    50
+  ],
+  "ReferenceNoNullFields": true,
+  "ReferenceTransactionGrainPreserved": true,
+  "PythonSyntaxValid": true,
+  "SparkExecutionVerified": false
+}

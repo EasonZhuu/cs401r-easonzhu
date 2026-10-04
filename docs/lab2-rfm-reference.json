@@ -1,0 +1,87 @@
+{
+  "ValidationSource": "Independent standard-library CSV reference; not execution of compute_rfm_features or a read of S3 Parquet",
+  "FeatureCutoff": "2026-04-01",
+  "RecentWindowConvention": "(T - N days, T]",
+  "ReferenceHistoryTransactions": 130189,
+  "ReferenceCustomerRows": 9999,
+  "NumericFeatureCount": 11,
+  "ReferenceAllValuesFinite": true,
+  "ReferenceOneRowPerCustomer": true,
+  "ReferenceCustomersWithoutRecent180dOrders": 505,
+  "ReferenceKnownCategories": [
+    "Apparel",
+    "Beauty",
+    "Electronics",
+    "Footwear",
+    "Grocery",
+    "Home",
+    "Outdoor",
+    "Toys"
+  ],
+  "ReferenceChannelCounts": {
+    "store": 64608,
+    "online": 65581
+  },
+  "ReferenceRanges": {
+    "days_since_last_purchase": {
+      "Min": 0.0,
+      "Max": 365.0
+    },
+    "customer_tenure_days": {
+      "Min": 91.0,
+      "Max": 365.0
+    },
+    "purchase_frequency_30d": {
+      "Min": 0.0,
+      "Max": 9.0
+    },
+    "purchase_frequency_90d": {
+      "Min": 0.0,
+      "Max": 20.0
+    },
+    "purchase_frequency_180d": {
+      "Min": 0.0,
+      "Max": 30.0
+    },
+    "avg_order_value": {
+      "Min": 17.02,
+      "Max": 502.88
+    },
+    "total_spend_90d": {
+      "Min": 0.0,
+      "Max": 8210.09
+    },
+    "total_lifetime_value": {
+      "Min": 17.02,
+      "Max": 18735.69
+    },
+    "avg_basket_size_6m": {
+      "Min": 0.0,
+      "Max": 9.0
+    },
+    "category_diversity_score": {
+      "Min": 0.125,
+      "Max": 1.0
+    },
+    "online_to_store_ratio": {
+      "Min": 0.0,
+      "Max": 1.0
+    }
+  },
+  "ReferenceSampleCustomer": {
+    "customer_id": "CUST-10000000",
+    "days_since_last_purchase": 14.0,
+    "customer_tenure_days": 332.0,
+    "purchase_frequency_30d": 2.0,
+    "purchase_frequency_90d": 6.0,
+    "purchase_frequency_180d": 6.0,
+    "avg_order_value": 121.92785714285715,
+    "total_spend_90d": 797.21,
+    "total_lifetime_value": 1706.99,
+    "avg_basket_size_6m": 6.0,
+    "category_diversity_score": 0.625,
+    "online_to_store_ratio": 0.5714285714285714
+  },
+  "PythonSyntaxValid": true,
+  "SparkExecutionVerified": false
+}
