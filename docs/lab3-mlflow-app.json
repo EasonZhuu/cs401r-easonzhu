@@ -1,0 +1,46 @@
+{
+  "checked_at_utc": "2026-10-18T01:27:42.009982+00:00",
+  "api_used": "CreateMlflowApp",
+  "created_this_run": true,
+  "resource_names_source": "terraform output -json",
+  "account": "173506956686",
+  "region": "us-east-1",
+  "app": {
+    "Arn": "arn:aws:sagemaker:us-east-1:173506956686:mlflow-app/app-F7R7VMZUHHY4",
+    "Name": "northstar-mlflow",
+    "ArtifactStoreUri": "s3://northstar-dev-data-173506956686/artifacts/mlflow/",
+    "MlflowVersion": "3.10.1",
+    "RoleArn": "arn:aws:iam::173506956686:role/northstar-dev-MLEngineer",
+    "Status": "Created",
+    "ModelRegistrationMode": "AutoModelRegistrationDisabled",
+    "CreationTime": "2026-10-17 19:23:08-06:00",
+    "CreatedBy": {
+      "IamIdentity": {
+        "Arn": "arn:aws:iam::173506956686:user/cs401_admin"
+      }
+    },
+    "LastModifiedTime": "2026-10-17 19:27:38.818000-06:00",
+    "LastModifiedBy": {
+      "IamIdentity": {
+        "Arn": "arn:aws:iam::173506956686:user/cs401_admin"
+      }
+    },
+    "WeeklyMaintenanceWindowStart": "Fri:07:08",
+    "ResponseMetadata": {
+      "RequestId": "741b1a7e-1e70-4cb1-88e0-e0b18d253ae3",
+      "HTTPStatusCode": 200,
+      "HTTPHeaders": {
+        "x-amzn-requestid": "741b1a7e-1e70-4cb1-88e0-e0b18d253ae3",
+        "strict-transport-security": "max-age=47304000; includeSubDomains",
+        "x-frame-options": "DENY",
+        "content-security-policy": "frame-ancestors 'none'",
+        "cache-control": "no-cache, no-store, must-revalidate",
+        "x-content-type-options": "nosniff",
+        "content-type": "application/x-amz-json-1.1",
+        "content-length": "691",
+        "date": "Sun, 18 Oct 2026 01:27:44 GMT"
+      },
+      "RetryAttempts": 0
+    }
+  }
+}

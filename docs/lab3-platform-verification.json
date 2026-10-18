@@ -1,0 +1,40 @@
+{
+  "checked_at_utc": "2026-10-17T21:56:43.6184399+00:00",
+  "account": "173506956686",
+  "region": "us-east-1",
+  "terraform_managed_resource_count": 42,
+  "terraform_data_source_count": 3,
+  "bucket": "northstar-dev-data-173506956686",
+  "feature_group": "northstar-dev-customer-features",
+  "feature_group_status": "Created",
+  "online_store_enabled": true,
+  "offline_store_uri": "s3://northstar-dev-data-173506956686/features/offline-store/",
+  "glue_database": "northstar_dev",
+  "offline_table": "northstar_dev_customer_features",
+  "glue_jobs": [
+    {
+      "name": "northstar-dev-transform",
+      "script": "s3://northstar-dev-data-173506956686/artifacts/glue/transform.py"
+    },
+    {
+      "name": "northstar-dev-feature-engineer",
+      "script": "s3://northstar-dev-data-173506956686/artifacts/glue/feature_engineer.py"
+    }
+  ],
+  "roles": [
+    "northstar-dev-DataEngineer",
+    "northstar-dev-MLEngineer",
+    "northstar-dev-ModelMonitor"
+  ],
+  "studio_domain_id": "d-ktq3q2cj8hqe",
+  "studio_domain_status": "InService",
+  "studio_user_status": "InService",
+  "nat_gateway_status": [
+    "available"
+  ],
+  "data_object_count": 0,
+  "empty_service_marker_count": 1,
+  "platform_ready": true,
+  "data_ingestion_performed_this_step": false,
+  "training_data_ready": false
+}

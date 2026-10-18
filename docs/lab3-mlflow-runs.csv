@@ -1,0 +1,4 @@
+run_id,status,params.max_depth,params.eta,params.num_round,params.scale_pos_weight,params.xgboost_version,metrics.auc_roc,metrics.validation_logloss,metrics.retained_boosting_rounds,tags.recorded_after_training,tags.athena_query_execution_id
+eb689a748b6a4a7e8e9272f92880e338,FINISHED,6,0.1,200,3.544805194805195,3.2.0,0.7838128075628075,0.555894136428833,11.0,true,0e64e221-f1d9-44a9-8de3-8e151d89a0a6
+7683b5d9444941a78183b136029bff39,FINISHED,6,0.05,200,3.544805194805195,3.2.0,0.7826936026936027,0.5370054244995117,32.0,false,7401d141-7d67-4d94-bc88-fb9eb9999e29
+915384dece994015be175f3317122314,FINISHED,3,0.1,200,3.544805194805195,3.2.0,0.7803600103600103,0.5322513580322266,48.0,false,7401d141-7d67-4d94-bc88-fb9eb9999e29

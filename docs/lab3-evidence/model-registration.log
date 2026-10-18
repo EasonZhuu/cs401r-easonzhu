@@ -1,0 +1,22 @@
+sagemaker.config INFO - Not applying SDK defaults from location: C:\ProgramData\sagemaker\sagemaker\config.yaml
+sagemaker.config INFO - Not applying SDK defaults from location: C:\Users\Midnight\AppData\Local\sagemaker\sagemaker\config.yaml
+D:\A study\BYU\05 26 Fall\CS 401\cs401r-easonzhu\.venv\Lib\site-packages\sagemaker\__init__.py:86: SageMakerV2DeprecationWarning: You are using the SageMaker Python SDK v2, which is on path of deprecation. v3 is the actively developed major version.
+See https://github.com/aws/sagemaker-python-sdk/blob/master/migration.md for the migration guide. Set SAGEMAKER_SUPPRESS_V2_WARNING=1 to silence this warning.
+  warn_v2_deprecation()
+You are using the SageMaker Python SDK v2, which is on path of deprecation. v3 is the actively developed major version.
+See https://github.com/aws/sagemaker-python-sdk/blob/master/migration.md for the migration guide. Set SAGEMAKER_SUPPRESS_V2_WARNING=1 to silence this warning.
+{
+  "checked_at_utc": "2026-10-18T03:01:06.539288+00:00",
+  "model_package_arn": "arn:aws:sagemaker:us-east-1:173506956686:model-package/northstar-churn-models/1",
+  "model_package_version": 1,
+  "status": "Completed",
+  "approval_status": "PendingManualApproval",
+  "model_sha256": "8ef39c2469667a6e718318826294962f88679b4ac30c3c259ea1d6b88a1d95dc",
+  "bundle_sha256": "4f1e5307588c64ec8eea28900c021f7928e3bb8b8406cc4c2f6e50e7aed7e1d0",
+  "bundle_s3_uri": "s3://northstar-dev-data-173506956686/artifacts/lab3/churn/6d3dfd0d527543feafe2d37712a54b92/4f1e5307588c64ec8eea28900c021f7928e3bb8b8406cc4c2f6e50e7aed7e1d0/model.tar.gz",
+  "official_image_tag": "3.2-0",
+  "official_image_digest": "sha256:46d8511f9377a603bc173263efd0d85544003b172be5b803d5ce22f11d235e09",
+  "metrics_match_mlflow_and_registry": true,
+  "s3_bundle_readback_hash_matches": true,
+  "endpoint_created": false
+}

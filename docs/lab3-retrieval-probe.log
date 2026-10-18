@@ -1,0 +1,59 @@
+Gold A: POL-LOY-011 4. Tier Benefits (0.6969); KB-FAQ-022 Loyalty (0.5395); POL-RET-004 1. Standard Return Window / 1.1 Extended Window for Platinum Members (0.4574); POL-LOY-011 2. Tiers (0.4560)
+Gold B: POL-LOY-011 5. Promotional Offers / 5.1 Retention Offers (0.5365); POL-LOY-011 5. Promotional Offers (0.5235); POL-RET-004 4. Non-Returnable Merchandise (0.4606); KB-FAQ-022 Returns (0.3238)
+Gold C: POL-SHP-007 2. Free Shipping Thresholds (0.5164); POL-LOY-011 4. Tier Benefits (0.5079); POL-LOY-011 2. Tiers / 2.1 Tier Upgrades (0.5044); POL-LOY-011 2. Tiers (0.4701)
+Bronze A: POL-LOY-011 4. Tier Benefits (0.6747); KB-FAQ-022 Loyalty (0.5249); POL-RET-004 1. Standard Return Window / 1.1 Extended Window for Platinum Members (0.4391); POL-LOY-011 2. Tiers (0.4151)
+Bronze B: POL-LOY-011 5. Promotional Offers / 5.1 Retention Offers (0.5365); POL-LOY-011 5. Promotional Offers (0.5235); POL-RET-004 4. Non-Returnable Merchandise (0.4606); KB-FAQ-022 Returns (0.3238)
+Bronze C: POL-LOY-011 4. Tier Benefits (0.5112); POL-SHP-007 2. Free Shipping Thresholds (0.4882); POL-LOY-011 2. Tiers (0.4493); POL-LOY-011 2. Tiers / 2.1 Tier Upgrades (0.4109)
+Platinum A: POL-LOY-011 4. Tier Benefits (0.6748); KB-FAQ-022 Loyalty (0.5425); POL-RET-004 1. Standard Return Window / 1.1 Extended Window for Platinum Members (0.5302); POL-LOY-011 2. Tiers (0.4485)
+Platinum B: POL-LOY-011 5. Promotional Offers / 5.1 Retention Offers (0.5365); POL-LOY-011 5. Promotional Offers (0.5235); POL-RET-004 4. Non-Returnable Merchandise (0.4606); KB-FAQ-022 Returns (0.3238)
+Platinum C: POL-SHP-007 2. Free Shipping Thresholds (0.5406); POL-LOY-011 4. Tier Benefits (0.5087); POL-LOY-011 2. Tiers (0.4773); POL-LOY-011 2. Tiers / 2.1 Tier Upgrades (0.4152)
+Silver A: POL-LOY-011 4. Tier Benefits (0.6835); KB-FAQ-022 Loyalty (0.5128); POL-LOY-011 2. Tiers (0.4498); POL-RET-004 1. Standard Return Window / 1.1 Extended Window for Platinum Members (0.4149)
+Silver B: POL-LOY-011 5. Promotional Offers / 5.1 Retention Offers (0.5365); POL-LOY-011 5. Promotional Offers (0.5235); POL-RET-004 4. Non-Returnable Merchandise (0.4606); KB-FAQ-022 Returns (0.3238)
+Silver C: POL-SHP-007 2. Free Shipping Thresholds (0.4752); POL-LOY-011 4. Tier Benefits (0.4743); POL-LOY-011 2. Tiers (0.4271); POL-LOY-011 2. Tiers / 2.1 Tier Upgrades (0.3690)
+{
+  "checked_at_utc": "2026-10-18T04:02:00.597489+00:00",
+  "fixture_source": "evaluation_harness.py OFFER_TEST_CASES",
+  "fixture_source_sha256": "fad2be0cfd45a0ccf5a307470d5acc5e3b230216b426c2eb15233e0ac00d839f",
+  "retrieval_source_sha256": "e141b244959fd10be542b8a609d603251c356b17dffd09987149e7d0fefc52c4",
+  "top_k": 4,
+  "cases": 4,
+  "retrievals": 12,
+  "unique_queries": 9,
+  "new_successful_query_embeddings": 9,
+  "query_cache_hits": 3,
+  "new_input_tokens": 142,
+  "faiss_matches_independent_numpy": true,
+  "filtered_results_respect_allowed_docs": true,
+  "persisted_rows_match_original_embeddings": true,
+  "source_text_and_prompt_chunk_ids_match": true,
+  "offline_replay_identical": true,
+  "offline_replay_new_model_calls": 0,
+  "validation_source": "240 earlier offline corpus-vector/filter comparisons, plus 12 real-query comparisons",
+  "invalid_vector_and_k_checks": 4,
+  "policy_section_presence_counts": {
+    "A": {
+      "tier_benefits_table": 4,
+      "shipping_thresholds_source": 0,
+      "no_free_expedited_statement": 0,
+      "explicit_final_sale_restriction": 0,
+      "retention_offer_terms": 0
+    },
+    "B": {
+      "tier_benefits_table": 0,
+      "shipping_thresholds_source": 0,
+      "no_free_expedited_statement": 0,
+      "explicit_final_sale_restriction": 4,
+      "retention_offer_terms": 4
+    },
+    "C": {
+      "tier_benefits_table": 4,
+      "shipping_thresholds_source": 4,
+      "no_free_expedited_statement": 4,
+      "explicit_final_sale_restriction": 0,
+      "retention_offer_terms": 0
+    }
+  },
+  "scope": "Retrieval only. Presence checks are diagnostics, not RAGAS context recall or policy correctness guarantees.",
+  "ragas_context_recall": null,
+  "generation_calls": 0
+}

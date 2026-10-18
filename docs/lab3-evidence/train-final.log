@@ -1,0 +1,65 @@
+sagemaker.config INFO - Not applying SDK defaults from location: C:\ProgramData\sagemaker\sagemaker\config.yaml
+sagemaker.config INFO - Not applying SDK defaults from location: C:\Users\Midnight\AppData\Local\sagemaker\sagemaker\config.yaml
+D:\A study\BYU\05 26 Fall\CS 401\cs401r-easonzhu\.venv\Lib\site-packages\sagemaker\__init__.py:86: SageMakerV2DeprecationWarning: You are using the SageMaker Python SDK v2, which is on path of deprecation. v3 is the actively developed major version.
+See https://github.com/aws/sagemaker-python-sdk/blob/master/migration.md for the migration guide. Set SAGEMAKER_SUPPRESS_V2_WARNING=1 to silence this warning.
+  warn_v2_deprecation()
+You are using the SageMaker Python SDK v2, which is on path of deprecation. v3 is the actively developed major version.
+See https://github.com/aws/sagemaker-python-sdk/blob/master/migration.md for the migration guide. Set SAGEMAKER_SUPPRESS_V2_WARNING=1 to silence this warning.
+============================================================
+NorthStar Churn Prediction — Training Script
+============================================================
+Athena QueryExecutionId: a4a936c4-dcbe-46d7-bf7c-d2d1627e6c9f
+Loaded 9,999 customer rows from Feature Store via Athena
+Preprocessing 9,999 samples...
+  Positive class rate: 22.0%
+  Feature matrix shape: (9999, 11)
+  Missing feature values: 0 (native XGBoost handling)
+
+Train: 6,999 | Validation: 3,000
+
+Training XGBoost with params: {
+  "objective": "binary:logistic",
+  "eval_metric": [
+    "logloss",
+    "auc"
+  ],
+  "max_depth": 6,
+  "eta": 0.1,
+  "min_child_weight": 5,
+  "subsample": 0.8,
+  "colsample_bytree": 0.8,
+  "scale_pos_weight": 3.544805194805195,
+  "seed": 42,
+  "verbosity": 1
+}
+[0]	train-logloss:0.66855	train-auc:0.78082	validation-logloss:0.67031	validation-auc:0.75309
+[25]	train-logloss:0.48160	train-auc:0.85748	validation-logloss:0.52000	validation-auc:0.78026
+[29]	train-logloss:0.47315	train-auc:0.86414	validation-logloss:0.51780	validation-auc:0.77814
+Best validation AUC: 0.783813; retained boosting rounds: 11
+
+── Evaluation Results ──────────────────────────────
+  precision_top10          : 0.7133  (threshold: 0.5000)  PASS
+  recall_top10             : 0.3242  (threshold: 0.2500)  PASS
+  auc_lift 95% CI          : [0.0415, 0.0802]  (must exclude 0)  PASS
+  All thresholds passed
+
+Loyalty-tier evaluation (global top-10% contact policy):
+    tier    n  positives      auc   recall  too_small
+  Bronze 1071        361 0.757967 0.418283      False
+    Gold  483         52 0.750112 0.134615      False
+Platinum  307         21 0.896354 0.095238       True
+  Silver 1139        226 0.721392 0.238938      False
+D:\A study\BYU\05 26 Fall\CS 401\cs401r-easonzhu\churn_training_skeleton.py:809: UserWarning: [19:46:22] WARNING: C:\actions-runner\_work\xgboost\xgboost\src\c_api\c_api.cc:1573: Saving model in the UBJSON format as default.  You can use a file extension: `json` or `ubj` to choose between formats.
+  model.save_model(model_path)
+
+✓ Model saved to D:/A study/BYU/05 26 Fall/CS 401/.tools/lab3/selected-model\model.xgb
+D:\A study\BYU\05 26 Fall\CS 401\cs401r-easonzhu\churn_training_skeleton.py:822: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "training_date": datetime.utcnow().isoformat(),
+TODO: Register model in SageMaker Model Registry (see comments above)
+MLflow Run ID: 6d3dfd0d527543feafe2d37712a54b92
+🏃 View run selected-depth6-eta0.1-evaluation at: https://mlflow.sagemaker.us-east-1.app.aws/#/experiments/1/runs/6d3dfd0d527543feafe2d37712a54b92
+🧪 View experiment at: https://mlflow.sagemaker.us-east-1.app.aws/#/experiments/1
+
+============================================================
+Training complete. AUC-ROC: 0.7838
+============================================================

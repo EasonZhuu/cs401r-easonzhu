@@ -1,0 +1,394 @@
+{
+  "started_at_utc": "2026-10-18T03:47:39.162701+00:00",
+  "completed_at_utc": "2026-10-18T03:47:48.963633+00:00",
+  "model_id": "amazon.titan-embed-text-v2:0",
+  "region": "us-east-1",
+  "dimensions": 1024,
+  "normalize": true,
+  "chunking": {
+    "strategy": "markdown_sections",
+    "max_words": 250,
+    "size_unit": "whitespace-separated words, not Titan tokens",
+    "overlap_words": 0,
+    "tables_split": false
+  },
+  "documents": [
+    {
+      "source": "customer-faq.md",
+      "doc_id": "KB-FAQ-022",
+      "source_sha256": "ce14caad8dec8cc9c0d345bf8b3f6b349939efb6665fe74f270ce03ecd3dec8b",
+      "chunks": 6
+    },
+    {
+      "source": "loyalty-program-terms.md",
+      "doc_id": "POL-LOY-011",
+      "source_sha256": "c0709853c22be819477e40075ac8855a7ae7a2493a144bbb655ce081baafebf1",
+      "chunks": 15
+    },
+    {
+      "source": "return-policy.md",
+      "doc_id": "POL-RET-004",
+      "source_sha256": "4764b32cd610631875b7a17f4d57f25ddb4c0a9051039295d12a5e1ecddff0cd",
+      "chunks": 14
+    },
+    {
+      "source": "shipping-policy.md",
+      "doc_id": "POL-SHP-007",
+      "source_sha256": "1694c3165e9aff917b45dc851252413df4667d0c04ef37012a7427e9d5dd03e1",
+      "chunks": 13
+    }
+  ],
+  "chunks": 48,
+  "matrix_shape": [
+    48,
+    1024
+  ],
+  "matrix_dtype": "float32",
+  "chunk_ids_in_row_order": [
+    "KB-FAQ-022:001:f05a9ae60d",
+    "KB-FAQ-022:002:636e91c073",
+    "KB-FAQ-022:003:716beea738",
+    "KB-FAQ-022:004:998ce1f72b",
+    "KB-FAQ-022:005:82ea5333d5",
+    "KB-FAQ-022:006:673c362025",
+    "POL-LOY-011:001:cbfcc682b5",
+    "POL-LOY-011:002:2d16c08cc6",
+    "POL-LOY-011:003:8c4328c83f",
+    "POL-LOY-011:004:773059e1b0",
+    "POL-LOY-011:005:03a668ea72",
+    "POL-LOY-011:006:8a82460cc1",
+    "POL-LOY-011:007:df3fd61764",
+    "POL-LOY-011:008:4672c85ddf",
+    "POL-LOY-011:009:d4fc7a0510",
+    "POL-LOY-011:010:cdbdbe1ea2",
+    "POL-LOY-011:011:78f4f4ad65",
+    "POL-LOY-011:012:d96352d7c0",
+    "POL-LOY-011:013:c2d7a201cd",
+    "POL-LOY-011:014:2446c22994",
+    "POL-LOY-011:015:b8bd50ad5e",
+    "POL-RET-004:001:357e95b972",
+    "POL-RET-004:002:b34df5c1fd",
+    "POL-RET-004:003:c35321e3fd",
+    "POL-RET-004:004:ee8c1202a8",
+    "POL-RET-004:005:deff713c41",
+    "POL-RET-004:006:2ab9738423",
+    "POL-RET-004:007:49b78de484",
+    "POL-RET-004:008:3535314bf5",
+    "POL-RET-004:009:d31b5ebc9a",
+    "POL-RET-004:010:4d33c8f015",
+    "POL-RET-004:011:b28dabdda5",
+    "POL-RET-004:012:bd33fb4d39",
+    "POL-RET-004:013:afefa0fdf9",
+    "POL-RET-004:014:5a126b8b78",
+    "POL-SHP-007:001:b455d8c9cf",
+    "POL-SHP-007:002:1a46dd6e37",
+    "POL-SHP-007:003:c163e7eb41",
+    "POL-SHP-007:004:7a968d718c",
+    "POL-SHP-007:005:f20745e08b",
+    "POL-SHP-007:006:a0907dbd32",
+    "POL-SHP-007:007:f6b370facb",
+    "POL-SHP-007:008:d859ce9823",
+    "POL-SHP-007:009:eaeac9a251",
+    "POL-SHP-007:010:5438484490",
+    "POL-SHP-007:011:30f5179ddc",
+    "POL-SHP-007:012:8845c3354a",
+    "POL-SHP-007:013:6c740e7275"
+  ],
+  "chunks_sha256": "7c8cb6cdea366b012e6222f0cdcfa69fe80a4989cc00fd65539dac54cbf0d8d0",
+  "embeddings_sha256": "086cb35d384ec1d07a7e4a28467cddbefe8d99e7d7bde3a52049fea3ce797e72",
+  "embedding_source_sha256": "7f8b3fbcbdac9d048ef9bb1f2efd5eb835acf8fe5e42de1ebba01e9203122521",
+  "new_invoke_model_calls": 48,
+  "cache_hits": 0,
+  "input_tokens_all_chunks": 6515,
+  "input_tokens_new_requests": 6515,
+  "requests": [
+    {
+      "chunk_id": "KB-FAQ-022:001:f05a9ae60d",
+      "input_tokens": 101,
+      "request_id": "bba87cf4-be69-43c1-aa3d-826ca06e2efb",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "KB-FAQ-022:002:636e91c073",
+      "input_tokens": 342,
+      "request_id": "814517fd-f25a-4e16-8293-fc71ee375a9b",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "KB-FAQ-022:003:716beea738",
+      "input_tokens": 337,
+      "request_id": "3ef82614-3d39-420d-8d27-b8b788ecc378",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "KB-FAQ-022:004:998ce1f72b",
+      "input_tokens": 325,
+      "request_id": "a60f6f5d-a34f-4e3b-b1be-4ad396b2c856",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "KB-FAQ-022:005:82ea5333d5",
+      "input_tokens": 137,
+      "request_id": "04f3e7d3-1c0b-453b-9803-f2367a12b313",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "KB-FAQ-022:006:673c362025",
+      "input_tokens": 285,
+      "request_id": "f0bd7d06-d0e6-481f-86a4-e00dad2ca71b",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-LOY-011:001:cbfcc682b5",
+      "input_tokens": 72,
+      "request_id": "356c15b5-0c07-4522-8498-5a0cc9301500",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-LOY-011:002:2d16c08cc6",
+      "input_tokens": 70,
+      "request_id": "29c8365d-1dd9-43b8-bd7e-3d315c1c3083",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-LOY-011:003:8c4328c83f",
+      "input_tokens": 187,
+      "request_id": "fbe6d610-36fd-43d7-982f-ae56c3939d0a",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-LOY-011:004:773059e1b0",
+      "input_tokens": 86,
+      "request_id": "ee5d59b8-84f0-4b56-b009-d41b4bed4213",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-LOY-011:005:03a668ea72",
+      "input_tokens": 100,
+      "request_id": "ec8f3ff1-cfdc-4b0b-a98e-09966e8afae0",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-LOY-011:006:8a82460cc1",
+      "input_tokens": 85,
+      "request_id": "4a5046b0-efe9-4b6a-8d15-527d3c05146a",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-LOY-011:007:df3fd61764",
+      "input_tokens": 162,
+      "request_id": "8e69c86b-0057-4f26-88dd-ad4bc18b2b1b",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-LOY-011:008:4672c85ddf",
+      "input_tokens": 135,
+      "request_id": "433ea8ba-39e1-47d6-9702-b9be851cddab",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-LOY-011:009:d4fc7a0510",
+      "input_tokens": 91,
+      "request_id": "6cd91628-03ce-4e9a-a229-b4e418704008",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-LOY-011:010:cdbdbe1ea2",
+      "input_tokens": 256,
+      "request_id": "d3582139-8419-40e4-84a4-653e87c6051d",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-LOY-011:011:78f4f4ad65",
+      "input_tokens": 96,
+      "request_id": "75d393f4-09c0-4594-ab9c-2ba3731d17ed",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-LOY-011:012:d96352d7c0",
+      "input_tokens": 125,
+      "request_id": "fa6de869-718c-4d7c-b158-eb1920016868",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-LOY-011:013:c2d7a201cd",
+      "input_tokens": 168,
+      "request_id": "f9b27414-825b-4bb4-8e83-efd1fdea19dc",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-LOY-011:014:2446c22994",
+      "input_tokens": 123,
+      "request_id": "6937f87e-6870-4ec0-9c13-581fb3fcfc79",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-LOY-011:015:b8bd50ad5e",
+      "input_tokens": 85,
+      "request_id": "89b59c1f-e3fb-4b5a-be3c-0687a650ba31",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-RET-004:001:357e95b972",
+      "input_tokens": 99,
+      "request_id": "ed8c04ce-1bad-48bf-99b0-d227835c958c",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-RET-004:002:b34df5c1fd",
+      "input_tokens": 105,
+      "request_id": "5527b406-a45b-45d6-911c-f86eb9ff78e0",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-RET-004:003:c35321e3fd",
+      "input_tokens": 134,
+      "request_id": "46486667-681c-4740-b71e-caafcb76febd",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-RET-004:004:ee8c1202a8",
+      "input_tokens": 97,
+      "request_id": "13e00d9e-d7fa-4c2a-a532-c7ca46e77b09",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-RET-004:005:deff713c41",
+      "input_tokens": 189,
+      "request_id": "73278a6d-18d6-46ba-b215-d68902682456",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-RET-004:006:2ab9738423",
+      "input_tokens": 127,
+      "request_id": "2f625ed7-3218-46ef-9753-b9182b40e724",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-RET-004:007:49b78de484",
+      "input_tokens": 202,
+      "request_id": "dcab52e4-64cb-40db-abbf-edfb5af0b69c",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-RET-004:008:3535314bf5",
+      "input_tokens": 151,
+      "request_id": "8fc9c487-918d-4a87-95e4-e9626dd6a6ce",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-RET-004:009:d31b5ebc9a",
+      "input_tokens": 84,
+      "request_id": "bfca2696-b1b3-4cdc-8574-b88f1f3ffef1",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-RET-004:010:4d33c8f015",
+      "input_tokens": 119,
+      "request_id": "06eb8f63-646a-43bc-a0a8-618e686880fd",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-RET-004:011:b28dabdda5",
+      "input_tokens": 92,
+      "request_id": "d33cb37c-9f3a-48a4-887b-5ad523d8eb78",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-RET-004:012:bd33fb4d39",
+      "input_tokens": 101,
+      "request_id": "31b14a44-45ca-4bd4-969e-f6a8dff2f092",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-RET-004:013:afefa0fdf9",
+      "input_tokens": 122,
+      "request_id": "4869e718-6d79-4d87-ac65-b97fbaa528b6",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-RET-004:014:5a126b8b78",
+      "input_tokens": 125,
+      "request_id": "97f7938b-1d86-4754-88ef-213f496397a7",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-SHP-007:001:b455d8c9cf",
+      "input_tokens": 78,
+      "request_id": "765593d5-c763-48c1-b1a5-5b6dcd175748",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-SHP-007:002:1a46dd6e37",
+      "input_tokens": 168,
+      "request_id": "6a80cd88-fa46-4c30-911a-56f8b3b44d9c",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-SHP-007:003:c163e7eb41",
+      "input_tokens": 162,
+      "request_id": "35d6c1c9-4533-4d67-8623-ca249b8df338",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-SHP-007:004:7a968d718c",
+      "input_tokens": 114,
+      "request_id": "46747552-0d46-4d2a-8b4b-ae12258b2b86",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-SHP-007:005:f20745e08b",
+      "input_tokens": 149,
+      "request_id": "e8ddc26e-c8ae-4113-8aa0-d52a6fa94f5f",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-SHP-007:006:a0907dbd32",
+      "input_tokens": 82,
+      "request_id": "c08037e0-4a19-4968-a41b-c89609859005",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-SHP-007:007:f6b370facb",
+      "input_tokens": 86,
+      "request_id": "d9b7d2a1-1110-4c61-af22-e43e7d85b5ab",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-SHP-007:008:d859ce9823",
+      "input_tokens": 76,
+      "request_id": "fcee0472-c9f6-46b4-baeb-c9550d5457f8",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-SHP-007:009:eaeac9a251",
+      "input_tokens": 91,
+      "request_id": "e0b1167f-01f3-4f62-b5cc-065e57702077",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-SHP-007:010:5438484490",
+      "input_tokens": 84,
+      "request_id": "9cafaa3c-11b0-4c2b-b370-ecd4ef1e9648",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-SHP-007:011:30f5179ddc",
+      "input_tokens": 123,
+      "request_id": "1b5ac11c-4f87-4408-bfb7-c90064236b3f",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-SHP-007:012:8845c3354a",
+      "input_tokens": 105,
+      "request_id": "e05b68d7-0a4d-419c-992d-09235e154a8a",
+      "cache_hit": false
+    },
+    {
+      "chunk_id": "POL-SHP-007:013:6c740e7275",
+      "input_tokens": 82,
+      "request_id": "50ec51d7-02d2-4c26-893c-0a4fb51de267",
+      "cache_hit": false
+    }
+  ]
+}

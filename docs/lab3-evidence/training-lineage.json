@@ -1,0 +1,24 @@
+{
+  "athena_query_execution_id": "a4a936c4-dcbe-46d7-bf7c-d2d1627e6c9f",
+  "mlflow_run_id": "6d3dfd0d527543feafe2d37712a54b92",
+  "model_path": "D:/A study/BYU/05 26 Fall/CS 401/.tools/lab3/selected-model\\model.xgb",
+  "model_sha256": "8ef39c2469667a6e718318826294962f88679b4ac30c3c259ea1d6b88a1d95dc",
+  "training_source_sha256": "d72392ee5c493b49034904dddd3ab00138e2763cf3e69b9532d654545b6397f2",
+  "training_started_at_utc": "2026-10-18T01:46:01.949751+00:00",
+  "training_completed_at_utc": "2026-10-18T01:46:02.216907+00:00",
+  "feature_columns": [
+    "days_since_last_purchase",
+    "customer_tenure_days",
+    "purchase_frequency_30d",
+    "purchase_frequency_90d",
+    "purchase_frequency_180d",
+    "avg_order_value",
+    "total_spend_90d",
+    "total_lifetime_value",
+    "avg_basket_size_6m",
+    "category_diversity_score",
+    "online_to_store_ratio"
+  ],
+  "xgboost_version": "3.2.0",
+  "resolved_scale_pos_weight": 3.544805194805195
+}

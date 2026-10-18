@@ -1,2 +1,8 @@
 PASS  Titan embeddings        dim=1024
 PASS  Claude Haiku 4.5        'OK'
+
+Region: us-east-1
+Titan checked at (UTC): 2026-10-17T07:55:09.315067+00:00
+Haiku checked at (UTC): 2026-10-17T09:05:50.899713+00:00
+These checks were performed separately; each timestamp records its actual invocation.
+Anthropic use-case form: registered and read-back verified.

@@ -1,0 +1,42 @@
+{
+  "scope": "Static source audit and local rendering only; no retrieval, generation or RAGAS run",
+  "policy_documents_unchanged_from_teacher": true,
+  "policy_document_sha256": {
+    "customer-faq.md": "ce14caad8dec8cc9c0d345bf8b3f6b349939efb6665fe74f270ce03ecd3dec8b",
+    "loyalty-program-terms.md": "c0709853c22be819477e40075ac8855a7ae7a2493a144bbb655ce081baafebf1",
+    "return-policy.md": "4764b32cd610631875b7a17f4d57f25ddb4c0a9051039295d12a5e1ecddff0cd",
+    "shipping-policy.md": "1694c3165e9aff917b45dc851252413df4667d0c04ef37012a7427e9d5dd03e1"
+  },
+  "template_sha256": "cea278a2fa32e84f130c901dbc7a84f881915618529300c5e0a081dd7557c6b1",
+  "teacher_template_sha256": "b6c7f7e153db60e487e5fd5b58e5be5ee73bacc00034ce3d1664031a2589656c",
+  "three_planted_errors_corrected": true,
+  "cases": [
+    {
+      "customer_id": "CUST-10000317",
+      "tier": "Gold",
+      "rendered": true,
+      "ground_truth_not_in_prompt": true
+    },
+    {
+      "customer_id": "CUST-10000904",
+      "tier": "Bronze",
+      "rendered": true,
+      "ground_truth_not_in_prompt": true
+    },
+    {
+      "customer_id": "CUST-10000122",
+      "tier": "Platinum",
+      "rendered": true,
+      "ground_truth_not_in_prompt": true
+    },
+    {
+      "customer_id": "CUST-10000588",
+      "tier": "Silver",
+      "rendered": true,
+      "ground_truth_not_in_prompt": true
+    }
+  ],
+  "invalid_input_checks_passed": 4,
+  "llm_calls": 0,
+  "ragas_scores": null
+}

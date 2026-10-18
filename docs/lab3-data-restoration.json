@@ -1,0 +1,147 @@
+{
+  "started_at_utc": "2026-10-17T22:12:44.059890+00:00",
+  "pipeline_succeeded": true,
+  "training_data_ready": true,
+  "offline_backup_uploaded": false,
+  "account": "173506956686",
+  "region": "us-east-1",
+  "bucket": "northstar-dev-data-173506956686",
+  "feature_group": "northstar-dev-customer-features",
+  "operator_arn": "arn:aws:iam::173506956686:user/cs401_admin",
+  "raw": {
+    "key": "raw/customers/northstar-raw-sample.csv",
+    "bytes": 13582469,
+    "rows": 163255,
+    "columns": [
+      "transaction_id",
+      "customer_id",
+      "purchase_date",
+      "order_value",
+      "num_items",
+      "payment_method",
+      "channel",
+      "store_id",
+      "product_category"
+    ],
+    "sha256": "38b19325c00ee0d5e05b4588066d16aa124a8cc822c3362709d6145e0ba612b2",
+    "readback_verified": true
+  },
+  "updated_at_utc": "2026-10-17T22:24:11.479982+00:00",
+  "crawler": {
+    "name": "northstar-dev-raw-crawler",
+    "started_at_utc": "2026-10-17T22:13:00.065593+00:00",
+    "succeeded": true,
+    "table": "customers",
+    "location": "s3://northstar-dev-data-173506956686/raw/customers/",
+    "columns": [
+      {
+        "Name": "transaction_id",
+        "Type": "string"
+      },
+      {
+        "Name": "customer_id",
+        "Type": "string"
+      },
+      {
+        "Name": "purchase_date",
+        "Type": "string"
+      },
+      {
+        "Name": "order_value",
+        "Type": "double"
+      },
+      {
+        "Name": "num_items",
+        "Type": "bigint"
+      },
+      {
+        "Name": "payment_method",
+        "Type": "string"
+      },
+      {
+        "Name": "channel",
+        "Type": "string"
+      },
+      {
+        "Name": "store_id",
+        "Type": "string"
+      },
+      {
+        "Name": "product_category",
+        "Type": "string"
+      }
+    ]
+  },
+  "transform": {
+    "job_name": "northstar-dev-transform",
+    "run_id": "jr_17bb611d9d41bf8316de39068c51c4ff6f2fdfcb0d809ebd6efdddb5b7a22e3c",
+    "started_at_utc": "2026-10-17T22:15:01.384522+00:00",
+    "state": "SUCCEEDED",
+    "execution_seconds": 127,
+    "error": null,
+    "completed_on": "2026-10-17 16:17:42.445000-06:00"
+  },
+  "feature_engineer": {
+    "job_name": "northstar-dev-feature-engineer",
+    "run_id": "jr_e8f6c660a56fa1c51d83ddefd8a90cabbfd29358cbc8a4c4d22c7b785858d568",
+    "started_at_utc": "2026-10-17T22:17:48.139473+00:00",
+    "state": "SUCCEEDED",
+    "execution_seconds": 163,
+    "error": null,
+    "completed_on": "2026-10-17 16:20:38.623000-06:00"
+  },
+  "regenerated_outputs": {
+    "processed_files": 4,
+    "processed_rows": 157627,
+    "feature_files": 2,
+    "feature_rows": 9999,
+    "unique_customers": 9999,
+    "labels": {
+      "0": 7799,
+      "1": 2200
+    },
+    "all_non_event_time_fields_match_audited_backup": true,
+    "online_sample_checks": [
+      {
+        "customer_id": "CUST-10000000",
+        "all_16_fields_match": true
+      },
+      {
+        "customer_id": "CUST-10009999",
+        "all_16_fields_match": true
+      }
+    ],
+    "event_time": 1792275535.0
+  },
+  "offline_table": "northstar_dev.northstar_dev_customer_features",
+  "athena_readiness_queries": [
+    {
+      "query_execution_id": "ff101954-d10b-405b-85d8-8e58f8708d49",
+      "sql": "WITH ranked AS (\n  SELECT customer_id, churn_label, event_time,\n    row_number() OVER (PARTITION BY customer_id ORDER BY event_time DESC, write_time DESC) AS rn\n  FROM \"northstar_dev\".\"northstar_dev_customer_features\"\n  WHERE NOT is_deleted\n)\nSELECT count(*) AS records, count(DISTINCT customer_id) AS unique_customers,\n  count_if(churn_label = 0) AS label_0, count_if(churn_label = 1) AS label_1,\n  count_if(churn_label IS NULL OR churn_label NOT IN (0, 1)) AS invalid_labels,\n  min(event_time) AS min_event_time, max(event_time) AS max_event_time\nFROM ranked WHERE rn = 1",
+      "state": "SUCCEEDED",
+      "statistics": {
+        "EngineExecutionTimeInMillis": 708,
+        "DataScannedInBytes": 186443,
+        "TotalExecutionTimeInMillis": 911,
+        "QueryQueueTimeInMillis": 98,
+        "ServicePreProcessingTimeInMillis": 80,
+        "QueryPlanningTimeInMillis": 128,
+        "ServiceProcessingTimeInMillis": 25,
+        "ResultReuseInformation": {
+          "ReusedPreviousResult": false
+        }
+      },
+      "result": {
+        "records": "9999",
+        "unique_customers": "9999",
+        "label_0": "7799",
+        "label_1": "2200",
+        "invalid_labels": "0",
+        "min_event_time": "1.792275535E9",
+        "max_event_time": "1.792275535E9"
+      }
+    }
+  ],
+  "offline_parquet_files": 54,
+  "verified_at_utc": "2026-10-17T22:24:11.479982+00:00"
+}

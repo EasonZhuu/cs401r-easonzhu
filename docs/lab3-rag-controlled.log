@@ -1,0 +1,73 @@
+CB_controlled CUST-10000317: Subject: Explore Outdoor with Summit Rewards
+Body: If your current membership is Gold, you earn 1.5× points on qualifying Outdoor purchases. Explore Outdoor at NorthStar and check your current membership eligibility before using these benefits.
+CB_controlled CUST-10000904: Subject: Explore Apparel with Summit Rewards
+Body: If your current membership is Bronze, you earn 1× points on qualifying Apparel purchases. Explore Apparel at NorthStar and check your current membership eligibility before using these benefits.
+CB_controlled CUST-10000122: Subject: Explore Outdoor with Summit Rewards
+Body: If your current membership is Platinum, you earn 2× points on qualifying Outdoor purchases. Explore Outdoor at NorthStar and check your current membership eligibility before using these benefits.
+CB_controlled CUST-10000588: Subject: Explore Home with Summit Rewards
+Body: If your current membership is Silver, you earn 1.25× points on qualifying Home purchases. Explore Home at NorthStar and check your current membership eligibility before using these benefits.
+
+── Running RAG Evaluation (4 test cases) ──
+  Evaluating CUST-10000317...
+  Evaluating CUST-10000904...
+  Evaluating CUST-10000122...
+  Evaluating CUST-10000588...
+
+Evaluating:   0%|          | 0/12 [00:00<?, ?it/s]
+Evaluating:   8%|▊         | 1/12 [00:01<00:21,  1.91s/it]
+Evaluating:  17%|█▋        | 2/12 [00:05<00:29,  2.99s/it]
+Evaluating:  25%|██▌       | 3/12 [00:05<00:15,  1.73s/it]
+Evaluating:  33%|███▎      | 4/12 [00:07<00:12,  1.61s/it]
+Evaluating:  42%|████▏     | 5/12 [00:11<00:16,  2.39s/it]
+Evaluating:  50%|█████     | 6/12 [00:12<00:12,  2.01s/it]
+Evaluating:  58%|█████▊    | 7/12 [00:13<00:09,  1.83s/it]
+Evaluating:  67%|██████▋   | 8/12 [00:16<00:08,  2.05s/it]
+Evaluating:  75%|███████▌  | 9/12 [00:16<00:04,  1.48s/it]
+Evaluating:  83%|████████▎ | 10/12 [00:17<00:02,  1.44s/it]
+Evaluating:  92%|█████████▏| 11/12 [00:21<00:02,  2.06s/it]
+Evaluating: 100%|██████████| 12/12 [00:22<00:00,  1.79s/it]
+Evaluating: 100%|██████████| 12/12 [00:22<00:00,  1.88s/it]
+
+── RAGAS Evaluation Results ──────────────────────────
+  faithfulness        : 0.031 (reported score; no fixed grading gate)
+  answer_relevancy    : 0.298 (reported score; no fixed grading gate)
+  context_recall      : 0.683 (reported score; no fixed grading gate)
+
+SAVED scores-CB_controlled-1.csv: {'faithfulness': 0.03125, 'answer_relevancy': 0.2975413273596263, 'context_recall': 0.6833333333333333}
+
+── Running RAG Evaluation (4 test cases) ──
+  Evaluating CUST-10000317...
+  Evaluating CUST-10000904...
+  Evaluating CUST-10000122...
+  Evaluating CUST-10000588...
+
+Evaluating:   0%|          | 0/12 [00:00<?, ?it/s]
+Evaluating:   8%|▊         | 1/12 [00:01<00:21,  1.92s/it]
+Evaluating:  17%|█▋        | 2/12 [00:05<00:29,  2.99s/it]
+Evaluating:  25%|██▌       | 3/12 [00:06<00:19,  2.18s/it]
+Evaluating:  33%|███▎      | 4/12 [00:08<00:15,  1.90s/it]
+Evaluating:  42%|████▏     | 5/12 [00:12<00:18,  2.58s/it]
+Evaluating:  50%|█████     | 6/12 [00:12<00:10,  1.76s/it]
+Evaluating:  58%|█████▊    | 7/12 [00:14<00:08,  1.75s/it]
+Evaluating:  67%|██████▋   | 8/12 [00:16<00:07,  1.98s/it]
+Evaluating:  75%|███████▌  | 9/12 [00:18<00:05,  1.89s/it]
+Evaluating:  83%|████████▎ | 10/12 [00:19<00:03,  1.75s/it]
+Evaluating:  92%|█████████▏| 11/12 [00:22<00:02,  2.05s/it]
+Evaluating: 100%|██████████| 12/12 [00:23<00:00,  1.63s/it]
+Evaluating: 100%|██████████| 12/12 [00:23<00:00,  1.92s/it]
+
+── RAGAS Evaluation Results ──────────────────────────
+  faithfulness        : 0.031 (reported score; no fixed grading gate)
+  answer_relevancy    : 0.319 (reported score; no fixed grading gate)
+  context_recall      : 0.683 (reported score; no fixed grading gate)
+
+SAVED scores-CB_controlled-2.csv: {'faithfulness': 0.03125, 'answer_relevancy': 0.31870203010295584, 'context_recall': 0.6833333333333333}
+              faithfulness                     answer_relevancy                     context_recall               
+                      mean       min       max             mean       min       max           mean       min  max
+strategy                                                                                                         
+A                 0.183985  0.100000  0.307692         0.347177  0.291944  0.425992       0.483333  0.200000  1.0
+B                 0.179167  0.000000  0.500000         0.394921  0.337665  0.479380       0.387500  0.000000  0.8
+C                 0.308838  0.090909  0.545455         0.359561  0.296740  0.479029       0.483333  0.200000  1.0
+CB                0.297475  0.090909  0.454545         0.360169  0.263346  0.532558       0.683333  0.333333  1.0
+CB_controlled     0.031250  0.000000  0.125000         0.308122  0.218964  0.428025       0.683333  0.333333  1.0
+CB_hardened       0.137500  0.000000  0.300000         0.369371  0.257216  0.476730       0.683333  0.333333  1.0

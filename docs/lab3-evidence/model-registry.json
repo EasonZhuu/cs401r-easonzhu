@@ -1,0 +1,37 @@
+{
+  "ModelPackageGroupName": "northstar-churn-models",
+  "Versions": [
+    {
+      "ModelPackageArn": "arn:aws:sagemaker:us-east-1:173506956686:model-package/northstar-churn-models/1",
+      "ModelPackageVersion": 1,
+      "ModelApprovalStatus": "PendingManualApproval",
+      "CreationTime": "2026-10-17 21:01:06.127000-06:00",
+      "ModelPackageDescription": "Evaluated local XGBoost 3.2.0 churn model; manual approval required",
+      "CustomerMetadataProperties": {
+        "athena_query_execution_id": "a4a936c4-dcbe-46d7-bf7c-d2d1627e6c9f",
+        "auc_roc": "0.7838",
+        "auc_vs_baseline": "0.0609",
+        "baseline_auc": "0.7229",
+        "bootstrap_replicates": "2000",
+        "bootstrap_seed": "42",
+        "bundle_sha256": "4f1e5307588c64ec8eea28900c021f7928e3bb8b8406cc4c2f6e50e7aed7e1d0",
+        "confusion_threshold": "0.5",
+        "eval_timestamp": "2026-10-18T01:46:17.662914+00:00",
+        "inference_source_sha256": "9e0ffc3e31e02ea21bce4f49a75d42ccbf90a166b9bcfec4773922758b94166c",
+        "lift_ci_high": "0.0802",
+        "lift_ci_low": "0.0415",
+        "mlflow_run_id": "6d3dfd0d527543feafe2d37712a54b92",
+        "model_sha256": "8ef39c2469667a6e718318826294962f88679b4ac30c3c259ea1d6b88a1d95dc",
+        "n_val_positives": "660",
+        "n_val_samples": "3000",
+        "positive_rate_val": "0.22",
+        "precision_top10": "0.7133",
+        "recall_top10": "0.3242",
+        "top10_selected_count": "300",
+        "top10_true_positives": "214",
+        "training_source_sha256": "d72392ee5c493b49034904dddd3ab00138e2763cf3e69b9532d654545b6397f2",
+        "xgboost_version": "3.2.0"
+      }
+    }
+  ]
+}

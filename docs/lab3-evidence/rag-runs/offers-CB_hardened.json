@@ -1,0 +1,814 @@
+[
+  {
+    "answer": "Subject: Your Gold Member Points Advantage on Outdoor Gear\nBody: If your current membership is Gold, you earn 1.5× points on qualifying purchases in Outdoor gear—a benefit that rewards your loyalty on the categories you shop most. We'd love to have you explore what's new in Outdoor and Footwear, and invite you to check your membership status and points balance in your account.",
+    "contexts": [
+      "[POL-SHP-007:003:c163e7eb41 | POL-SHP-007 | 2. Free Shipping Thresholds]\n## 2. Free Shipping Thresholds\n\nFree standard shipping applies at the following order subtotals, after discounts and before tax:\n\n| Tier | Free standard shipping at |\n|---|---|\n| Non-member | $99 |\n| Bronze | $75 |\n| Silver | $50 |\n| Gold | Any amount |\n| Platinum | Any amount |\n\nFree shipping applies to **standard** shipping only. Expedited and overnight are charged at full rate for all tiers, with no exception. Gold and Platinum members do not receive free expedited shipping, and this is the most frequent source of customer confusion on this policy.\n\nGift card purchases do not count toward the free shipping threshold.\n\n---\n\n",
+      "[POL-LOY-011:010:cdbdbe1ea2 | POL-LOY-011 | 4. Tier Benefits]\n## 4. Tier Benefits\n\n| Benefit | Bronze | Silver | Gold | Platinum |\n|---|---|---|---|---|\n| Points earn rate | 1× | 1.25× | 1.5× | 2× |\n| Birthday reward | $5 | $10 | $20 | $40 |\n| Free standard shipping | $75+ | $50+ | Always | Always |\n| Free return shipping | No | No | Yes | Yes |\n| Return window | 30 days | 30 days | 30 days | **60 days** |\n| Early access to sales | No | 12 hours | 24 hours | 48 hours |\n| Free gear repair | No | No | 2 per year | Unlimited |\n| Dedicated support line | No | No | No | Yes |\n| Annual gear credit | No | No | No | $100 |\n\nBenefits are tied to the member's tier at the time the benefit is used, except the return window, which is fixed at the tier held **at the time of purchase** (see POL-RET-004 §1.1).\n\n",
+      "[POL-LOY-011:004:773059e1b0 | POL-LOY-011 | 2. Tiers / 2.1 Tier Upgrades]\n### 2.1 Tier Upgrades\n\nUpgrades take effect **immediately** upon crossing a threshold. A customer whose qualifying purchase pushes trailing spend to $2,000 becomes Gold at the moment the transaction settles and may use Gold benefits on that same visit.\n\n",
+      "[POL-LOY-011:013:c2d7a201cd | POL-LOY-011 | 5. Promotional Offers / 5.1 Retention Offers]\n### 5.1 Retention Offers\n\nRetention offers are generated for members identified as at risk of lapsing. These offers:\n\n- Are valid for **45 days** from issue unless stated otherwise\n- Are limited to **one active retention offer per member** at a time\n- May not be combined with another retention offer\n- Do not extend, alter, or waive any provision of the returns policy\n\nAn offer that promises a benefit inconsistent with these terms — a return window longer than the member's tier allows, a discount stacked beyond the stated limit, or a benefit belonging to a higher tier — is **invalid**, and honoring it requires Director-level approval.\n\n---\n\n",
+      "[POL-LOY-011:012:d96352d7c0 | POL-LOY-011 | 5. Promotional Offers]\n## 5. Promotional Offers\n\nTargeted offers issued to a member are **single-use, non-transferable, and tied to the member account**. Offers may not be stacked with other targeted offers, though a targeted offer may generally be combined with points redemption.\n\nOffer codes are void if the account is closed, if the offer's stated conditions are not met, or after the stated expiry date. Expired offers **cannot be reinstated by customer service or by any automated system.**\n\n",
+      "[POL-RET-004:007:49b78de484 | POL-RET-004 | 4. Non-Returnable Merchandise]\n## 4. Non-Returnable Merchandise\n\nThe following are **final sale** and cannot be returned or exchanged under any circumstance, including for Platinum members and including during the holiday window:\n\n- Items marked **\"Final Sale\"** on the product page or receipt\n- Clearance merchandise discounted **50% or more** from original retail\n- Personalized or custom-embroidered items\n- Perishable goods, including trail food and fuel canisters\n- Undergarments, swimwear, and socks, if the hygiene seal is broken\n- Gift cards and digital products\n- Downloadable trip guides and map subscriptions\n\n**This section overrides all other sections of this policy, including the Platinum extended window and the holiday window.** No tier benefit, promotional offer, or service gesture creates a right of return for final sale merchandise.\n\n---\n\n",
+      "Customer profile (reported tier is approximate): {\"avg_order_value\": 186.25, \"category_diversity_score\": 0.5, \"churn_probability\": 0.81, \"customer_id\": \"CUST-10000317\", \"days_since_last_purchase\": 47, \"loyalty_tier\": \"Gold\", \"online_to_store_ratio\": 0.72, \"top_categories\": [\"Outdoor\", \"Footwear\"], \"total_lifetime_value\": 3120.4}"
+    ],
+    "customer_profile": {
+      "churn_probability": 0.81,
+      "loyalty_tier": "Gold",
+      "days_since_last_purchase": 47,
+      "total_lifetime_value": 3120.4,
+      "avg_order_value": 186.25,
+      "category_diversity_score": 0.5,
+      "online_to_store_ratio": 0.72,
+      "top_categories": [
+        "Outdoor",
+        "Footwear"
+      ],
+      "customer_id": "CUST-10000317"
+    },
+    "question": "Generate a personalized retention offer for this at-risk Gold member who shops mostly online for outdoor gear and footwear.",
+    "strategy": "CB",
+    "prompt_variant": "hardened",
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "row_id": 37,
+        "score": 0.5163734555244446,
+        "chunk_id": "POL-SHP-007:003:c163e7eb41",
+        "doc_id": "POL-SHP-007",
+        "source": "shipping-policy.md",
+        "section_path": "2. Free Shipping Thresholds",
+        "text": "## 2. Free Shipping Thresholds\n\nFree standard shipping applies at the following order subtotals, after discounts and before tax:\n\n| Tier | Free standard shipping at |\n|---|---|\n| Non-member | $99 |\n| Bronze | $75 |\n| Silver | $50 |\n| Gold | Any amount |\n| Platinum | Any amount |\n\nFree shipping applies to **standard** shipping only. Expedited and overnight are charged at full rate for all tiers, with no exception. Gold and Platinum members do not receive free expedited shipping, and this is the most frequent source of customer confusion on this policy.\n\nGift card purchases do not count toward the free shipping threshold.\n\n---\n\n"
+      },
+      {
+        "rank": 2,
+        "row_id": 15,
+        "score": 0.5079360604286194,
+        "chunk_id": "POL-LOY-011:010:cdbdbe1ea2",
+        "doc_id": "POL-LOY-011",
+        "source": "loyalty-program-terms.md",
+        "section_path": "4. Tier Benefits",
+        "text": "## 4. Tier Benefits\n\n| Benefit | Bronze | Silver | Gold | Platinum |\n|---|---|---|---|---|\n| Points earn rate | 1× | 1.25× | 1.5× | 2× |\n| Birthday reward | $5 | $10 | $20 | $40 |\n| Free standard shipping | $75+ | $50+ | Always | Always |\n| Free return shipping | No | No | Yes | Yes |\n| Return window | 30 days | 30 days | 30 days | **60 days** |\n| Early access to sales | No | 12 hours | 24 hours | 48 hours |\n| Free gear repair | No | No | 2 per year | Unlimited |\n| Dedicated support line | No | No | No | Yes |\n| Annual gear credit | No | No | No | $100 |\n\nBenefits are tied to the member's tier at the time the benefit is used, except the return window, which is fixed at the tier held **at the time of purchase** (see POL-RET-004 §1.1).\n\n"
+      },
+      {
+        "rank": 3,
+        "row_id": 9,
+        "score": 0.5044335126876831,
+        "chunk_id": "POL-LOY-011:004:773059e1b0",
+        "doc_id": "POL-LOY-011",
+        "source": "loyalty-program-terms.md",
+        "section_path": "2. Tiers / 2.1 Tier Upgrades",
+        "text": "### 2.1 Tier Upgrades\n\nUpgrades take effect **immediately** upon crossing a threshold. A customer whose qualifying purchase pushes trailing spend to $2,000 becomes Gold at the moment the transaction settles and may use Gold benefits on that same visit.\n\n"
+      },
+      {
+        "rank": 1,
+        "row_id": 18,
+        "score": 0.5364644527435303,
+        "chunk_id": "POL-LOY-011:013:c2d7a201cd",
+        "doc_id": "POL-LOY-011",
+        "source": "loyalty-program-terms.md",
+        "section_path": "5. Promotional Offers / 5.1 Retention Offers",
+        "text": "### 5.1 Retention Offers\n\nRetention offers are generated for members identified as at risk of lapsing. These offers:\n\n- Are valid for **45 days** from issue unless stated otherwise\n- Are limited to **one active retention offer per member** at a time\n- May not be combined with another retention offer\n- Do not extend, alter, or waive any provision of the returns policy\n\nAn offer that promises a benefit inconsistent with these terms — a return window longer than the member's tier allows, a discount stacked beyond the stated limit, or a benefit belonging to a higher tier — is **invalid**, and honoring it requires Director-level approval.\n\n---\n\n"
+      },
+      {
+        "rank": 2,
+        "row_id": 17,
+        "score": 0.5235196352005005,
+        "chunk_id": "POL-LOY-011:012:d96352d7c0",
+        "doc_id": "POL-LOY-011",
+        "source": "loyalty-program-terms.md",
+        "section_path": "5. Promotional Offers",
+        "text": "## 5. Promotional Offers\n\nTargeted offers issued to a member are **single-use, non-transferable, and tied to the member account**. Offers may not be stacked with other targeted offers, though a targeted offer may generally be combined with points redemption.\n\nOffer codes are void if the account is closed, if the offer's stated conditions are not met, or after the stated expiry date. Expired offers **cannot be reinstated by customer service or by any automated system.**\n\n"
+      },
+      {
+        "rank": 3,
+        "row_id": 27,
+        "score": 0.4606421887874603,
+        "chunk_id": "POL-RET-004:007:49b78de484",
+        "doc_id": "POL-RET-004",
+        "source": "return-policy.md",
+        "section_path": "4. Non-Returnable Merchandise",
+        "text": "## 4. Non-Returnable Merchandise\n\nThe following are **final sale** and cannot be returned or exchanged under any circumstance, including for Platinum members and including during the holiday window:\n\n- Items marked **\"Final Sale\"** on the product page or receipt\n- Clearance merchandise discounted **50% or more** from original retail\n- Personalized or custom-embroidered items\n- Perishable goods, including trail food and fuel canisters\n- Undergarments, swimwear, and socks, if the hygiene seal is broken\n- Gift cards and digital products\n- Downloadable trip guides and map subscriptions\n\n**This section overrides all other sections of this policy, including the Platinum extended window and the holiday window.** No tier benefit, promotional offer, or service gesture creates a right of return for final sale merchandise.\n\n---\n\n"
+      }
+    ],
+    "retrieval_passes": [
+      {
+        "query": "tier Gold entitlements and shipping thresholds for a customer who shops online",
+        "filter_doc_ids": [
+          "POL-LOY-011",
+          "POL-SHP-007"
+        ],
+        "top_k": 3,
+        "embedding_request": {
+          "request_id": "642c0329-5fd3-4b9a-bc4c-cb37ece09840",
+          "input_tokens": 14,
+          "cache_hit": true,
+          "input_sha256": "f0903d8cf5e87db2bd5b563512012acfa975ace8e287e79853cf57690a7d806a"
+        },
+        "results": [
+          {
+            "rank": 1,
+            "row_id": 37,
+            "score": 0.5163734555244446,
+            "chunk_id": "POL-SHP-007:003:c163e7eb41",
+            "doc_id": "POL-SHP-007",
+            "source": "shipping-policy.md",
+            "section_path": "2. Free Shipping Thresholds",
+            "text": "## 2. Free Shipping Thresholds\n\nFree standard shipping applies at the following order subtotals, after discounts and before tax:\n\n| Tier | Free standard shipping at |\n|---|---|\n| Non-member | $99 |\n| Bronze | $75 |\n| Silver | $50 |\n| Gold | Any amount |\n| Platinum | Any amount |\n\nFree shipping applies to **standard** shipping only. Expedited and overnight are charged at full rate for all tiers, with no exception. Gold and Platinum members do not receive free expedited shipping, and this is the most frequent source of customer confusion on this policy.\n\nGift card purchases do not count toward the free shipping threshold.\n\n---\n\n"
+          },
+          {
+            "rank": 2,
+            "row_id": 15,
+            "score": 0.5079360604286194,
+            "chunk_id": "POL-LOY-011:010:cdbdbe1ea2",
+            "doc_id": "POL-LOY-011",
+            "source": "loyalty-program-terms.md",
+            "section_path": "4. Tier Benefits",
+            "text": "## 4. Tier Benefits\n\n| Benefit | Bronze | Silver | Gold | Platinum |\n|---|---|---|---|---|\n| Points earn rate | 1× | 1.25× | 1.5× | 2× |\n| Birthday reward | $5 | $10 | $20 | $40 |\n| Free standard shipping | $75+ | $50+ | Always | Always |\n| Free return shipping | No | No | Yes | Yes |\n| Return window | 30 days | 30 days | 30 days | **60 days** |\n| Early access to sales | No | 12 hours | 24 hours | 48 hours |\n| Free gear repair | No | No | 2 per year | Unlimited |\n| Dedicated support line | No | No | No | Yes |\n| Annual gear credit | No | No | No | $100 |\n\nBenefits are tied to the member's tier at the time the benefit is used, except the return window, which is fixed at the tier held **at the time of purchase** (see POL-RET-004 §1.1).\n\n"
+          },
+          {
+            "rank": 3,
+            "row_id": 9,
+            "score": 0.5044335126876831,
+            "chunk_id": "POL-LOY-011:004:773059e1b0",
+            "doc_id": "POL-LOY-011",
+            "source": "loyalty-program-terms.md",
+            "section_path": "2. Tiers / 2.1 Tier Upgrades",
+            "text": "### 2.1 Tier Upgrades\n\nUpgrades take effect **immediately** upon crossing a threshold. A customer whose qualifying purchase pushes trailing spend to $2,000 becomes Gold at the moment the transaction settles and may use Gold benefits on that same visit.\n\n"
+          }
+        ],
+        "strategy": "C"
+      },
+      {
+        "query": "final sale non-returnable exclusions expired offers cannot be reinstated retention offer validity single use combinability",
+        "filter_doc_ids": null,
+        "top_k": 3,
+        "embedding_request": {
+          "request_id": "90bd55ac-fa4a-46e6-9770-b6e252d654d2",
+          "input_tokens": 21,
+          "cache_hit": true,
+          "input_sha256": "acff10275a9c33feb6a49acd073a397c2c27c25fd1e480c3267b504dbed492f5"
+        },
+        "results": [
+          {
+            "rank": 1,
+            "row_id": 18,
+            "score": 0.5364644527435303,
+            "chunk_id": "POL-LOY-011:013:c2d7a201cd",
+            "doc_id": "POL-LOY-011",
+            "source": "loyalty-program-terms.md",
+            "section_path": "5. Promotional Offers / 5.1 Retention Offers",
+            "text": "### 5.1 Retention Offers\n\nRetention offers are generated for members identified as at risk of lapsing. These offers:\n\n- Are valid for **45 days** from issue unless stated otherwise\n- Are limited to **one active retention offer per member** at a time\n- May not be combined with another retention offer\n- Do not extend, alter, or waive any provision of the returns policy\n\nAn offer that promises a benefit inconsistent with these terms — a return window longer than the member's tier allows, a discount stacked beyond the stated limit, or a benefit belonging to a higher tier — is **invalid**, and honoring it requires Director-level approval.\n\n---\n\n"
+          },
+          {
+            "rank": 2,
+            "row_id": 17,
+            "score": 0.5235196352005005,
+            "chunk_id": "POL-LOY-011:012:d96352d7c0",
+            "doc_id": "POL-LOY-011",
+            "source": "loyalty-program-terms.md",
+            "section_path": "5. Promotional Offers",
+            "text": "## 5. Promotional Offers\n\nTargeted offers issued to a member are **single-use, non-transferable, and tied to the member account**. Offers may not be stacked with other targeted offers, though a targeted offer may generally be combined with points redemption.\n\nOffer codes are void if the account is closed, if the offer's stated conditions are not met, or after the stated expiry date. Expired offers **cannot be reinstated by customer service or by any automated system.**\n\n"
+          },
+          {
+            "rank": 3,
+            "row_id": 27,
+            "score": 0.4606421887874603,
+            "chunk_id": "POL-RET-004:007:49b78de484",
+            "doc_id": "POL-RET-004",
+            "source": "return-policy.md",
+            "section_path": "4. Non-Returnable Merchandise",
+            "text": "## 4. Non-Returnable Merchandise\n\nThe following are **final sale** and cannot be returned or exchanged under any circumstance, including for Platinum members and including during the holiday window:\n\n- Items marked **\"Final Sale\"** on the product page or receipt\n- Clearance merchandise discounted **50% or more** from original retail\n- Personalized or custom-embroidered items\n- Perishable goods, including trail food and fuel canisters\n- Undergarments, swimwear, and socks, if the hygiene seal is broken\n- Gift cards and digital products\n- Downloadable trip guides and map subscriptions\n\n**This section overrides all other sections of this policy, including the Platinum extended window and the holiday window.** No tier benefit, promotional offer, or service gesture creates a right of return for final sale merchandise.\n\n---\n\n"
+          }
+        ],
+        "strategy": "B"
+      }
+    ],
+    "subject": "Your Gold Member Points Advantage on Outdoor Gear",
+    "body": "If your current membership is Gold, you earn 1.5× points on qualifying purchases in Outdoor gear—a benefit that rewards your loyalty on the categories you shop most. We'd love to have you explore what's new in Outdoor and Footwear, and invite you to check your membership status and points balance in your account.",
+    "rationale": "This offer anchors to the customer's verified Gold tier benefit (1.5× points earn rate per POL-LOY-011 §4), applies it to a top category the customer already purchases (Outdoor), and uses conditional language to avoid assuming current tier status or points availability. It avoids invented discounts, deadlines, or benefits outside Gold tier entitlements, and invites account verification rather than asserting eligibility.",
+    "formatted_as_requested": true,
+    "generation_cache_hit": false,
+    "raw_answer": "Subject: Your Gold Member Points Advantage on Outdoor Gear\n\nBody: If your current membership is Gold, you earn 1.5× points on qualifying purchases in Outdoor gear—a benefit that rewards your loyalty on the categories you shop most. We'd love to have you explore what's new in Outdoor and Footwear, and invite you to check your membership status and points balance in your account.\n\nRationale: This offer anchors to the customer's verified Gold tier benefit (1.5× points earn rate per POL-LOY-011 §4), applies it to a top category the customer already purchases (Outdoor), and uses conditional language to avoid assuming current tier status or points availability. It avoids invented discounts, deadlines, or benefits outside Gold tier entitlements, and invites account verification rather than asserting eligibility.",
+    "request_id": "d6af106e-c22c-42e2-a0d3-2cc9cdfc8f74",
+    "usage": {
+      "inputTokens": 2585,
+      "outputTokens": 185,
+      "totalTokens": 2770,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "stop_reason": "end_turn",
+    "latency_ms": 3150.68,
+    "generated_at_utc": "2026-10-18T04:28:29.869471+00:00",
+    "request_sha256": "0f158bd38d00e58e42265399d362c1d77d9c2aa2b9d8c577a2afa30b7368192c",
+    "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0"
+  },
+  {
+    "answer": "Subject: Your Bronze Member Points on Apparel\nBody: If your current membership is Bronze, you earn 1× points on all qualifying apparel purchases—a benefit that rewards every dollar you spend in a category you already shop. We'd love to have you back; check your account to see your current membership status and explore our apparel selection.",
+    "contexts": [
+      "[POL-LOY-011:010:cdbdbe1ea2 | POL-LOY-011 | 4. Tier Benefits]\n## 4. Tier Benefits\n\n| Benefit | Bronze | Silver | Gold | Platinum |\n|---|---|---|---|---|\n| Points earn rate | 1× | 1.25× | 1.5× | 2× |\n| Birthday reward | $5 | $10 | $20 | $40 |\n| Free standard shipping | $75+ | $50+ | Always | Always |\n| Free return shipping | No | No | Yes | Yes |\n| Return window | 30 days | 30 days | 30 days | **60 days** |\n| Early access to sales | No | 12 hours | 24 hours | 48 hours |\n| Free gear repair | No | No | 2 per year | Unlimited |\n| Dedicated support line | No | No | No | Yes |\n| Annual gear credit | No | No | No | $100 |\n\nBenefits are tied to the member's tier at the time the benefit is used, except the return window, which is fixed at the tier held **at the time of purchase** (see POL-RET-004 §1.1).\n\n",
+      "[POL-SHP-007:003:c163e7eb41 | POL-SHP-007 | 2. Free Shipping Thresholds]\n## 2. Free Shipping Thresholds\n\nFree standard shipping applies at the following order subtotals, after discounts and before tax:\n\n| Tier | Free standard shipping at |\n|---|---|\n| Non-member | $99 |\n| Bronze | $75 |\n| Silver | $50 |\n| Gold | Any amount |\n| Platinum | Any amount |\n\nFree shipping applies to **standard** shipping only. Expedited and overnight are charged at full rate for all tiers, with no exception. Gold and Platinum members do not receive free expedited shipping, and this is the most frequent source of customer confusion on this policy.\n\nGift card purchases do not count toward the free shipping threshold.\n\n---\n\n",
+      "[POL-LOY-011:003:8c4328c83f | POL-LOY-011 | 2. Tiers]\n## 2. Tiers\n\nTier is determined by **trailing 12-month spend**, evaluated on the first day of each month.\n\n| Tier | Trailing 12-month spend | Members (approx.) |\n|---|---|---|\n| **Bronze** | Under $500 | 61% |\n| **Silver** | $500 – $1,999.99 | 26% |\n| **Gold** | $2,000 – $4,999.99 | 10% |\n| **Platinum** | $5,000 and above | 3% |\n\nSpend counts merchandise only. Gift card purchases, taxes, shipping charges, and amounts refunded through returns do **not** count toward tier qualification. A return reduces trailing spend and can cause a tier downgrade.\n\n",
+      "[POL-LOY-011:013:c2d7a201cd | POL-LOY-011 | 5. Promotional Offers / 5.1 Retention Offers]\n### 5.1 Retention Offers\n\nRetention offers are generated for members identified as at risk of lapsing. These offers:\n\n- Are valid for **45 days** from issue unless stated otherwise\n- Are limited to **one active retention offer per member** at a time\n- May not be combined with another retention offer\n- Do not extend, alter, or waive any provision of the returns policy\n\nAn offer that promises a benefit inconsistent with these terms — a return window longer than the member's tier allows, a discount stacked beyond the stated limit, or a benefit belonging to a higher tier — is **invalid**, and honoring it requires Director-level approval.\n\n---\n\n",
+      "[POL-LOY-011:012:d96352d7c0 | POL-LOY-011 | 5. Promotional Offers]\n## 5. Promotional Offers\n\nTargeted offers issued to a member are **single-use, non-transferable, and tied to the member account**. Offers may not be stacked with other targeted offers, though a targeted offer may generally be combined with points redemption.\n\nOffer codes are void if the account is closed, if the offer's stated conditions are not met, or after the stated expiry date. Expired offers **cannot be reinstated by customer service or by any automated system.**\n\n",
+      "[POL-RET-004:007:49b78de484 | POL-RET-004 | 4. Non-Returnable Merchandise]\n## 4. Non-Returnable Merchandise\n\nThe following are **final sale** and cannot be returned or exchanged under any circumstance, including for Platinum members and including during the holiday window:\n\n- Items marked **\"Final Sale\"** on the product page or receipt\n- Clearance merchandise discounted **50% or more** from original retail\n- Personalized or custom-embroidered items\n- Perishable goods, including trail food and fuel canisters\n- Undergarments, swimwear, and socks, if the hygiene seal is broken\n- Gift cards and digital products\n- Downloadable trip guides and map subscriptions\n\n**This section overrides all other sections of this policy, including the Platinum extended window and the holiday window.** No tier benefit, promotional offer, or service gesture creates a right of return for final sale merchandise.\n\n---\n\n",
+      "Customer profile (reported tier is approximate): {\"avg_order_value\": 41.15, \"category_diversity_score\": 0.125, \"churn_probability\": 0.74, \"customer_id\": \"CUST-10000904\", \"days_since_last_purchase\": 68, \"loyalty_tier\": \"Bronze\", \"online_to_store_ratio\": 0.2, \"top_categories\": [\"Apparel\"], \"total_lifetime_value\": 312.8}"
+    ],
+    "customer_profile": {
+      "churn_probability": 0.74,
+      "loyalty_tier": "Bronze",
+      "days_since_last_purchase": 68,
+      "total_lifetime_value": 312.8,
+      "avg_order_value": 41.15,
+      "category_diversity_score": 0.125,
+      "online_to_store_ratio": 0.2,
+      "top_categories": [
+        "Apparel"
+      ],
+      "customer_id": "CUST-10000904"
+    },
+    "question": "Generate a retention offer for this Bronze member who shops in store, buys only apparel, and has not purchased in over two months.",
+    "strategy": "CB",
+    "prompt_variant": "hardened",
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "row_id": 15,
+        "score": 0.5112091898918152,
+        "chunk_id": "POL-LOY-011:010:cdbdbe1ea2",
+        "doc_id": "POL-LOY-011",
+        "source": "loyalty-program-terms.md",
+        "section_path": "4. Tier Benefits",
+        "text": "## 4. Tier Benefits\n\n| Benefit | Bronze | Silver | Gold | Platinum |\n|---|---|---|---|---|\n| Points earn rate | 1× | 1.25× | 1.5× | 2× |\n| Birthday reward | $5 | $10 | $20 | $40 |\n| Free standard shipping | $75+ | $50+ | Always | Always |\n| Free return shipping | No | No | Yes | Yes |\n| Return window | 30 days | 30 days | 30 days | **60 days** |\n| Early access to sales | No | 12 hours | 24 hours | 48 hours |\n| Free gear repair | No | No | 2 per year | Unlimited |\n| Dedicated support line | No | No | No | Yes |\n| Annual gear credit | No | No | No | $100 |\n\nBenefits are tied to the member's tier at the time the benefit is used, except the return window, which is fixed at the tier held **at the time of purchase** (see POL-RET-004 §1.1).\n\n"
+      },
+      {
+        "rank": 2,
+        "row_id": 37,
+        "score": 0.4882037341594696,
+        "chunk_id": "POL-SHP-007:003:c163e7eb41",
+        "doc_id": "POL-SHP-007",
+        "source": "shipping-policy.md",
+        "section_path": "2. Free Shipping Thresholds",
+        "text": "## 2. Free Shipping Thresholds\n\nFree standard shipping applies at the following order subtotals, after discounts and before tax:\n\n| Tier | Free standard shipping at |\n|---|---|\n| Non-member | $99 |\n| Bronze | $75 |\n| Silver | $50 |\n| Gold | Any amount |\n| Platinum | Any amount |\n\nFree shipping applies to **standard** shipping only. Expedited and overnight are charged at full rate for all tiers, with no exception. Gold and Platinum members do not receive free expedited shipping, and this is the most frequent source of customer confusion on this policy.\n\nGift card purchases do not count toward the free shipping threshold.\n\n---\n\n"
+      },
+      {
+        "rank": 3,
+        "row_id": 8,
+        "score": 0.4492841362953186,
+        "chunk_id": "POL-LOY-011:003:8c4328c83f",
+        "doc_id": "POL-LOY-011",
+        "source": "loyalty-program-terms.md",
+        "section_path": "2. Tiers",
+        "text": "## 2. Tiers\n\nTier is determined by **trailing 12-month spend**, evaluated on the first day of each month.\n\n| Tier | Trailing 12-month spend | Members (approx.) |\n|---|---|---|\n| **Bronze** | Under $500 | 61% |\n| **Silver** | $500 – $1,999.99 | 26% |\n| **Gold** | $2,000 – $4,999.99 | 10% |\n| **Platinum** | $5,000 and above | 3% |\n\nSpend counts merchandise only. Gift card purchases, taxes, shipping charges, and amounts refunded through returns do **not** count toward tier qualification. A return reduces trailing spend and can cause a tier downgrade.\n\n"
+      },
+      {
+        "rank": 1,
+        "row_id": 18,
+        "score": 0.5364644527435303,
+        "chunk_id": "POL-LOY-011:013:c2d7a201cd",
+        "doc_id": "POL-LOY-011",
+        "source": "loyalty-program-terms.md",
+        "section_path": "5. Promotional Offers / 5.1 Retention Offers",
+        "text": "### 5.1 Retention Offers\n\nRetention offers are generated for members identified as at risk of lapsing. These offers:\n\n- Are valid for **45 days** from issue unless stated otherwise\n- Are limited to **one active retention offer per member** at a time\n- May not be combined with another retention offer\n- Do not extend, alter, or waive any provision of the returns policy\n\nAn offer that promises a benefit inconsistent with these terms — a return window longer than the member's tier allows, a discount stacked beyond the stated limit, or a benefit belonging to a higher tier — is **invalid**, and honoring it requires Director-level approval.\n\n---\n\n"
+      },
+      {
+        "rank": 2,
+        "row_id": 17,
+        "score": 0.5235196352005005,
+        "chunk_id": "POL-LOY-011:012:d96352d7c0",
+        "doc_id": "POL-LOY-011",
+        "source": "loyalty-program-terms.md",
+        "section_path": "5. Promotional Offers",
+        "text": "## 5. Promotional Offers\n\nTargeted offers issued to a member are **single-use, non-transferable, and tied to the member account**. Offers may not be stacked with other targeted offers, though a targeted offer may generally be combined with points redemption.\n\nOffer codes are void if the account is closed, if the offer's stated conditions are not met, or after the stated expiry date. Expired offers **cannot be reinstated by customer service or by any automated system.**\n\n"
+      },
+      {
+        "rank": 3,
+        "row_id": 27,
+        "score": 0.4606421887874603,
+        "chunk_id": "POL-RET-004:007:49b78de484",
+        "doc_id": "POL-RET-004",
+        "source": "return-policy.md",
+        "section_path": "4. Non-Returnable Merchandise",
+        "text": "## 4. Non-Returnable Merchandise\n\nThe following are **final sale** and cannot be returned or exchanged under any circumstance, including for Platinum members and including during the holiday window:\n\n- Items marked **\"Final Sale\"** on the product page or receipt\n- Clearance merchandise discounted **50% or more** from original retail\n- Personalized or custom-embroidered items\n- Perishable goods, including trail food and fuel canisters\n- Undergarments, swimwear, and socks, if the hygiene seal is broken\n- Gift cards and digital products\n- Downloadable trip guides and map subscriptions\n\n**This section overrides all other sections of this policy, including the Platinum extended window and the holiday window.** No tier benefit, promotional offer, or service gesture creates a right of return for final sale merchandise.\n\n---\n\n"
+      }
+    ],
+    "retrieval_passes": [
+      {
+        "query": "tier Bronze entitlements and shipping thresholds for a customer who shops in store",
+        "filter_doc_ids": [
+          "POL-LOY-011",
+          "POL-SHP-007"
+        ],
+        "top_k": 3,
+        "embedding_request": {
+          "request_id": "3650a132-0484-4c94-b801-5b8d5cc1f957",
+          "input_tokens": 15,
+          "cache_hit": true,
+          "input_sha256": "dc23ea97c84bca73d29a54963d6f6b7d624ed19da88b012217042a56ca5ae060"
+        },
+        "results": [
+          {
+            "rank": 1,
+            "row_id": 15,
+            "score": 0.5112091898918152,
+            "chunk_id": "POL-LOY-011:010:cdbdbe1ea2",
+            "doc_id": "POL-LOY-011",
+            "source": "loyalty-program-terms.md",
+            "section_path": "4. Tier Benefits",
+            "text": "## 4. Tier Benefits\n\n| Benefit | Bronze | Silver | Gold | Platinum |\n|---|---|---|---|---|\n| Points earn rate | 1× | 1.25× | 1.5× | 2× |\n| Birthday reward | $5 | $10 | $20 | $40 |\n| Free standard shipping | $75+ | $50+ | Always | Always |\n| Free return shipping | No | No | Yes | Yes |\n| Return window | 30 days | 30 days | 30 days | **60 days** |\n| Early access to sales | No | 12 hours | 24 hours | 48 hours |\n| Free gear repair | No | No | 2 per year | Unlimited |\n| Dedicated support line | No | No | No | Yes |\n| Annual gear credit | No | No | No | $100 |\n\nBenefits are tied to the member's tier at the time the benefit is used, except the return window, which is fixed at the tier held **at the time of purchase** (see POL-RET-004 §1.1).\n\n"
+          },
+          {
+            "rank": 2,
+            "row_id": 37,
+            "score": 0.4882037341594696,
+            "chunk_id": "POL-SHP-007:003:c163e7eb41",
+            "doc_id": "POL-SHP-007",
+            "source": "shipping-policy.md",
+            "section_path": "2. Free Shipping Thresholds",
+            "text": "## 2. Free Shipping Thresholds\n\nFree standard shipping applies at the following order subtotals, after discounts and before tax:\n\n| Tier | Free standard shipping at |\n|---|---|\n| Non-member | $99 |\n| Bronze | $75 |\n| Silver | $50 |\n| Gold | Any amount |\n| Platinum | Any amount |\n\nFree shipping applies to **standard** shipping only. Expedited and overnight are charged at full rate for all tiers, with no exception. Gold and Platinum members do not receive free expedited shipping, and this is the most frequent source of customer confusion on this policy.\n\nGift card purchases do not count toward the free shipping threshold.\n\n---\n\n"
+          },
+          {
+            "rank": 3,
+            "row_id": 8,
+            "score": 0.4492841362953186,
+            "chunk_id": "POL-LOY-011:003:8c4328c83f",
+            "doc_id": "POL-LOY-011",
+            "source": "loyalty-program-terms.md",
+            "section_path": "2. Tiers",
+            "text": "## 2. Tiers\n\nTier is determined by **trailing 12-month spend**, evaluated on the first day of each month.\n\n| Tier | Trailing 12-month spend | Members (approx.) |\n|---|---|---|\n| **Bronze** | Under $500 | 61% |\n| **Silver** | $500 – $1,999.99 | 26% |\n| **Gold** | $2,000 – $4,999.99 | 10% |\n| **Platinum** | $5,000 and above | 3% |\n\nSpend counts merchandise only. Gift card purchases, taxes, shipping charges, and amounts refunded through returns do **not** count toward tier qualification. A return reduces trailing spend and can cause a tier downgrade.\n\n"
+          }
+        ],
+        "strategy": "C"
+      },
+      {
+        "query": "final sale non-returnable exclusions expired offers cannot be reinstated retention offer validity single use combinability",
+        "filter_doc_ids": null,
+        "top_k": 3,
+        "embedding_request": {
+          "request_id": "90bd55ac-fa4a-46e6-9770-b6e252d654d2",
+          "input_tokens": 21,
+          "cache_hit": true,
+          "input_sha256": "acff10275a9c33feb6a49acd073a397c2c27c25fd1e480c3267b504dbed492f5"
+        },
+        "results": [
+          {
+            "rank": 1,
+            "row_id": 18,
+            "score": 0.5364644527435303,
+            "chunk_id": "POL-LOY-011:013:c2d7a201cd",
+            "doc_id": "POL-LOY-011",
+            "source": "loyalty-program-terms.md",
+            "section_path": "5. Promotional Offers / 5.1 Retention Offers",
+            "text": "### 5.1 Retention Offers\n\nRetention offers are generated for members identified as at risk of lapsing. These offers:\n\n- Are valid for **45 days** from issue unless stated otherwise\n- Are limited to **one active retention offer per member** at a time\n- May not be combined with another retention offer\n- Do not extend, alter, or waive any provision of the returns policy\n\nAn offer that promises a benefit inconsistent with these terms — a return window longer than the member's tier allows, a discount stacked beyond the stated limit, or a benefit belonging to a higher tier — is **invalid**, and honoring it requires Director-level approval.\n\n---\n\n"
+          },
+          {
+            "rank": 2,
+            "row_id": 17,
+            "score": 0.5235196352005005,
+            "chunk_id": "POL-LOY-011:012:d96352d7c0",
+            "doc_id": "POL-LOY-011",
+            "source": "loyalty-program-terms.md",
+            "section_path": "5. Promotional Offers",
+            "text": "## 5. Promotional Offers\n\nTargeted offers issued to a member are **single-use, non-transferable, and tied to the member account**. Offers may not be stacked with other targeted offers, though a targeted offer may generally be combined with points redemption.\n\nOffer codes are void if the account is closed, if the offer's stated conditions are not met, or after the stated expiry date. Expired offers **cannot be reinstated by customer service or by any automated system.**\n\n"
+          },
+          {
+            "rank": 3,
+            "row_id": 27,
+            "score": 0.4606421887874603,
+            "chunk_id": "POL-RET-004:007:49b78de484",
+            "doc_id": "POL-RET-004",
+            "source": "return-policy.md",
+            "section_path": "4. Non-Returnable Merchandise",
+            "text": "## 4. Non-Returnable Merchandise\n\nThe following are **final sale** and cannot be returned or exchanged under any circumstance, including for Platinum members and including during the holiday window:\n\n- Items marked **\"Final Sale\"** on the product page or receipt\n- Clearance merchandise discounted **50% or more** from original retail\n- Personalized or custom-embroidered items\n- Perishable goods, including trail food and fuel canisters\n- Undergarments, swimwear, and socks, if the hygiene seal is broken\n- Gift cards and digital products\n- Downloadable trip guides and map subscriptions\n\n**This section overrides all other sections of this policy, including the Platinum extended window and the holiday window.** No tier benefit, promotional offer, or service gesture creates a right of return for final sale merchandise.\n\n---\n\n"
+          }
+        ],
+        "strategy": "B"
+      }
+    ],
+    "subject": "Your Bronze Member Points on Apparel",
+    "body": "If your current membership is Bronze, you earn 1× points on all qualifying apparel purchases—a benefit that rewards every dollar you spend in a category you already shop. We'd love to have you back; check your account to see your current membership status and explore our apparel selection.",
+    "rationale": "This offer anchors to the customer's verified tier benefit (1× points earn on Bronze) and their sole observed category (Apparel), avoiding invented promotions, tier upgrades, or unverified account states. The conditional phrasing respects that reported tier is approximate and does not assume points balance or active redemption eligibility.",
+    "formatted_as_requested": true,
+    "generation_cache_hit": false,
+    "raw_answer": "Subject: Your Bronze Member Points on Apparel\n\nBody: If your current membership is Bronze, you earn 1× points on all qualifying apparel purchases—a benefit that rewards every dollar you spend in a category you already shop. We'd love to have you back; check your account to see your current membership status and explore our apparel selection.\n\nRationale: This offer anchors to the customer's verified tier benefit (1× points earn on Bronze) and their sole observed category (Apparel), avoiding invented promotions, tier upgrades, or unverified account states. The conditional phrasing respects that reported tier is approximate and does not assume points balance or active redemption eligibility.",
+    "request_id": "69afd226-5fad-471e-91ac-211a97f40087",
+    "usage": {
+      "inputTokens": 2692,
+      "outputTokens": 150,
+      "totalTokens": 2842,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "stop_reason": "end_turn",
+    "latency_ms": 2474.17,
+    "generated_at_utc": "2026-10-18T04:28:32.356920+00:00",
+    "request_sha256": "3d60156e1eb3b719dcfeb6fd8e3d3a18670f70546b40a252fb75ad844179b331",
+    "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0"
+  },
+  {
+    "answer": "Subject: Your Platinum Rewards on Outdoor Gear\nBody: If your current membership is Platinum, you're earning 2× points on all qualifying purchases in Outdoor, Electronics, and Home categories—a benefit that rewards your broad shopping interests across our store. We'd love to have you explore these categories again and confirm your current membership tier at northstar.com or in-store.",
+    "contexts": [
+      "[POL-SHP-007:003:c163e7eb41 | POL-SHP-007 | 2. Free Shipping Thresholds]\n## 2. Free Shipping Thresholds\n\nFree standard shipping applies at the following order subtotals, after discounts and before tax:\n\n| Tier | Free standard shipping at |\n|---|---|\n| Non-member | $99 |\n| Bronze | $75 |\n| Silver | $50 |\n| Gold | Any amount |\n| Platinum | Any amount |\n\nFree shipping applies to **standard** shipping only. Expedited and overnight are charged at full rate for all tiers, with no exception. Gold and Platinum members do not receive free expedited shipping, and this is the most frequent source of customer confusion on this policy.\n\nGift card purchases do not count toward the free shipping threshold.\n\n---\n\n",
+      "[POL-LOY-011:010:cdbdbe1ea2 | POL-LOY-011 | 4. Tier Benefits]\n## 4. Tier Benefits\n\n| Benefit | Bronze | Silver | Gold | Platinum |\n|---|---|---|---|---|\n| Points earn rate | 1× | 1.25× | 1.5× | 2× |\n| Birthday reward | $5 | $10 | $20 | $40 |\n| Free standard shipping | $75+ | $50+ | Always | Always |\n| Free return shipping | No | No | Yes | Yes |\n| Return window | 30 days | 30 days | 30 days | **60 days** |\n| Early access to sales | No | 12 hours | 24 hours | 48 hours |\n| Free gear repair | No | No | 2 per year | Unlimited |\n| Dedicated support line | No | No | No | Yes |\n| Annual gear credit | No | No | No | $100 |\n\nBenefits are tied to the member's tier at the time the benefit is used, except the return window, which is fixed at the tier held **at the time of purchase** (see POL-RET-004 §1.1).\n\n",
+      "[POL-LOY-011:003:8c4328c83f | POL-LOY-011 | 2. Tiers]\n## 2. Tiers\n\nTier is determined by **trailing 12-month spend**, evaluated on the first day of each month.\n\n| Tier | Trailing 12-month spend | Members (approx.) |\n|---|---|---|\n| **Bronze** | Under $500 | 61% |\n| **Silver** | $500 – $1,999.99 | 26% |\n| **Gold** | $2,000 – $4,999.99 | 10% |\n| **Platinum** | $5,000 and above | 3% |\n\nSpend counts merchandise only. Gift card purchases, taxes, shipping charges, and amounts refunded through returns do **not** count toward tier qualification. A return reduces trailing spend and can cause a tier downgrade.\n\n",
+      "[POL-LOY-011:013:c2d7a201cd | POL-LOY-011 | 5. Promotional Offers / 5.1 Retention Offers]\n### 5.1 Retention Offers\n\nRetention offers are generated for members identified as at risk of lapsing. These offers:\n\n- Are valid for **45 days** from issue unless stated otherwise\n- Are limited to **one active retention offer per member** at a time\n- May not be combined with another retention offer\n- Do not extend, alter, or waive any provision of the returns policy\n\nAn offer that promises a benefit inconsistent with these terms — a return window longer than the member's tier allows, a discount stacked beyond the stated limit, or a benefit belonging to a higher tier — is **invalid**, and honoring it requires Director-level approval.\n\n---\n\n",
+      "[POL-LOY-011:012:d96352d7c0 | POL-LOY-011 | 5. Promotional Offers]\n## 5. Promotional Offers\n\nTargeted offers issued to a member are **single-use, non-transferable, and tied to the member account**. Offers may not be stacked with other targeted offers, though a targeted offer may generally be combined with points redemption.\n\nOffer codes are void if the account is closed, if the offer's stated conditions are not met, or after the stated expiry date. Expired offers **cannot be reinstated by customer service or by any automated system.**\n\n",
+      "[POL-RET-004:007:49b78de484 | POL-RET-004 | 4. Non-Returnable Merchandise]\n## 4. Non-Returnable Merchandise\n\nThe following are **final sale** and cannot be returned or exchanged under any circumstance, including for Platinum members and including during the holiday window:\n\n- Items marked **\"Final Sale\"** on the product page or receipt\n- Clearance merchandise discounted **50% or more** from original retail\n- Personalized or custom-embroidered items\n- Perishable goods, including trail food and fuel canisters\n- Undergarments, swimwear, and socks, if the hygiene seal is broken\n- Gift cards and digital products\n- Downloadable trip guides and map subscriptions\n\n**This section overrides all other sections of this policy, including the Platinum extended window and the holiday window.** No tier benefit, promotional offer, or service gesture creates a right of return for final sale merchandise.\n\n---\n\n",
+      "Customer profile (reported tier is approximate): {\"avg_order_value\": 447.0, \"category_diversity_score\": 0.75, \"churn_probability\": 0.66, \"customer_id\": \"CUST-10000122\", \"days_since_last_purchase\": 39, \"loyalty_tier\": \"Platinum\", \"online_to_store_ratio\": 0.55, \"top_categories\": [\"Outdoor\", \"Electronics\", \"Home\"], \"total_lifetime_value\": 8940.0}"
+    ],
+    "customer_profile": {
+      "churn_probability": 0.66,
+      "loyalty_tier": "Platinum",
+      "days_since_last_purchase": 39,
+      "total_lifetime_value": 8940.0,
+      "avg_order_value": 447.0,
+      "category_diversity_score": 0.75,
+      "online_to_store_ratio": 0.55,
+      "top_categories": [
+        "Outdoor",
+        "Electronics",
+        "Home"
+      ],
+      "customer_id": "CUST-10000122"
+    },
+    "question": "Generate a retention offer for this high-value Platinum member with broad category interest and a large average order.",
+    "strategy": "CB",
+    "prompt_variant": "hardened",
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "row_id": 37,
+        "score": 0.540640652179718,
+        "chunk_id": "POL-SHP-007:003:c163e7eb41",
+        "doc_id": "POL-SHP-007",
+        "source": "shipping-policy.md",
+        "section_path": "2. Free Shipping Thresholds",
+        "text": "## 2. Free Shipping Thresholds\n\nFree standard shipping applies at the following order subtotals, after discounts and before tax:\n\n| Tier | Free standard shipping at |\n|---|---|\n| Non-member | $99 |\n| Bronze | $75 |\n| Silver | $50 |\n| Gold | Any amount |\n| Platinum | Any amount |\n\nFree shipping applies to **standard** shipping only. Expedited and overnight are charged at full rate for all tiers, with no exception. Gold and Platinum members do not receive free expedited shipping, and this is the most frequent source of customer confusion on this policy.\n\nGift card purchases do not count toward the free shipping threshold.\n\n---\n\n"
+      },
+      {
+        "rank": 2,
+        "row_id": 15,
+        "score": 0.5087498426437378,
+        "chunk_id": "POL-LOY-011:010:cdbdbe1ea2",
+        "doc_id": "POL-LOY-011",
+        "source": "loyalty-program-terms.md",
+        "section_path": "4. Tier Benefits",
+        "text": "## 4. Tier Benefits\n\n| Benefit | Bronze | Silver | Gold | Platinum |\n|---|---|---|---|---|\n| Points earn rate | 1× | 1.25× | 1.5× | 2× |\n| Birthday reward | $5 | $10 | $20 | $40 |\n| Free standard shipping | $75+ | $50+ | Always | Always |\n| Free return shipping | No | No | Yes | Yes |\n| Return window | 30 days | 30 days | 30 days | **60 days** |\n| Early access to sales | No | 12 hours | 24 hours | 48 hours |\n| Free gear repair | No | No | 2 per year | Unlimited |\n| Dedicated support line | No | No | No | Yes |\n| Annual gear credit | No | No | No | $100 |\n\nBenefits are tied to the member's tier at the time the benefit is used, except the return window, which is fixed at the tier held **at the time of purchase** (see POL-RET-004 §1.1).\n\n"
+      },
+      {
+        "rank": 3,
+        "row_id": 8,
+        "score": 0.47730106115341187,
+        "chunk_id": "POL-LOY-011:003:8c4328c83f",
+        "doc_id": "POL-LOY-011",
+        "source": "loyalty-program-terms.md",
+        "section_path": "2. Tiers",
+        "text": "## 2. Tiers\n\nTier is determined by **trailing 12-month spend**, evaluated on the first day of each month.\n\n| Tier | Trailing 12-month spend | Members (approx.) |\n|---|---|---|\n| **Bronze** | Under $500 | 61% |\n| **Silver** | $500 – $1,999.99 | 26% |\n| **Gold** | $2,000 – $4,999.99 | 10% |\n| **Platinum** | $5,000 and above | 3% |\n\nSpend counts merchandise only. Gift card purchases, taxes, shipping charges, and amounts refunded through returns do **not** count toward tier qualification. A return reduces trailing spend and can cause a tier downgrade.\n\n"
+      },
+      {
+        "rank": 1,
+        "row_id": 18,
+        "score": 0.5364644527435303,
+        "chunk_id": "POL-LOY-011:013:c2d7a201cd",
+        "doc_id": "POL-LOY-011",
+        "source": "loyalty-program-terms.md",
+        "section_path": "5. Promotional Offers / 5.1 Retention Offers",
+        "text": "### 5.1 Retention Offers\n\nRetention offers are generated for members identified as at risk of lapsing. These offers:\n\n- Are valid for **45 days** from issue unless stated otherwise\n- Are limited to **one active retention offer per member** at a time\n- May not be combined with another retention offer\n- Do not extend, alter, or waive any provision of the returns policy\n\nAn offer that promises a benefit inconsistent with these terms — a return window longer than the member's tier allows, a discount stacked beyond the stated limit, or a benefit belonging to a higher tier — is **invalid**, and honoring it requires Director-level approval.\n\n---\n\n"
+      },
+      {
+        "rank": 2,
+        "row_id": 17,
+        "score": 0.5235196352005005,
+        "chunk_id": "POL-LOY-011:012:d96352d7c0",
+        "doc_id": "POL-LOY-011",
+        "source": "loyalty-program-terms.md",
+        "section_path": "5. Promotional Offers",
+        "text": "## 5. Promotional Offers\n\nTargeted offers issued to a member are **single-use, non-transferable, and tied to the member account**. Offers may not be stacked with other targeted offers, though a targeted offer may generally be combined with points redemption.\n\nOffer codes are void if the account is closed, if the offer's stated conditions are not met, or after the stated expiry date. Expired offers **cannot be reinstated by customer service or by any automated system.**\n\n"
+      },
+      {
+        "rank": 3,
+        "row_id": 27,
+        "score": 0.4606421887874603,
+        "chunk_id": "POL-RET-004:007:49b78de484",
+        "doc_id": "POL-RET-004",
+        "source": "return-policy.md",
+        "section_path": "4. Non-Returnable Merchandise",
+        "text": "## 4. Non-Returnable Merchandise\n\nThe following are **final sale** and cannot be returned or exchanged under any circumstance, including for Platinum members and including during the holiday window:\n\n- Items marked **\"Final Sale\"** on the product page or receipt\n- Clearance merchandise discounted **50% or more** from original retail\n- Personalized or custom-embroidered items\n- Perishable goods, including trail food and fuel canisters\n- Undergarments, swimwear, and socks, if the hygiene seal is broken\n- Gift cards and digital products\n- Downloadable trip guides and map subscriptions\n\n**This section overrides all other sections of this policy, including the Platinum extended window and the holiday window.** No tier benefit, promotional offer, or service gesture creates a right of return for final sale merchandise.\n\n---\n\n"
+      }
+    ],
+    "retrieval_passes": [
+      {
+        "query": "tier Platinum entitlements and shipping thresholds for a customer who shops online",
+        "filter_doc_ids": [
+          "POL-LOY-011",
+          "POL-SHP-007"
+        ],
+        "top_k": 3,
+        "embedding_request": {
+          "request_id": "54f61902-d557-448f-8eac-5e7bf8905e4a",
+          "input_tokens": 14,
+          "cache_hit": true,
+          "input_sha256": "f007a7e7ef4233b468d83f7bd512e38bb9a8ffb191039cec046a2cbb634a3f7c"
+        },
+        "results": [
+          {
+            "rank": 1,
+            "row_id": 37,
+            "score": 0.540640652179718,
+            "chunk_id": "POL-SHP-007:003:c163e7eb41",
+            "doc_id": "POL-SHP-007",
+            "source": "shipping-policy.md",
+            "section_path": "2. Free Shipping Thresholds",
+            "text": "## 2. Free Shipping Thresholds\n\nFree standard shipping applies at the following order subtotals, after discounts and before tax:\n\n| Tier | Free standard shipping at |\n|---|---|\n| Non-member | $99 |\n| Bronze | $75 |\n| Silver | $50 |\n| Gold | Any amount |\n| Platinum | Any amount |\n\nFree shipping applies to **standard** shipping only. Expedited and overnight are charged at full rate for all tiers, with no exception. Gold and Platinum members do not receive free expedited shipping, and this is the most frequent source of customer confusion on this policy.\n\nGift card purchases do not count toward the free shipping threshold.\n\n---\n\n"
+          },
+          {
+            "rank": 2,
+            "row_id": 15,
+            "score": 0.5087498426437378,
+            "chunk_id": "POL-LOY-011:010:cdbdbe1ea2",
+            "doc_id": "POL-LOY-011",
+            "source": "loyalty-program-terms.md",
+            "section_path": "4. Tier Benefits",
+            "text": "## 4. Tier Benefits\n\n| Benefit | Bronze | Silver | Gold | Platinum |\n|---|---|---|---|---|\n| Points earn rate | 1× | 1.25× | 1.5× | 2× |\n| Birthday reward | $5 | $10 | $20 | $40 |\n| Free standard shipping | $75+ | $50+ | Always | Always |\n| Free return shipping | No | No | Yes | Yes |\n| Return window | 30 days | 30 days | 30 days | **60 days** |\n| Early access to sales | No | 12 hours | 24 hours | 48 hours |\n| Free gear repair | No | No | 2 per year | Unlimited |\n| Dedicated support line | No | No | No | Yes |\n| Annual gear credit | No | No | No | $100 |\n\nBenefits are tied to the member's tier at the time the benefit is used, except the return window, which is fixed at the tier held **at the time of purchase** (see POL-RET-004 §1.1).\n\n"
+          },
+          {
+            "rank": 3,
+            "row_id": 8,
+            "score": 0.47730106115341187,
+            "chunk_id": "POL-LOY-011:003:8c4328c83f",
+            "doc_id": "POL-LOY-011",
+            "source": "loyalty-program-terms.md",
+            "section_path": "2. Tiers",
+            "text": "## 2. Tiers\n\nTier is determined by **trailing 12-month spend**, evaluated on the first day of each month.\n\n| Tier | Trailing 12-month spend | Members (approx.) |\n|---|---|---|\n| **Bronze** | Under $500 | 61% |\n| **Silver** | $500 – $1,999.99 | 26% |\n| **Gold** | $2,000 – $4,999.99 | 10% |\n| **Platinum** | $5,000 and above | 3% |\n\nSpend counts merchandise only. Gift card purchases, taxes, shipping charges, and amounts refunded through returns do **not** count toward tier qualification. A return reduces trailing spend and can cause a tier downgrade.\n\n"
+          }
+        ],
+        "strategy": "C"
+      },
+      {
+        "query": "final sale non-returnable exclusions expired offers cannot be reinstated retention offer validity single use combinability",
+        "filter_doc_ids": null,
+        "top_k": 3,
+        "embedding_request": {
+          "request_id": "90bd55ac-fa4a-46e6-9770-b6e252d654d2",
+          "input_tokens": 21,
+          "cache_hit": true,
+          "input_sha256": "acff10275a9c33feb6a49acd073a397c2c27c25fd1e480c3267b504dbed492f5"
+        },
+        "results": [
+          {
+            "rank": 1,
+            "row_id": 18,
+            "score": 0.5364644527435303,
+            "chunk_id": "POL-LOY-011:013:c2d7a201cd",
+            "doc_id": "POL-LOY-011",
+            "source": "loyalty-program-terms.md",
+            "section_path": "5. Promotional Offers / 5.1 Retention Offers",
+            "text": "### 5.1 Retention Offers\n\nRetention offers are generated for members identified as at risk of lapsing. These offers:\n\n- Are valid for **45 days** from issue unless stated otherwise\n- Are limited to **one active retention offer per member** at a time\n- May not be combined with another retention offer\n- Do not extend, alter, or waive any provision of the returns policy\n\nAn offer that promises a benefit inconsistent with these terms — a return window longer than the member's tier allows, a discount stacked beyond the stated limit, or a benefit belonging to a higher tier — is **invalid**, and honoring it requires Director-level approval.\n\n---\n\n"
+          },
+          {
+            "rank": 2,
+            "row_id": 17,
+            "score": 0.5235196352005005,
+            "chunk_id": "POL-LOY-011:012:d96352d7c0",
+            "doc_id": "POL-LOY-011",
+            "source": "loyalty-program-terms.md",
+            "section_path": "5. Promotional Offers",
+            "text": "## 5. Promotional Offers\n\nTargeted offers issued to a member are **single-use, non-transferable, and tied to the member account**. Offers may not be stacked with other targeted offers, though a targeted offer may generally be combined with points redemption.\n\nOffer codes are void if the account is closed, if the offer's stated conditions are not met, or after the stated expiry date. Expired offers **cannot be reinstated by customer service or by any automated system.**\n\n"
+          },
+          {
+            "rank": 3,
+            "row_id": 27,
+            "score": 0.4606421887874603,
+            "chunk_id": "POL-RET-004:007:49b78de484",
+            "doc_id": "POL-RET-004",
+            "source": "return-policy.md",
+            "section_path": "4. Non-Returnable Merchandise",
+            "text": "## 4. Non-Returnable Merchandise\n\nThe following are **final sale** and cannot be returned or exchanged under any circumstance, including for Platinum members and including during the holiday window:\n\n- Items marked **\"Final Sale\"** on the product page or receipt\n- Clearance merchandise discounted **50% or more** from original retail\n- Personalized or custom-embroidered items\n- Perishable goods, including trail food and fuel canisters\n- Undergarments, swimwear, and socks, if the hygiene seal is broken\n- Gift cards and digital products\n- Downloadable trip guides and map subscriptions\n\n**This section overrides all other sections of this policy, including the Platinum extended window and the holiday window.** No tier benefit, promotional offer, or service gesture creates a right of return for final sale merchandise.\n\n---\n\n"
+          }
+        ],
+        "strategy": "B"
+      }
+    ],
+    "subject": "Your Platinum Rewards on Outdoor Gear",
+    "body": "If your current membership is Platinum, you're earning 2× points on all qualifying purchases in Outdoor, Electronics, and Home categories—a benefit that rewards your broad shopping interests across our store. We'd love to have you explore these categories again and confirm your current membership tier at northstar.com or in-store.",
+    "rationale": "This offer anchors to the verified Platinum points earn rate (2×) applied to the three supplied top categories the customer already purchases from, avoiding invented discounts or tier-specific benefits beyond what the policy supports. The conditional phrasing acknowledges that lifetime value does not confirm trailing 12-month qualifying spend, and the invitation to verify membership is appropriate given the 39-day purchase gap and mixed-channel behavior.",
+    "formatted_as_requested": true,
+    "generation_cache_hit": false,
+    "raw_answer": "Subject: Your Platinum Rewards on Outdoor Gear\n\nBody: If your current membership is Platinum, you're earning 2× points on all qualifying purchases in Outdoor, Electronics, and Home categories—a benefit that rewards your broad shopping interests across our store. We'd love to have you explore these categories again and confirm your current membership tier at northstar.com or in-store.\n\nRationale: This offer anchors to the verified Platinum points earn rate (2×) applied to the three supplied top categories the customer already purchases from, avoiding invented discounts or tier-specific benefits beyond what the policy supports. The conditional phrasing acknowledges that lifetime value does not confirm trailing 12-month qualifying spend, and the invitation to verify membership is appropriate given the 39-day purchase gap and mixed-channel behavior.",
+    "request_id": "5b93694e-3ccc-4781-ad84-e18dac46ff0c",
+    "usage": {
+      "inputTokens": 2693,
+      "outputTokens": 177,
+      "totalTokens": 2870,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "stop_reason": "end_turn",
+    "latency_ms": 3153.57,
+    "generated_at_utc": "2026-10-18T04:28:35.527076+00:00",
+    "request_sha256": "f2e5b6d0677f2e48dd25aa4185fd3c28f583a949c6c512b2326ce429dff0cd11",
+    "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0"
+  },
+  {
+    "answer": "Subject: Your Silver Member Points on Home Purchases\nBody: If your current membership is Silver, you earn 1.25× points on qualifying Home purchases—a benefit that rewards your loyalty on categories you already shop. We'd love to have you explore our Home collection and verify your current membership benefits at northstar.com or in store.",
+    "contexts": [
+      "[POL-SHP-007:003:c163e7eb41 | POL-SHP-007 | 2. Free Shipping Thresholds]\n## 2. Free Shipping Thresholds\n\nFree standard shipping applies at the following order subtotals, after discounts and before tax:\n\n| Tier | Free standard shipping at |\n|---|---|\n| Non-member | $99 |\n| Bronze | $75 |\n| Silver | $50 |\n| Gold | Any amount |\n| Platinum | Any amount |\n\nFree shipping applies to **standard** shipping only. Expedited and overnight are charged at full rate for all tiers, with no exception. Gold and Platinum members do not receive free expedited shipping, and this is the most frequent source of customer confusion on this policy.\n\nGift card purchases do not count toward the free shipping threshold.\n\n---\n\n",
+      "[POL-LOY-011:010:cdbdbe1ea2 | POL-LOY-011 | 4. Tier Benefits]\n## 4. Tier Benefits\n\n| Benefit | Bronze | Silver | Gold | Platinum |\n|---|---|---|---|---|\n| Points earn rate | 1× | 1.25× | 1.5× | 2× |\n| Birthday reward | $5 | $10 | $20 | $40 |\n| Free standard shipping | $75+ | $50+ | Always | Always |\n| Free return shipping | No | No | Yes | Yes |\n| Return window | 30 days | 30 days | 30 days | **60 days** |\n| Early access to sales | No | 12 hours | 24 hours | 48 hours |\n| Free gear repair | No | No | 2 per year | Unlimited |\n| Dedicated support line | No | No | No | Yes |\n| Annual gear credit | No | No | No | $100 |\n\nBenefits are tied to the member's tier at the time the benefit is used, except the return window, which is fixed at the tier held **at the time of purchase** (see POL-RET-004 §1.1).\n\n",
+      "[POL-LOY-011:003:8c4328c83f | POL-LOY-011 | 2. Tiers]\n## 2. Tiers\n\nTier is determined by **trailing 12-month spend**, evaluated on the first day of each month.\n\n| Tier | Trailing 12-month spend | Members (approx.) |\n|---|---|---|\n| **Bronze** | Under $500 | 61% |\n| **Silver** | $500 – $1,999.99 | 26% |\n| **Gold** | $2,000 – $4,999.99 | 10% |\n| **Platinum** | $5,000 and above | 3% |\n\nSpend counts merchandise only. Gift card purchases, taxes, shipping charges, and amounts refunded through returns do **not** count toward tier qualification. A return reduces trailing spend and can cause a tier downgrade.\n\n",
+      "[POL-LOY-011:013:c2d7a201cd | POL-LOY-011 | 5. Promotional Offers / 5.1 Retention Offers]\n### 5.1 Retention Offers\n\nRetention offers are generated for members identified as at risk of lapsing. These offers:\n\n- Are valid for **45 days** from issue unless stated otherwise\n- Are limited to **one active retention offer per member** at a time\n- May not be combined with another retention offer\n- Do not extend, alter, or waive any provision of the returns policy\n\nAn offer that promises a benefit inconsistent with these terms — a return window longer than the member's tier allows, a discount stacked beyond the stated limit, or a benefit belonging to a higher tier — is **invalid**, and honoring it requires Director-level approval.\n\n---\n\n",
+      "[POL-LOY-011:012:d96352d7c0 | POL-LOY-011 | 5. Promotional Offers]\n## 5. Promotional Offers\n\nTargeted offers issued to a member are **single-use, non-transferable, and tied to the member account**. Offers may not be stacked with other targeted offers, though a targeted offer may generally be combined with points redemption.\n\nOffer codes are void if the account is closed, if the offer's stated conditions are not met, or after the stated expiry date. Expired offers **cannot be reinstated by customer service or by any automated system.**\n\n",
+      "[POL-RET-004:007:49b78de484 | POL-RET-004 | 4. Non-Returnable Merchandise]\n## 4. Non-Returnable Merchandise\n\nThe following are **final sale** and cannot be returned or exchanged under any circumstance, including for Platinum members and including during the holiday window:\n\n- Items marked **\"Final Sale\"** on the product page or receipt\n- Clearance merchandise discounted **50% or more** from original retail\n- Personalized or custom-embroidered items\n- Perishable goods, including trail food and fuel canisters\n- Undergarments, swimwear, and socks, if the hygiene seal is broken\n- Gift cards and digital products\n- Downloadable trip guides and map subscriptions\n\n**This section overrides all other sections of this policy, including the Platinum extended window and the holiday window.** No tier benefit, promotional offer, or service gesture creates a right of return for final sale merchandise.\n\n---\n\n",
+      "Customer profile (reported tier is approximate): {\"avg_order_value\": 132.3, \"category_diversity_score\": 0.375, \"churn_probability\": 0.7, \"customer_id\": \"CUST-10000588\", \"days_since_last_purchase\": 52, \"loyalty_tier\": \"Silver\", \"online_to_store_ratio\": 0.61, \"top_categories\": [\"Home\", \"Beauty\"], \"total_lifetime_value\": 1985.0}"
+    ],
+    "customer_profile": {
+      "churn_probability": 0.7,
+      "loyalty_tier": "Silver",
+      "total_lifetime_value": 1985.0,
+      "days_since_last_purchase": 52,
+      "avg_order_value": 132.3,
+      "category_diversity_score": 0.375,
+      "online_to_store_ratio": 0.61,
+      "top_categories": [
+        "Home",
+        "Beauty"
+      ],
+      "customer_id": "CUST-10000588"
+    },
+    "question": "Generate a retention offer for this Silver member whose lifetime value is just under the Gold threshold.",
+    "strategy": "CB",
+    "prompt_variant": "hardened",
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "row_id": 37,
+        "score": 0.47517120838165283,
+        "chunk_id": "POL-SHP-007:003:c163e7eb41",
+        "doc_id": "POL-SHP-007",
+        "source": "shipping-policy.md",
+        "section_path": "2. Free Shipping Thresholds",
+        "text": "## 2. Free Shipping Thresholds\n\nFree standard shipping applies at the following order subtotals, after discounts and before tax:\n\n| Tier | Free standard shipping at |\n|---|---|\n| Non-member | $99 |\n| Bronze | $75 |\n| Silver | $50 |\n| Gold | Any amount |\n| Platinum | Any amount |\n\nFree shipping applies to **standard** shipping only. Expedited and overnight are charged at full rate for all tiers, with no exception. Gold and Platinum members do not receive free expedited shipping, and this is the most frequent source of customer confusion on this policy.\n\nGift card purchases do not count toward the free shipping threshold.\n\n---\n\n"
+      },
+      {
+        "rank": 2,
+        "row_id": 15,
+        "score": 0.47434374690055847,
+        "chunk_id": "POL-LOY-011:010:cdbdbe1ea2",
+        "doc_id": "POL-LOY-011",
+        "source": "loyalty-program-terms.md",
+        "section_path": "4. Tier Benefits",
+        "text": "## 4. Tier Benefits\n\n| Benefit | Bronze | Silver | Gold | Platinum |\n|---|---|---|---|---|\n| Points earn rate | 1× | 1.25× | 1.5× | 2× |\n| Birthday reward | $5 | $10 | $20 | $40 |\n| Free standard shipping | $75+ | $50+ | Always | Always |\n| Free return shipping | No | No | Yes | Yes |\n| Return window | 30 days | 30 days | 30 days | **60 days** |\n| Early access to sales | No | 12 hours | 24 hours | 48 hours |\n| Free gear repair | No | No | 2 per year | Unlimited |\n| Dedicated support line | No | No | No | Yes |\n| Annual gear credit | No | No | No | $100 |\n\nBenefits are tied to the member's tier at the time the benefit is used, except the return window, which is fixed at the tier held **at the time of purchase** (see POL-RET-004 §1.1).\n\n"
+      },
+      {
+        "rank": 3,
+        "row_id": 8,
+        "score": 0.4270791709423065,
+        "chunk_id": "POL-LOY-011:003:8c4328c83f",
+        "doc_id": "POL-LOY-011",
+        "source": "loyalty-program-terms.md",
+        "section_path": "2. Tiers",
+        "text": "## 2. Tiers\n\nTier is determined by **trailing 12-month spend**, evaluated on the first day of each month.\n\n| Tier | Trailing 12-month spend | Members (approx.) |\n|---|---|---|\n| **Bronze** | Under $500 | 61% |\n| **Silver** | $500 – $1,999.99 | 26% |\n| **Gold** | $2,000 – $4,999.99 | 10% |\n| **Platinum** | $5,000 and above | 3% |\n\nSpend counts merchandise only. Gift card purchases, taxes, shipping charges, and amounts refunded through returns do **not** count toward tier qualification. A return reduces trailing spend and can cause a tier downgrade.\n\n"
+      },
+      {
+        "rank": 1,
+        "row_id": 18,
+        "score": 0.5364644527435303,
+        "chunk_id": "POL-LOY-011:013:c2d7a201cd",
+        "doc_id": "POL-LOY-011",
+        "source": "loyalty-program-terms.md",
+        "section_path": "5. Promotional Offers / 5.1 Retention Offers",
+        "text": "### 5.1 Retention Offers\n\nRetention offers are generated for members identified as at risk of lapsing. These offers:\n\n- Are valid for **45 days** from issue unless stated otherwise\n- Are limited to **one active retention offer per member** at a time\n- May not be combined with another retention offer\n- Do not extend, alter, or waive any provision of the returns policy\n\nAn offer that promises a benefit inconsistent with these terms — a return window longer than the member's tier allows, a discount stacked beyond the stated limit, or a benefit belonging to a higher tier — is **invalid**, and honoring it requires Director-level approval.\n\n---\n\n"
+      },
+      {
+        "rank": 2,
+        "row_id": 17,
+        "score": 0.5235196352005005,
+        "chunk_id": "POL-LOY-011:012:d96352d7c0",
+        "doc_id": "POL-LOY-011",
+        "source": "loyalty-program-terms.md",
+        "section_path": "5. Promotional Offers",
+        "text": "## 5. Promotional Offers\n\nTargeted offers issued to a member are **single-use, non-transferable, and tied to the member account**. Offers may not be stacked with other targeted offers, though a targeted offer may generally be combined with points redemption.\n\nOffer codes are void if the account is closed, if the offer's stated conditions are not met, or after the stated expiry date. Expired offers **cannot be reinstated by customer service or by any automated system.**\n\n"
+      },
+      {
+        "rank": 3,
+        "row_id": 27,
+        "score": 0.4606421887874603,
+        "chunk_id": "POL-RET-004:007:49b78de484",
+        "doc_id": "POL-RET-004",
+        "source": "return-policy.md",
+        "section_path": "4. Non-Returnable Merchandise",
+        "text": "## 4. Non-Returnable Merchandise\n\nThe following are **final sale** and cannot be returned or exchanged under any circumstance, including for Platinum members and including during the holiday window:\n\n- Items marked **\"Final Sale\"** on the product page or receipt\n- Clearance merchandise discounted **50% or more** from original retail\n- Personalized or custom-embroidered items\n- Perishable goods, including trail food and fuel canisters\n- Undergarments, swimwear, and socks, if the hygiene seal is broken\n- Gift cards and digital products\n- Downloadable trip guides and map subscriptions\n\n**This section overrides all other sections of this policy, including the Platinum extended window and the holiday window.** No tier benefit, promotional offer, or service gesture creates a right of return for final sale merchandise.\n\n---\n\n"
+      }
+    ],
+    "retrieval_passes": [
+      {
+        "query": "tier Silver entitlements and shipping thresholds for a customer who shops online",
+        "filter_doc_ids": [
+          "POL-LOY-011",
+          "POL-SHP-007"
+        ],
+        "top_k": 3,
+        "embedding_request": {
+          "request_id": "29404e1b-2954-4fd2-956a-d9df51fe56ce",
+          "input_tokens": 14,
+          "cache_hit": true,
+          "input_sha256": "570e99d7cf29c70b55a7956c220d814f120e6b0fa4cb105eda979165e9010a81"
+        },
+        "results": [
+          {
+            "rank": 1,
+            "row_id": 37,
+            "score": 0.47517120838165283,
+            "chunk_id": "POL-SHP-007:003:c163e7eb41",
+            "doc_id": "POL-SHP-007",
+            "source": "shipping-policy.md",
+            "section_path": "2. Free Shipping Thresholds",
+            "text": "## 2. Free Shipping Thresholds\n\nFree standard shipping applies at the following order subtotals, after discounts and before tax:\n\n| Tier | Free standard shipping at |\n|---|---|\n| Non-member | $99 |\n| Bronze | $75 |\n| Silver | $50 |\n| Gold | Any amount |\n| Platinum | Any amount |\n\nFree shipping applies to **standard** shipping only. Expedited and overnight are charged at full rate for all tiers, with no exception. Gold and Platinum members do not receive free expedited shipping, and this is the most frequent source of customer confusion on this policy.\n\nGift card purchases do not count toward the free shipping threshold.\n\n---\n\n"
+          },
+          {
+            "rank": 2,
+            "row_id": 15,
+            "score": 0.47434374690055847,
+            "chunk_id": "POL-LOY-011:010:cdbdbe1ea2",
+            "doc_id": "POL-LOY-011",
+            "source": "loyalty-program-terms.md",
+            "section_path": "4. Tier Benefits",
+            "text": "## 4. Tier Benefits\n\n| Benefit | Bronze | Silver | Gold | Platinum |\n|---|---|---|---|---|\n| Points earn rate | 1× | 1.25× | 1.5× | 2× |\n| Birthday reward | $5 | $10 | $20 | $40 |\n| Free standard shipping | $75+ | $50+ | Always | Always |\n| Free return shipping | No | No | Yes | Yes |\n| Return window | 30 days | 30 days | 30 days | **60 days** |\n| Early access to sales | No | 12 hours | 24 hours | 48 hours |\n| Free gear repair | No | No | 2 per year | Unlimited |\n| Dedicated support line | No | No | No | Yes |\n| Annual gear credit | No | No | No | $100 |\n\nBenefits are tied to the member's tier at the time the benefit is used, except the return window, which is fixed at the tier held **at the time of purchase** (see POL-RET-004 §1.1).\n\n"
+          },
+          {
+            "rank": 3,
+            "row_id": 8,
+            "score": 0.4270791709423065,
+            "chunk_id": "POL-LOY-011:003:8c4328c83f",
+            "doc_id": "POL-LOY-011",
+            "source": "loyalty-program-terms.md",
+            "section_path": "2. Tiers",
+            "text": "## 2. Tiers\n\nTier is determined by **trailing 12-month spend**, evaluated on the first day of each month.\n\n| Tier | Trailing 12-month spend | Members (approx.) |\n|---|---|---|\n| **Bronze** | Under $500 | 61% |\n| **Silver** | $500 – $1,999.99 | 26% |\n| **Gold** | $2,000 – $4,999.99 | 10% |\n| **Platinum** | $5,000 and above | 3% |\n\nSpend counts merchandise only. Gift card purchases, taxes, shipping charges, and amounts refunded through returns do **not** count toward tier qualification. A return reduces trailing spend and can cause a tier downgrade.\n\n"
+          }
+        ],
+        "strategy": "C"
+      },
+      {
+        "query": "final sale non-returnable exclusions expired offers cannot be reinstated retention offer validity single use combinability",
+        "filter_doc_ids": null,
+        "top_k": 3,
+        "embedding_request": {
+          "request_id": "90bd55ac-fa4a-46e6-9770-b6e252d654d2",
+          "input_tokens": 21,
+          "cache_hit": true,
+          "input_sha256": "acff10275a9c33feb6a49acd073a397c2c27c25fd1e480c3267b504dbed492f5"
+        },
+        "results": [
+          {
+            "rank": 1,
+            "row_id": 18,
+            "score": 0.5364644527435303,
+            "chunk_id": "POL-LOY-011:013:c2d7a201cd",
+            "doc_id": "POL-LOY-011",
+            "source": "loyalty-program-terms.md",
+            "section_path": "5. Promotional Offers / 5.1 Retention Offers",
+            "text": "### 5.1 Retention Offers\n\nRetention offers are generated for members identified as at risk of lapsing. These offers:\n\n- Are valid for **45 days** from issue unless stated otherwise\n- Are limited to **one active retention offer per member** at a time\n- May not be combined with another retention offer\n- Do not extend, alter, or waive any provision of the returns policy\n\nAn offer that promises a benefit inconsistent with these terms — a return window longer than the member's tier allows, a discount stacked beyond the stated limit, or a benefit belonging to a higher tier — is **invalid**, and honoring it requires Director-level approval.\n\n---\n\n"
+          },
+          {
+            "rank": 2,
+            "row_id": 17,
+            "score": 0.5235196352005005,
+            "chunk_id": "POL-LOY-011:012:d96352d7c0",
+            "doc_id": "POL-LOY-011",
+            "source": "loyalty-program-terms.md",
+            "section_path": "5. Promotional Offers",
+            "text": "## 5. Promotional Offers\n\nTargeted offers issued to a member are **single-use, non-transferable, and tied to the member account**. Offers may not be stacked with other targeted offers, though a targeted offer may generally be combined with points redemption.\n\nOffer codes are void if the account is closed, if the offer's stated conditions are not met, or after the stated expiry date. Expired offers **cannot be reinstated by customer service or by any automated system.**\n\n"
+          },
+          {
+            "rank": 3,
+            "row_id": 27,
+            "score": 0.4606421887874603,
+            "chunk_id": "POL-RET-004:007:49b78de484",
+            "doc_id": "POL-RET-004",
+            "source": "return-policy.md",
+            "section_path": "4. Non-Returnable Merchandise",
+            "text": "## 4. Non-Returnable Merchandise\n\nThe following are **final sale** and cannot be returned or exchanged under any circumstance, including for Platinum members and including during the holiday window:\n\n- Items marked **\"Final Sale\"** on the product page or receipt\n- Clearance merchandise discounted **50% or more** from original retail\n- Personalized or custom-embroidered items\n- Perishable goods, including trail food and fuel canisters\n- Undergarments, swimwear, and socks, if the hygiene seal is broken\n- Gift cards and digital products\n- Downloadable trip guides and map subscriptions\n\n**This section overrides all other sections of this policy, including the Platinum extended window and the holiday window.** No tier benefit, promotional offer, or service gesture creates a right of return for final sale merchandise.\n\n---\n\n"
+          }
+        ],
+        "strategy": "B"
+      }
+    ],
+    "subject": "Your Silver Member Points on Home Purchases",
+    "body": "If your current membership is Silver, you earn 1.25× points on qualifying Home purchases—a benefit that rewards your loyalty on categories you already shop. We'd love to have you explore our Home collection and verify your current membership benefits at northstar.com or in store.",
+    "rationale": "This offer anchors to the customer's demonstrated Home category engagement and Silver tier's actual points multiplier (1.25×), avoiding any invented discount or tier upgrade while inviting re-engagement through a category where purchase history exists.",
+    "formatted_as_requested": true,
+    "generation_cache_hit": false,
+    "raw_answer": "Subject: Your Silver Member Points on Home Purchases\n\nBody: If your current membership is Silver, you earn 1.25× points on qualifying Home purchases—a benefit that rewards your loyalty on categories you already shop. We'd love to have you explore our Home collection and verify your current membership benefits at northstar.com or in store.\n\nRationale: This offer anchors to the customer's demonstrated Home category engagement and Silver tier's actual points multiplier (1.25×), avoiding any invented discount or tier upgrade while inviting re-engagement through a category where purchase history exists.",
+    "request_id": "fa1f0e9d-3095-4a83-a8ec-e9a5871ec532",
+    "usage": {
+      "inputTokens": 2683,
+      "outputTokens": 125,
+      "totalTokens": 2808,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "stop_reason": "end_turn",
+    "latency_ms": 2450.09,
+    "generated_at_utc": "2026-10-18T04:28:37.986740+00:00",
+    "request_sha256": "acbcacdd44f9c5d8c96ee011c30cff2f4d6567992231e5f7faeb76c7ec5518d1",
+    "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0"
+  }
+]

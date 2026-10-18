@@ -1,0 +1,70 @@
+CB_hardened CUST-10000317: Subject: Your Gold Member Points Advantage on Outdoor Gear
+Body: If your current membership is Gold, you earn 1.5× points on qualifying purchases in Outdoor gear—a benefit that rewards your loyalty on the categories you shop most. We'd love to have you explore what's new in Outdoor and Footwear, and invite you to check your membership status and points balance in your account.
+CB_hardened CUST-10000904: Subject: Your Bronze Member Points on Apparel
+Body: If your current membership is Bronze, you earn 1× points on all qualifying apparel purchases—a benefit that rewards every dollar you spend in a category you already shop. We'd love to have you back; check your account to see your current membership status and explore our apparel selection.
+CB_hardened CUST-10000122: Subject: Your Platinum Rewards on Outdoor Gear
+Body: If your current membership is Platinum, you're earning 2× points on all qualifying purchases in Outdoor, Electronics, and Home categories—a benefit that rewards your broad shopping interests across our store. We'd love to have you explore these categories again and confirm your current membership tier at northstar.com or in-store.
+CB_hardened CUST-10000588: Subject: Your Silver Member Points on Home Purchases
+Body: If your current membership is Silver, you earn 1.25× points on qualifying Home purchases—a benefit that rewards your loyalty on categories you already shop. We'd love to have you explore our Home collection and verify your current membership benefits at northstar.com or in store.
+
+── Running RAG Evaluation (4 test cases) ──
+  Evaluating CUST-10000317...
+  Evaluating CUST-10000904...
+  Evaluating CUST-10000122...
+  Evaluating CUST-10000588...
+
+Evaluating:   0%|          | 0/12 [00:00<?, ?it/s]
+Evaluating:   8%|▊         | 1/12 [00:01<00:20,  1.91s/it]
+Evaluating:  17%|█▋        | 2/12 [00:05<00:29,  2.92s/it]
+Evaluating:  33%|███▎      | 4/12 [00:06<00:12,  1.54s/it]
+Evaluating:  42%|████▏     | 5/12 [00:10<00:15,  2.23s/it]
+Evaluating:  50%|█████     | 6/12 [00:13<00:13,  2.29s/it]
+Evaluating:  58%|█████▊    | 7/12 [00:14<00:10,  2.07s/it]
+Evaluating:  67%|██████▋   | 8/12 [00:16<00:07,  1.93s/it]
+Evaluating:  75%|███████▌  | 9/12 [00:17<00:04,  1.59s/it]
+Evaluating:  83%|████████▎ | 10/12 [00:18<00:03,  1.56s/it]
+Evaluating:  92%|█████████▏| 11/12 [00:22<00:02,  2.11s/it]
+Evaluating: 100%|██████████| 12/12 [00:22<00:00,  1.84s/it]
+
+── RAGAS Evaluation Results ──────────────────────────
+  faithfulness        : 0.106 (reported score; no fixed grading gate)
+  answer_relevancy    : 0.369 (reported score; no fixed grading gate)
+  context_recall      : 0.683 (reported score; no fixed grading gate)
+
+SAVED scores-CB_hardened-1.csv: {'faithfulness': 0.10625, 'answer_relevancy': 0.3689317841229157, 'context_recall': 0.6833333333333333}
+
+── Running RAG Evaluation (4 test cases) ──
+  Evaluating CUST-10000317...
+  Evaluating CUST-10000904...
+  Evaluating CUST-10000122...
+  Evaluating CUST-10000588...
+
+Evaluating:   0%|          | 0/12 [00:00<?, ?it/s]
+Evaluating:   8%|▊         | 1/12 [00:01<00:20,  1.86s/it]
+Evaluating:  17%|█▋        | 2/12 [00:05<00:28,  2.89s/it]
+Evaluating:  25%|██▌       | 3/12 [00:06<00:17,  1.89s/it]
+Evaluating:  33%|███▎      | 4/12 [00:12<00:29,  3.66s/it]
+Evaluating:  42%|████▏     | 5/12 [00:15<00:24,  3.45s/it]
+Evaluating:  50%|█████     | 6/12 [00:16<00:15,  2.54s/it]
+Evaluating:  58%|█████▊    | 7/12 [00:18<00:12,  2.53s/it]
+Evaluating:  67%|██████▋   | 8/12 [00:21<00:10,  2.54s/it]
+Evaluating:  75%|███████▌  | 9/12 [00:22<00:05,  1.99s/it]
+Evaluating:  83%|████████▎ | 10/12 [00:25<00:04,  2.36s/it]
+Evaluating:  92%|█████████▏| 11/12 [00:29<00:02,  2.75s/it]
+Evaluating: 100%|██████████| 12/12 [00:29<00:00,  2.15s/it]
+Evaluating: 100%|██████████| 12/12 [00:29<00:00,  2.49s/it]
+
+── RAGAS Evaluation Results ──────────────────────────
+  faithfulness        : 0.169 (reported score; no fixed grading gate)
+  answer_relevancy    : 0.370 (reported score; no fixed grading gate)
+  context_recall      : 0.683 (reported score; no fixed grading gate)
+
+SAVED scores-CB_hardened-2.csv: {'faithfulness': 0.16875, 'answer_relevancy': 0.3698109480537507, 'context_recall': 0.6833333333333333}
+            faithfulness                     answer_relevancy                     context_recall               
+                    mean       min       max             mean       min       max           mean       min  max
+strategy                                                                                                       
+A               0.183985  0.100000  0.307692         0.347177  0.291944  0.425992       0.483333  0.200000  1.0
+B               0.179167  0.000000  0.500000         0.394921  0.337665  0.479380       0.387500  0.000000  0.8
+C               0.308838  0.090909  0.545455         0.359561  0.296740  0.479029       0.483333  0.200000  1.0
+CB              0.297475  0.090909  0.454545         0.360169  0.263346  0.532558       0.683333  0.333333  1.0
+CB_hardened     0.137500  0.000000  0.300000         0.369371  0.257216  0.476730       0.683333  0.333333  1.0

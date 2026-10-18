@@ -1,0 +1,47 @@
+{
+  "checked_at_utc": "2026-10-18T04:02:00.597489+00:00",
+  "fixture_source": "evaluation_harness.py OFFER_TEST_CASES",
+  "fixture_source_sha256": "fad2be0cfd45a0ccf5a307470d5acc5e3b230216b426c2eb15233e0ac00d839f",
+  "retrieval_source_sha256": "e141b244959fd10be542b8a609d603251c356b17dffd09987149e7d0fefc52c4",
+  "top_k": 4,
+  "cases": 4,
+  "retrievals": 12,
+  "unique_queries": 9,
+  "new_successful_query_embeddings": 9,
+  "query_cache_hits": 3,
+  "new_input_tokens": 142,
+  "faiss_matches_independent_numpy": true,
+  "filtered_results_respect_allowed_docs": true,
+  "persisted_rows_match_original_embeddings": true,
+  "source_text_and_prompt_chunk_ids_match": true,
+  "offline_replay_identical": true,
+  "offline_replay_new_model_calls": 0,
+  "validation_source": "240 earlier offline corpus-vector/filter comparisons, plus 12 real-query comparisons",
+  "invalid_vector_and_k_checks": 4,
+  "policy_section_presence_counts": {
+    "A": {
+      "tier_benefits_table": 4,
+      "shipping_thresholds_source": 0,
+      "no_free_expedited_statement": 0,
+      "explicit_final_sale_restriction": 0,
+      "retention_offer_terms": 0
+    },
+    "B": {
+      "tier_benefits_table": 0,
+      "shipping_thresholds_source": 0,
+      "no_free_expedited_statement": 0,
+      "explicit_final_sale_restriction": 4,
+      "retention_offer_terms": 4
+    },
+    "C": {
+      "tier_benefits_table": 4,
+      "shipping_thresholds_source": 4,
+      "no_free_expedited_statement": 4,
+      "explicit_final_sale_restriction": 0,
+      "retention_offer_terms": 0
+    }
+  },
+  "scope": "Retrieval only. Presence checks are diagnostics, not RAGAS context recall or policy correctness guarantees.",
+  "ragas_context_recall": null,
+  "generation_calls": 0
+}

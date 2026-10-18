@@ -1,0 +1,20 @@
+[
+  {
+    "address": "module.vpc.aws_eip.nat[0]",
+    "actions": [
+      "delete"
+    ]
+  },
+  {
+    "address": "module.vpc.aws_nat_gateway.this[0]",
+    "actions": [
+      "delete"
+    ]
+  },
+  {
+    "address": "module.vpc.aws_route.private_nat[0]",
+    "actions": [
+      "delete"
+    ]
+  }
+]

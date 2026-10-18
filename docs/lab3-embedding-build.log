@@ -1,0 +1,83 @@
+{
+  "documents": [
+    {
+      "source": "customer-faq.md",
+      "doc_id": "KB-FAQ-022",
+      "source_sha256": "ce14caad8dec8cc9c0d345bf8b3f6b349939efb6665fe74f270ce03ecd3dec8b",
+      "chunks": 6
+    },
+    {
+      "source": "loyalty-program-terms.md",
+      "doc_id": "POL-LOY-011",
+      "source_sha256": "c0709853c22be819477e40075ac8855a7ae7a2493a144bbb655ce081baafebf1",
+      "chunks": 15
+    },
+    {
+      "source": "return-policy.md",
+      "doc_id": "POL-RET-004",
+      "source_sha256": "4764b32cd610631875b7a17f4d57f25ddb4c0a9051039295d12a5e1ecddff0cd",
+      "chunks": 14
+    },
+    {
+      "source": "shipping-policy.md",
+      "doc_id": "POL-SHP-007",
+      "source_sha256": "1694c3165e9aff917b45dc851252413df4667d0c04ef37012a7427e9d5dd03e1",
+      "chunks": 13
+    }
+  ],
+  "chunks": 48,
+  "word_range": [
+    21,
+    245
+  ],
+  "overlap_words": 0
+}
+[1/48] KB-FAQ-022:001:f05a9ae60d tokens=101 cache_hit=False
+[2/48] KB-FAQ-022:002:636e91c073 tokens=342 cache_hit=False
+[3/48] KB-FAQ-022:003:716beea738 tokens=337 cache_hit=False
+[4/48] KB-FAQ-022:004:998ce1f72b tokens=325 cache_hit=False
+[5/48] KB-FAQ-022:005:82ea5333d5 tokens=137 cache_hit=False
+[6/48] KB-FAQ-022:006:673c362025 tokens=285 cache_hit=False
+[7/48] POL-LOY-011:001:cbfcc682b5 tokens=72 cache_hit=False
+[8/48] POL-LOY-011:002:2d16c08cc6 tokens=70 cache_hit=False
+[9/48] POL-LOY-011:003:8c4328c83f tokens=187 cache_hit=False
+[10/48] POL-LOY-011:004:773059e1b0 tokens=86 cache_hit=False
+[11/48] POL-LOY-011:005:03a668ea72 tokens=100 cache_hit=False
+[12/48] POL-LOY-011:006:8a82460cc1 tokens=85 cache_hit=False
+[13/48] POL-LOY-011:007:df3fd61764 tokens=162 cache_hit=False
+[14/48] POL-LOY-011:008:4672c85ddf tokens=135 cache_hit=False
+[15/48] POL-LOY-011:009:d4fc7a0510 tokens=91 cache_hit=False
+[16/48] POL-LOY-011:010:cdbdbe1ea2 tokens=256 cache_hit=False
+[17/48] POL-LOY-011:011:78f4f4ad65 tokens=96 cache_hit=False
+[18/48] POL-LOY-011:012:d96352d7c0 tokens=125 cache_hit=False
+[19/48] POL-LOY-011:013:c2d7a201cd tokens=168 cache_hit=False
+[20/48] POL-LOY-011:014:2446c22994 tokens=123 cache_hit=False
+[21/48] POL-LOY-011:015:b8bd50ad5e tokens=85 cache_hit=False
+[22/48] POL-RET-004:001:357e95b972 tokens=99 cache_hit=False
+[23/48] POL-RET-004:002:b34df5c1fd tokens=105 cache_hit=False
+[24/48] POL-RET-004:003:c35321e3fd tokens=134 cache_hit=False
+[25/48] POL-RET-004:004:ee8c1202a8 tokens=97 cache_hit=False
+[26/48] POL-RET-004:005:deff713c41 tokens=189 cache_hit=False
+[27/48] POL-RET-004:006:2ab9738423 tokens=127 cache_hit=False
+[28/48] POL-RET-004:007:49b78de484 tokens=202 cache_hit=False
+[29/48] POL-RET-004:008:3535314bf5 tokens=151 cache_hit=False
+[30/48] POL-RET-004:009:d31b5ebc9a tokens=84 cache_hit=False
+[31/48] POL-RET-004:010:4d33c8f015 tokens=119 cache_hit=False
+[32/48] POL-RET-004:011:b28dabdda5 tokens=92 cache_hit=False
+[33/48] POL-RET-004:012:bd33fb4d39 tokens=101 cache_hit=False
+[34/48] POL-RET-004:013:afefa0fdf9 tokens=122 cache_hit=False
+[35/48] POL-RET-004:014:5a126b8b78 tokens=125 cache_hit=False
+[36/48] POL-SHP-007:001:b455d8c9cf tokens=78 cache_hit=False
+[37/48] POL-SHP-007:002:1a46dd6e37 tokens=168 cache_hit=False
+[38/48] POL-SHP-007:003:c163e7eb41 tokens=162 cache_hit=False
+[39/48] POL-SHP-007:004:7a968d718c tokens=114 cache_hit=False
+[40/48] POL-SHP-007:005:f20745e08b tokens=149 cache_hit=False
+[41/48] POL-SHP-007:006:a0907dbd32 tokens=82 cache_hit=False
+[42/48] POL-SHP-007:007:f6b370facb tokens=86 cache_hit=False
+[43/48] POL-SHP-007:008:d859ce9823 tokens=76 cache_hit=False
+[44/48] POL-SHP-007:009:eaeac9a251 tokens=91 cache_hit=False
+[45/48] POL-SHP-007:010:5438484490 tokens=84 cache_hit=False
+[46/48] POL-SHP-007:011:30f5179ddc tokens=123 cache_hit=False
+[47/48] POL-SHP-007:012:8845c3354a tokens=105 cache_hit=False
+[48/48] POL-SHP-007:013:6c740e7275 tokens=82 cache_hit=False
+PASS embeddings saved and read back: [48, 1024]

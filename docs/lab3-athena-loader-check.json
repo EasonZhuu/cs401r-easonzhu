@@ -1,0 +1,66 @@
+{
+  "checked_at_utc": "2026-10-17T22:53:17.622429+00:00",
+  "account": "173506956686",
+  "identity_arn": "arn:aws:iam::173506956686:user/cs401_admin",
+  "region": "us-east-1",
+  "resource_names_source": "terraform output -json",
+  "feature_group": "northstar-dev-customer-features",
+  "artifacts_bucket": "northstar-dev-data-173506956686",
+  "training_start_date": "2026-01-01",
+  "training_end_date": "2027-01-01",
+  "query_execution_id": "1cd550a0-6d3e-4949-a042-fe5d6a52c75a",
+  "query_state": "SUCCEEDED",
+  "query_context": {
+    "Database": "northstar_dev",
+    "Catalog": "awsdatacatalog"
+  },
+  "sql": "WITH ranked AS (\n            SELECT\n                customer_id,\n                days_since_last_purchase, customer_tenure_days, purchase_frequency_30d, purchase_frequency_90d, purchase_frequency_180d, avg_order_value, total_spend_90d, total_lifetime_value, avg_basket_size_6m, category_diversity_score, online_to_store_ratio,\n                churn_label,\n                loyalty_tier,\n                event_time,\n                ROW_NUMBER() OVER (\n                    PARTITION BY customer_id\n                    ORDER BY event_time DESC, write_time DESC\n                ) AS rn\n            FROM \"northstar_dev_customer_features\"\n            WHERE event_time BETWEEN 1767225600.0 AND 1798761600.0\n              AND NOT is_deleted\n        )\n        SELECT\n            customer_id,\n            days_since_last_purchase, customer_tenure_days, purchase_frequency_30d, purchase_frequency_90d, purchase_frequency_180d, avg_order_value, total_spend_90d, total_lifetime_value, avg_basket_size_6m, category_diversity_score, online_to_store_ratio,\n            churn_label,\n            loyalty_tier\n        FROM ranked\n        WHERE rn = 1\n        ORDER BY customer_id",
+  "statistics": {
+    "EngineExecutionTimeInMillis": 826,
+    "DataScannedInBytes": 682222,
+    "TotalExecutionTimeInMillis": 994,
+    "QueryQueueTimeInMillis": 97,
+    "ServicePreProcessingTimeInMillis": 55,
+    "QueryPlanningTimeInMillis": 84,
+    "ServiceProcessingTimeInMillis": 16,
+    "ResultReuseInformation": {
+      "ReusedPreviousResult": false
+    }
+  },
+  "rows": 9999,
+  "unique_customers": 9999,
+  "columns": [
+    "customer_id",
+    "days_since_last_purchase",
+    "customer_tenure_days",
+    "purchase_frequency_30d",
+    "purchase_frequency_90d",
+    "purchase_frequency_180d",
+    "avg_order_value",
+    "total_spend_90d",
+    "total_lifetime_value",
+    "avg_basket_size_6m",
+    "category_diversity_score",
+    "online_to_store_ratio",
+    "churn_label",
+    "loyalty_tier"
+  ],
+  "model_feature_count": 11,
+  "labels": {
+    "0": 7799,
+    "1": 2200
+  },
+  "null_cells": 0,
+  "customer_id_ordered": true,
+  "all_rows_match_regenerated_features": true,
+  "ordered_csv_sha256": "325f9999c1f345321c2fb5f1eb3aae7390be08a84587ea495ec505ef94db8589",
+  "loyalty_tiers": {
+    "Silver": 3862,
+    "Bronze": 3529,
+    "Gold": 1664,
+    "Platinum": 944
+  },
+  "local_data_loader_used": false,
+  "training_performed": false,
+  "scope": "Section 4 loader verification, not the final graded training run"
+}

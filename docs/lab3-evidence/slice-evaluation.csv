@@ -1,0 +1,5 @@
+tier,n,positives,negatives,auc,recall,selected,true_positives,too_small,too_small_rule,recall_below_aggregate_10pp
+Bronze,1071,361,710,0.75796691506379,0.4182825484764543,186,151,False,n < 100 or fewer than 30 examples in either class,False
+Gold,483,52,431,0.7501115473853294,0.1346153846153846,10,7,False,n < 100 or fewer than 30 examples in either class,True
+Platinum,307,21,286,0.8963536463536463,0.09523809523809523,3,2,True,n < 100 or fewer than 30 examples in either class,True
+Silver,1139,226,913,0.7213916001899795,0.23893805309734514,101,54,False,n < 100 or fewer than 30 examples in either class,False

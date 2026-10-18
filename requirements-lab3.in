@@ -1,0 +1,24 @@
+# Python 3.12. Use requirements-lab3.txt for the verified exact environment.
+# SageMaker 3 removed the Feature Store API used by the course skeleton.
+sagemaker>=2.200.0,<3.0.0
+boto3>=1.34.0
+numpy>=1.26.0,<2.0.0
+pandas>=2.0.0,<3.0.0
+scipy>=1.11.0,<2.0.0
+scikit-learn>=1.4.0,<2.0.0
+xgboost==3.2.0
+matplotlib>=3.8.0,<4.0.0
+mlflow>=3.0.0,<4.0.0
+sagemaker-mlflow
+
+# The course guide verified this RAGAS/community pair.
+ragas==0.4.3
+langchain-community==0.3.31
+langchain-aws
+datasets
+faiss-cpu>=1.8.0,<1.13.0
+
+# Local notebook execution and saved demo outputs.
+ipykernel
+nbformat
+nbclient

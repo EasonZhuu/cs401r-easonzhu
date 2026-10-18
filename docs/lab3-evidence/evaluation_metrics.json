@@ -1,0 +1,19 @@
+{
+  "auc_roc": 0.7838,
+  "precision_top10": 0.7133,
+  "recall_top10": 0.3242,
+  "auc_vs_baseline": 0.0609,
+  "baseline_auc": 0.7229,
+  "lift_ci_low": 0.0415,
+  "lift_ci_high": 0.0802,
+  "positive_rate_val": 0.22,
+  "n_val_samples": 3000,
+  "n_val_positives": 660,
+  "top10_selected_count": 300,
+  "top10_true_positives": 214,
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 42,
+  "confusion_threshold": 0.5,
+  "xgboost_version": "3.2.0",
+  "eval_timestamp": "2026-10-18T01:46:17.662914+00:00"
+}

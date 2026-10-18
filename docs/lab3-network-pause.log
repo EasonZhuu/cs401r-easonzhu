@@ -1,0 +1,36 @@
+
+Warning: Deprecated Parameter
+
+The parameter "dynamodb_table" is deprecated. Use parameter "use_lockfile"
+instead.
+module.vpc.aws_route.private_nat[0]: Destroying... [id=r-rtb-04e27bb9d623175021080289494]
+module.vpc.aws_route.private_nat[0]: Destruction complete after 1s
+module.vpc.aws_nat_gateway.this[0]: Destroying... [id=nat-0214b9efa55351245]
+module.vpc.aws_nat_gateway.this[0]: Still destroying... [id=nat-0214b9efa55351245, 00m10s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still destroying... [id=nat-0214b9efa55351245, 00m20s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still destroying... [id=nat-0214b9efa55351245, 00m30s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still destroying... [id=nat-0214b9efa55351245, 00m40s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Still destroying... [id=nat-0214b9efa55351245, 00m50s elapsed]
+module.vpc.aws_nat_gateway.this[0]: Destruction complete after 50s
+module.vpc.aws_eip.nat[0]: Destroying... [id=eipalloc-06a918f2fff6f3057]
+module.vpc.aws_eip.nat[0]: Destruction complete after 1s
+
+Apply complete! Resources: 0 added, 0 changed, 3 destroyed.
+
+Outputs:
+
+data_engineer_role_arn = "arn:aws:iam::173506956686:role/northstar-dev-DataEngineer"
+feature_engineer_job_name = "northstar-dev-feature-engineer"
+feature_group_arn = "arn:aws:sagemaker:us-east-1:173506956686:feature-group/northstar-dev-customer-features"
+feature_group_name = "northstar-dev-customer-features"
+feature_store_offline_s3_uri = "s3://northstar-dev-data-173506956686/features/offline-store/"
+glue_connection_name = "northstar-dev-vpc-connection"
+glue_database_name = "northstar_dev"
+ml_engineer_role_arn = "arn:aws:iam::173506956686:role/northstar-dev-MLEngineer"
+model_monitor_role_arn = "arn:aws:iam::173506956686:role/northstar-dev-ModelMonitor"
+public_subnet_id = "subnet-09a3da9e0461b3354"
+raw_crawler_name = "northstar-dev-raw-crawler"
+s3_bucket_name = "northstar-dev-data-173506956686"
+sagemaker_domain_id = "d-ktq3q2cj8hqe"
+transform_job_name = "northstar-dev-transform"
+vpc_id = "vpc-0425359ce62d1337b"

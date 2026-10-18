@@ -1,0 +1,586 @@
+[
+  {
+    "answer": "Subject: Your Gold Member Perks Are Waiting – Free Shipping on Your Next Order\nBody: We've noticed it's been a while since your last visit, and we'd love to welcome you back. As a Gold member, you enjoy free standard shipping on every order—no minimum spend required—plus free return shipping on items that don't work out, making it easy to shop outdoor gear and footwear risk-free online. Come back and rediscover what you love about NorthStar, and let us know if you have questions about your account.",
+    "contexts": [
+      "[POL-SHP-007:003:c163e7eb41 | POL-SHP-007 | 2. Free Shipping Thresholds]\n## 2. Free Shipping Thresholds\n\nFree standard shipping applies at the following order subtotals, after discounts and before tax:\n\n| Tier | Free standard shipping at |\n|---|---|\n| Non-member | $99 |\n| Bronze | $75 |\n| Silver | $50 |\n| Gold | Any amount |\n| Platinum | Any amount |\n\nFree shipping applies to **standard** shipping only. Expedited and overnight are charged at full rate for all tiers, with no exception. Gold and Platinum members do not receive free expedited shipping, and this is the most frequent source of customer confusion on this policy.\n\nGift card purchases do not count toward the free shipping threshold.\n\n---\n\n",
+      "[POL-LOY-011:010:cdbdbe1ea2 | POL-LOY-011 | 4. Tier Benefits]\n## 4. Tier Benefits\n\n| Benefit | Bronze | Silver | Gold | Platinum |\n|---|---|---|---|---|\n| Points earn rate | 1× | 1.25× | 1.5× | 2× |\n| Birthday reward | $5 | $10 | $20 | $40 |\n| Free standard shipping | $75+ | $50+ | Always | Always |\n| Free return shipping | No | No | Yes | Yes |\n| Return window | 30 days | 30 days | 30 days | **60 days** |\n| Early access to sales | No | 12 hours | 24 hours | 48 hours |\n| Free gear repair | No | No | 2 per year | Unlimited |\n| Dedicated support line | No | No | No | Yes |\n| Annual gear credit | No | No | No | $100 |\n\nBenefits are tied to the member's tier at the time the benefit is used, except the return window, which is fixed at the tier held **at the time of purchase** (see POL-RET-004 §1.1).\n\n",
+      "[POL-LOY-011:004:773059e1b0 | POL-LOY-011 | 2. Tiers / 2.1 Tier Upgrades]\n### 2.1 Tier Upgrades\n\nUpgrades take effect **immediately** upon crossing a threshold. A customer whose qualifying purchase pushes trailing spend to $2,000 becomes Gold at the moment the transaction settles and may use Gold benefits on that same visit.\n\n",
+      "[POL-LOY-011:003:8c4328c83f | POL-LOY-011 | 2. Tiers]\n## 2. Tiers\n\nTier is determined by **trailing 12-month spend**, evaluated on the first day of each month.\n\n| Tier | Trailing 12-month spend | Members (approx.) |\n|---|---|---|\n| **Bronze** | Under $500 | 61% |\n| **Silver** | $500 – $1,999.99 | 26% |\n| **Gold** | $2,000 – $4,999.99 | 10% |\n| **Platinum** | $5,000 and above | 3% |\n\nSpend counts merchandise only. Gift card purchases, taxes, shipping charges, and amounts refunded through returns do **not** count toward tier qualification. A return reduces trailing spend and can cause a tier downgrade.\n\n",
+      "Customer profile (reported tier is approximate): {\"avg_order_value\": 186.25, \"category_diversity_score\": 0.5, \"churn_probability\": 0.81, \"customer_id\": \"CUST-10000317\", \"days_since_last_purchase\": 47, \"loyalty_tier\": \"Gold\", \"online_to_store_ratio\": 0.72, \"top_categories\": [\"Outdoor\", \"Footwear\"], \"total_lifetime_value\": 3120.4}"
+    ],
+    "customer_profile": {
+      "churn_probability": 0.81,
+      "loyalty_tier": "Gold",
+      "days_since_last_purchase": 47,
+      "total_lifetime_value": 3120.4,
+      "avg_order_value": 186.25,
+      "category_diversity_score": 0.5,
+      "online_to_store_ratio": 0.72,
+      "top_categories": [
+        "Outdoor",
+        "Footwear"
+      ],
+      "customer_id": "CUST-10000317"
+    },
+    "question": "Generate a personalized retention offer for this at-risk Gold member who shops mostly online for outdoor gear and footwear.",
+    "strategy": "C",
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "row_id": 37,
+        "score": 0.5163734555244446,
+        "chunk_id": "POL-SHP-007:003:c163e7eb41",
+        "doc_id": "POL-SHP-007",
+        "source": "shipping-policy.md",
+        "section_path": "2. Free Shipping Thresholds",
+        "text": "## 2. Free Shipping Thresholds\n\nFree standard shipping applies at the following order subtotals, after discounts and before tax:\n\n| Tier | Free standard shipping at |\n|---|---|\n| Non-member | $99 |\n| Bronze | $75 |\n| Silver | $50 |\n| Gold | Any amount |\n| Platinum | Any amount |\n\nFree shipping applies to **standard** shipping only. Expedited and overnight are charged at full rate for all tiers, with no exception. Gold and Platinum members do not receive free expedited shipping, and this is the most frequent source of customer confusion on this policy.\n\nGift card purchases do not count toward the free shipping threshold.\n\n---\n\n"
+      },
+      {
+        "rank": 2,
+        "row_id": 15,
+        "score": 0.5079360604286194,
+        "chunk_id": "POL-LOY-011:010:cdbdbe1ea2",
+        "doc_id": "POL-LOY-011",
+        "source": "loyalty-program-terms.md",
+        "section_path": "4. Tier Benefits",
+        "text": "## 4. Tier Benefits\n\n| Benefit | Bronze | Silver | Gold | Platinum |\n|---|---|---|---|---|\n| Points earn rate | 1× | 1.25× | 1.5× | 2× |\n| Birthday reward | $5 | $10 | $20 | $40 |\n| Free standard shipping | $75+ | $50+ | Always | Always |\n| Free return shipping | No | No | Yes | Yes |\n| Return window | 30 days | 30 days | 30 days | **60 days** |\n| Early access to sales | No | 12 hours | 24 hours | 48 hours |\n| Free gear repair | No | No | 2 per year | Unlimited |\n| Dedicated support line | No | No | No | Yes |\n| Annual gear credit | No | No | No | $100 |\n\nBenefits are tied to the member's tier at the time the benefit is used, except the return window, which is fixed at the tier held **at the time of purchase** (see POL-RET-004 §1.1).\n\n"
+      },
+      {
+        "rank": 3,
+        "row_id": 9,
+        "score": 0.5044335126876831,
+        "chunk_id": "POL-LOY-011:004:773059e1b0",
+        "doc_id": "POL-LOY-011",
+        "source": "loyalty-program-terms.md",
+        "section_path": "2. Tiers / 2.1 Tier Upgrades",
+        "text": "### 2.1 Tier Upgrades\n\nUpgrades take effect **immediately** upon crossing a threshold. A customer whose qualifying purchase pushes trailing spend to $2,000 becomes Gold at the moment the transaction settles and may use Gold benefits on that same visit.\n\n"
+      },
+      {
+        "rank": 4,
+        "row_id": 8,
+        "score": 0.47014540433883667,
+        "chunk_id": "POL-LOY-011:003:8c4328c83f",
+        "doc_id": "POL-LOY-011",
+        "source": "loyalty-program-terms.md",
+        "section_path": "2. Tiers",
+        "text": "## 2. Tiers\n\nTier is determined by **trailing 12-month spend**, evaluated on the first day of each month.\n\n| Tier | Trailing 12-month spend | Members (approx.) |\n|---|---|---|\n| **Bronze** | Under $500 | 61% |\n| **Silver** | $500 – $1,999.99 | 26% |\n| **Gold** | $2,000 – $4,999.99 | 10% |\n| **Platinum** | $5,000 and above | 3% |\n\nSpend counts merchandise only. Gift card purchases, taxes, shipping charges, and amounts refunded through returns do **not** count toward tier qualification. A return reduces trailing spend and can cause a tier downgrade.\n\n"
+      }
+    ],
+    "retrieval_passes": [
+      {
+        "query": "tier Gold entitlements and shipping thresholds for a customer who shops online",
+        "filter_doc_ids": [
+          "POL-LOY-011",
+          "POL-SHP-007"
+        ],
+        "top_k": 4,
+        "embedding_request": {
+          "request_id": "642c0329-5fd3-4b9a-bc4c-cb37ece09840",
+          "input_tokens": 14,
+          "cache_hit": true,
+          "input_sha256": "f0903d8cf5e87db2bd5b563512012acfa975ace8e287e79853cf57690a7d806a"
+        },
+        "results": [
+          {
+            "rank": 1,
+            "row_id": 37,
+            "score": 0.5163734555244446,
+            "chunk_id": "POL-SHP-007:003:c163e7eb41",
+            "doc_id": "POL-SHP-007",
+            "source": "shipping-policy.md",
+            "section_path": "2. Free Shipping Thresholds",
+            "text": "## 2. Free Shipping Thresholds\n\nFree standard shipping applies at the following order subtotals, after discounts and before tax:\n\n| Tier | Free standard shipping at |\n|---|---|\n| Non-member | $99 |\n| Bronze | $75 |\n| Silver | $50 |\n| Gold | Any amount |\n| Platinum | Any amount |\n\nFree shipping applies to **standard** shipping only. Expedited and overnight are charged at full rate for all tiers, with no exception. Gold and Platinum members do not receive free expedited shipping, and this is the most frequent source of customer confusion on this policy.\n\nGift card purchases do not count toward the free shipping threshold.\n\n---\n\n"
+          },
+          {
+            "rank": 2,
+            "row_id": 15,
+            "score": 0.5079360604286194,
+            "chunk_id": "POL-LOY-011:010:cdbdbe1ea2",
+            "doc_id": "POL-LOY-011",
+            "source": "loyalty-program-terms.md",
+            "section_path": "4. Tier Benefits",
+            "text": "## 4. Tier Benefits\n\n| Benefit | Bronze | Silver | Gold | Platinum |\n|---|---|---|---|---|\n| Points earn rate | 1× | 1.25× | 1.5× | 2× |\n| Birthday reward | $5 | $10 | $20 | $40 |\n| Free standard shipping | $75+ | $50+ | Always | Always |\n| Free return shipping | No | No | Yes | Yes |\n| Return window | 30 days | 30 days | 30 days | **60 days** |\n| Early access to sales | No | 12 hours | 24 hours | 48 hours |\n| Free gear repair | No | No | 2 per year | Unlimited |\n| Dedicated support line | No | No | No | Yes |\n| Annual gear credit | No | No | No | $100 |\n\nBenefits are tied to the member's tier at the time the benefit is used, except the return window, which is fixed at the tier held **at the time of purchase** (see POL-RET-004 §1.1).\n\n"
+          },
+          {
+            "rank": 3,
+            "row_id": 9,
+            "score": 0.5044335126876831,
+            "chunk_id": "POL-LOY-011:004:773059e1b0",
+            "doc_id": "POL-LOY-011",
+            "source": "loyalty-program-terms.md",
+            "section_path": "2. Tiers / 2.1 Tier Upgrades",
+            "text": "### 2.1 Tier Upgrades\n\nUpgrades take effect **immediately** upon crossing a threshold. A customer whose qualifying purchase pushes trailing spend to $2,000 becomes Gold at the moment the transaction settles and may use Gold benefits on that same visit.\n\n"
+          },
+          {
+            "rank": 4,
+            "row_id": 8,
+            "score": 0.47014540433883667,
+            "chunk_id": "POL-LOY-011:003:8c4328c83f",
+            "doc_id": "POL-LOY-011",
+            "source": "loyalty-program-terms.md",
+            "section_path": "2. Tiers",
+            "text": "## 2. Tiers\n\nTier is determined by **trailing 12-month spend**, evaluated on the first day of each month.\n\n| Tier | Trailing 12-month spend | Members (approx.) |\n|---|---|---|\n| **Bronze** | Under $500 | 61% |\n| **Silver** | $500 – $1,999.99 | 26% |\n| **Gold** | $2,000 – $4,999.99 | 10% |\n| **Platinum** | $5,000 and above | 3% |\n\nSpend counts merchandise only. Gift card purchases, taxes, shipping charges, and amounts refunded through returns do **not** count toward tier qualification. A return reduces trailing spend and can cause a tier downgrade.\n\n"
+          }
+        ],
+        "strategy": "C"
+      }
+    ],
+    "subject": "Your Gold Member Perks Are Waiting – Free Shipping on Your Next Order",
+    "body": "We've noticed it's been a while since your last visit, and we'd love to welcome you back. As a Gold member, you enjoy free standard shipping on every order—no minimum spend required—plus free return shipping on items that don't work out, making it easy to shop outdoor gear and footwear risk-free online. Come back and rediscover what you love about NorthStar, and let us know if you have questions about your account.",
+    "rationale": "This offer anchors to Gold-tier benefits the customer already holds (free standard shipping at any amount and free return shipping), removes friction for online shopping, and invites re-engagement without inventing a promotion, deadline, or unverified account details.",
+    "formatted_as_requested": true,
+    "generation_cache_hit": false,
+    "raw_answer": "Subject: Your Gold Member Perks Are Waiting – Free Shipping on Your Next Order\n\nBody: We've noticed it's been a while since your last visit, and we'd love to welcome you back. As a Gold member, you enjoy free standard shipping on every order—no minimum spend required—plus free return shipping on items that don't work out, making it easy to shop outdoor gear and footwear risk-free online. Come back and rediscover what you love about NorthStar, and let us know if you have questions about your account.\n\nRationale: This offer anchors to Gold-tier benefits the customer already holds (free standard shipping at any amount and free return shipping), removes friction for online shopping, and invites re-engagement without inventing a promotion, deadline, or unverified account details.",
+    "request_id": "2d782e24-30c2-450d-bae0-390ee233f77b",
+    "usage": {
+      "inputTokens": 2072,
+      "outputTokens": 178,
+      "totalTokens": 2250,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "stop_reason": "end_turn",
+    "latency_ms": 3012.9,
+    "generated_at_utc": "2026-10-18T04:25:10.144850+00:00",
+    "request_sha256": "3c50c526e2f2dbe29a79c7b57d446eb2e39b85fb13cb2455b3c6d36117ba3c89",
+    "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0"
+  },
+  {
+    "answer": "Subject: Your Bronze Member Apparel Offer – Free Shipping on Your Next Order\nBody: We'd love to see you back in our apparel collection. As a Bronze member, you'll enjoy free standard shipping on orders of $75 or more—making it easier to refresh your outdoor wardrobe online or in store. Shop apparel this week and take advantage of the savings.",
+    "contexts": [
+      "[POL-LOY-011:010:cdbdbe1ea2 | POL-LOY-011 | 4. Tier Benefits]\n## 4. Tier Benefits\n\n| Benefit | Bronze | Silver | Gold | Platinum |\n|---|---|---|---|---|\n| Points earn rate | 1× | 1.25× | 1.5× | 2× |\n| Birthday reward | $5 | $10 | $20 | $40 |\n| Free standard shipping | $75+ | $50+ | Always | Always |\n| Free return shipping | No | No | Yes | Yes |\n| Return window | 30 days | 30 days | 30 days | **60 days** |\n| Early access to sales | No | 12 hours | 24 hours | 48 hours |\n| Free gear repair | No | No | 2 per year | Unlimited |\n| Dedicated support line | No | No | No | Yes |\n| Annual gear credit | No | No | No | $100 |\n\nBenefits are tied to the member's tier at the time the benefit is used, except the return window, which is fixed at the tier held **at the time of purchase** (see POL-RET-004 §1.1).\n\n",
+      "[POL-SHP-007:003:c163e7eb41 | POL-SHP-007 | 2. Free Shipping Thresholds]\n## 2. Free Shipping Thresholds\n\nFree standard shipping applies at the following order subtotals, after discounts and before tax:\n\n| Tier | Free standard shipping at |\n|---|---|\n| Non-member | $99 |\n| Bronze | $75 |\n| Silver | $50 |\n| Gold | Any amount |\n| Platinum | Any amount |\n\nFree shipping applies to **standard** shipping only. Expedited and overnight are charged at full rate for all tiers, with no exception. Gold and Platinum members do not receive free expedited shipping, and this is the most frequent source of customer confusion on this policy.\n\nGift card purchases do not count toward the free shipping threshold.\n\n---\n\n",
+      "[POL-LOY-011:003:8c4328c83f | POL-LOY-011 | 2. Tiers]\n## 2. Tiers\n\nTier is determined by **trailing 12-month spend**, evaluated on the first day of each month.\n\n| Tier | Trailing 12-month spend | Members (approx.) |\n|---|---|---|\n| **Bronze** | Under $500 | 61% |\n| **Silver** | $500 – $1,999.99 | 26% |\n| **Gold** | $2,000 – $4,999.99 | 10% |\n| **Platinum** | $5,000 and above | 3% |\n\nSpend counts merchandise only. Gift card purchases, taxes, shipping charges, and amounts refunded through returns do **not** count toward tier qualification. A return reduces trailing spend and can cause a tier downgrade.\n\n",
+      "[POL-LOY-011:004:773059e1b0 | POL-LOY-011 | 2. Tiers / 2.1 Tier Upgrades]\n### 2.1 Tier Upgrades\n\nUpgrades take effect **immediately** upon crossing a threshold. A customer whose qualifying purchase pushes trailing spend to $2,000 becomes Gold at the moment the transaction settles and may use Gold benefits on that same visit.\n\n",
+      "Customer profile (reported tier is approximate): {\"avg_order_value\": 41.15, \"category_diversity_score\": 0.125, \"churn_probability\": 0.74, \"customer_id\": \"CUST-10000904\", \"days_since_last_purchase\": 68, \"loyalty_tier\": \"Bronze\", \"online_to_store_ratio\": 0.2, \"top_categories\": [\"Apparel\"], \"total_lifetime_value\": 312.8}"
+    ],
+    "customer_profile": {
+      "churn_probability": 0.74,
+      "loyalty_tier": "Bronze",
+      "days_since_last_purchase": 68,
+      "total_lifetime_value": 312.8,
+      "avg_order_value": 41.15,
+      "category_diversity_score": 0.125,
+      "online_to_store_ratio": 0.2,
+      "top_categories": [
+        "Apparel"
+      ],
+      "customer_id": "CUST-10000904"
+    },
+    "question": "Generate a retention offer for this Bronze member who shops in store, buys only apparel, and has not purchased in over two months.",
+    "strategy": "C",
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "row_id": 15,
+        "score": 0.5112091898918152,
+        "chunk_id": "POL-LOY-011:010:cdbdbe1ea2",
+        "doc_id": "POL-LOY-011",
+        "source": "loyalty-program-terms.md",
+        "section_path": "4. Tier Benefits",
+        "text": "## 4. Tier Benefits\n\n| Benefit | Bronze | Silver | Gold | Platinum |\n|---|---|---|---|---|\n| Points earn rate | 1× | 1.25× | 1.5× | 2× |\n| Birthday reward | $5 | $10 | $20 | $40 |\n| Free standard shipping | $75+ | $50+ | Always | Always |\n| Free return shipping | No | No | Yes | Yes |\n| Return window | 30 days | 30 days | 30 days | **60 days** |\n| Early access to sales | No | 12 hours | 24 hours | 48 hours |\n| Free gear repair | No | No | 2 per year | Unlimited |\n| Dedicated support line | No | No | No | Yes |\n| Annual gear credit | No | No | No | $100 |\n\nBenefits are tied to the member's tier at the time the benefit is used, except the return window, which is fixed at the tier held **at the time of purchase** (see POL-RET-004 §1.1).\n\n"
+      },
+      {
+        "rank": 2,
+        "row_id": 37,
+        "score": 0.4882037341594696,
+        "chunk_id": "POL-SHP-007:003:c163e7eb41",
+        "doc_id": "POL-SHP-007",
+        "source": "shipping-policy.md",
+        "section_path": "2. Free Shipping Thresholds",
+        "text": "## 2. Free Shipping Thresholds\n\nFree standard shipping applies at the following order subtotals, after discounts and before tax:\n\n| Tier | Free standard shipping at |\n|---|---|\n| Non-member | $99 |\n| Bronze | $75 |\n| Silver | $50 |\n| Gold | Any amount |\n| Platinum | Any amount |\n\nFree shipping applies to **standard** shipping only. Expedited and overnight are charged at full rate for all tiers, with no exception. Gold and Platinum members do not receive free expedited shipping, and this is the most frequent source of customer confusion on this policy.\n\nGift card purchases do not count toward the free shipping threshold.\n\n---\n\n"
+      },
+      {
+        "rank": 3,
+        "row_id": 8,
+        "score": 0.4492841362953186,
+        "chunk_id": "POL-LOY-011:003:8c4328c83f",
+        "doc_id": "POL-LOY-011",
+        "source": "loyalty-program-terms.md",
+        "section_path": "2. Tiers",
+        "text": "## 2. Tiers\n\nTier is determined by **trailing 12-month spend**, evaluated on the first day of each month.\n\n| Tier | Trailing 12-month spend | Members (approx.) |\n|---|---|---|\n| **Bronze** | Under $500 | 61% |\n| **Silver** | $500 – $1,999.99 | 26% |\n| **Gold** | $2,000 – $4,999.99 | 10% |\n| **Platinum** | $5,000 and above | 3% |\n\nSpend counts merchandise only. Gift card purchases, taxes, shipping charges, and amounts refunded through returns do **not** count toward tier qualification. A return reduces trailing spend and can cause a tier downgrade.\n\n"
+      },
+      {
+        "rank": 4,
+        "row_id": 9,
+        "score": 0.4108988046646118,
+        "chunk_id": "POL-LOY-011:004:773059e1b0",
+        "doc_id": "POL-LOY-011",
+        "source": "loyalty-program-terms.md",
+        "section_path": "2. Tiers / 2.1 Tier Upgrades",
+        "text": "### 2.1 Tier Upgrades\n\nUpgrades take effect **immediately** upon crossing a threshold. A customer whose qualifying purchase pushes trailing spend to $2,000 becomes Gold at the moment the transaction settles and may use Gold benefits on that same visit.\n\n"
+      }
+    ],
+    "retrieval_passes": [
+      {
+        "query": "tier Bronze entitlements and shipping thresholds for a customer who shops in store",
+        "filter_doc_ids": [
+          "POL-LOY-011",
+          "POL-SHP-007"
+        ],
+        "top_k": 4,
+        "embedding_request": {
+          "request_id": "3650a132-0484-4c94-b801-5b8d5cc1f957",
+          "input_tokens": 15,
+          "cache_hit": true,
+          "input_sha256": "dc23ea97c84bca73d29a54963d6f6b7d624ed19da88b012217042a56ca5ae060"
+        },
+        "results": [
+          {
+            "rank": 1,
+            "row_id": 15,
+            "score": 0.5112091898918152,
+            "chunk_id": "POL-LOY-011:010:cdbdbe1ea2",
+            "doc_id": "POL-LOY-011",
+            "source": "loyalty-program-terms.md",
+            "section_path": "4. Tier Benefits",
+            "text": "## 4. Tier Benefits\n\n| Benefit | Bronze | Silver | Gold | Platinum |\n|---|---|---|---|---|\n| Points earn rate | 1× | 1.25× | 1.5× | 2× |\n| Birthday reward | $5 | $10 | $20 | $40 |\n| Free standard shipping | $75+ | $50+ | Always | Always |\n| Free return shipping | No | No | Yes | Yes |\n| Return window | 30 days | 30 days | 30 days | **60 days** |\n| Early access to sales | No | 12 hours | 24 hours | 48 hours |\n| Free gear repair | No | No | 2 per year | Unlimited |\n| Dedicated support line | No | No | No | Yes |\n| Annual gear credit | No | No | No | $100 |\n\nBenefits are tied to the member's tier at the time the benefit is used, except the return window, which is fixed at the tier held **at the time of purchase** (see POL-RET-004 §1.1).\n\n"
+          },
+          {
+            "rank": 2,
+            "row_id": 37,
+            "score": 0.4882037341594696,
+            "chunk_id": "POL-SHP-007:003:c163e7eb41",
+            "doc_id": "POL-SHP-007",
+            "source": "shipping-policy.md",
+            "section_path": "2. Free Shipping Thresholds",
+            "text": "## 2. Free Shipping Thresholds\n\nFree standard shipping applies at the following order subtotals, after discounts and before tax:\n\n| Tier | Free standard shipping at |\n|---|---|\n| Non-member | $99 |\n| Bronze | $75 |\n| Silver | $50 |\n| Gold | Any amount |\n| Platinum | Any amount |\n\nFree shipping applies to **standard** shipping only. Expedited and overnight are charged at full rate for all tiers, with no exception. Gold and Platinum members do not receive free expedited shipping, and this is the most frequent source of customer confusion on this policy.\n\nGift card purchases do not count toward the free shipping threshold.\n\n---\n\n"
+          },
+          {
+            "rank": 3,
+            "row_id": 8,
+            "score": 0.4492841362953186,
+            "chunk_id": "POL-LOY-011:003:8c4328c83f",
+            "doc_id": "POL-LOY-011",
+            "source": "loyalty-program-terms.md",
+            "section_path": "2. Tiers",
+            "text": "## 2. Tiers\n\nTier is determined by **trailing 12-month spend**, evaluated on the first day of each month.\n\n| Tier | Trailing 12-month spend | Members (approx.) |\n|---|---|---|\n| **Bronze** | Under $500 | 61% |\n| **Silver** | $500 – $1,999.99 | 26% |\n| **Gold** | $2,000 – $4,999.99 | 10% |\n| **Platinum** | $5,000 and above | 3% |\n\nSpend counts merchandise only. Gift card purchases, taxes, shipping charges, and amounts refunded through returns do **not** count toward tier qualification. A return reduces trailing spend and can cause a tier downgrade.\n\n"
+          },
+          {
+            "rank": 4,
+            "row_id": 9,
+            "score": 0.4108988046646118,
+            "chunk_id": "POL-LOY-011:004:773059e1b0",
+            "doc_id": "POL-LOY-011",
+            "source": "loyalty-program-terms.md",
+            "section_path": "2. Tiers / 2.1 Tier Upgrades",
+            "text": "### 2.1 Tier Upgrades\n\nUpgrades take effect **immediately** upon crossing a threshold. A customer whose qualifying purchase pushes trailing spend to $2,000 becomes Gold at the moment the transaction settles and may use Gold benefits on that same visit.\n\n"
+          }
+        ],
+        "strategy": "C"
+      }
+    ],
+    "subject": "Your Bronze Member Apparel Offer – Free Shipping on Your Next Order",
+    "body": "We'd love to see you back in our apparel collection. As a Bronze member, you'll enjoy free standard shipping on orders of $75 or more—making it easier to refresh your outdoor wardrobe online or in store. Shop apparel this week and take advantage of the savings.",
+    "rationale": "This offer targets the customer's primary category (apparel), leverages a Bronze-tier benefit they may not have fully used (free shipping at $75+), and invites re-engagement without inventing a deadline or promotion outside policy.",
+    "formatted_as_requested": true,
+    "generation_cache_hit": false,
+    "raw_answer": "Subject: Your Bronze Member Apparel Offer – Free Shipping on Your Next Order\n\nBody: We'd love to see you back in our apparel collection. As a Bronze member, you'll enjoy free standard shipping on orders of $75 or more—making it easier to refresh your outdoor wardrobe online or in store. Shop apparel this week and take advantage of the savings.\n\nRationale: This offer targets the customer's primary category (apparel), leverages a Bronze-tier benefit they may not have fully used (free shipping at $75+), and invites re-engagement without inventing a deadline or promotion outside policy.",
+    "request_id": "45a4317c-61c4-4469-be9a-02a19740da11",
+    "usage": {
+      "inputTokens": 2071,
+      "outputTokens": 138,
+      "totalTokens": 2209,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "stop_reason": "end_turn",
+    "latency_ms": 2311.16,
+    "generated_at_utc": "2026-10-18T04:25:12.464275+00:00",
+    "request_sha256": "e82fe84aba975770e4dbbcdff050d711a696a8cfb6828b308f84144c87406b39",
+    "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0"
+  },
+  {
+    "answer": "Subject: Your Platinum Perks Are Waiting—Free Gear Repair & Exclusive Support\nBody: We've noticed it's been a while since your last visit, and we'd love to welcome you back. As a Platinum member, you enjoy unlimited free gear repair on outdoor and electronics purchases—a benefit that pays for itself quickly on high-quality items. Reach out to our dedicated Platinum support line to schedule a repair or explore new arrivals in your favorite categories, and we'll make sure you get the expert service you deserve.",
+    "contexts": [
+      "[POL-SHP-007:003:c163e7eb41 | POL-SHP-007 | 2. Free Shipping Thresholds]\n## 2. Free Shipping Thresholds\n\nFree standard shipping applies at the following order subtotals, after discounts and before tax:\n\n| Tier | Free standard shipping at |\n|---|---|\n| Non-member | $99 |\n| Bronze | $75 |\n| Silver | $50 |\n| Gold | Any amount |\n| Platinum | Any amount |\n\nFree shipping applies to **standard** shipping only. Expedited and overnight are charged at full rate for all tiers, with no exception. Gold and Platinum members do not receive free expedited shipping, and this is the most frequent source of customer confusion on this policy.\n\nGift card purchases do not count toward the free shipping threshold.\n\n---\n\n",
+      "[POL-LOY-011:010:cdbdbe1ea2 | POL-LOY-011 | 4. Tier Benefits]\n## 4. Tier Benefits\n\n| Benefit | Bronze | Silver | Gold | Platinum |\n|---|---|---|---|---|\n| Points earn rate | 1× | 1.25× | 1.5× | 2× |\n| Birthday reward | $5 | $10 | $20 | $40 |\n| Free standard shipping | $75+ | $50+ | Always | Always |\n| Free return shipping | No | No | Yes | Yes |\n| Return window | 30 days | 30 days | 30 days | **60 days** |\n| Early access to sales | No | 12 hours | 24 hours | 48 hours |\n| Free gear repair | No | No | 2 per year | Unlimited |\n| Dedicated support line | No | No | No | Yes |\n| Annual gear credit | No | No | No | $100 |\n\nBenefits are tied to the member's tier at the time the benefit is used, except the return window, which is fixed at the tier held **at the time of purchase** (see POL-RET-004 §1.1).\n\n",
+      "[POL-LOY-011:003:8c4328c83f | POL-LOY-011 | 2. Tiers]\n## 2. Tiers\n\nTier is determined by **trailing 12-month spend**, evaluated on the first day of each month.\n\n| Tier | Trailing 12-month spend | Members (approx.) |\n|---|---|---|\n| **Bronze** | Under $500 | 61% |\n| **Silver** | $500 – $1,999.99 | 26% |\n| **Gold** | $2,000 – $4,999.99 | 10% |\n| **Platinum** | $5,000 and above | 3% |\n\nSpend counts merchandise only. Gift card purchases, taxes, shipping charges, and amounts refunded through returns do **not** count toward tier qualification. A return reduces trailing spend and can cause a tier downgrade.\n\n",
+      "[POL-LOY-011:004:773059e1b0 | POL-LOY-011 | 2. Tiers / 2.1 Tier Upgrades]\n### 2.1 Tier Upgrades\n\nUpgrades take effect **immediately** upon crossing a threshold. A customer whose qualifying purchase pushes trailing spend to $2,000 becomes Gold at the moment the transaction settles and may use Gold benefits on that same visit.\n\n",
+      "Customer profile (reported tier is approximate): {\"avg_order_value\": 447.0, \"category_diversity_score\": 0.75, \"churn_probability\": 0.66, \"customer_id\": \"CUST-10000122\", \"days_since_last_purchase\": 39, \"loyalty_tier\": \"Platinum\", \"online_to_store_ratio\": 0.55, \"top_categories\": [\"Outdoor\", \"Electronics\", \"Home\"], \"total_lifetime_value\": 8940.0}"
+    ],
+    "customer_profile": {
+      "churn_probability": 0.66,
+      "loyalty_tier": "Platinum",
+      "days_since_last_purchase": 39,
+      "total_lifetime_value": 8940.0,
+      "avg_order_value": 447.0,
+      "category_diversity_score": 0.75,
+      "online_to_store_ratio": 0.55,
+      "top_categories": [
+        "Outdoor",
+        "Electronics",
+        "Home"
+      ],
+      "customer_id": "CUST-10000122"
+    },
+    "question": "Generate a retention offer for this high-value Platinum member with broad category interest and a large average order.",
+    "strategy": "C",
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "row_id": 37,
+        "score": 0.540640652179718,
+        "chunk_id": "POL-SHP-007:003:c163e7eb41",
+        "doc_id": "POL-SHP-007",
+        "source": "shipping-policy.md",
+        "section_path": "2. Free Shipping Thresholds",
+        "text": "## 2. Free Shipping Thresholds\n\nFree standard shipping applies at the following order subtotals, after discounts and before tax:\n\n| Tier | Free standard shipping at |\n|---|---|\n| Non-member | $99 |\n| Bronze | $75 |\n| Silver | $50 |\n| Gold | Any amount |\n| Platinum | Any amount |\n\nFree shipping applies to **standard** shipping only. Expedited and overnight are charged at full rate for all tiers, with no exception. Gold and Platinum members do not receive free expedited shipping, and this is the most frequent source of customer confusion on this policy.\n\nGift card purchases do not count toward the free shipping threshold.\n\n---\n\n"
+      },
+      {
+        "rank": 2,
+        "row_id": 15,
+        "score": 0.5087498426437378,
+        "chunk_id": "POL-LOY-011:010:cdbdbe1ea2",
+        "doc_id": "POL-LOY-011",
+        "source": "loyalty-program-terms.md",
+        "section_path": "4. Tier Benefits",
+        "text": "## 4. Tier Benefits\n\n| Benefit | Bronze | Silver | Gold | Platinum |\n|---|---|---|---|---|\n| Points earn rate | 1× | 1.25× | 1.5× | 2× |\n| Birthday reward | $5 | $10 | $20 | $40 |\n| Free standard shipping | $75+ | $50+ | Always | Always |\n| Free return shipping | No | No | Yes | Yes |\n| Return window | 30 days | 30 days | 30 days | **60 days** |\n| Early access to sales | No | 12 hours | 24 hours | 48 hours |\n| Free gear repair | No | No | 2 per year | Unlimited |\n| Dedicated support line | No | No | No | Yes |\n| Annual gear credit | No | No | No | $100 |\n\nBenefits are tied to the member's tier at the time the benefit is used, except the return window, which is fixed at the tier held **at the time of purchase** (see POL-RET-004 §1.1).\n\n"
+      },
+      {
+        "rank": 3,
+        "row_id": 8,
+        "score": 0.47730106115341187,
+        "chunk_id": "POL-LOY-011:003:8c4328c83f",
+        "doc_id": "POL-LOY-011",
+        "source": "loyalty-program-terms.md",
+        "section_path": "2. Tiers",
+        "text": "## 2. Tiers\n\nTier is determined by **trailing 12-month spend**, evaluated on the first day of each month.\n\n| Tier | Trailing 12-month spend | Members (approx.) |\n|---|---|---|\n| **Bronze** | Under $500 | 61% |\n| **Silver** | $500 – $1,999.99 | 26% |\n| **Gold** | $2,000 – $4,999.99 | 10% |\n| **Platinum** | $5,000 and above | 3% |\n\nSpend counts merchandise only. Gift card purchases, taxes, shipping charges, and amounts refunded through returns do **not** count toward tier qualification. A return reduces trailing spend and can cause a tier downgrade.\n\n"
+      },
+      {
+        "rank": 4,
+        "row_id": 9,
+        "score": 0.41523849964141846,
+        "chunk_id": "POL-LOY-011:004:773059e1b0",
+        "doc_id": "POL-LOY-011",
+        "source": "loyalty-program-terms.md",
+        "section_path": "2. Tiers / 2.1 Tier Upgrades",
+        "text": "### 2.1 Tier Upgrades\n\nUpgrades take effect **immediately** upon crossing a threshold. A customer whose qualifying purchase pushes trailing spend to $2,000 becomes Gold at the moment the transaction settles and may use Gold benefits on that same visit.\n\n"
+      }
+    ],
+    "retrieval_passes": [
+      {
+        "query": "tier Platinum entitlements and shipping thresholds for a customer who shops online",
+        "filter_doc_ids": [
+          "POL-LOY-011",
+          "POL-SHP-007"
+        ],
+        "top_k": 4,
+        "embedding_request": {
+          "request_id": "54f61902-d557-448f-8eac-5e7bf8905e4a",
+          "input_tokens": 14,
+          "cache_hit": true,
+          "input_sha256": "f007a7e7ef4233b468d83f7bd512e38bb9a8ffb191039cec046a2cbb634a3f7c"
+        },
+        "results": [
+          {
+            "rank": 1,
+            "row_id": 37,
+            "score": 0.540640652179718,
+            "chunk_id": "POL-SHP-007:003:c163e7eb41",
+            "doc_id": "POL-SHP-007",
+            "source": "shipping-policy.md",
+            "section_path": "2. Free Shipping Thresholds",
+            "text": "## 2. Free Shipping Thresholds\n\nFree standard shipping applies at the following order subtotals, after discounts and before tax:\n\n| Tier | Free standard shipping at |\n|---|---|\n| Non-member | $99 |\n| Bronze | $75 |\n| Silver | $50 |\n| Gold | Any amount |\n| Platinum | Any amount |\n\nFree shipping applies to **standard** shipping only. Expedited and overnight are charged at full rate for all tiers, with no exception. Gold and Platinum members do not receive free expedited shipping, and this is the most frequent source of customer confusion on this policy.\n\nGift card purchases do not count toward the free shipping threshold.\n\n---\n\n"
+          },
+          {
+            "rank": 2,
+            "row_id": 15,
+            "score": 0.5087498426437378,
+            "chunk_id": "POL-LOY-011:010:cdbdbe1ea2",
+            "doc_id": "POL-LOY-011",
+            "source": "loyalty-program-terms.md",
+            "section_path": "4. Tier Benefits",
+            "text": "## 4. Tier Benefits\n\n| Benefit | Bronze | Silver | Gold | Platinum |\n|---|---|---|---|---|\n| Points earn rate | 1× | 1.25× | 1.5× | 2× |\n| Birthday reward | $5 | $10 | $20 | $40 |\n| Free standard shipping | $75+ | $50+ | Always | Always |\n| Free return shipping | No | No | Yes | Yes |\n| Return window | 30 days | 30 days | 30 days | **60 days** |\n| Early access to sales | No | 12 hours | 24 hours | 48 hours |\n| Free gear repair | No | No | 2 per year | Unlimited |\n| Dedicated support line | No | No | No | Yes |\n| Annual gear credit | No | No | No | $100 |\n\nBenefits are tied to the member's tier at the time the benefit is used, except the return window, which is fixed at the tier held **at the time of purchase** (see POL-RET-004 §1.1).\n\n"
+          },
+          {
+            "rank": 3,
+            "row_id": 8,
+            "score": 0.47730106115341187,
+            "chunk_id": "POL-LOY-011:003:8c4328c83f",
+            "doc_id": "POL-LOY-011",
+            "source": "loyalty-program-terms.md",
+            "section_path": "2. Tiers",
+            "text": "## 2. Tiers\n\nTier is determined by **trailing 12-month spend**, evaluated on the first day of each month.\n\n| Tier | Trailing 12-month spend | Members (approx.) |\n|---|---|---|\n| **Bronze** | Under $500 | 61% |\n| **Silver** | $500 – $1,999.99 | 26% |\n| **Gold** | $2,000 – $4,999.99 | 10% |\n| **Platinum** | $5,000 and above | 3% |\n\nSpend counts merchandise only. Gift card purchases, taxes, shipping charges, and amounts refunded through returns do **not** count toward tier qualification. A return reduces trailing spend and can cause a tier downgrade.\n\n"
+          },
+          {
+            "rank": 4,
+            "row_id": 9,
+            "score": 0.41523849964141846,
+            "chunk_id": "POL-LOY-011:004:773059e1b0",
+            "doc_id": "POL-LOY-011",
+            "source": "loyalty-program-terms.md",
+            "section_path": "2. Tiers / 2.1 Tier Upgrades",
+            "text": "### 2.1 Tier Upgrades\n\nUpgrades take effect **immediately** upon crossing a threshold. A customer whose qualifying purchase pushes trailing spend to $2,000 becomes Gold at the moment the transaction settles and may use Gold benefits on that same visit.\n\n"
+          }
+        ],
+        "strategy": "C"
+      }
+    ],
+    "subject": "Your Platinum Perks Are Waiting—Free Gear Repair & Exclusive Support",
+    "body": "We've noticed it's been a while since your last visit, and we'd love to welcome you back. As a Platinum member, you enjoy unlimited free gear repair on outdoor and electronics purchases—a benefit that pays for itself quickly on high-quality items. Reach out to our dedicated Platinum support line to schedule a repair or explore new arrivals in your favorite categories, and we'll make sure you get the expert service you deserve.",
+    "rationale": "This offer anchors to a verified Platinum benefit (unlimited gear repair) that aligns with the customer's high average order value and diverse category purchases, invites engagement without artificial urgency, and directs them to a tier-exclusive resource (dedicated support line) to deepen retention.",
+    "formatted_as_requested": true,
+    "generation_cache_hit": false,
+    "raw_answer": "Subject: Your Platinum Perks Are Waiting—Free Gear Repair & Exclusive Support\n\nBody: We've noticed it's been a while since your last visit, and we'd love to welcome you back. As a Platinum member, you enjoy unlimited free gear repair on outdoor and electronics purchases—a benefit that pays for itself quickly on high-quality items. Reach out to our dedicated Platinum support line to schedule a repair or explore new arrivals in your favorite categories, and we'll make sure you get the expert service you deserve.\n\nRationale: This offer anchors to a verified Platinum benefit (unlimited gear repair) that aligns with the customer's high average order value and diverse category purchases, invites engagement without artificial urgency, and directs them to a tier-exclusive resource (dedicated support line) to deepen retention.",
+    "request_id": "30b88729-03dd-4c49-929b-251cf18631fd",
+    "usage": {
+      "inputTokens": 2071,
+      "outputTokens": 181,
+      "totalTokens": 2252,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "stop_reason": "end_turn",
+    "latency_ms": 2833.04,
+    "generated_at_utc": "2026-10-18T04:25:15.304717+00:00",
+    "request_sha256": "c00c32883fd316e9be87b065118b3c525e025a7f80dd187d9a4a435ecc0ce724",
+    "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0"
+  },
+  {
+    "answer": "Subject: Your Silver Rewards Are Waiting – Free Shipping on Home Essentials\nBody: We've noticed it's been a while since your last visit, and we'd love to welcome you back. As a Silver member, you enjoy free standard shipping on orders of $50 or more—perfect for stocking up on home goods, one of your favorite categories. Shop now and let your rewards work for you.",
+    "contexts": [
+      "[POL-SHP-007:003:c163e7eb41 | POL-SHP-007 | 2. Free Shipping Thresholds]\n## 2. Free Shipping Thresholds\n\nFree standard shipping applies at the following order subtotals, after discounts and before tax:\n\n| Tier | Free standard shipping at |\n|---|---|\n| Non-member | $99 |\n| Bronze | $75 |\n| Silver | $50 |\n| Gold | Any amount |\n| Platinum | Any amount |\n\nFree shipping applies to **standard** shipping only. Expedited and overnight are charged at full rate for all tiers, with no exception. Gold and Platinum members do not receive free expedited shipping, and this is the most frequent source of customer confusion on this policy.\n\nGift card purchases do not count toward the free shipping threshold.\n\n---\n\n",
+      "[POL-LOY-011:010:cdbdbe1ea2 | POL-LOY-011 | 4. Tier Benefits]\n## 4. Tier Benefits\n\n| Benefit | Bronze | Silver | Gold | Platinum |\n|---|---|---|---|---|\n| Points earn rate | 1× | 1.25× | 1.5× | 2× |\n| Birthday reward | $5 | $10 | $20 | $40 |\n| Free standard shipping | $75+ | $50+ | Always | Always |\n| Free return shipping | No | No | Yes | Yes |\n| Return window | 30 days | 30 days | 30 days | **60 days** |\n| Early access to sales | No | 12 hours | 24 hours | 48 hours |\n| Free gear repair | No | No | 2 per year | Unlimited |\n| Dedicated support line | No | No | No | Yes |\n| Annual gear credit | No | No | No | $100 |\n\nBenefits are tied to the member's tier at the time the benefit is used, except the return window, which is fixed at the tier held **at the time of purchase** (see POL-RET-004 §1.1).\n\n",
+      "[POL-LOY-011:003:8c4328c83f | POL-LOY-011 | 2. Tiers]\n## 2. Tiers\n\nTier is determined by **trailing 12-month spend**, evaluated on the first day of each month.\n\n| Tier | Trailing 12-month spend | Members (approx.) |\n|---|---|---|\n| **Bronze** | Under $500 | 61% |\n| **Silver** | $500 – $1,999.99 | 26% |\n| **Gold** | $2,000 – $4,999.99 | 10% |\n| **Platinum** | $5,000 and above | 3% |\n\nSpend counts merchandise only. Gift card purchases, taxes, shipping charges, and amounts refunded through returns do **not** count toward tier qualification. A return reduces trailing spend and can cause a tier downgrade.\n\n",
+      "[POL-LOY-011:004:773059e1b0 | POL-LOY-011 | 2. Tiers / 2.1 Tier Upgrades]\n### 2.1 Tier Upgrades\n\nUpgrades take effect **immediately** upon crossing a threshold. A customer whose qualifying purchase pushes trailing spend to $2,000 becomes Gold at the moment the transaction settles and may use Gold benefits on that same visit.\n\n",
+      "Customer profile (reported tier is approximate): {\"avg_order_value\": 132.3, \"category_diversity_score\": 0.375, \"churn_probability\": 0.7, \"customer_id\": \"CUST-10000588\", \"days_since_last_purchase\": 52, \"loyalty_tier\": \"Silver\", \"online_to_store_ratio\": 0.61, \"top_categories\": [\"Home\", \"Beauty\"], \"total_lifetime_value\": 1985.0}"
+    ],
+    "customer_profile": {
+      "churn_probability": 0.7,
+      "loyalty_tier": "Silver",
+      "total_lifetime_value": 1985.0,
+      "days_since_last_purchase": 52,
+      "avg_order_value": 132.3,
+      "category_diversity_score": 0.375,
+      "online_to_store_ratio": 0.61,
+      "top_categories": [
+        "Home",
+        "Beauty"
+      ],
+      "customer_id": "CUST-10000588"
+    },
+    "question": "Generate a retention offer for this Silver member whose lifetime value is just under the Gold threshold.",
+    "strategy": "C",
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "row_id": 37,
+        "score": 0.47517120838165283,
+        "chunk_id": "POL-SHP-007:003:c163e7eb41",
+        "doc_id": "POL-SHP-007",
+        "source": "shipping-policy.md",
+        "section_path": "2. Free Shipping Thresholds",
+        "text": "## 2. Free Shipping Thresholds\n\nFree standard shipping applies at the following order subtotals, after discounts and before tax:\n\n| Tier | Free standard shipping at |\n|---|---|\n| Non-member | $99 |\n| Bronze | $75 |\n| Silver | $50 |\n| Gold | Any amount |\n| Platinum | Any amount |\n\nFree shipping applies to **standard** shipping only. Expedited and overnight are charged at full rate for all tiers, with no exception. Gold and Platinum members do not receive free expedited shipping, and this is the most frequent source of customer confusion on this policy.\n\nGift card purchases do not count toward the free shipping threshold.\n\n---\n\n"
+      },
+      {
+        "rank": 2,
+        "row_id": 15,
+        "score": 0.47434374690055847,
+        "chunk_id": "POL-LOY-011:010:cdbdbe1ea2",
+        "doc_id": "POL-LOY-011",
+        "source": "loyalty-program-terms.md",
+        "section_path": "4. Tier Benefits",
+        "text": "## 4. Tier Benefits\n\n| Benefit | Bronze | Silver | Gold | Platinum |\n|---|---|---|---|---|\n| Points earn rate | 1× | 1.25× | 1.5× | 2× |\n| Birthday reward | $5 | $10 | $20 | $40 |\n| Free standard shipping | $75+ | $50+ | Always | Always |\n| Free return shipping | No | No | Yes | Yes |\n| Return window | 30 days | 30 days | 30 days | **60 days** |\n| Early access to sales | No | 12 hours | 24 hours | 48 hours |\n| Free gear repair | No | No | 2 per year | Unlimited |\n| Dedicated support line | No | No | No | Yes |\n| Annual gear credit | No | No | No | $100 |\n\nBenefits are tied to the member's tier at the time the benefit is used, except the return window, which is fixed at the tier held **at the time of purchase** (see POL-RET-004 §1.1).\n\n"
+      },
+      {
+        "rank": 3,
+        "row_id": 8,
+        "score": 0.4270791709423065,
+        "chunk_id": "POL-LOY-011:003:8c4328c83f",
+        "doc_id": "POL-LOY-011",
+        "source": "loyalty-program-terms.md",
+        "section_path": "2. Tiers",
+        "text": "## 2. Tiers\n\nTier is determined by **trailing 12-month spend**, evaluated on the first day of each month.\n\n| Tier | Trailing 12-month spend | Members (approx.) |\n|---|---|---|\n| **Bronze** | Under $500 | 61% |\n| **Silver** | $500 – $1,999.99 | 26% |\n| **Gold** | $2,000 – $4,999.99 | 10% |\n| **Platinum** | $5,000 and above | 3% |\n\nSpend counts merchandise only. Gift card purchases, taxes, shipping charges, and amounts refunded through returns do **not** count toward tier qualification. A return reduces trailing spend and can cause a tier downgrade.\n\n"
+      },
+      {
+        "rank": 4,
+        "row_id": 9,
+        "score": 0.36900806427001953,
+        "chunk_id": "POL-LOY-011:004:773059e1b0",
+        "doc_id": "POL-LOY-011",
+        "source": "loyalty-program-terms.md",
+        "section_path": "2. Tiers / 2.1 Tier Upgrades",
+        "text": "### 2.1 Tier Upgrades\n\nUpgrades take effect **immediately** upon crossing a threshold. A customer whose qualifying purchase pushes trailing spend to $2,000 becomes Gold at the moment the transaction settles and may use Gold benefits on that same visit.\n\n"
+      }
+    ],
+    "retrieval_passes": [
+      {
+        "query": "tier Silver entitlements and shipping thresholds for a customer who shops online",
+        "filter_doc_ids": [
+          "POL-LOY-011",
+          "POL-SHP-007"
+        ],
+        "top_k": 4,
+        "embedding_request": {
+          "request_id": "29404e1b-2954-4fd2-956a-d9df51fe56ce",
+          "input_tokens": 14,
+          "cache_hit": true,
+          "input_sha256": "570e99d7cf29c70b55a7956c220d814f120e6b0fa4cb105eda979165e9010a81"
+        },
+        "results": [
+          {
+            "rank": 1,
+            "row_id": 37,
+            "score": 0.47517120838165283,
+            "chunk_id": "POL-SHP-007:003:c163e7eb41",
+            "doc_id": "POL-SHP-007",
+            "source": "shipping-policy.md",
+            "section_path": "2. Free Shipping Thresholds",
+            "text": "## 2. Free Shipping Thresholds\n\nFree standard shipping applies at the following order subtotals, after discounts and before tax:\n\n| Tier | Free standard shipping at |\n|---|---|\n| Non-member | $99 |\n| Bronze | $75 |\n| Silver | $50 |\n| Gold | Any amount |\n| Platinum | Any amount |\n\nFree shipping applies to **standard** shipping only. Expedited and overnight are charged at full rate for all tiers, with no exception. Gold and Platinum members do not receive free expedited shipping, and this is the most frequent source of customer confusion on this policy.\n\nGift card purchases do not count toward the free shipping threshold.\n\n---\n\n"
+          },
+          {
+            "rank": 2,
+            "row_id": 15,
+            "score": 0.47434374690055847,
+            "chunk_id": "POL-LOY-011:010:cdbdbe1ea2",
+            "doc_id": "POL-LOY-011",
+            "source": "loyalty-program-terms.md",
+            "section_path": "4. Tier Benefits",
+            "text": "## 4. Tier Benefits\n\n| Benefit | Bronze | Silver | Gold | Platinum |\n|---|---|---|---|---|\n| Points earn rate | 1× | 1.25× | 1.5× | 2× |\n| Birthday reward | $5 | $10 | $20 | $40 |\n| Free standard shipping | $75+ | $50+ | Always | Always |\n| Free return shipping | No | No | Yes | Yes |\n| Return window | 30 days | 30 days | 30 days | **60 days** |\n| Early access to sales | No | 12 hours | 24 hours | 48 hours |\n| Free gear repair | No | No | 2 per year | Unlimited |\n| Dedicated support line | No | No | No | Yes |\n| Annual gear credit | No | No | No | $100 |\n\nBenefits are tied to the member's tier at the time the benefit is used, except the return window, which is fixed at the tier held **at the time of purchase** (see POL-RET-004 §1.1).\n\n"
+          },
+          {
+            "rank": 3,
+            "row_id": 8,
+            "score": 0.4270791709423065,
+            "chunk_id": "POL-LOY-011:003:8c4328c83f",
+            "doc_id": "POL-LOY-011",
+            "source": "loyalty-program-terms.md",
+            "section_path": "2. Tiers",
+            "text": "## 2. Tiers\n\nTier is determined by **trailing 12-month spend**, evaluated on the first day of each month.\n\n| Tier | Trailing 12-month spend | Members (approx.) |\n|---|---|---|\n| **Bronze** | Under $500 | 61% |\n| **Silver** | $500 – $1,999.99 | 26% |\n| **Gold** | $2,000 – $4,999.99 | 10% |\n| **Platinum** | $5,000 and above | 3% |\n\nSpend counts merchandise only. Gift card purchases, taxes, shipping charges, and amounts refunded through returns do **not** count toward tier qualification. A return reduces trailing spend and can cause a tier downgrade.\n\n"
+          },
+          {
+            "rank": 4,
+            "row_id": 9,
+            "score": 0.36900806427001953,
+            "chunk_id": "POL-LOY-011:004:773059e1b0",
+            "doc_id": "POL-LOY-011",
+            "source": "loyalty-program-terms.md",
+            "section_path": "2. Tiers / 2.1 Tier Upgrades",
+            "text": "### 2.1 Tier Upgrades\n\nUpgrades take effect **immediately** upon crossing a threshold. A customer whose qualifying purchase pushes trailing spend to $2,000 becomes Gold at the moment the transaction settles and may use Gold benefits on that same visit.\n\n"
+          }
+        ],
+        "strategy": "C"
+      }
+    ],
+    "subject": "Your Silver Rewards Are Waiting – Free Shipping on Home Essentials",
+    "body": "We've noticed it's been a while since your last visit, and we'd love to welcome you back. As a Silver member, you enjoy free standard shipping on orders of $50 or more—perfect for stocking up on home goods, one of your favorite categories. Shop now and let your rewards work for you.",
+    "rationale": "This offer anchors to a Silver-tier benefit the customer is entitled to use immediately, highlights a top category (Home) where they already shop, and removes a common friction point (shipping cost) without inventing a promotion or assuming tier upgrade eligibility.",
+    "formatted_as_requested": true,
+    "generation_cache_hit": false,
+    "raw_answer": "Subject: Your Silver Rewards Are Waiting – Free Shipping on Home Essentials\n\nBody: We've noticed it's been a while since your last visit, and we'd love to welcome you back. As a Silver member, you enjoy free standard shipping on orders of $50 or more—perfect for stocking up on home goods, one of your favorite categories. Shop now and let your rewards work for you.\n\nRationale: This offer anchors to a Silver-tier benefit the customer is entitled to use immediately, highlights a top category (Home) where they already shop, and removes a common friction point (shipping cost) without inventing a promotion or assuming tier upgrade eligibility.",
+    "request_id": "c866c035-f4e8-4204-8f33-31e96d17ccbe",
+    "usage": {
+      "inputTokens": 2062,
+      "outputTokens": 147,
+      "totalTokens": 2209,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    },
+    "stop_reason": "end_turn",
+    "latency_ms": 2337.92,
+    "generated_at_utc": "2026-10-18T04:25:17.656287+00:00",
+    "request_sha256": "e90ffa0e96ad180a7b302f18815fa63b4e8b6d19849a416121113bb1b5e13ffb",
+    "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0"
+  }
+]

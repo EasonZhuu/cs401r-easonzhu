@@ -1,0 +1,89 @@
+{
+  "checked_at_utc": "2026-10-17T07:55:09.315067+00:00",
+  "region": "us-east-1",
+  "account": "173506956686",
+  "identity_arn": "arn:aws:iam::173506956686:user/cs401_admin",
+  "data_bucket": "northstar-dev-data-173506956686",
+  "feature_group": "northstar-dev-customer-features",
+  "resources": {
+    "data_bucket": {
+      "status": "MISSING",
+      "error_code": "404",
+      "message": "Not Found"
+    },
+    "state_bucket": {
+      "status": "PRESENT"
+    },
+    "feature_group": {
+      "status": "MISSING",
+      "error_code": "ResourceNotFound",
+      "message": "Resource Not Found: Amazon SageMaker can't find a FeatureGroup with name northstar-dev-customer-features"
+    },
+    "glue_database": {
+      "status": "MISSING",
+      "error_code": "EntityNotFoundException",
+      "message": "Database northstar_dev not found."
+    },
+    "ml_engineer_role": {
+      "status": "MISSING",
+      "error_code": "NoSuchEntity",
+      "message": "The role with name northstar-dev-MLEngineer cannot be found."
+    },
+    "data_engineer_role": {
+      "status": "MISSING",
+      "error_code": "NoSuchEntity",
+      "message": "The role with name northstar-dev-DataEngineer cannot be found."
+    }
+  },
+  "bedrock": {
+    "titan": {
+      "status": "PASS",
+      "dimensions": 1024
+    },
+    "haiku": {
+      "status": "PASS",
+      "response": "OK",
+      "usage": {
+        "inputTokens": 10,
+        "outputTokens": 4,
+        "totalTokens": 14,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "last_checked_at_utc": "2026-10-17T09:05:50.899713+00:00"
+    }
+  },
+  "training_resources_present": false,
+  "cloud_resources_modified": false,
+  "anthropic_use_case_form": "SUBMITTED",
+  "local_snapshot": {
+    "snapshot": "D:\\A study\\BYU\\05 26 Fall\\CS 401\\.tools\\parquet-validation\\20261004T020645Z",
+    "checked_on": "2026-10-17",
+    "datasets": {
+      "processed": {
+        "files": 4,
+        "rows": 157627,
+        "matches_previous_audit_sha256": true
+      },
+      "features": {
+        "files": 2,
+        "rows": 9999,
+        "matches_previous_audit_sha256": true
+      },
+      "offline": {
+        "files": 54,
+        "rows": 9999,
+        "matches_previous_audit_sha256": true
+      }
+    },
+    "unique_customers": 9999,
+    "churn_label_counts": {
+      "0": 7799,
+      "1": 2200
+    },
+    "final_training_source": "Must restore Feature Store and use Athena; local snapshot is only a backup/development source"
+  },
+  "form_last_verified_at_utc": "2026-10-17T09:05:50.899713+00:00",
+  "bedrock_registration_report": "docs/lab3-bedrock-registration.json",
+  "bedrock_models_verified": true
+}

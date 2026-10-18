@@ -1,0 +1,263 @@
+C CUST-10000317: Subject: Your Gold Member Perks Are Waiting – Free Shipping on Your Next Order
+Body: We've noticed it's been a while since your last visit, and we'd love to welcome you back. As a Gold member, you enjoy free standard shipping on every order—no minimum spend required—plus free return shipping on items that don't work out, making it easy to shop outdoor gear and footwear risk-free online. Come back and rediscover what you love about NorthStar, and let us know if you have questions about your account.
+C CUST-10000904: Subject: Your Bronze Member Apparel Offer – Free Shipping on Your Next Order
+Body: We'd love to see you back in our apparel collection. As a Bronze member, you'll enjoy free standard shipping on orders of $75 or more—making it easier to refresh your outdoor wardrobe online or in store. Shop apparel this week and take advantage of the savings.
+C CUST-10000122: Subject: Your Platinum Perks Are Waiting—Free Gear Repair & Exclusive Support
+Body: We've noticed it's been a while since your last visit, and we'd love to welcome you back. As a Platinum member, you enjoy unlimited free gear repair on outdoor and electronics purchases—a benefit that pays for itself quickly on high-quality items. Reach out to our dedicated Platinum support line to schedule a repair or explore new arrivals in your favorite categories, and we'll make sure you get the expert service you deserve.
+C CUST-10000588: Subject: Your Silver Rewards Are Waiting – Free Shipping on Home Essentials
+Body: We've noticed it's been a while since your last visit, and we'd love to welcome you back. As a Silver member, you enjoy free standard shipping on orders of $50 or more—perfect for stocking up on home goods, one of your favorite categories. Shop now and let your rewards work for you.
+
+── Running RAG Evaluation (4 test cases) ──
+  Evaluating CUST-10000317...
+  Evaluating CUST-10000904...
+  Evaluating CUST-10000122...
+  Evaluating CUST-10000588...
+
+Evaluating:   0%|          | 0/12 [00:00<?, ?it/s]
+Evaluating:   8%|▊         | 1/12 [00:02<00:22,  2.01s/it]
+Evaluating:  17%|█▋        | 2/12 [00:05<00:28,  2.89s/it]
+Evaluating:  25%|██▌       | 3/12 [00:07<00:21,  2.35s/it]
+Evaluating:  33%|███▎      | 4/12 [00:08<00:16,  2.04s/it]
+Evaluating:  42%|████▏     | 5/12 [00:11<00:16,  2.38s/it]
+Evaluating:  50%|█████     | 6/12 [00:12<00:10,  1.82s/it]
+Evaluating:  58%|█████▊    | 7/12 [00:13<00:08,  1.68s/it]
+Evaluating:  67%|██████▋   | 8/12 [00:16<00:08,  2.04s/it]
+Evaluating:  75%|███████▌  | 9/12 [00:18<00:06,  2.04s/it]
+Evaluating:  83%|████████▎ | 10/12 [00:20<00:03,  1.93s/it]
+Evaluating:  92%|█████████▏| 11/12 [00:23<00:02,  2.14s/it]
+Evaluating: 100%|██████████| 12/12 [00:23<00:00,  1.74s/it]
+Evaluating: 100%|██████████| 12/12 [00:23<00:00,  1.99s/it]
+
+── RAGAS Evaluation Results ──────────────────────────
+  faithfulness        : 0.320 (reported score; no fixed grading gate)
+  answer_relevancy    : 0.358 (reported score; no fixed grading gate)
+  context_recall      : 0.483 (reported score; no fixed grading gate)
+
+SAVED scores-C-1.csv: {'faithfulness': 0.32020202020202015, 'answer_relevancy': 0.3580011834626358, 'context_recall': 0.4833333333333333}
+
+── Running RAG Evaluation (4 test cases) ──
+  Evaluating CUST-10000317...
+  Evaluating CUST-10000904...
+  Evaluating CUST-10000122...
+  Evaluating CUST-10000588...
+
+Evaluating:   0%|          | 0/12 [00:00<?, ?it/s]
+Evaluating:   8%|▊         | 1/12 [00:01<00:21,  1.96s/it]
+Evaluating:  17%|█▋        | 2/12 [00:05<00:28,  2.87s/it]
+Evaluating:  25%|██▌       | 3/12 [00:07<00:23,  2.64s/it]
+Evaluating:  33%|███▎      | 4/12 [00:09<00:17,  2.21s/it]
+Evaluating:  42%|████▏     | 5/12 [00:11<00:15,  2.24s/it]
+Evaluating:  50%|█████     | 6/12 [00:13<00:11,  1.95s/it]
+Evaluating:  58%|█████▊    | 7/12 [00:14<00:08,  1.77s/it]
+Evaluating:  67%|██████▋   | 8/12 [00:17<00:08,  2.10s/it]
+Evaluating:  75%|███████▌  | 9/12 [00:18<00:05,  1.79s/it]
+Evaluating:  83%|████████▎ | 10/12 [00:19<00:03,  1.72s/it]
+Evaluating:  92%|█████████▏| 11/12 [00:23<00:02,  2.21s/it]
+Evaluating: 100%|██████████| 12/12 [00:23<00:00,  1.57s/it]
+Evaluating: 100%|██████████| 12/12 [00:23<00:00,  1.95s/it]
+
+── RAGAS Evaluation Results ──────────────────────────
+  faithfulness        : 0.297 (reported score; no fixed grading gate)
+  answer_relevancy    : 0.361 (reported score; no fixed grading gate)
+  context_recall      : 0.483 (reported score; no fixed grading gate)
+
+SAVED scores-C-2.csv: {'faithfulness': 0.29747474747474745, 'answer_relevancy': 0.3611210690881489, 'context_recall': 0.4833333333333333}
+CB CUST-10000317: Subject: Your Gold Member Perks Are Waiting—Free Shipping on Your Next Order
+Body: We've noticed it's been a while since your last visit, and we'd love to welcome you back. As a Gold member, you enjoy free standard shipping on every order—no minimum spend required—plus free return shipping on items that don't work out, making it easy to shop outdoor gear and footwear risk-free. Come back to NorthStar and rediscover what you love, with benefits that make online shopping simpler.
+CB CUST-10000904: Subject: We Miss You – Easier Returns on Your Apparel Favorites
+Body: We noticed it's been a while since your last visit, and we'd love to welcome you back. As a Bronze member, you enjoy free standard shipping on apparel orders of $75 or more—and to make returns even simpler, we're offering you free return shipping on your next purchase. Shop apparel in-store or online, and if you need to make a return, we'll cover the cost to send it back.
+CB CUST-10000122: Subject: Your Platinum Perks Are Waiting—Free Gear Repair & Exclusive Support
+Body: We've noticed it's been a while since your last visit, and we'd love to welcome you back. As a Platinum member, you enjoy unlimited free gear repair on outdoor and electronics purchases—a benefit that pays for itself quickly on high-quality equipment. Reach out to our dedicated Platinum support line to schedule a repair or explore new arrivals in your favorite categories, and we'll make sure you're taken care of.
+CB CUST-10000588: Subject: We Miss You – Extra Rewards on Your Favorite Home Picks
+Body: It's been a while since we've seen you, and we'd love to welcome you back. As a Silver member, you earn 1.25× points on every purchase—and if you spend $50 or more, you'll qualify for free standard shipping on your order. Come browse our Home collection and let us know what brings you back.
+
+── Running RAG Evaluation (4 test cases) ──
+  Evaluating CUST-10000317...
+  Evaluating CUST-10000904...
+  Evaluating CUST-10000122...
+  Evaluating CUST-10000588...
+
+Evaluating:   0%|          | 0/12 [00:00<?, ?it/s]
+Evaluating:   8%|▊         | 1/12 [00:01<00:21,  1.99s/it]
+Evaluating:  17%|█▋        | 2/12 [00:05<00:29,  2.98s/it]
+Evaluating:  25%|██▌       | 3/12 [00:07<00:20,  2.25s/it]
+Evaluating:  33%|███▎      | 4/12 [00:08<00:15,  1.99s/it]
+Evaluating:  42%|████▏     | 5/12 [00:12<00:18,  2.62s/it]
+Evaluating:  50%|█████     | 6/12 [00:12<00:11,  1.87s/it]
+Evaluating:  58%|█████▊    | 7/12 [00:14<00:08,  1.73s/it]
+Evaluating:  67%|██████▋   | 8/12 [00:16<00:07,  1.99s/it]
+Evaluating:  75%|███████▌  | 9/12 [00:19<00:07,  2.36s/it]
+Evaluating:  83%|████████▎ | 10/12 [00:21<00:04,  2.13s/it]
+Evaluating:  92%|█████████▏| 11/12 [00:22<00:01,  1.91s/it]
+Evaluating: 100%|██████████| 12/12 [00:24<00:00,  1.93s/it]
+Evaluating: 100%|██████████| 12/12 [00:24<00:00,  2.08s/it]
+
+── RAGAS Evaluation Results ──────────────────────────
+  faithfulness        : 0.297 (reported score; no fixed grading gate)
+  answer_relevancy    : 0.360 (reported score; no fixed grading gate)
+  context_recall      : 0.683 (reported score; no fixed grading gate)
+
+SAVED scores-CB-1.csv: {'faithfulness': 0.29747474747474745, 'answer_relevancy': 0.3602903547469283, 'context_recall': 0.6833333333333333}
+
+
+── Running RAG Evaluation (4 test cases) ──
+  Evaluating CUST-10000317...
+  Evaluating CUST-10000904...
+  Evaluating CUST-10000122...
+  Evaluating CUST-10000588...
+Evaluating:   0%|          | 0/12 [00:00<?, ?it/s]
+Evaluating:   8%|▊         | 1/12 [00:02<00:22,  2.08s/it]
+Evaluating:  17%|█▋        | 2/12 [00:05<00:30,  3.04s/it]
+Evaluating:  25%|██▌       | 3/12 [00:06<00:19,  2.15s/it]
+Evaluating:  33%|███▎      | 4/12 [00:08<00:15,  1.95s/it]
+Evaluating:  42%|████▏     | 5/12 [00:12<00:18,  2.62s/it]
+Evaluating:  50%|█████     | 6/12 [00:13<00:11,  1.98s/it]
+Evaluating:  58%|█████▊    | 7/12 [00:14<00:08,  1.78s/it]
+Evaluating:  67%|██████▋   | 8/12 [00:16<00:07,  1.98s/it]
+Evaluating:  75%|███████▌  | 9/12 [00:20<00:07,  2.46s/it]
+Evaluating:  83%|████████▎ | 10/12 [00:21<00:04,  2.18s/it]
+Evaluating:  92%|█████████▏| 11/12 [00:23<00:01,  1.85s/it]
+Evaluating: 100%|██████████| 12/12 [00:25<00:00,  2.02s/it]
+Evaluating: 100%|██████████| 12/12 [00:25<00:00,  2.12s/it]
+
+── RAGAS Evaluation Results ──────────────────────────
+  faithfulness        : 0.297 (reported score; no fixed grading gate)
+  answer_relevancy    : 0.360 (reported score; no fixed grading gate)
+  context_recall      : 0.683 (reported score; no fixed grading gate)
+
+SAVED scores-CB-2.csv: {'faithfulness': 0.29747474747474745, 'answer_relevancy': 0.36004790141053933, 'context_recall': 0.6833333333333333}
+A CUST-10000317: Subject: Your Gold Member Perks Are Waiting – Free Shipping on Your Next Order
+Body: We've noticed it's been a while since your last visit, and we'd love to welcome you back. As a Gold member, you enjoy free standard shipping on every order—no minimum spend required—plus free return shipping on eligible items, making it easy to shop outdoor gear and footwear risk-free. Come back to NorthStar and rediscover what you love.
+A CUST-10000904: Subject: We miss you—earn extra points on your next apparel purchase
+Body: It's been a while since we've seen you in store, and we'd love to welcome you back. As a Bronze member, you earn 1× points on every purchase—and your points never expire as long as you keep shopping with us. Stop by NorthStar or visit northstar.com to browse our apparel selection, and let's get you back on track with rewards that add up.
+A CUST-10000122: Subject: Your Platinum Perks Are Waiting—Gear Repair & Free Returns on Your Next Order
+Body: We've noticed it's been a while since your last visit, and we'd love to welcome you back. As a Platinum member, you enjoy unlimited free gear repair and a 60-day return window on eligible purchases—benefits that make outdoor and electronics gear easier to try and maintain. Shop your favorite categories and take advantage of these exclusive perks on us.
+A CUST-10000588: Subject: Earn More on Your Next Home Purchase — Silver Member Bonus
+Body: We've noticed it's been a while since your last visit, and we'd love to welcome you back. As a Silver member, you earn 1.25× points on every purchase—and your next order of home goods qualifies for free standard shipping on orders $50+. Stop by a store or shop online at northstar.com to start earning toward your next reward.
+
+── Running RAG Evaluation (4 test cases) ──
+  Evaluating CUST-10000317...
+  Evaluating CUST-10000904...
+  Evaluating CUST-10000122...
+  Evaluating CUST-10000588...
+
+Evaluating:   0%|          | 0/12 [00:00<?, ?it/s]
+Evaluating:   8%|▊         | 1/12 [00:01<00:20,  1.91s/it]
+Evaluating:  17%|█▋        | 2/12 [00:05<00:28,  2.83s/it]
+Evaluating:  25%|██▌       | 3/12 [00:07<00:22,  2.46s/it]
+Evaluating:  33%|███▎      | 4/12 [00:09<00:16,  2.12s/it]
+Evaluating:  42%|████▏     | 5/12 [00:12<00:17,  2.55s/it]
+Evaluating:  50%|█████     | 6/12 [00:13<00:12,  2.11s/it]
+Evaluating:  58%|█████▊    | 7/12 [00:15<00:09,  1.89s/it]
+Evaluating:  67%|██████▋   | 8/12 [00:17<00:08,  2.20s/it]
+Evaluating:  75%|███████▌  | 9/12 [00:20<00:07,  2.37s/it]
+Evaluating:  83%|████████▎ | 10/12 [00:22<00:04,  2.11s/it]
+Evaluating:  92%|█████████▏| 11/12 [00:23<00:01,  1.96s/it]
+Evaluating: 100%|██████████| 12/12 [00:25<00:00,  2.02s/it]
+Evaluating: 100%|██████████| 12/12 [00:25<00:00,  2.16s/it]
+
+── RAGAS Evaluation Results ──────────────────────────
+  faithfulness        : 0.179 (reported score; no fixed grading gate)
+  answer_relevancy    : 0.341 (reported score; no fixed grading gate)
+  context_recall      : 0.483 (reported score; no fixed grading gate)
+
+SAVED scores-A-1.csv: {'faithfulness': 0.17862762237762236, 'answer_relevancy': 0.3412271934135568, 'context_recall': 0.4833333333333333}
+
+── Running RAG Evaluation (4 test cases) ──
+  Evaluating CUST-10000317...
+  Evaluating CUST-10000904...
+  Evaluating CUST-10000122...
+  Evaluating CUST-10000588...
+
+Evaluating:   0%|          | 0/12 [00:00<?, ?it/s]
+Evaluating:   8%|▊         | 1/12 [00:01<00:20,  1.83s/it]
+Evaluating:  17%|█▋        | 2/12 [00:05<00:26,  2.63s/it]
+Evaluating:  25%|██▌       | 3/12 [00:05<00:14,  1.65s/it]
+Evaluating:  33%|███▎      | 4/12 [00:07<00:12,  1.61s/it]
+Evaluating:  42%|████▏     | 5/12 [00:10<00:15,  2.22s/it]
+Evaluating:  50%|█████     | 6/12 [00:13<00:15,  2.55s/it]
+Evaluating:  58%|█████▊    | 7/12 [00:14<00:10,  2.18s/it]
+Evaluating:  67%|██████▋   | 8/12 [00:17<00:09,  2.40s/it]
+Evaluating:  83%|████████▎ | 10/12 [00:19<00:03,  1.63s/it]
+Evaluating:  92%|█████████▏| 11/12 [00:23<00:02,  2.20s/it]
+Evaluating: 100%|██████████| 12/12 [00:24<00:00,  1.93s/it]
+Evaluating: 100%|██████████| 12/12 [00:24<00:00,  2.04s/it]
+
+── RAGAS Evaluation Results ──────────────────────────
+  faithfulness        : 0.189 (reported score; no fixed grading gate)
+  answer_relevancy    : 0.353 (reported score; no fixed grading gate)
+  context_recall      : 0.483 (reported score; no fixed grading gate)
+
+SAVED scores-A-2.csv: {'faithfulness': 0.1893419080919081, 'answer_relevancy': 0.3531260601995258, 'context_recall': 0.4833333333333333}
+B CUST-10000317: Subject: Your Gold Member Benefit: Free Returns on Your Next Order
+Body: We'd love to have you back, and we're making it easier with a reminder of your Gold member perk—free return shipping on your next purchase. Whether you're stocking up on outdoor gear or finding your next pair of footwear, you can shop with confidence knowing returns are on us. Visit northstar.com or stop by one of our 400 stores to explore what's new.
+B CUST-10000904: Subject: We Miss You — Special Offer Inside for Your Next Apparel Purchase
+Body: We noticed it's been a while since your last visit, and we'd love to welcome you back. As a Bronze member, we're offering you 15% off your next apparel purchase — valid both online and in any of our 400 stores for 45 days from today. Stop by or shop at northstar.com to redeem this offer on your account and discover what's new in our apparel collection.
+B CUST-10000122: Subject: Your Platinum Advantage: Free Returns on Your Next Outdoor Purchase
+Body: We'd love to have you back. As a Platinum member, you enjoy free return shipping on orders—a benefit that makes trying new gear risk-free. We've noticed you love Outdoor and Electronics, so we're inviting you to explore our latest collection in those categories with the confidence that returns are always on us.
+B CUST-10000588: Subject: We'd Love to Welcome You Back — Silver Member Exclusive
+Body: We've noticed it's been a while since your last visit, and we'd like to bring you back with an offer tailored to you. As a Silver member, you enjoy free returns to any of our 400 stores — a convenient way to shop Home and Beauty items risk-free. We'd be delighted to see you again soon; simply visit northstar.com or your nearest store to explore what's new.
+
+── Running RAG Evaluation (4 test cases) ──
+  Evaluating CUST-10000317...
+  Evaluating CUST-10000904...
+  Evaluating CUST-10000122...
+  Evaluating CUST-10000588...
+
+Evaluating:   0%|          | 0/12 [00:00<?, ?it/s]
+Evaluating:   8%|▊         | 1/12 [00:01<00:21,  1.99s/it]
+Evaluating:  17%|█▋        | 2/12 [00:04<00:23,  2.31s/it]
+Evaluating:  25%|██▌       | 3/12 [00:07<00:24,  2.76s/it]
+Evaluating:  33%|███▎      | 4/12 [00:09<00:18,  2.26s/it]
+Evaluating:  42%|████▏     | 5/12 [00:11<00:16,  2.39s/it]
+Evaluating:  50%|█████     | 6/12 [00:13<00:12,  2.15s/it]
+Evaluating:  58%|█████▊    | 7/12 [00:15<00:09,  1.92s/it]
+Evaluating:  67%|██████▋   | 8/12 [00:17<00:08,  2.12s/it]
+Evaluating:  75%|███████▌  | 9/12 [00:18<00:05,  1.74s/it]
+Evaluating:  83%|████████▎ | 10/12 [00:20<00:03,  1.68s/it]
+Evaluating:  92%|█████████▏| 11/12 [00:22<00:02,  2.03s/it]
+Evaluating: 100%|██████████| 12/12 [00:24<00:00,  1.82s/it]
+Evaluating: 100%|██████████| 12/12 [00:24<00:00,  2.02s/it]
+
+── RAGAS Evaluation Results ──────────────────────────
+  faithfulness        : 0.229 (reported score; no fixed grading gate)
+  answer_relevancy    : 0.395 (reported score; no fixed grading gate)
+  context_recall      : 0.388 (reported score; no fixed grading gate)
+
+SAVED scores-B-1.csv: {'faithfulness': 0.22916666666666669, 'answer_relevancy': 0.3949854525578217, 'context_recall': 0.3875}
+
+── Running RAG Evaluation (4 test cases) ──
+  Evaluating CUST-10000317...
+  Evaluating CUST-10000904...
+  Evaluating CUST-10000122...
+  Evaluating CUST-10000588...
+
+Evaluating:   0%|          | 0/12 [00:00<?, ?it/s]
+Evaluating:   8%|▊         | 1/12 [00:01<00:21,  1.91s/it]
+Evaluating:  17%|█▋        | 2/12 [00:04<00:23,  2.35s/it]
+Evaluating:  25%|██▌       | 3/12 [00:07<00:22,  2.45s/it]
+Evaluating:  33%|███▎      | 4/12 [00:08<00:16,  2.06s/it]
+Evaluating:  42%|████▏     | 5/12 [00:11<00:17,  2.52s/it]
+Evaluating:  50%|█████     | 6/12 [00:12<00:11,  1.99s/it]
+Evaluating:  58%|█████▊    | 7/12 [00:14<00:09,  1.81s/it]
+Evaluating:  67%|██████▋   | 8/12 [00:16<00:08,  2.04s/it]
+Evaluating:  75%|███████▌  | 9/12 [00:18<00:05,  1.88s/it]
+Evaluating:  83%|████████▎ | 10/12 [00:20<00:03,  1.80s/it]
+Evaluating:  92%|█████████▏| 11/12 [00:22<00:02,  2.01s/it]
+Evaluating: 100%|██████████| 12/12 [00:22<00:00,  1.50s/it]
+Evaluating: 100%|██████████| 12/12 [00:22<00:00,  1.90s/it]
+
+── RAGAS Evaluation Results ──────────────────────────
+  faithfulness        : 0.129 (reported score; no fixed grading gate)
+  answer_relevancy    : 0.395 (reported score; no fixed grading gate)
+  context_recall      : 0.388 (reported score; no fixed grading gate)
+
+SAVED scores-B-2.csv: {'faithfulness': 0.12916666666666665, 'answer_relevancy': 0.39485719518997775, 'context_recall': 0.3875}
+            faithfulness                     answer_relevancy                     context_recall               
+                    mean       min       max             mean       min       max           mean       min  max
+strategy                                                                                                       
+A               0.183985  0.100000  0.307692         0.347177  0.291944  0.425992       0.483333  0.200000  1.0
+B               0.179167  0.000000  0.500000         0.394921  0.337665  0.479380       0.387500  0.000000  0.8
+C               0.308838  0.090909  0.545455         0.359561  0.296740  0.479029       0.483333  0.200000  1.0
+CB              0.297475  0.090909  0.454545         0.360169  0.263346  0.532558       0.683333  0.333333  1.0
+CB_hardened     0.106250  0.000000  0.300000         0.368932  0.257216  0.476730       0.683333  0.333333  1.0

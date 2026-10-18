@@ -1,0 +1,19 @@
+{
+  "checked_at_utc": "2026-10-17T09:05:50.899713+00:00",
+  "account": "173506956686",
+  "region": "us-east-1",
+  "submitted_this_run": false,
+  "form_registered": true,
+  "form_readback_matches_course_template": true,
+  "haiku": {
+    "status": "PASS",
+    "response": "OK",
+    "usage": {
+      "inputTokens": 10,
+      "outputTokens": 4,
+      "totalTokens": 14,
+      "cacheReadInputTokens": 0,
+      "cacheWriteInputTokens": 0
+    }
+  }
+}

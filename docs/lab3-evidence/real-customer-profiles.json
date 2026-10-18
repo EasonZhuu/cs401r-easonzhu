@@ -1,0 +1,119 @@
+{
+  "profiles": [
+    {
+      "days_since_last_purchase": 210.0,
+      "customer_tenure_days": 345.0,
+      "purchase_frequency_30d": 0.0,
+      "purchase_frequency_90d": 0.0,
+      "purchase_frequency_180d": 0.0,
+      "avg_order_value": 116.5457,
+      "total_spend_90d": 0.0,
+      "total_lifetime_value": 815.82,
+      "avg_basket_size_6m": 0.0,
+      "category_diversity_score": 0.5,
+      "online_to_store_ratio": 0.7143,
+      "customer_id": "CUST-10000299",
+      "loyalty_tier": "Silver",
+      "churn_probability": 0.8281450867652893,
+      "top_categories": [
+        "Beauty",
+        "Home",
+        "Electronics"
+      ]
+    },
+    {
+      "days_since_last_purchase": 295.0,
+      "customer_tenure_days": 361.0,
+      "purchase_frequency_30d": 0.0,
+      "purchase_frequency_90d": 0.0,
+      "purchase_frequency_180d": 0.0,
+      "avg_order_value": 123.7767,
+      "total_spend_90d": 0.0,
+      "total_lifetime_value": 371.33,
+      "avg_basket_size_6m": 0.0,
+      "category_diversity_score": 0.375,
+      "online_to_store_ratio": 0.0,
+      "customer_id": "CUST-10000324",
+      "loyalty_tier": "Bronze",
+      "churn_probability": 0.8281450867652893,
+      "top_categories": [
+        "Apparel",
+        "Grocery",
+        "Home"
+      ]
+    },
+    {
+      "days_since_last_purchase": 222.0,
+      "customer_tenure_days": 348.0,
+      "purchase_frequency_30d": 0.0,
+      "purchase_frequency_90d": 0.0,
+      "purchase_frequency_180d": 0.0,
+      "avg_order_value": 227.9256,
+      "total_spend_90d": 0.0,
+      "total_lifetime_value": 2051.33,
+      "avg_basket_size_6m": 0.0,
+      "category_diversity_score": 0.375,
+      "online_to_store_ratio": 0.1111,
+      "customer_id": "CUST-10007187",
+      "loyalty_tier": "Gold",
+      "churn_probability": 0.8281450867652893,
+      "top_categories": [
+        "Home",
+        "Footwear",
+        "Beauty"
+      ]
+    },
+    {
+      "days_since_last_purchase": 183.0,
+      "customer_tenure_days": 360.0,
+      "purchase_frequency_30d": 0.0,
+      "purchase_frequency_90d": 0.0,
+      "purchase_frequency_180d": 0.0,
+      "avg_order_value": 435.1582,
+      "total_spend_90d": 0.0,
+      "total_lifetime_value": 7397.69,
+      "avg_basket_size_6m": 0.0,
+      "category_diversity_score": 0.5,
+      "online_to_store_ratio": 0.6471,
+      "customer_id": "CUST-10002887",
+      "loyalty_tier": "Platinum",
+      "churn_probability": 0.8270395994186401,
+      "top_categories": [
+        "Home",
+        "Beauty",
+        "Toys"
+      ]
+    },
+    {
+      "days_since_last_purchase": 223.0,
+      "customer_tenure_days": 336.0,
+      "purchase_frequency_30d": 0.0,
+      "purchase_frequency_90d": 0.0,
+      "purchase_frequency_180d": 0.0,
+      "avg_order_value": 108.74,
+      "total_spend_90d": 0.0,
+      "total_lifetime_value": 543.7,
+      "avg_basket_size_6m": 0.0,
+      "category_diversity_score": 0.125,
+      "online_to_store_ratio": 1.0,
+      "customer_id": "CUST-10000350",
+      "loyalty_tier": "Silver",
+      "churn_probability": 0.8281450867652893,
+      "top_categories": [
+        "Apparel"
+      ]
+    }
+  ],
+  "provenance": {
+    "athena_query_execution_id": "a4a936c4-dcbe-46d7-bf7c-d2d1627e6c9f",
+    "feature_csv_sha256": "70d22878ab524ee755a268b742ce5645c40d02342287ec738546c514f67dd4c2",
+    "transaction_csv_sha256": "38b19325c00ee0d5e05b4588066d16aa124a8cc822c3362709d6145e0ba612b2",
+    "model_sha256": "8ef39c2469667a6e718318826294962f88679b4ac30c3c259ea1d6b88a1d95dc",
+    "feature_cutoff_inclusive": "2026-04-01",
+    "selection": "top 10% of all 9999 model scores; one per represented tier plus highest remaining scores",
+    "categories": "top 3 observed categories by purchase count, then spend, then name; no post-cutoff transactions",
+    "raw_rows": 163255,
+    "invalid_purchase_dates_excluded": 4912,
+    "observed_valid_positive_purchase_rows": 125534
+  }
+}

@@ -9,3 +9,8 @@ __pycache__/
 *.zip
 .aws/
 .localstack/
+.venv/
+.ipynb_checkpoints/
+artifacts/lab3-rag/cache/
+artifacts/lab3-rag/offer-cache/
+.notebook-runtime/

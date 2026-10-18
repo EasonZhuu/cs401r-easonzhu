@@ -1,0 +1,13 @@
+{
+  "checked_at_utc": "2026-10-18T04:40:38.665783+00:00",
+  "nat_gateway_states": [
+    "deleted"
+  ],
+  "active_nat_gateways": 0,
+  "nat_eip_present": false,
+  "mlflow_app_status": "Created",
+  "data_bucket_preserved": true,
+  "feature_group_preserved": true,
+  "model_approval_status": "PendingManualApproval",
+  "scope": "Only the temporary NAT, its EIP and private default route were removed; other reusable platform resources remain."
+}

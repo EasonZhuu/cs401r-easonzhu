@@ -319,3 +319,89 @@ available to rebuild the platform for Lab 3.
 Teardown evidence belongs on `main` after the submission tag. Keep
 `lab2-submit` fixed; do not move it to the teardown commit. Every final
 teardown check must report `OK`, with no `CHECK FAILED` or `STILL PRESENT`.
+
+## Lab 3 local Python environment
+
+Track A/B uses a project-local Python 3.12 environment. See the
+[environment setup and offline checks](docs/lab3-environment.md),
+[exact dependency versions](requirements-lab3.txt), and
+[direct dependency constraints](requirements-lab3.in).
+
+```powershell
+.\.venv\Scripts\python.exe scripts\check-lab3-env.py
+```
+
+## Lab 3: model development (Track A+B)
+
+The selected XGBoost 3.2.0 model has AUC 0.7838, Precision@10% 0.7133,
+Recall@10% 0.3242 and paired AUC-lift CI [0.0415, 0.0802]. It is registered
+as version 1 in `northstar-churn-models`, PendingManualApproval. The actual
+training query, MLflow run, model hash and registry metadata are exported under
+`docs/lab3-evidence/`. The saved `train-final.log` is the unchanged selected
+training output; registration happened afterwards and has its own log.
+
+Use Python 3.12 and `requirements-lab3.txt` in a project environment. On Windows,
+run the following from this repository with `.venv\Scripts` on PATH and AWS
+credentials configured for the original course account in us-east-1:
+
+```powershell
+$env:PATH = "$PWD\.venv\Scripts;$env:PATH"
+$env:AWS_DEFAULT_REGION = 'us-east-1'
+$env:PYTHONIOENCODING = 'utf-8'
+$env:PYTHONUTF8 = '1'
+$env:RAGAS_DO_NOT_TRACK = 'true'
+```
+
+Training requires the restored Lab 2 Feature Group and its offline store. Read
+the bucket and role from the existing Terraform outputs, rather than creating
+new resources. Supply `--artifacts-bucket`, `--feature-group-name` and the
+existing MLflow **App** ARN to `churn_training_skeleton.py`; its CLI exposes the
+hyperparameters. The registered model, archived original training source and
+five example input profiles are also included for the demo, so viewing existing
+results does not require re-running training.
+
+For a new reproduction after restoring the platform (creates a new pending
+registry version; keep its outputs separate from the submitted evidence):
+
+```powershell
+$tf = terraform -chdir=infrastructure/environments/dev output -json | ConvertFrom-Json
+$app = Get-Content docs/lab3-evidence/mlflow-app.json -Raw | ConvertFrom-Json
+python churn_training_skeleton.py --feature-group-name $tf.feature_group_name.value --artifacts-bucket $tf.s3_bucket_name.value --mlflow-arn $app.Arn --max-depth 6 --eta 0.1 --num-round 200 --run-name local-reproduction-depth6 --model-dir artifacts/retrained-churn --output-data-dir artifacts/retraining-output
+```
+
+```powershell
+python rag_index.py --embed
+python rag_retrieval.py --build-index
+python scripts/run_rag_experiments.py --strategies A B C CB CB_hardened CB_controlled --repetitions 2
+python scripts/run_lab3_demo.py
+```
+
+The demo runs in a fresh project-Python kernel and writes runtime files locally.
+`rag_index.py --verify` checks the committed policy vectors without AWS calls.
+Query and generation caches are local and ignored; fresh queries/generation and
+all judge evaluations use Bedrock. Completed score checkpoints are reused;
+archive the desired `docs/lab3-evidence/rag-runs/scores-*.csv` files before
+requesting a new judge experiment. The cached copy is held fixed across judge
+repetitions; those ranges measure judge variation.
+
+RAG uses Titan V2 normalized vectors and an exact FAISS index over 48 policy
+sections. The final C+B retrieval combines two top-3 passes. Raw generated copy
+proved unsafe, so final delivery applies bounded points-only checks and can
+fall back to a policy-rendered offer. All five demonstrated final deliveries
+used fallback; the original LLM drafts remain available. No coupon is issued
+and no customer is contacted. Historical fixed RAGAS score gates were removed
+by the teacher on October 12; poor measured scores are retained and explained.
+
+- [Churn evaluation](docs/lab3-evaluation-report.md)
+- [Repeated RAG evaluation and limitations](docs/lab3-rag-evaluation-report.md)
+- [Five input/output pairs and two observed failures](docs/lab3-evidence/track-b-examples.md)
+- [Design justification](docs/lab3-model-design.md)
+- [Executed demo notebook](notebooks/lab3-demo.ipynb)
+- [Policy chunking](docs/lab3-rag-chunking-embeddings.md) and [retrieval](docs/lab3-rag-retrieval.md)
+
+After all outputs are saved, run `scripts/collect-lab3-evidence.sh --track B`
+(or its Python companion), fix FAIL results, then run
+`scripts/teardown-lab3.sh`. Keep the MLflow App and Registry. The teardown
+report covers Lab 3 inference/training/agent resources; it does not imply that
+the reusable Lab 2 data platform was destroyed. Commit and push the complete
+result and the `lab3-submit` tag, then submit this repository URL in Canvas.

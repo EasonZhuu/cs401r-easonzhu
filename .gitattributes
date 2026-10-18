@@ -1,3 +1,15 @@
-# Keep Bash scripts executable after a fresh Windows checkout
-*.sh text eol=lf
-*.py text eol=lf
+# Lab 3 lineage hashes bind exact bytes, including original source newlines.
+/northstar-policy-docs/** -text
+/prompt_templates/** -text
+/artifacts/** -text -whitespace
+/churn_training_skeleton.py -text
+/evaluation_harness.py -text
+/rag_*.py -text
+/inference/** -text
+/scripts/register_churn_model.py -text
+/scripts/*lab3* -text
+/scripts/run_rag_experiments.py -text
+/scripts/prepare_offer_profiles.py -text
+
+# Raw console tables keep the padding emitted by pandas.
+/docs/lab3*.log -whitespace

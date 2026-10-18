@@ -1,0 +1,30 @@
+Section 5 development training; not the final graded training run
+Athena QueryExecutionId: 0e64e221-f1d9-44a9-8de3-8e151d89a0a6
+Loaded 9,999 customer rows from Feature Store via Athena
+Preprocessing 9,999 samples...
+  Positive class rate: 22.0%
+  Feature matrix shape: (9999, 11)
+  Missing feature values: 0 (native XGBoost handling)
+Train: 6,999 | Validation: 3,000
+
+Training XGBoost with params: {
+  "objective": "binary:logistic",
+  "eval_metric": [
+    "logloss",
+    "auc"
+  ],
+  "max_depth": 6,
+  "eta": 0.1,
+  "min_child_weight": 5,
+  "subsample": 0.8,
+  "colsample_bytree": 0.8,
+  "scale_pos_weight": 3.544805194805195,
+  "seed": 42,
+  "verbosity": 1
+}
+[0]	train-logloss:0.66855	train-auc:0.78082	validation-logloss:0.67031	validation-auc:0.75309
+[25]	train-logloss:0.48160	train-auc:0.85748	validation-logloss:0.52000	validation-auc:0.78026
+[29]	train-logloss:0.47315	train-auc:0.86414	validation-logloss:0.51780	validation-auc:0.77814
+Best validation AUC: 0.783813; retained boosting rounds: 11
+Development validation AUC: 0.783813
+PASS saved model reload produces identical predictions

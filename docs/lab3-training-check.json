@@ -1,0 +1,94 @@
+{
+  "checked_at_utc": "2026-10-18T00:51:33.405968+00:00",
+  "scope": "Section 5 development training",
+  "account": "173506956686",
+  "identity_arn": "arn:aws:iam::173506956686:user/cs401_admin",
+  "region": "us-east-1",
+  "run_name": "development-depth6-eta0.1",
+  "training_started_at_utc": "2026-10-18T00:51:32.794420+00:00",
+  "training_completed_at_utc": "2026-10-18T00:51:33.206178+00:00",
+  "xgboost_version": "3.2.0",
+  "query_execution_id": "0e64e221-f1d9-44a9-8de3-8e151d89a0a6",
+  "query_state": "SUCCEEDED",
+  "query_sql": "WITH ranked AS (\n            SELECT\n                customer_id,\n                days_since_last_purchase, customer_tenure_days, purchase_frequency_30d, purchase_frequency_90d, purchase_frequency_180d, avg_order_value, total_spend_90d, total_lifetime_value, avg_basket_size_6m, category_diversity_score, online_to_store_ratio,\n                churn_label,\n                loyalty_tier,\n                event_time,\n                ROW_NUMBER() OVER (\n                    PARTITION BY customer_id\n                    ORDER BY event_time DESC, write_time DESC\n                ) AS rn\n            FROM \"northstar_dev_customer_features\"\n            WHERE event_time BETWEEN 1767225600.0 AND 1798761600.0\n              AND NOT is_deleted\n        )\n        SELECT\n            customer_id,\n            days_since_last_purchase, customer_tenure_days, purchase_frequency_30d, purchase_frequency_90d, purchase_frequency_180d, avg_order_value, total_spend_90d, total_lifetime_value, avg_basket_size_6m, category_diversity_score, online_to_store_ratio,\n            churn_label,\n            loyalty_tier\n        FROM ranked\n        WHERE rn = 1\n        ORDER BY customer_id",
+  "query_statistics": {
+    "EngineExecutionTimeInMillis": 1282,
+    "DataScannedInBytes": 682222,
+    "TotalExecutionTimeInMillis": 1491,
+    "QueryQueueTimeInMillis": 106,
+    "ServicePreProcessingTimeInMillis": 60,
+    "QueryPlanningTimeInMillis": 118,
+    "ServiceProcessingTimeInMillis": 43,
+    "ResultReuseInformation": {
+      "ReusedPreviousResult": false
+    }
+  },
+  "ordered_source_csv_sha256": "325f9999c1f345321c2fb5f1eb3aae7390be08a84587ea495ec505ef94db8589",
+  "source_matches_section_4": true,
+  "n_customers": 9999,
+  "feature_columns": [
+    "days_since_last_purchase",
+    "customer_tenure_days",
+    "purchase_frequency_30d",
+    "purchase_frequency_90d",
+    "purchase_frequency_180d",
+    "avg_order_value",
+    "total_spend_90d",
+    "total_lifetime_value",
+    "avg_basket_size_6m",
+    "category_diversity_score",
+    "online_to_store_ratio"
+  ],
+  "n_features": 11,
+  "preprocessing": {
+    "strategy": "Native NaN, no imputation; reject invalid labels and infinite features",
+    "missing_feature_values": 0,
+    "rows_dropped": 0
+  },
+  "split": {
+    "test_size": 0.3,
+    "random_state": 42,
+    "stratify": "churn_label",
+    "train_rows": 6999,
+    "validation_rows": 3000,
+    "train_negatives": 5459,
+    "train_positives": 1540,
+    "validation_negatives": 2340,
+    "validation_positives": 660,
+    "customer_overlap": 0,
+    "loyalty_tiers_aligned": true
+  },
+  "parameters": {
+    "objective": "binary:logistic",
+    "eval_metric": [
+      "logloss",
+      "auc"
+    ],
+    "max_depth": 6,
+    "eta": 0.1,
+    "num_round": 200,
+    "min_child_weight": 5,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "scale_pos_weight": 3.544805194805195,
+    "seed": 42,
+    "early_stopping_rounds": 20
+  },
+  "best_iteration_zero_based": 10,
+  "retained_boosting_rounds": 11,
+  "diagnostic_metrics": {
+    "validation_auc": 0.7838128075628075,
+    "best_validation_auc": 0.7838128075628076
+  },
+  "probabilities_finite_and_in_range": true,
+  "model_path": ".tools/lab3/step5-training/model.ubj",
+  "model_sha256": "8ef39c2469667a6e718318826294962f88679b4ac30c3c259ea1d6b88a1d95dc",
+  "model_reload_predictions_identical": true,
+  "training_source_sha256": "2e5de9e000e624c3179b1f886e7c36ac598a635cf0ea8fced572d38cf78a3ca6",
+  "mlflow_status": "logged_and_read_back_from_mlflow_app",
+  "model_registered": false,
+  "formal_evaluation_completed": false,
+  "sagemaker_training_job_created": false,
+  "mlflow_run_id": "eb689a748b6a4a7e8e9272f92880e338",
+  "mlflow_app_arn": "arn:aws:sagemaker:us-east-1:173506956686:mlflow-app/app-F7R7VMZUHHY4"
+}

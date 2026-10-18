@@ -1,0 +1,19 @@
+{
+  "checked_at_utc": "2026-10-18T03:20:06.416940+00:00",
+  "model_package_arn": "arn:aws:sagemaker:us-east-1:173506956686:model-package/northstar-churn-models/1",
+  "model_package_version": 1,
+  "status": "Completed",
+  "approval_status": "PendingManualApproval",
+  "metrics_match_registry_and_mlflow": true,
+  "bundle_readback_hash_matches": true,
+  "model_matches_mlflow_and_evaluated_model": true,
+  "original_training_source_hash_verified": true,
+  "athena_query_succeeded": true,
+  "validation_rows": 3000,
+  "all_probabilities_identical": true,
+  "auc_roc": 0.7838,
+  "precision_top10": 0.7133,
+  "recall_top10": 0.3242,
+  "supported_input_checks": "ordered JSON, named JSON and CSV passed before registration",
+  "deployment_validation": "Local handler only; no endpoint or full container startup test"
+}

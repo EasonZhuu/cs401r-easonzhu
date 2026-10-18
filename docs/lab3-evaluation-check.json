@@ -1,0 +1,22 @@
+{
+  "checked_at_utc": "2026-10-18T02:59:04.585697+00:00",
+  "athena_query_execution_id": "a4a936c4-dcbe-46d7-bf7c-d2d1627e6c9f",
+  "mlflow_run_id": "6d3dfd0d527543feafe2d37712a54b92",
+  "mlflow_status": "FINISHED",
+  "query_succeeded": true,
+  "source_matches_verified_dataset": true,
+  "metrics_match_mlflow": true,
+  "artifact_hashes": {
+    "model/model.xgb": "8ef39c2469667a6e718318826294962f88679b4ac30c3c259ea1d6b88a1d95dc",
+    "source/churn_training_skeleton.py": "d72392ee5c493b49034904dddd3ab00138e2763cf3e69b9532d654545b6397f2",
+    "evaluation_metrics.json": "78020f3094fcfb70da79c0d2d948ae04ebc44b4af2ec653b76d51bb059c6ef42",
+    "evaluation/slice-evaluation.csv": "e032bc593587dcac0697ac74bf844634203b8109a813fa033c5cfc5e75294ee7",
+    "evaluation/confusion-matrix.png": "f67e7dc7aaa54dd30283d0c4ccd2788fab52de2833950cb87a0645fb42c54287",
+    "evaluation/feature-importance.png": "621b46c8dc85a175b17658c11758f1f3c7c421de9730bfeb9047973640b7ed4f"
+  },
+  "downloaded_model_predictions_match_published_counts": true,
+  "slice_totals_and_membership_verified": true,
+  "all_evaluation_gates_passed": true,
+  "plots_visually_checked": true,
+  "model_registered": false
+}
