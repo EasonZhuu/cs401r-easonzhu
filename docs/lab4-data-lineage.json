@@ -1,0 +1,20 @@
+{
+  "data_uri": "s3://northstar-dev-data-173506956686/features/customers/",
+  "customers": 9999,
+  "event_time": 1793478476.0,
+  "manifest_sha256": "e460ef80f140c833af6fb2e2ca6a7a8f59c4ca084c604d6b16f05c193ab411c0",
+  "objects": [
+    {
+      "key": "features/customers/part-00000-2539180d-bf28-4965-b3e1-aa96c06ab5a0-c000.snappy.parquet",
+      "etag": "f2d3eb591f1ee1bd4b5e21497fcb18be-1",
+      "version_id": "NEsH4jh1BNZwmQqTy.UIU0O7xkh2oTpI",
+      "last_modified": "2026-10-31T20:27:59+00:00"
+    },
+    {
+      "key": "features/customers/part-00001-2539180d-bf28-4965-b3e1-aa96c06ab5a0-c000.snappy.parquet",
+      "etag": "1b7c8c391c01348fe12ff31a1980561b-1",
+      "version_id": "csVspGBIC2cfbD2bnrohB1mKHQ3NP.y.",
+      "last_modified": "2026-10-31T20:27:59+00:00"
+    }
+  ]
+}

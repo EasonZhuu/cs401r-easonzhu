@@ -123,7 +123,22 @@ def main():
         executions.extend(page["pipelineExecutionSummaries"])
     model_executions = []
     for page in sm.get_paginator("list_pipeline_executions").paginate(PipelineName="northstar-churn-pipeline"):
-        model_executions.extend(page["PipelineExecutionSummaries"])
+        for execution in page["PipelineExecutionSummaries"]:
+            arn = execution["PipelineExecutionArn"]
+            details = sm.describe_pipeline_execution(PipelineExecutionArn=arn)
+            details.pop("ResponseMetadata", None)
+            steps = []
+            for step_page in sm.get_paginator("list_pipeline_execution_steps").paginate(PipelineExecutionArn=arn):
+                steps.extend(step_page["PipelineExecutionSteps"])
+            training = []
+            for step in steps:
+                job_arn = step.get("Metadata", {}).get("TrainingJob", {}).get("Arn")
+                if job_arn:
+                    job = sm.describe_training_job(TrainingJobName=job_arn.rsplit("/", 1)[-1])
+                    training.append({key: job.get(key) for key in
+                        ("TrainingJobArn", "TrainingJobStatus", "TrainingTimeInSeconds", "BillableTimeInSeconds",
+                         "EnableManagedSpotTraining", "ResourceConfig", "InputDataConfig", "ModelArtifacts")})
+            model_executions.append({**execution, "details": details, "steps": steps, "training": training})
     all_builds = []
     for page in cb.get_paginator("list_builds_for_project").paginate(projectName="northstar-ci", sortOrder="ASCENDING"):
         for build_id in page["ids"]:

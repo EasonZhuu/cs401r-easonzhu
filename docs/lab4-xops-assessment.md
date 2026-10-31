@@ -1,8 +1,10 @@
 # Lab 4 XOps assessment
 
-Implementation status: local validation completed; applied Spot quota is now ten.
-Cloud CI runs, champion approval, failure/revert evidence, final lineage and alarm
-email remain pending. This is a working assessment, not a claim of completed CI.
+Implementation status: three real CI runs completed on 2026-10-31: green,
+deliberate PRE_BUILD failure, and revert green. The final build passed 82 tests
+with no skips, including a real Approved v2 champion comparison. Evidence was
+exported before teardown. Grading tag and Canvas submission remain the owner's
+final step.
 
 ## Pipeline Stage Mapping
 
@@ -34,8 +36,11 @@ of AUC regression rather than asserting superiority. Missing Approved packages
 allow bootstrap only; unreadable Registry/S3 data or invalid AUC must fail.
 After all gates pass, a human approves the eligible package and reviews warnings.
 Bronze/Platinum recall gap > 0.10 produces a warning, not an automatic rejection.
-The current local gap is approximately 0.2616 and Platinum has only 21 positives,
-so its recall estimate needs cautious interpretation.
+The final cloud gap is 0.3928 (Bronze 0.4404, Platinum 0.0476). Platinum has
+only 21 positives, so its recall estimate needs cautious interpretation. The
+candidate AUC 0.7775 equals champion v2 AUC 0.7775. The authorized operator
+approved v3 after review; teardown changes Approved packages to Rejected before
+deleting their backing artifacts. This is lifecycle cleanup, not a failed gate.
 
 ## Retraining Triggers
 
@@ -55,43 +60,40 @@ These are designs; the services below are not deployed or billed by this lab.
 
 ## DataOps Maturity
 
-Current level: Level 1, Repeatable, using the course table: pipelines exist but
-are manually triggered, with versioning and basic monitoring. The Glue jobs and
-Terraform definitions already provide a reproducible path from raw transactions
-to cleaned Parquet, customer features, holdout labels, and Feature Store records.
-The Lab4 change makes `data/feature_engineering.py` the shared calculation module;
-Glue distributes it through `--extra-py-files` instead of maintaining separate
-Spark formulas. Evidence: `tests/test_data.py`, `tests/test_features.py`,
-`tests/test_feature_boundaries.py`, and `docs/lab4-local-validation.json` record
-independent boundaries and historical-output parity. All eleven features and
-labels matched 9,999 customers from 157,627 processed rows. Running the complete
-historical data suite intentionally exposed one stale-data failure; no timestamp
-was edited to make that result green. This is evidence of enforcement locally,
-not evidence that refreshed cloud data exists. Gap to Level 2, Automated: the
-proposed code-triggered CI and scheduled refresh have not yet been demonstrated,
-and cloud Glue execution of the new shared module is being verified before
-the first CI run. Top priority investment: finish the real
-CodePipeline data gate, refresh Glue output in the execution window, and retain
-its timestamp and logs. Then deploy the documented Scheduler coordinator with
-freshness enforcement and failure monitoring. Versioned inputs and a routine
-schema-change review would make later investigations easier.
+Current level: Level 1, Repeatable. Terraform and Glue reproduce cleaning,
+customer features, holdout labels, Parquet output and Feature Store ingestion.
+The shared pandas module is distributed through `--extra-py-files`; hash
+partitioning keeps each customer's transactions together. Boundary tests cover
+empty customers, missing values and both window endpoints. The historical data
+suite genuinely failed freshness; no timestamp was edited. A subsequent real
+Glue run generated 9,999 feature rows and ingested 9,999 records. All eleven
+features, labels and customer identities matched the previous Spark output;
+only the processing timestamp changed. The refreshed data suite passed 28 tests.
+Evidence is retained in `lab4-fresh-data-tests.xml`, both parity JSON files and
+the build logs. Code-triggered validation is automated, but the upstream feature
+refresh still required an operator. Scheduled ingestion, schema-change review
+and source failure recovery have not been deployed. Therefore I do not claim
+end-to-end Level 2 DataOps. The highest priority is the documented refresh
+coordinator: run Glue, require success and freshness, then invoke the same CI.
+Immutable dataset manifests, explicit ownership and monitoring of late inputs
+would make that automation easier to operate and audit.
 
 ## MLOps Maturity
 
-Current level: Level 1, Repeatable. Training is callable through the container
-contract, the data split and baseline are reproducible, model artifacts include
-separate metadata, and experiment tracking already exists. Evidence:
-`models/churn/churn_model.py`, `tests/test_model.py`, `tests/test_fairness.py`, and
-`docs/lab4-mlflow-runs.txt` show executable checks and four existing MLflow runs
-with three distinct hyperparameter combinations. Local XGBoost 1.7 training and
-newer-version artifact loading passed; precision was 0.6967, recall 0.3167, and
-the paired lift confidence interval was [0.0382, 0.0750]. The tier warning remains
-visible rather than being hidden by the aggregate metrics. Gap to Level 2,
-Automated: no Lab4 cloud green/failure/revert sequence, real champion comparison,
-or delivered alarm email has yet been verified. Configuration alone cannot
-establish automatic operation. Top priority investment: obtain Spot quota,
-execute and retain those runs, approve the initial champion, and attach final
-lineage before teardown. Even after successful CI, Level 3, Governed, would
-require operational audit trails and policy enforcement together with automated
-retraining on monitored drift signals. The proposed triggers describe that next
-step but do not constitute deployed drift detection or a closed production loop.
+Current level: Level 2, Automated, within this lab's training and registration
+scope. GitHub pushes actually invoked CodePipeline through WebhookV2, and
+CodeBuild executed data, feature, model and fairness tests. The revert build
+passed all 82 tests without a skip. It read Approved v2 metrics from S3 and
+compared candidate AUC 0.7775 against champion AUC 0.7775. Precision was 0.7000,
+recall 0.3182 and paired lift CI [0.0338, 0.0739]. The deliberate failure stopped
+in PRE_BUILD, started no training and left Registry at v2. CloudWatch entered
+ALARM and the actual notification email arrived at 21:09:54 UTC. Logs, three
+snapshots and the original email screenshot preserve this sequence. Both Lab4
+packages carry exact commits, data manifests and metrics; four existing MLflow
+runs provide three parameter combinations. Approval remained an operator
+decision; no serving endpoint was deployed. The 0.3928 tier recall gap remains
+a visible limitation. Level 3 governance and monitored performance retraining
+are not established by CI alone. The next investment is a production evaluation
+loop using matured labels, a documented fairness review policy and durable
+audit ownership. The proposed retraining triggers are designs, not deployed
+drift detection.

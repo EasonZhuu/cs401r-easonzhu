@@ -1,0 +1,104 @@
+{
+  "phase": "Three real CI runs complete; evidence exported; cleanup verified",
+  "local_head": "9aff0e5dd81304ab29af530c254c554e7878227a",
+  "remote_main": "9aff0e5dd81304ab29af530c254c554e7878227a",
+  "spot_applied_quota": 10,
+  "nat_gateway": "nat-089ce6f1ffe05f0bc",
+  "eip_allocation": "eipalloc-02244e83c2f8144c0",
+  "network_apply": "3 created, 0 changed, 0 destroyed",
+  "artifacts_bucket": "northstar-dev-cicd-artifacts-173506956686",
+  "stack": "northstar-cicd",
+  "change_set": "arn:aws:cloudformation:us-east-1:173506956686:changeSet/lab4-20261031-202118/dd5ce114-06bc-461d-8b62-7bb69b15223c",
+  "change_set_status": "stack deployed, tested, then DELETE_COMPLETE after evidence export",
+  "glue_runs": [
+    {
+      "id": "jr_662205bd58c06c6d94ef11f7036c295d0eccfbfee0128b84eb3cb2d6c8076425",
+      "status": "STOPPED",
+      "execution_seconds": 350,
+      "reason": "replaced per-customer pandas calls with hash-partitioned batching and caching"
+    },
+    {
+      "id": "jr_52a536920488fbdc251429dd38c834ea59eb67b595e5bcefe602389c3049afad",
+      "status": "FAILED",
+      "execution_seconds": 118,
+      "reason": "S3 features_$folder$ marker denied; exact DataEngineer permission added/applied; IAM simulation allowed"
+    },
+    {
+      "id": "jr_0e7f3e5dc84ef789a323946a19db23b4395376b53a4308d7603cc4e494171821",
+      "status": "SUCCEEDED",
+      "execution_seconds": 205,
+      "feature_event_time": 1793478476.0
+    }
+  ],
+  "ci_builds": [
+    {
+      "label": "first green",
+      "id": "northstar-ci:d151aa6b-6eba-4d41-ba46-bc6d4ca39b76",
+      "pipeline_execution": "14ec663a-cd31-49d7-ad4a-6346986d5157",
+      "commit": "a72d3155cb463a634b05313e4faa329e39820a08",
+      "status": "SUCCEEDED",
+      "model_package_version": 2,
+      "model_approval": "Approved",
+      "sagemaker_execution": "jf0pu6oysh0o",
+      "training_job": "pipelines-jf0pu6oysh0o-TrainChurnModel-VOJ9oNSM88",
+      "training_seconds": 139,
+      "billable_spot_seconds": 51,
+      "pipeline_status": "Succeeded"
+    },
+    {
+      "label": "deliberate failure",
+      "id": "northstar-ci:54280ff4-cb20-4013-a80b-9c8787c415ea",
+      "pipeline_execution": "4d0abb74-9215-4ac2-8545-9ab18ccdbe1a",
+      "commit": "3cd9a16b51bf4b809821478ec7ab3727b2b1b1ff",
+      "status": "FAILED",
+      "model_package_version": null,
+      "trigger": "WebhookV2 PUSH_BRANCH",
+      "pipeline_status": "Failed"
+    },
+    {
+      "label": "revert final green",
+      "id": "northstar-ci:7376b239-228d-4223-8d94-0cc5d73c83ac",
+      "pipeline_execution": "87d6e830-c10f-4168-8cfc-d83f227b95f0",
+      "commit": "9aff0e5dd81304ab29af530c254c554e7878227a",
+      "status": "SUCCEEDED",
+      "trigger": "WebhookV2 PUSH_BRANCH",
+      "model_package_version": 3,
+      "model_approval": "Approved before cleanup",
+      "sagemaker_execution": "ys96kk7yy2lb",
+      "training_seconds": 140,
+      "billable_spot_seconds": 53,
+      "pipeline_status": "Succeeded"
+    }
+  ],
+  "canvas": "refreshed login; 22 announcements; latest Lab4 Oct19; full guide hash unchanged",
+  "budget_usd": 5,
+  "cost_note": "CE baseline with credits returned near0 and estimated; not a real-time spend limit; record runtime estimates separately",
+  "fresh_data_tests": "28 passed",
+  "feature_parity": "11 features and holdout labels match 9999 customers",
+  "sns": "confirmed",
+  "failure_commit": "8e814f4a7360f2ac748339096223a9f77277784e",
+  "snapshots": [
+    "BEFORE",
+    "AFTER FAILED RUN",
+    "AFTER REVERT"
+  ],
+  "nat_cleanup": "completed: NAT, EIP and route deleted",
+  "trigger_issue": "initial DetectChanges push did not start an execution; explicit V2 main push trigger configured",
+  "trigger_fix_commit": "4106944",
+  "github_app": "AWS Connector installed on course repository, verified in GitHub UI",
+  "trigger_fix": "explicit main push trigger applied; push 4106944 still produced no Webhook execution",
+  "github_installation_id": 177326908,
+  "alarm_email_received": "2026-10-31T21:09:54Z",
+  "alarm_email_png": "docs/lab4-alarm-email.png",
+  "revert_commit": "9aff0e5dd81304ab29af530c254c554e7878227a",
+  "final_regression": "PASSED against Approved v2 AUC 0.7775",
+  "final_tests": "82 passed, no skips",
+  "final_package": "arn:aws:sagemaker:us-east-1:173506956686:model-package/northstar-churn-models/3",
+  "recorded_at_utc": "2026-10-31T21:24:00.884074+00:00",
+  "cloud_acceptance": "PASSED; first green / PRE_BUILD failure / revert green; actual notification delivered",
+  "cleanup_verified_at_utc": "2026-10-31T21:34:21.133655+00:00",
+  "cleanup": "All checked course compute, NAT/EIP/EFS, CI and data buckets absent",
+  "grading_tag_created": false,
+  "canvas_submitted": false,
+  "visual_browser_qa": "Not performed: local-file navigation was explicitly blocked; static and mock DOM QA only"
+}

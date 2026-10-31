@@ -1,0 +1,722 @@
+{
+  "codepipeline": [
+    {
+      "pipelineExecutionId": "87d6e830-c10f-4168-8cfc-d83f227b95f0",
+      "status": "Succeeded",
+      "startTime": "2026-10-31 15:12:39.111000-06:00",
+      "lastUpdateTime": "2026-10-31 15:21:27.055000-06:00",
+      "sourceRevisions": [
+        {
+          "actionName": "GitHubSource",
+          "revisionId": "9aff0e5dd81304ab29af530c254c554e7878227a",
+          "revisionSummary": "{\"ProviderType\":\"GitHub\",\"CommitMessage\":\"Revert \\\"Demonstrate Lab4 PRE_BUILD failure before training\\\"\\n\\nThis reverts commit 8e814f4a7360f2ac748339096223a9f77277784e.\"}",
+          "revisionUrl": "https://us-east-1.console.aws.amazon.com/codesuite/settings/connections/redirect?connectionArn=arn:aws:codeconnections:us-east-1:173506956686:connection/b5a53e5d-2053-4fad-90e7-0e28048241cb&referenceType=COMMIT&FullRepositoryId=EasonZhuu/cs401r-easonzhu&Commit=9aff0e5dd81304ab29af530c254c554e7878227a"
+        }
+      ],
+      "trigger": {
+        "triggerType": "WebhookV2",
+        "triggerDetail": "{\"connectionArn\":\"arn:aws:codeconnections:us-east-1:173506956686:connection/b5a53e5d-2053-4fad-90e7-0e28048241cb\",\"repositoryId\":\"EasonZhuu/cs401r-easonzhu\",\"branchName\":\"main\",\"commitId\":\"9aff0e5dd81304ab29af530c254c554e7878227a\",\"type\":\"PUSH_BRANCH\"}"
+      },
+      "executionMode": "SUPERSEDED"
+    },
+    {
+      "pipelineExecutionId": "4d0abb74-9215-4ac2-8545-9ab18ccdbe1a",
+      "status": "Failed",
+      "startTime": "2026-10-31 15:06:43.295000-06:00",
+      "lastUpdateTime": "2026-10-31 15:08:22.556000-06:00",
+      "sourceRevisions": [
+        {
+          "actionName": "GitHubSource",
+          "revisionId": "3cd9a16b51bf4b809821478ec7ab3727b2b1b1ff",
+          "revisionSummary": "{\"ProviderType\":\"GitHub\",\"CommitMessage\":\"Record verified green-build model and data lineage\"}",
+          "revisionUrl": "https://us-east-1.console.aws.amazon.com/codesuite/settings/connections/redirect?connectionArn=arn:aws:codeconnections:us-east-1:173506956686:connection/b5a53e5d-2053-4fad-90e7-0e28048241cb&referenceType=COMMIT&FullRepositoryId=EasonZhuu/cs401r-easonzhu&Commit=3cd9a16b51bf4b809821478ec7ab3727b2b1b1ff"
+        }
+      ],
+      "trigger": {
+        "triggerType": "WebhookV2",
+        "triggerDetail": "{\"connectionArn\":\"arn:aws:codeconnections:us-east-1:173506956686:connection/b5a53e5d-2053-4fad-90e7-0e28048241cb\",\"repositoryId\":\"EasonZhuu/cs401r-easonzhu\",\"branchName\":\"main\",\"commitId\":\"3cd9a16b51bf4b809821478ec7ab3727b2b1b1ff\",\"type\":\"PUSH_BRANCH\"}"
+      },
+      "executionMode": "SUPERSEDED"
+    },
+    {
+      "pipelineExecutionId": "14ec663a-cd31-49d7-ad4a-6346986d5157",
+      "status": "Succeeded",
+      "startTime": "2026-10-31 14:31:40.357000-06:00",
+      "lastUpdateTime": "2026-10-31 14:38:05.714000-06:00",
+      "sourceRevisions": [
+        {
+          "actionName": "GitHubSource",
+          "revisionId": "a72d3155cb463a634b05313e4faa329e39820a08",
+          "revisionSummary": "{\"ProviderType\":\"GitHub\",\"CommitMessage\":\"Allow Glue feature directory marker in scoped data policy\"}",
+          "revisionUrl": "https://us-east-1.console.aws.amazon.com/codesuite/settings/connections/redirect?connectionArn=arn:aws:codeconnections:us-east-1:173506956686:connection/b5a53e5d-2053-4fad-90e7-0e28048241cb&referenceType=COMMIT&FullRepositoryId=EasonZhuu/cs401r-easonzhu&Commit=a72d3155cb463a634b05313e4faa329e39820a08"
+        }
+      ],
+      "trigger": {
+        "triggerType": "CreatePipeline",
+        "triggerDetail": "arn:aws:iam::173506956686:user/cs401_admin"
+      },
+      "executionMode": "SUPERSEDED"
+    }
+  ],
+  "codebuild": [
+    {
+      "id": "northstar-ci:d151aa6b-6eba-4d41-ba46-bc6d4ca39b76",
+      "buildStatus": "SUCCEEDED",
+      "sourceVersion": "arn:aws:s3:::northstar-dev-cicd-artifacts-173506956686/northstar-pipeline/SourceArti/xwCJyst",
+      "resolvedSourceVersion": "a72d3155cb463a634b05313e4faa329e39820a08",
+      "startTime": "2026-10-31 14:31:45.471000-06:00",
+      "endTime": "2026-10-31 14:36:28.901000-06:00",
+      "phases": [
+        {
+          "phaseType": "SUBMITTED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-31 14:31:45.471000-06:00",
+          "endTime": "2026-10-31 14:31:45.583000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "QUEUED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-31 14:31:45.583000-06:00",
+          "endTime": "2026-10-31 14:31:46.220000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "PROVISIONING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-31 14:31:46.220000-06:00",
+          "endTime": "2026-10-31 14:31:50.426000-06:00",
+          "durationInSeconds": 4,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "DOWNLOAD_SOURCE",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-31 14:31:50.426000-06:00",
+          "endTime": "2026-10-31 14:31:53.018000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "INSTALL",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-31 14:31:53.018000-06:00",
+          "endTime": "2026-10-31 14:32:54.218000-06:00",
+          "durationInSeconds": 61,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "PRE_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-31 14:32:54.218000-06:00",
+          "endTime": "2026-10-31 14:33:01.264000-06:00",
+          "durationInSeconds": 7,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-31 14:33:01.264000-06:00",
+          "endTime": "2026-10-31 14:36:25.750000-06:00",
+          "durationInSeconds": 204,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "POST_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-31 14:36:25.750000-06:00",
+          "endTime": "2026-10-31 14:36:26.472000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "UPLOAD_ARTIFACTS",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-31 14:36:26.472000-06:00",
+          "endTime": "2026-10-31 14:36:28.626000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "FINALIZING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-31 14:36:28.626000-06:00",
+          "endTime": "2026-10-31 14:36:28.901000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "COMPLETED",
+          "startTime": "2026-10-31 14:36:28.901000-06:00"
+        }
+      ],
+      "logs": {
+        "groupName": "/aws/codebuild/northstar-ci",
+        "streamName": "d151aa6b-6eba-4d41-ba46-bc6d4ca39b76",
+        "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#logsV2:log-groups/log-group/$252Faws$252Fcodebuild$252Fnorthstar-ci/log-events/d151aa6b-6eba-4d41-ba46-bc6d4ca39b76",
+        "cloudWatchLogsArn": "arn:aws:logs:us-east-1:173506956686:log-group:/aws/codebuild/northstar-ci:log-stream:d151aa6b-6eba-4d41-ba46-bc6d4ca39b76",
+        "cloudWatchLogs": {
+          "status": "ENABLED",
+          "groupName": "/aws/codebuild/northstar-ci"
+        }
+      },
+      "pytest_summaries": [
+        "============================== 28 passed in 1.06s ==============================",
+        "tests/test_registry_contract.py::test_s3_failure_is_not_silently_skipped PASSED [ 78%]",
+        "============================== 33 passed in 0.68s ==============================",
+        "[Container] 2026/10/31 20:33:01.229059 Running command echo \"All pre-build tests passed \u2713\"",
+        "All pre-build tests passed \u2713",
+        "================== 20 passed, 1 skipped, 3 warnings in 1.42s ===================",
+        "    --approval-description \"Auto-rejected: CodeBuild build ${CODEBUILD_BUILD_ID} (commit ${COMMIT_SHA}) failed after registration.\"",
+        "    MSG=\"\u2705 NorthStar CI passed \u2014 commit ${COMMIT_SHA}\""
+      ]
+    },
+    {
+      "id": "northstar-ci:54280ff4-cb20-4013-a80b-9c8787c415ea",
+      "buildStatus": "FAILED",
+      "sourceVersion": "arn:aws:s3:::northstar-dev-cicd-artifacts-173506956686/northstar-pipeline/SourceArti/Ed3aftO",
+      "resolvedSourceVersion": "3cd9a16b51bf4b809821478ec7ab3727b2b1b1ff",
+      "startTime": "2026-10-31 15:06:49.117000-06:00",
+      "endTime": "2026-10-31 15:08:03.023000-06:00",
+      "phases": [
+        {
+          "phaseType": "SUBMITTED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-31 15:06:49.117000-06:00",
+          "endTime": "2026-10-31 15:06:49.230000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "QUEUED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-31 15:06:49.230000-06:00",
+          "endTime": "2026-10-31 15:06:49.880000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "PROVISIONING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-31 15:06:49.880000-06:00",
+          "endTime": "2026-10-31 15:06:53.662000-06:00",
+          "durationInSeconds": 3,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "DOWNLOAD_SOURCE",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-31 15:06:53.662000-06:00",
+          "endTime": "2026-10-31 15:06:56.090000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "INSTALL",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-31 15:06:56.090000-06:00",
+          "endTime": "2026-10-31 15:07:55.520000-06:00",
+          "durationInSeconds": 59,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "PRE_BUILD",
+          "phaseStatus": "FAILED",
+          "startTime": "2026-10-31 15:07:55.520000-06:00",
+          "endTime": "2026-10-31 15:08:02.728000-06:00",
+          "durationInSeconds": 7,
+          "contexts": [
+            {
+              "statusCode": "COMMAND_EXECUTION_ERROR",
+              "message": "Error while executing command: python -m pytest tests/test_features.py tests/test_feature_boundaries.py tests/test_registry_contract.py -v --tb=short --junitxml=reports/feature_tests.xml. Reason: exit status 1"
+            }
+          ]
+        },
+        {
+          "phaseType": "FINALIZING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-31 15:08:02.728000-06:00",
+          "endTime": "2026-10-31 15:08:03.023000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "COMPLETED",
+          "startTime": "2026-10-31 15:08:03.023000-06:00"
+        }
+      ],
+      "logs": {
+        "groupName": "/aws/codebuild/northstar-ci",
+        "streamName": "54280ff4-cb20-4013-a80b-9c8787c415ea",
+        "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#logsV2:log-groups/log-group/$252Faws$252Fcodebuild$252Fnorthstar-ci/log-events/54280ff4-cb20-4013-a80b-9c8787c415ea",
+        "cloudWatchLogsArn": "arn:aws:logs:us-east-1:173506956686:log-group:/aws/codebuild/northstar-ci:log-stream:54280ff4-cb20-4013-a80b-9c8787c415ea",
+        "cloudWatchLogs": {
+          "status": "ENABLED",
+          "groupName": "/aws/codebuild/northstar-ci"
+        }
+      },
+      "pytest_summaries": [
+        "============================== 28 passed in 1.08s ==============================",
+        "tests/test_registry_contract.py::test_s3_failure_is_not_silently_skipped PASSED [ 79%]",
+        "========================= 1 failed, 33 passed in 0.71s ========================="
+      ]
+    },
+    {
+      "id": "northstar-ci:7376b239-228d-4223-8d94-0cc5d73c83ac",
+      "buildStatus": "SUCCEEDED",
+      "sourceVersion": "arn:aws:s3:::northstar-dev-cicd-artifacts-173506956686/northstar-pipeline/SourceArti/4tToDGC",
+      "resolvedSourceVersion": "9aff0e5dd81304ab29af530c254c554e7878227a",
+      "startTime": "2026-10-31 15:12:46.901000-06:00",
+      "endTime": "2026-10-31 15:17:54.136000-06:00",
+      "phases": [
+        {
+          "phaseType": "SUBMITTED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-31 15:12:46.901000-06:00",
+          "endTime": "2026-10-31 15:12:47.020000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "QUEUED",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-31 15:12:47.020000-06:00",
+          "endTime": "2026-10-31 15:12:47.758000-06:00",
+          "durationInSeconds": 0
+        },
+        {
+          "phaseType": "PROVISIONING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-31 15:12:47.758000-06:00",
+          "endTime": "2026-10-31 15:12:51.425000-06:00",
+          "durationInSeconds": 3,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "DOWNLOAD_SOURCE",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-31 15:12:51.425000-06:00",
+          "endTime": "2026-10-31 15:12:54.011000-06:00",
+          "durationInSeconds": 2,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "INSTALL",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-31 15:12:54.011000-06:00",
+          "endTime": "2026-10-31 15:13:51.422000-06:00",
+          "durationInSeconds": 57,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "PRE_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-31 15:13:51.422000-06:00",
+          "endTime": "2026-10-31 15:13:58.005000-06:00",
+          "durationInSeconds": 6,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-31 15:13:58.005000-06:00",
+          "endTime": "2026-10-31 15:17:51.564000-06:00",
+          "durationInSeconds": 233,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "POST_BUILD",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-31 15:17:51.564000-06:00",
+          "endTime": "2026-10-31 15:17:52.223000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "UPLOAD_ARTIFACTS",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-31 15:17:52.223000-06:00",
+          "endTime": "2026-10-31 15:17:53.847000-06:00",
+          "durationInSeconds": 1,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "FINALIZING",
+          "phaseStatus": "SUCCEEDED",
+          "startTime": "2026-10-31 15:17:53.847000-06:00",
+          "endTime": "2026-10-31 15:17:54.136000-06:00",
+          "durationInSeconds": 0,
+          "contexts": [
+            {
+              "statusCode": "",
+              "message": ""
+            }
+          ]
+        },
+        {
+          "phaseType": "COMPLETED",
+          "startTime": "2026-10-31 15:17:54.136000-06:00"
+        }
+      ],
+      "logs": {
+        "groupName": "/aws/codebuild/northstar-ci",
+        "streamName": "7376b239-228d-4223-8d94-0cc5d73c83ac",
+        "deepLink": "https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#logsV2:log-groups/log-group/$252Faws$252Fcodebuild$252Fnorthstar-ci/log-events/7376b239-228d-4223-8d94-0cc5d73c83ac",
+        "cloudWatchLogsArn": "arn:aws:logs:us-east-1:173506956686:log-group:/aws/codebuild/northstar-ci:log-stream:7376b239-228d-4223-8d94-0cc5d73c83ac",
+        "cloudWatchLogs": {
+          "status": "ENABLED",
+          "groupName": "/aws/codebuild/northstar-ci"
+        }
+      },
+      "pytest_summaries": [
+        "============================== 28 passed in 0.96s ==============================",
+        "tests/test_registry_contract.py::test_s3_failure_is_not_silently_skipped PASSED [ 78%]",
+        "============================== 33 passed in 0.61s ==============================",
+        "[Container] 2026/10/31 21:13:57.974237 Running command echo \"All pre-build tests passed \u2713\"",
+        "All pre-build tests passed \u2713",
+        "======================== 21 passed, 4 warnings in 1.44s ========================",
+        "    --approval-description \"Auto-rejected: CodeBuild build ${CODEBUILD_BUILD_ID} (commit ${COMMIT_SHA}) failed after registration.\"",
+        "    MSG=\"\u2705 NorthStar CI passed \u2014 commit ${COMMIT_SHA}\""
+      ]
+    }
+  ],
+  "sagemaker": [
+    {
+      "PipelineExecutionArn": "arn:aws:sagemaker:us-east-1:173506956686:pipeline/northstar-churn-pipeline/execution/ys96kk7yy2lb",
+      "StartTime": "2026-10-31 15:14:09.474000-06:00",
+      "PipelineExecutionStatus": "Succeeded",
+      "PipelineExecutionDisplayName": "codebuild-9aff0e5d",
+      "details": {
+        "PipelineArn": "arn:aws:sagemaker:us-east-1:173506956686:pipeline/northstar-churn-pipeline",
+        "PipelineExecutionArn": "arn:aws:sagemaker:us-east-1:173506956686:pipeline/northstar-churn-pipeline/execution/ys96kk7yy2lb",
+        "PipelineExecutionDisplayName": "codebuild-9aff0e5d",
+        "PipelineExecutionStatus": "Succeeded",
+        "PipelineExperimentConfig": {
+          "ExperimentName": "northstar-churn-pipeline",
+          "TrialName": "ys96kk7yy2lb"
+        },
+        "CreationTime": "2026-10-31 15:14:09.474000-06:00",
+        "LastModifiedTime": "2026-10-31 15:17:17.174000-06:00",
+        "CreatedBy": {
+          "IamIdentity": {
+            "Arn": "arn:aws:sts::173506956686:assumed-role/northstar-codebuild-role/AWSCodeBuild-7376b239-228d-4223-8d94-0cc5d73c83ac",
+            "PrincipalId": "AROASQZOSBWHF2QULUPMW:AWSCodeBuild-7376b239-228d-4223-8d94-0cc5d73c83ac"
+          }
+        },
+        "LastModifiedBy": {
+          "IamIdentity": {
+            "Arn": "arn:aws:sts::173506956686:assumed-role/northstar-codebuild-role/AWSCodeBuild-7376b239-228d-4223-8d94-0cc5d73c83ac",
+            "PrincipalId": "AROASQZOSBWHF2QULUPMW:AWSCodeBuild-7376b239-228d-4223-8d94-0cc5d73c83ac"
+          }
+        },
+        "PipelineVersionId": 2
+      },
+      "steps": [
+        {
+          "StepName": "RegisterChurnModel-RegisterModel",
+          "StartTime": "2026-10-31 15:17:15.390000-06:00",
+          "EndTime": "2026-10-31 15:17:16.955000-06:00",
+          "StepStatus": "Succeeded",
+          "Metadata": {
+            "RegisterModel": {
+              "Arn": "arn:aws:sagemaker:us-east-1:173506956686:model-package/northstar-churn-models/3"
+            }
+          },
+          "AttemptCount": 1
+        },
+        {
+          "StepName": "TrainChurnModel",
+          "StartTime": "2026-10-31 15:14:10.513000-06:00",
+          "EndTime": "2026-10-31 15:17:14.855000-06:00",
+          "StepStatus": "Succeeded",
+          "Metadata": {
+            "TrainingJob": {
+              "Arn": "arn:aws:sagemaker:us-east-1:173506956686:training-job/pipelines-ys96kk7yy2lb-TrainChurnModel-KJ7KHl1AxP"
+            }
+          },
+          "AttemptCount": 1
+        }
+      ],
+      "training": [
+        {
+          "TrainingJobArn": "arn:aws:sagemaker:us-east-1:173506956686:training-job/pipelines-ys96kk7yy2lb-TrainChurnModel-KJ7KHl1AxP",
+          "TrainingJobStatus": "Completed",
+          "TrainingTimeInSeconds": 140,
+          "BillableTimeInSeconds": 53,
+          "EnableManagedSpotTraining": true,
+          "ResourceConfig": {
+            "InstanceType": "ml.m5.large",
+            "InstanceCount": 1,
+            "VolumeSizeInGB": 30
+          },
+          "InputDataConfig": [
+            {
+              "ChannelName": "training",
+              "DataSource": {
+                "S3DataSource": {
+                  "S3DataType": "S3Prefix",
+                  "S3Uri": "s3://northstar-dev-data-173506956686/features/customers/",
+                  "S3DataDistributionType": "FullyReplicated"
+                }
+              },
+              "ContentType": "application/x-parquet",
+              "CompressionType": "None",
+              "RecordWrapperType": "None"
+            }
+          ],
+          "ModelArtifacts": {
+            "S3ModelArtifacts": "s3://northstar-dev-data-173506956686/artifacts/training/pipelines-ys96kk7yy2lb-TrainChurnModel-KJ7KHl1AxP/output/model.tar.gz"
+          }
+        }
+      ]
+    },
+    {
+      "PipelineExecutionArn": "arn:aws:sagemaker:us-east-1:173506956686:pipeline/northstar-churn-pipeline/execution/jf0pu6oysh0o",
+      "StartTime": "2026-10-31 14:33:13.439000-06:00",
+      "PipelineExecutionStatus": "Succeeded",
+      "PipelineExecutionDisplayName": "codebuild-a72d3155",
+      "details": {
+        "PipelineArn": "arn:aws:sagemaker:us-east-1:173506956686:pipeline/northstar-churn-pipeline",
+        "PipelineExecutionArn": "arn:aws:sagemaker:us-east-1:173506956686:pipeline/northstar-churn-pipeline/execution/jf0pu6oysh0o",
+        "PipelineExecutionDisplayName": "codebuild-a72d3155",
+        "PipelineExecutionStatus": "Succeeded",
+        "PipelineExperimentConfig": {
+          "ExperimentName": "northstar-churn-pipeline",
+          "TrialName": "jf0pu6oysh0o"
+        },
+        "CreationTime": "2026-10-31 14:33:13.439000-06:00",
+        "LastModifiedTime": "2026-10-31 14:36:18.649000-06:00",
+        "CreatedBy": {
+          "IamIdentity": {
+            "Arn": "arn:aws:sts::173506956686:assumed-role/northstar-codebuild-role/AWSCodeBuild-d151aa6b-6eba-4d41-ba46-bc6d4ca39b76",
+            "PrincipalId": "AROASQZOSBWHF2QULUPMW:AWSCodeBuild-d151aa6b-6eba-4d41-ba46-bc6d4ca39b76"
+          }
+        },
+        "LastModifiedBy": {
+          "IamIdentity": {
+            "Arn": "arn:aws:sts::173506956686:assumed-role/northstar-codebuild-role/AWSCodeBuild-d151aa6b-6eba-4d41-ba46-bc6d4ca39b76",
+            "PrincipalId": "AROASQZOSBWHF2QULUPMW:AWSCodeBuild-d151aa6b-6eba-4d41-ba46-bc6d4ca39b76"
+          }
+        },
+        "PipelineVersionId": 1
+      },
+      "steps": [
+        {
+          "StepName": "RegisterChurnModel-RegisterModel",
+          "StartTime": "2026-10-31 14:36:16.684000-06:00",
+          "EndTime": "2026-10-31 14:36:18.307000-06:00",
+          "StepStatus": "Succeeded",
+          "Metadata": {
+            "RegisterModel": {
+              "Arn": "arn:aws:sagemaker:us-east-1:173506956686:model-package/northstar-churn-models/2"
+            }
+          },
+          "AttemptCount": 1
+        },
+        {
+          "StepName": "TrainChurnModel",
+          "StartTime": "2026-10-31 14:33:14.293000-06:00",
+          "EndTime": "2026-10-31 14:36:16.073000-06:00",
+          "StepStatus": "Succeeded",
+          "Metadata": {
+            "TrainingJob": {
+              "Arn": "arn:aws:sagemaker:us-east-1:173506956686:training-job/pipelines-jf0pu6oysh0o-TrainChurnModel-VOJ9oNSM88"
+            }
+          },
+          "AttemptCount": 1
+        }
+      ],
+      "training": [
+        {
+          "TrainingJobArn": "arn:aws:sagemaker:us-east-1:173506956686:training-job/pipelines-jf0pu6oysh0o-TrainChurnModel-VOJ9oNSM88",
+          "TrainingJobStatus": "Completed",
+          "TrainingTimeInSeconds": 139,
+          "BillableTimeInSeconds": 51,
+          "EnableManagedSpotTraining": true,
+          "ResourceConfig": {
+            "InstanceType": "ml.m5.large",
+            "InstanceCount": 1,
+            "VolumeSizeInGB": 30
+          },
+          "InputDataConfig": [
+            {
+              "ChannelName": "training",
+              "DataSource": {
+                "S3DataSource": {
+                  "S3DataType": "S3Prefix",
+                  "S3Uri": "s3://northstar-dev-data-173506956686/features/customers/",
+                  "S3DataDistributionType": "FullyReplicated"
+                }
+              },
+              "ContentType": "application/x-parquet",
+              "CompressionType": "None",
+              "RecordWrapperType": "None"
+            }
+          ],
+          "ModelArtifacts": {
+            "S3ModelArtifacts": "s3://northstar-dev-data-173506956686/artifacts/training/pipelines-jf0pu6oysh0o-TrainChurnModel-VOJ9oNSM88/output/model.tar.gz"
+          }
+        }
+      ]
+    }
+  ],
+  "alarm_history": [
+    {
+      "AlarmName": "northstar-ci-build-failure",
+      "AlarmType": "MetricAlarm",
+      "Timestamp": "2026-10-31 15:18:54.667000-06:00",
+      "HistoryItemType": "Action",
+      "HistorySummary": "Successfully executed action arn:aws:sns:us-east-1:173506956686:northstar-model-approvals",
+      "HistoryData": "{\"actionState\":\"Succeeded\",\"stateUpdateTimestamp\":1793481534636,\"notificationResource\":\"arn:aws:sns:us-east-1:173506956686:northstar-model-approvals\",\"publishedMessage\":\"{\\\"default\\\":\\\"{\\\\\\\"AlarmName\\\\\\\":\\\\\\\"northstar-ci-build-failure\\\\\\\",\\\\\\\"AlarmDescription\\\\\\\":\\\\\\\"A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was registered. Check the NorthStar/CI BuildSucceeded metric to tell the two apart: absent means it failed before the gate ran.\\\\\\\",\\\\\\\"AWSAccountId\\\\\\\":\\\\\\\"173506956686\\\\\\\",\\\\\\\"AlarmConfigurationUpdatedTimestamp\\\\\\\":\\\\\\\"2026-10-31T20:31:21.853+0000\\\\\\\",\\\\\\\"NewStateValue\\\\\\\":\\\\\\\"OK\\\\\\\",\\\\\\\"NewStateReason\\\\\\\":\\\\\\\"Threshold Crossed: 1 datapoint [0.0 (31/10/26 21:13:00)] was not greater than or equal to the threshold (1.0).\\\\\\\",\\\\\\\"StateChangeTime\\\\\\\":\\\\\\\"2026-10-31T21:18:54.636+0000\\\\\\\",\\\\\\\"Region\\\\\\\":\\\\\\\"US East (N. Virginia)\\\\\\\",\\\\\\\"AlarmArn\\\\\\\":\\\\\\\"arn:aws:cloudwatch:us-east-1:173506956686:alarm:northstar-ci-build-failure\\\\\\\",\\\\\\\"OldStateValue\\\\\\\":\\\\\\\"ALARM\\\\\\\",\\\\\\\"ActionExecutedAfterMuteWindow\\\\\\\":false,\\\\\\\"OKActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:173506956686:northstar-model-approvals\\\\\\\"],\\\\\\\"AlarmActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:173506956686:northstar-model-approvals\\\\\\\"],\\\\\\\"InsufficientDataActions\\\\\\\":[],\\\\\\\"Trigger\\\\\\\":{\\\\\\\"MetricName\\\\\\\":\\\\\\\"FailedBuilds\\\\\\\",\\\\\\\"Namespace\\\\\\\":\\\\\\\"AWS/CodeBuild\\\\\\\",\\\\\\\"StatisticType\\\\\\\":\\\\\\\"Statistic\\\\\\\",\\\\\\\"Statistic\\\\\\\":\\\\\\\"SUM\\\\\\\",\\\\\\\"Unit\\\\\\\":null,\\\\\\\"Dimensions\\\\\\\":[{\\\\\\\"value\\\\\\\":\\\\\\\"northstar-ci\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"ProjectName\\\\\\\"}],\\\\\\\"Period\\\\\\\":300,\\\\\\\"EvaluationPeriods\\\\\\\":1,\\\\\\\"ComparisonOperator\\\\\\\":\\\\\\\"GreaterThanOrEqualToThreshold\\\\\\\",\\\\\\\"Threshold\\\\\\\":1.0,\\\\\\\"TreatMissingData\\\\\\\":\\\\\\\"notBreaching\\\\\\\",\\\\\\\"EvaluateLowSampleCountPercentile\\\\\\\":\\\\\\\"\\\\\\\"}}\\\",\\\"sms\\\":\\\"OK: \\\\\\\"northstar-ci-build-failure\\\\\\\" in US East (N. Virginia)\\\",\\\"email\\\":\\\"You are receiving this email because your Amazon CloudWatch Alarm \\\\\\\"northstar-ci-build-failure\\\\\\\" in the US East (N. Virginia) region has entered the OK state, because \\\\\\\"Threshold Crossed: 1 datapoint [0.0 (31/10/26 21:13:00)] was not greater than or equal to the threshold (1.0).\\\\\\\" at \\\\\\\"Saturday 31 October, 2026 21:18:54 UTC\\\\\\\".\\\\n\\\\nView this alarm in the AWS Management Console:\\\\nhttps://us-east-1.console.aws.amazon.com/cloudwatch/deeplink.js?region=us-east-1#alarmsV2:alarm/northstar-ci-build-failure\\\\n\\\\nAlarm Details:\\\\n- Name:                       northstar-ci-build-failure\\\\n- Description:                A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was registered. Check the NorthStar/CI BuildSucceeded metric to tell the two apart: absent means it failed before the gate ran.\\\\n- State Change:               ALARM -> OK\\\\n- Reason for State Change:    Threshold Crossed: 1 datapoint [0.0 (31/10/26 21:13:00)] was not greater than or equal to the threshold (1.0).\\\\n- Timestamp:                  Saturday 31 October, 2026 21:18:54 UTC\\\\n- AWS Account:                173506956686\\\\n- Alarm Arn:                  arn:aws:cloudwatch:us-east-1:173506956686:alarm:northstar-ci-build-failure\\\\n\\\\nThreshold:\\\\n- The alarm is in the ALARM state when the metric is GreaterThanOrEqualToThreshold 1.0 for at least 1 of the last 1 period(s) of 300 seconds. \\\\n\\\\nMonitored Metric:\\\\n- MetricNamespace:                     AWS/CodeBuild\\\\n- MetricName:                          FailedBuilds\\\\n- Dimensions:                          [ProjectName = northstar-ci]\\\\n- Period:                              300 seconds\\\\n- Statistic:                           Sum\\\\n- Unit:                                not specified\\\\n- TreatMissingData:                    notBreaching\\\\n\\\\n\\\\nState Change Actions:\\\\n- OK: [arn:aws:sns:us-east-1:173506956686:northstar-model-approvals]\\\\n- ALARM: [arn:aws:sns:us-east-1:173506956686:northstar-model-approvals]\\\\n- INSUFFICIENT_DATA: \\\\n\\\"}\",\"error\":null,\"muteWindowEndTimestamp\":null}"
+    },
+    {
+      "AlarmName": "northstar-ci-build-failure",
+      "AlarmType": "MetricAlarm",
+      "Timestamp": "2026-10-31 15:18:54.636000-06:00",
+      "HistoryItemType": "StateUpdate",
+      "HistorySummary": "Alarm updated from ALARM to OK",
+      "HistoryData": "{\"version\":\"1.0\",\"oldState\":{\"stateValue\":\"ALARM\",\"stateReason\":\"Threshold Crossed: 1 datapoint [1.0 (31/10/26 21:04:00)] was greater than or equal to the threshold (1.0).\",\"stateReasonData\":{\"version\":\"1.0\",\"queryDate\":\"2026-10-31T21:09:54.633+0000\",\"startDate\":\"2026-10-31T21:04:00.000+0000\",\"statistic\":\"Sum\",\"period\":300,\"recentDatapoints\":[1.0],\"threshold\":1.0,\"evaluatedDatapoints\":[{\"timestamp\":\"2026-10-31T21:04:00.000+0000\",\"sampleCount\":1.0,\"value\":1.0}]}},\"newState\":{\"stateValue\":\"OK\",\"stateReason\":\"Threshold Crossed: 1 datapoint [0.0 (31/10/26 21:13:00)] was not greater than or equal to the threshold (1.0).\",\"stateReasonData\":{\"version\":\"1.0\",\"queryDate\":\"2026-10-31T21:18:54.634+0000\",\"startDate\":\"2026-10-31T21:13:00.000+0000\",\"statistic\":\"Sum\",\"period\":300,\"recentDatapoints\":[0.0],\"threshold\":1.0,\"evaluatedDatapoints\":[{\"timestamp\":\"2026-10-31T21:13:00.000+0000\",\"sampleCount\":1.0,\"value\":0.0}]}}}"
+    },
+    {
+      "AlarmName": "northstar-ci-build-failure",
+      "AlarmType": "MetricAlarm",
+      "Timestamp": "2026-10-31 15:09:54.701000-06:00",
+      "HistoryItemType": "Action",
+      "HistorySummary": "Successfully executed action arn:aws:sns:us-east-1:173506956686:northstar-model-approvals",
+      "HistoryData": "{\"actionState\":\"Succeeded\",\"stateUpdateTimestamp\":1793480994634,\"notificationResource\":\"arn:aws:sns:us-east-1:173506956686:northstar-model-approvals\",\"publishedMessage\":\"{\\\"default\\\":\\\"{\\\\\\\"AlarmName\\\\\\\":\\\\\\\"northstar-ci-build-failure\\\\\\\",\\\\\\\"AlarmDescription\\\\\\\":\\\\\\\"A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was registered. Check the NorthStar/CI BuildSucceeded metric to tell the two apart: absent means it failed before the gate ran.\\\\\\\",\\\\\\\"AWSAccountId\\\\\\\":\\\\\\\"173506956686\\\\\\\",\\\\\\\"AlarmConfigurationUpdatedTimestamp\\\\\\\":\\\\\\\"2026-10-31T20:31:21.853+0000\\\\\\\",\\\\\\\"NewStateValue\\\\\\\":\\\\\\\"ALARM\\\\\\\",\\\\\\\"NewStateReason\\\\\\\":\\\\\\\"Threshold Crossed: 1 datapoint [1.0 (31/10/26 21:04:00)] was greater than or equal to the threshold (1.0).\\\\\\\",\\\\\\\"StateChangeTime\\\\\\\":\\\\\\\"2026-10-31T21:09:54.634+0000\\\\\\\",\\\\\\\"Region\\\\\\\":\\\\\\\"US East (N. Virginia)\\\\\\\",\\\\\\\"AlarmArn\\\\\\\":\\\\\\\"arn:aws:cloudwatch:us-east-1:173506956686:alarm:northstar-ci-build-failure\\\\\\\",\\\\\\\"OldStateValue\\\\\\\":\\\\\\\"OK\\\\\\\",\\\\\\\"ActionExecutedAfterMuteWindow\\\\\\\":false,\\\\\\\"OKActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:173506956686:northstar-model-approvals\\\\\\\"],\\\\\\\"AlarmActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:173506956686:northstar-model-approvals\\\\\\\"],\\\\\\\"InsufficientDataActions\\\\\\\":[],\\\\\\\"Trigger\\\\\\\":{\\\\\\\"MetricName\\\\\\\":\\\\\\\"FailedBuilds\\\\\\\",\\\\\\\"Namespace\\\\\\\":\\\\\\\"AWS/CodeBuild\\\\\\\",\\\\\\\"StatisticType\\\\\\\":\\\\\\\"Statistic\\\\\\\",\\\\\\\"Statistic\\\\\\\":\\\\\\\"SUM\\\\\\\",\\\\\\\"Unit\\\\\\\":null,\\\\\\\"Dimensions\\\\\\\":[{\\\\\\\"value\\\\\\\":\\\\\\\"northstar-ci\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"ProjectName\\\\\\\"}],\\\\\\\"Period\\\\\\\":300,\\\\\\\"EvaluationPeriods\\\\\\\":1,\\\\\\\"ComparisonOperator\\\\\\\":\\\\\\\"GreaterThanOrEqualToThreshold\\\\\\\",\\\\\\\"Threshold\\\\\\\":1.0,\\\\\\\"TreatMissingData\\\\\\\":\\\\\\\"notBreaching\\\\\\\",\\\\\\\"EvaluateLowSampleCountPercentile\\\\\\\":\\\\\\\"\\\\\\\"}}\\\",\\\"sms\\\":\\\"ALARM: \\\\\\\"northstar-ci-build-failure\\\\\\\" in US East (N. Virginia)\\\",\\\"email\\\":\\\"You are receiving this email because your Amazon CloudWatch Alarm \\\\\\\"northstar-ci-build-failure\\\\\\\" in the US East (N. Virginia) region has entered the ALARM state, because \\\\\\\"Threshold Crossed: 1 datapoint [1.0 (31/10/26 21:04:00)] was greater than or equal to the threshold (1.0).\\\\\\\" at \\\\\\\"Saturday 31 October, 2026 21:09:54 UTC\\\\\\\".\\\\n\\\\nView this alarm in the AWS Management Console:\\\\nhttps://us-east-1.console.aws.amazon.com/cloudwatch/deeplink.js?region=us-east-1#alarmsV2:alarm/northstar-ci-build-failure\\\\n\\\\nAlarm Details:\\\\n- Name:                       northstar-ci-build-failure\\\\n- Description:                A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was registered. Check the NorthStar/CI BuildSucceeded metric to tell the two apart: absent means it failed before the gate ran.\\\\n- State Change:               OK -> ALARM\\\\n- Reason for State Change:    Threshold Crossed: 1 datapoint [1.0 (31/10/26 21:04:00)] was greater than or equal to the threshold (1.0).\\\\n- Timestamp:                  Saturday 31 October, 2026 21:09:54 UTC\\\\n- AWS Account:                173506956686\\\\n- Alarm Arn:                  arn:aws:cloudwatch:us-east-1:173506956686:alarm:northstar-ci-build-failure\\\\n\\\\nThreshold:\\\\n- The alarm is in the ALARM state when the metric is GreaterThanOrEqualToThreshold 1.0 for at least 1 of the last 1 period(s) of 300 seconds. \\\\n\\\\nMonitored Metric:\\\\n- MetricNamespace:                     AWS/CodeBuild\\\\n- MetricName:                          FailedBuilds\\\\n- Dimensions:                          [ProjectName = northstar-ci]\\\\n- Period:                              300 seconds\\\\n- Statistic:                           Sum\\\\n- Unit:                                not specified\\\\n- TreatMissingData:                    notBreaching\\\\n\\\\n\\\\nState Change Actions:\\\\n- OK: [arn:aws:sns:us-east-1:173506956686:northstar-model-approvals]\\\\n- ALARM: [arn:aws:sns:us-east-1:173506956686:northstar-model-approvals]\\\\n- INSUFFICIENT_DATA: \\\\n\\\"}\",\"error\":null,\"muteWindowEndTimestamp\":null}"
+    },
+    {
+      "AlarmName": "northstar-ci-build-failure",
+      "AlarmType": "MetricAlarm",
+      "Timestamp": "2026-10-31 15:09:54.634000-06:00",
+      "HistoryItemType": "StateUpdate",
+      "HistorySummary": "Alarm updated from OK to ALARM",
+      "HistoryData": "{\"version\":\"1.0\",\"oldState\":{\"stateValue\":\"OK\",\"stateReason\":\"Threshold Crossed: no datapoints were received for 1 period and 1 missing datapoint was treated as [NonBreaching].\",\"stateReasonData\":{\"version\":\"1.0\",\"queryDate\":\"2026-10-31T20:32:54.636+0000\",\"statistic\":\"Sum\",\"period\":300,\"recentDatapoints\":[],\"threshold\":1.0,\"evaluatedDatapoints\":[{\"timestamp\":\"2026-10-31T20:27:00.000+0000\"}]}},\"newState\":{\"stateValue\":\"ALARM\",\"stateReason\":\"Threshold Crossed: 1 datapoint [1.0 (31/10/26 21:04:00)] was greater than or equal to the threshold (1.0).\",\"stateReasonData\":{\"version\":\"1.0\",\"queryDate\":\"2026-10-31T21:09:54.633+0000\",\"startDate\":\"2026-10-31T21:04:00.000+0000\",\"statistic\":\"Sum\",\"period\":300,\"recentDatapoints\":[1.0],\"threshold\":1.0,\"evaluatedDatapoints\":[{\"timestamp\":\"2026-10-31T21:04:00.000+0000\",\"sampleCount\":1.0,\"value\":1.0}]}}}"
+    },
+    {
+      "AlarmName": "northstar-ci-build-failure",
+      "AlarmType": "MetricAlarm",
+      "Timestamp": "2026-10-31 14:32:54.676000-06:00",
+      "HistoryItemType": "Action",
+      "HistorySummary": "Successfully executed action arn:aws:sns:us-east-1:173506956686:northstar-model-approvals",
+      "HistoryData": "{\"actionState\":\"Succeeded\",\"stateUpdateTimestamp\":1793478774637,\"notificationResource\":\"arn:aws:sns:us-east-1:173506956686:northstar-model-approvals\",\"publishedMessage\":\"{\\\"default\\\":\\\"{\\\\\\\"AlarmName\\\\\\\":\\\\\\\"northstar-ci-build-failure\\\\\\\",\\\\\\\"AlarmDescription\\\\\\\":\\\\\\\"A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was registered. Check the NorthStar/CI BuildSucceeded metric to tell the two apart: absent means it failed before the gate ran.\\\\\\\",\\\\\\\"AWSAccountId\\\\\\\":\\\\\\\"173506956686\\\\\\\",\\\\\\\"AlarmConfigurationUpdatedTimestamp\\\\\\\":\\\\\\\"2026-10-31T20:31:21.853+0000\\\\\\\",\\\\\\\"NewStateValue\\\\\\\":\\\\\\\"OK\\\\\\\",\\\\\\\"NewStateReason\\\\\\\":\\\\\\\"Threshold Crossed: no datapoints were received for 1 period and 1 missing datapoint was treated as [NonBreaching].\\\\\\\",\\\\\\\"StateChangeTime\\\\\\\":\\\\\\\"2026-10-31T20:32:54.637+0000\\\\\\\",\\\\\\\"Region\\\\\\\":\\\\\\\"US East (N. Virginia)\\\\\\\",\\\\\\\"AlarmArn\\\\\\\":\\\\\\\"arn:aws:cloudwatch:us-east-1:173506956686:alarm:northstar-ci-build-failure\\\\\\\",\\\\\\\"OldStateValue\\\\\\\":\\\\\\\"INSUFFICIENT_DATA\\\\\\\",\\\\\\\"ActionExecutedAfterMuteWindow\\\\\\\":false,\\\\\\\"OKActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:173506956686:northstar-model-approvals\\\\\\\"],\\\\\\\"AlarmActions\\\\\\\":[\\\\\\\"arn:aws:sns:us-east-1:173506956686:northstar-model-approvals\\\\\\\"],\\\\\\\"InsufficientDataActions\\\\\\\":[],\\\\\\\"Trigger\\\\\\\":{\\\\\\\"MetricName\\\\\\\":\\\\\\\"FailedBuilds\\\\\\\",\\\\\\\"Namespace\\\\\\\":\\\\\\\"AWS/CodeBuild\\\\\\\",\\\\\\\"StatisticType\\\\\\\":\\\\\\\"Statistic\\\\\\\",\\\\\\\"Statistic\\\\\\\":\\\\\\\"SUM\\\\\\\",\\\\\\\"Unit\\\\\\\":null,\\\\\\\"Dimensions\\\\\\\":[{\\\\\\\"value\\\\\\\":\\\\\\\"northstar-ci\\\\\\\",\\\\\\\"name\\\\\\\":\\\\\\\"ProjectName\\\\\\\"}],\\\\\\\"Period\\\\\\\":300,\\\\\\\"EvaluationPeriods\\\\\\\":1,\\\\\\\"ComparisonOperator\\\\\\\":\\\\\\\"GreaterThanOrEqualToThreshold\\\\\\\",\\\\\\\"Threshold\\\\\\\":1.0,\\\\\\\"TreatMissingData\\\\\\\":\\\\\\\"notBreaching\\\\\\\",\\\\\\\"EvaluateLowSampleCountPercentile\\\\\\\":\\\\\\\"\\\\\\\"}}\\\",\\\"sms\\\":\\\"OK: \\\\\\\"northstar-ci-build-failure\\\\\\\" in US East (N. Virginia)\\\",\\\"email\\\":\\\"You are receiving this email because your Amazon CloudWatch Alarm \\\\\\\"northstar-ci-build-failure\\\\\\\" in the US East (N. Virginia) region has entered the OK state, because \\\\\\\"Threshold Crossed: no datapoints were received for 1 period and 1 missing datapoint was treated as [NonBreaching].\\\\\\\" at \\\\\\\"Saturday 31 October, 2026 20:32:54 UTC\\\\\\\".\\\\n\\\\nView this alarm in the AWS Management Console:\\\\nhttps://us-east-1.console.aws.amazon.com/cloudwatch/deeplink.js?region=us-east-1#alarmsV2:alarm/northstar-ci-build-failure\\\\n\\\\nAlarm Details:\\\\n- Name:                       northstar-ci-build-failure\\\\n- Description:                A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was registered. Check the NorthStar/CI BuildSucceeded metric to tell the two apart: absent means it failed before the gate ran.\\\\n- State Change:               INSUFFICIENT_DATA -> OK\\\\n- Reason for State Change:    Threshold Crossed: no datapoints were received for 1 period and 1 missing datapoint was treated as [NonBreaching].\\\\n- Timestamp:                  Saturday 31 October, 2026 20:32:54 UTC\\\\n- AWS Account:                173506956686\\\\n- Alarm Arn:                  arn:aws:cloudwatch:us-east-1:173506956686:alarm:northstar-ci-build-failure\\\\n\\\\nThreshold:\\\\n- The alarm is in the ALARM state when the metric is GreaterThanOrEqualToThreshold 1.0 for at least 1 of the last 1 period(s) of 300 seconds. \\\\n\\\\nMonitored Metric:\\\\n- MetricNamespace:                     AWS/CodeBuild\\\\n- MetricName:                          FailedBuilds\\\\n- Dimensions:                          [ProjectName = northstar-ci]\\\\n- Period:                              300 seconds\\\\n- Statistic:                           Sum\\\\n- Unit:                                not specified\\\\n- TreatMissingData:                    notBreaching\\\\n\\\\n\\\\nState Change Actions:\\\\n- OK: [arn:aws:sns:us-east-1:173506956686:northstar-model-approvals]\\\\n- ALARM: [arn:aws:sns:us-east-1:173506956686:northstar-model-approvals]\\\\n- INSUFFICIENT_DATA: \\\\n\\\"}\",\"error\":null,\"muteWindowEndTimestamp\":null}"
+    },
+    {
+      "AlarmName": "northstar-ci-build-failure",
+      "AlarmType": "MetricAlarm",
+      "Timestamp": "2026-10-31 14:32:54.637000-06:00",
+      "HistoryItemType": "StateUpdate",
+      "HistorySummary": "Alarm updated from INSUFFICIENT_DATA to OK",
+      "HistoryData": "{\"version\":\"1.0\",\"oldState\":{\"stateValue\":\"INSUFFICIENT_DATA\",\"stateReason\":\"Unchecked: Initial alarm creation\"},\"newState\":{\"stateValue\":\"OK\",\"stateReason\":\"Threshold Crossed: no datapoints were received for 1 period and 1 missing datapoint was treated as [NonBreaching].\",\"stateReasonData\":{\"version\":\"1.0\",\"queryDate\":\"2026-10-31T20:32:54.636+0000\",\"statistic\":\"Sum\",\"period\":300,\"recentDatapoints\":[],\"threshold\":1.0,\"evaluatedDatapoints\":[{\"timestamp\":\"2026-10-31T20:27:00.000+0000\"}]}}}"
+    },
+    {
+      "AlarmName": "northstar-ci-build-failure",
+      "AlarmType": "MetricAlarm",
+      "Timestamp": "2026-10-31 14:31:21.854000-06:00",
+      "HistoryItemType": "ConfigurationUpdate",
+      "HistorySummary": "Alarm \"northstar-ci-build-failure\" created",
+      "HistoryData": "{\"version\":\"1.0\",\"type\":\"Create\",\"createdAlarm\":{\"alarmName\":\"northstar-ci-build-failure\",\"alarmDescription\":\"A NorthStar CI build failed. Either a test failed, or the model quality gate rejected the candidate -- it did not beat the recency-only baseline with a confidence interval excluding zero. Nothing was registered. Check the NorthStar/CI BuildSucceeded metric to tell the two apart: absent means it failed before the gate ran.\",\"alarmArn\":\"arn:aws:cloudwatch:us-east-1:173506956686:alarm:northstar-ci-build-failure\",\"alarmConfigurationUpdatedTimestamp\":\"2026-10-31T20:31:21.853+0000\",\"namespace\":\"AWS/CodeBuild\",\"metricName\":\"FailedBuilds\",\"extendedStatistic\":\"SUM\",\"period\":300,\"dimensions\":[{\"value\":\"northstar-ci\",\"name\":\"ProjectName\"}],\"threshold\":1.0,\"comparisonOperator\":\"GreaterThanOrEqualToThreshold\",\"evaluationPeriods\":1,\"treatMissingData\":\"notBreaching\",\"stateValue\":\"INSUFFICIENT_DATA\",\"stateUpdatedTimestamp\":\"2026-10-31T20:31:21.853+0000\",\"actionsEnabled\":true,\"alarmActions\":[\"arn:aws:sns:us-east-1:173506956686:northstar-model-approvals\"],\"insufficientDataActions\":[],\"okactions\":[\"arn:aws:sns:us-east-1:173506956686:northstar-model-approvals\"]}}"
+    }
+  ],
+  "subscriptions": [
+    {
+      "SubscriptionArn": "arn:aws:sns:us-east-1:173506956686:northstar-model-approvals:cda608dd-144b-4145-9c08-d40cce36eea0",
+      "Owner": "173506956686",
+      "Protocol": "email",
+      "Endpoint": "[redacted email]",
+      "TopicArn": "arn:aws:sns:us-east-1:173506956686:northstar-model-approvals"
+    }
+  ]
+}

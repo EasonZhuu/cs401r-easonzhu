@@ -1,0 +1,425 @@
+{
+  "entities": {
+    "ContextSummaries": [
+      {
+        "ContextArn": "arn:aws:sagemaker:us-east-1:173506956686:context/northstar-churn-models-1792292465-aws-model-package-group",
+        "ContextName": "northstar-churn-models-1792292465-aws-model-package-group",
+        "Source": {
+          "SourceUri": "arn:aws:sagemaker:us-east-1:173506956686:model-package-group/northstar-churn-models",
+          "SourceType": "ARN",
+          "SourceId": "Sun Oct 18 03:01:05 UTC 2026"
+        },
+        "ContextType": "ModelGroup",
+        "CreationTime": "2026-10-17 21:01:05-06:00",
+        "LastModifiedTime": "2026-10-17 21:01:05-06:00"
+      },
+      {
+        "ContextArn": "arn:aws:sagemaker:us-east-1:173506956686:context/northstar-dev-customer-features-1792274088-feature-group-pipeline",
+        "ContextName": "northstar-dev-customer-features-1792274088-feature-group-pipeline",
+        "Source": {
+          "SourceUri": "arn:aws:sagemaker:us-east-1:173506956686:context/northstar-dev-customer-features-1792274088",
+          "SourceType": "ARN"
+        },
+        "ContextType": "FeatureGroupPipeline",
+        "CreationTime": "2026-10-17 15:54:48-06:00",
+        "LastModifiedTime": "2026-10-17 15:54:48-06:00"
+      },
+      {
+        "ContextArn": "arn:aws:sagemaker:us-east-1:173506956686:context/northstar-dev-customer-features-1792274088-feature-group-pipeline-version",
+        "ContextName": "northstar-dev-customer-features-1792274088-feature-group-pipeline-version",
+        "Source": {
+          "SourceUri": "arn:aws:sagemaker:us-east-1:173506956686:context/northstar-dev-customer-features-1792274088",
+          "SourceType": "ARN"
+        },
+        "ContextType": "FeatureGroupPipelineVersion",
+        "CreationTime": "2026-10-17 15:54:48-06:00",
+        "LastModifiedTime": "2026-10-17 15:54:48-06:00"
+      },
+      {
+        "ContextArn": "arn:aws:sagemaker:us-east-1:173506956686:context/northstar-dev-customer-features-1792274088",
+        "ContextName": "northstar-dev-customer-features-1792274088",
+        "Source": {
+          "SourceUri": "arn:aws:sagemaker:us-east-1:173506956686:feature-group/northstar-dev-customer-features",
+          "SourceType": "ARN",
+          "SourceId": "1792274088"
+        },
+        "ContextType": "FeatureGroup",
+        "CreationTime": "2026-10-17 15:54:48-06:00",
+        "LastModifiedTime": "2026-10-17 15:54:48-06:00"
+      }
+    ],
+    "ArtifactSummaries": [
+      {
+        "ArtifactArn": "arn:aws:sagemaker:us-east-1:173506956686:artifact/c6903167f99935e24319681ea72366a6",
+        "Source": {
+          "SourceUri": "arn:aws:sagemaker:us-east-1:173506956686:model-package/northstar-churn-models/3",
+          "SourceTypes": [
+            {
+              "SourceIdType": "Custom",
+              "Value": "Sat Oct 31 21:17:16 UTC 2026"
+            }
+          ]
+        },
+        "ArtifactType": "Model",
+        "CreationTime": "2026-10-31 15:17:17.181000-06:00",
+        "LastModifiedTime": "2026-10-31 15:25:56.875000-06:00"
+      },
+      {
+        "ArtifactArn": "arn:aws:sagemaker:us-east-1:173506956686:artifact/cfc7ebb65927b711524141982e1bce67",
+        "Source": {
+          "SourceUri": "s3://northstar-dev-data-173506956686/artifacts/training/pipelines-ys96kk7yy2lb-TrainChurnModel-KJ7KHl1AxP/output/model.tar.gz",
+          "SourceTypes": []
+        },
+        "ArtifactType": "Model",
+        "CreationTime": "2026-10-31 15:17:14.770000-06:00",
+        "LastModifiedTime": "2026-10-31 15:17:14.770000-06:00"
+      },
+      {
+        "ArtifactArn": "arn:aws:sagemaker:us-east-1:173506956686:artifact/34613965d4898b4636208b283770c92d",
+        "Source": {
+          "SourceUri": "683313688378.dkr.ecr.us-east-1.amazonaws.com/sagemaker-xgboost:1.7-1",
+          "SourceTypes": [
+            {
+              "SourceIdType": "MD5Hash",
+              "Value": "sha256:b4f13edb198529c460692015797fa1ca6a8ff1ed64a149297174d922121b8fc4"
+            }
+          ]
+        },
+        "ArtifactType": "Image",
+        "CreationTime": "2026-10-31 14:36:19.057000-06:00",
+        "LastModifiedTime": "2026-10-31 14:36:19.057000-06:00"
+      },
+      {
+        "ArtifactArn": "arn:aws:sagemaker:us-east-1:173506956686:artifact/fc69ff29192b920c92c5342f47cf0770",
+        "Source": {
+          "SourceUri": "arn:aws:sagemaker:us-east-1:173506956686:model-package/northstar-churn-models/2",
+          "SourceTypes": [
+            {
+              "SourceIdType": "Custom",
+              "Value": "Sat Oct 31 20:36:18 UTC 2026"
+            }
+          ]
+        },
+        "ArtifactType": "Model",
+        "CreationTime": "2026-10-31 14:36:18.935000-06:00",
+        "LastModifiedTime": "2026-10-31 15:25:56.952000-06:00"
+      },
+      {
+        "ArtifactArn": "arn:aws:sagemaker:us-east-1:173506956686:artifact/11f3d27cc637fbee5f4cb4cafee1b448",
+        "Source": {
+          "SourceUri": "s3://northstar-dev-data-173506956686/artifacts/training/pipelines-jf0pu6oysh0o-TrainChurnModel-VOJ9oNSM88/output/model.tar.gz",
+          "SourceTypes": []
+        },
+        "ArtifactType": "Model",
+        "CreationTime": "2026-10-31 14:36:15.988000-06:00",
+        "LastModifiedTime": "2026-10-31 14:36:15.988000-06:00"
+      },
+      {
+        "ArtifactArn": "arn:aws:sagemaker:us-east-1:173506956686:artifact/1c297d9a6b028eb4d3763cd4ce70e27c",
+        "Source": {
+          "SourceUri": "s3://northstar-dev-data-173506956686/features/customers/",
+          "SourceTypes": []
+        },
+        "ArtifactType": "DataSet",
+        "CreationTime": "2026-10-31 14:33:16.242000-06:00",
+        "LastModifiedTime": "2026-10-31 14:33:16.242000-06:00"
+      },
+      {
+        "ArtifactArn": "arn:aws:sagemaker:us-east-1:173506956686:artifact/9d7522c83447ffcca9ada42e3dbcd2cb",
+        "Source": {
+          "SourceUri": "683313688378.dkr.ecr.us-east-1.amazonaws.com/sagemaker-xgboost:1.7-1",
+          "SourceTypes": []
+        },
+        "ArtifactType": "Image",
+        "CreationTime": "2026-10-31 14:33:16.198000-06:00",
+        "LastModifiedTime": "2026-10-31 14:33:16.198000-06:00"
+      },
+      {
+        "ArtifactArn": "arn:aws:sagemaker:us-east-1:173506956686:artifact/ba31c3e2f65e574474d88ba709435b65",
+        "Source": {
+          "SourceUri": "s3://northstar-dev-data-173506956686/artifacts/lab3/churn/6d3dfd0d527543feafe2d37712a54b92/4f1e5307588c64ec8eea28900c021f7928e3bb8b8406cc4c2f6e50e7aed7e1d0/model.tar.gz",
+          "SourceTypes": []
+        },
+        "ArtifactType": "ModelData",
+        "CreationTime": "2026-10-17 21:01:06.864000-06:00",
+        "LastModifiedTime": "2026-10-17 21:01:06.864000-06:00"
+      },
+      {
+        "ArtifactArn": "arn:aws:sagemaker:us-east-1:173506956686:artifact/d96a3c41bf7918d0dc4da3e94eea2ada",
+        "Source": {
+          "SourceUri": "683313688378.dkr.ecr.us-east-1.amazonaws.com/sagemaker-xgboost@sha256:46d8511f9377a603bc173263efd0d85544003b172be5b803d5ce22f11d235e09",
+          "SourceTypes": [
+            {
+              "SourceIdType": "MD5Hash",
+              "Value": "sha256:46d8511f9377a603bc173263efd0d85544003b172be5b803d5ce22f11d235e09"
+            }
+          ]
+        },
+        "ArtifactType": "Image",
+        "CreationTime": "2026-10-17 21:01:06.813000-06:00",
+        "LastModifiedTime": "2026-10-17 21:01:06.813000-06:00"
+      },
+      {
+        "ArtifactArn": "arn:aws:sagemaker:us-east-1:173506956686:artifact/57de2d115b5947983176b5dcf6834fd2",
+        "Source": {
+          "SourceUri": "arn:aws:sagemaker:us-east-1:173506956686:model-package/northstar-churn-models/1",
+          "SourceTypes": [
+            {
+              "SourceIdType": "Custom",
+              "Value": "Sun Oct 18 03:01:06 UTC 2026"
+            }
+          ]
+        },
+        "ArtifactType": "Model",
+        "CreationTime": "2026-10-17 21:01:06.681000-06:00",
+        "LastModifiedTime": "2026-10-17 21:01:06.681000-06:00"
+      },
+      {
+        "ArtifactArn": "arn:aws:sagemaker:us-east-1:173506956686:artifact/1c44c432f24ac93eafc6678f34e785af",
+        "Source": {
+          "SourceUri": "s3://northstar-dev-data-173506956686/features/offline-store/173506956686/sagemaker/us-east-1/offline-store/northstar-dev-customer-features-1792274088/data",
+          "SourceTypes": []
+        },
+        "ArtifactType": "DataSet",
+        "CreationTime": "2026-10-17 15:55:48.478000-06:00",
+        "LastModifiedTime": "2026-10-17 15:55:48.478000-06:00"
+      }
+    ],
+    "ActionSummaries": [
+      {
+        "ActionArn": "arn:aws:sagemaker:us-east-1:173506956686:action/northstar-churn-models-2-Rejected-1793481956-aws-model-package",
+        "ActionName": "northstar-churn-models-2-Rejected-1793481956-aws-model-package",
+        "Source": {
+          "SourceUri": "arn:aws:sagemaker:us-east-1:173506956686:model-package/northstar-churn-models/2",
+          "SourceType": "ARN"
+        },
+        "ActionType": "Approval",
+        "Status": "Completed",
+        "CreationTime": "2026-10-31 15:25:56-06:00",
+        "LastModifiedTime": "2026-10-31 15:25:56-06:00"
+      },
+      {
+        "ActionArn": "arn:aws:sagemaker:us-east-1:173506956686:action/northstar-churn-models-3-Rejected-1793481956-aws-model-package",
+        "ActionName": "northstar-churn-models-3-Rejected-1793481956-aws-model-package",
+        "Source": {
+          "SourceUri": "arn:aws:sagemaker:us-east-1:173506956686:model-package/northstar-churn-models/3",
+          "SourceType": "ARN"
+        },
+        "ActionType": "Approval",
+        "Status": "Completed",
+        "CreationTime": "2026-10-31 15:25:56-06:00",
+        "LastModifiedTime": "2026-10-31 15:25:56-06:00"
+      },
+      {
+        "ActionArn": "arn:aws:sagemaker:us-east-1:173506956686:action/northstar-churn-models-3-Approved-1793481686-aws-model-package",
+        "ActionName": "northstar-churn-models-3-Approved-1793481686-aws-model-package",
+        "Source": {
+          "SourceUri": "arn:aws:sagemaker:us-east-1:173506956686:model-package/northstar-churn-models/3",
+          "SourceType": "ARN"
+        },
+        "ActionType": "Approval",
+        "Status": "Completed",
+        "CreationTime": "2026-10-31 15:21:26-06:00",
+        "LastModifiedTime": "2026-10-31 15:21:26-06:00"
+      },
+      {
+        "ActionArn": "arn:aws:sagemaker:us-east-1:173506956686:action/northstar-churn-models-3-1793481436-aws-model-package",
+        "ActionName": "northstar-churn-models-3-1793481436-aws-model-package",
+        "Source": {
+          "SourceUri": "arn:aws:sagemaker:us-east-1:173506956686:model-package/northstar-churn-models/3",
+          "SourceType": "ARN"
+        },
+        "ActionType": "ModelLifeCycle",
+        "Status": "Completed",
+        "CreationTime": "2026-10-31 15:17:17.150000-06:00",
+        "LastModifiedTime": "2026-10-31 15:17:17.150000-06:00"
+      },
+      {
+        "ActionArn": "arn:aws:sagemaker:us-east-1:173506956686:action/northstar-churn-models-3-PendingManualApproval-1793481436-aws-model-package",
+        "ActionName": "northstar-churn-models-3-PendingManualApproval-1793481436-aws-model-package",
+        "Source": {
+          "SourceUri": "arn:aws:sagemaker:us-east-1:173506956686:model-package/northstar-churn-models/3",
+          "SourceType": "ARN"
+        },
+        "ActionType": "Approval",
+        "Status": "Completed",
+        "CreationTime": "2026-10-31 15:17:17.117000-06:00",
+        "LastModifiedTime": "2026-10-31 15:17:17.117000-06:00"
+      },
+      {
+        "ActionArn": "arn:aws:sagemaker:us-east-1:173506956686:action/northstar-churn-models-2-Approved-1793479084-aws-model-package",
+        "ActionName": "northstar-churn-models-2-Approved-1793479084-aws-model-package",
+        "Source": {
+          "SourceUri": "arn:aws:sagemaker:us-east-1:173506956686:model-package/northstar-churn-models/2",
+          "SourceType": "ARN"
+        },
+        "ActionType": "Approval",
+        "Status": "Completed",
+        "CreationTime": "2026-10-31 14:38:04-06:00",
+        "LastModifiedTime": "2026-10-31 14:38:04-06:00"
+      },
+      {
+        "ActionArn": "arn:aws:sagemaker:us-east-1:173506956686:action/northstar-churn-models-2-1793478978-aws-model-package",
+        "ActionName": "northstar-churn-models-2-1793478978-aws-model-package",
+        "Source": {
+          "SourceUri": "arn:aws:sagemaker:us-east-1:173506956686:model-package/northstar-churn-models/2",
+          "SourceType": "ARN"
+        },
+        "ActionType": "ModelLifeCycle",
+        "Status": "Completed",
+        "CreationTime": "2026-10-31 14:36:18.907000-06:00",
+        "LastModifiedTime": "2026-10-31 14:36:18.907000-06:00"
+      },
+      {
+        "ActionArn": "arn:aws:sagemaker:us-east-1:173506956686:action/northstar-churn-models-2-PendingManualApproval-1793478978-aws-model-package",
+        "ActionName": "northstar-churn-models-2-PendingManualApproval-1793478978-aws-model-package",
+        "Source": {
+          "SourceUri": "arn:aws:sagemaker:us-east-1:173506956686:model-package/northstar-churn-models/2",
+          "SourceType": "ARN"
+        },
+        "ActionType": "Approval",
+        "Status": "Completed",
+        "CreationTime": "2026-10-31 14:36:18.875000-06:00",
+        "LastModifiedTime": "2026-10-31 14:36:18.875000-06:00"
+      },
+      {
+        "ActionArn": "arn:aws:sagemaker:us-east-1:173506956686:action/northstar-churn-models-1-1792292466-aws-model-package",
+        "ActionName": "northstar-churn-models-1-1792292466-aws-model-package",
+        "Source": {
+          "SourceUri": "arn:aws:sagemaker:us-east-1:173506956686:model-package/northstar-churn-models/1",
+          "SourceType": "ARN"
+        },
+        "ActionType": "ModelLifeCycle",
+        "Status": "Completed",
+        "CreationTime": "2026-10-17 21:01:06.651000-06:00",
+        "LastModifiedTime": "2026-10-17 21:01:06.651000-06:00"
+      },
+      {
+        "ActionArn": "arn:aws:sagemaker:us-east-1:173506956686:action/northstar-churn-models-1-PendingManualApproval-1792292466-aws-model-package",
+        "ActionName": "northstar-churn-models-1-PendingManualApproval-1792292466-aws-model-package",
+        "Source": {
+          "SourceUri": "arn:aws:sagemaker:us-east-1:173506956686:model-package/northstar-churn-models/1",
+          "SourceType": "ARN"
+        },
+        "ActionType": "Approval",
+        "Status": "Completed",
+        "CreationTime": "2026-10-17 21:01:06.620000-06:00",
+        "LastModifiedTime": "2026-10-17 21:01:06.620000-06:00"
+      }
+    ]
+  },
+  "associations": [
+    {
+      "source": "arn:aws:sagemaker:us-east-1:173506956686:action/northstar-churn-models-1-1792292466-aws-model-package",
+      "destination": "arn:aws:sagemaker:us-east-1:173506956686:artifact/57de2d115b5947983176b5dcf6834fd2"
+    },
+    {
+      "source": "arn:aws:sagemaker:us-east-1:173506956686:action/northstar-churn-models-1-PendingManualApproval-1792292466-aws-model-package",
+      "destination": "arn:aws:sagemaker:us-east-1:173506956686:artifact/57de2d115b5947983176b5dcf6834fd2"
+    },
+    {
+      "source": "arn:aws:sagemaker:us-east-1:173506956686:action/northstar-churn-models-2-1793478978-aws-model-package",
+      "destination": "arn:aws:sagemaker:us-east-1:173506956686:artifact/fc69ff29192b920c92c5342f47cf0770"
+    },
+    {
+      "source": "arn:aws:sagemaker:us-east-1:173506956686:action/northstar-churn-models-2-Approved-1793479084-aws-model-package",
+      "destination": "arn:aws:sagemaker:us-east-1:173506956686:artifact/fc69ff29192b920c92c5342f47cf0770"
+    },
+    {
+      "source": "arn:aws:sagemaker:us-east-1:173506956686:action/northstar-churn-models-2-PendingManualApproval-1793478978-aws-model-package",
+      "destination": "arn:aws:sagemaker:us-east-1:173506956686:artifact/fc69ff29192b920c92c5342f47cf0770"
+    },
+    {
+      "source": "arn:aws:sagemaker:us-east-1:173506956686:action/northstar-churn-models-2-Rejected-1793481956-aws-model-package",
+      "destination": "arn:aws:sagemaker:us-east-1:173506956686:artifact/fc69ff29192b920c92c5342f47cf0770"
+    },
+    {
+      "source": "arn:aws:sagemaker:us-east-1:173506956686:action/northstar-churn-models-3-1793481436-aws-model-package",
+      "destination": "arn:aws:sagemaker:us-east-1:173506956686:artifact/c6903167f99935e24319681ea72366a6"
+    },
+    {
+      "source": "arn:aws:sagemaker:us-east-1:173506956686:action/northstar-churn-models-3-Approved-1793481686-aws-model-package",
+      "destination": "arn:aws:sagemaker:us-east-1:173506956686:artifact/c6903167f99935e24319681ea72366a6"
+    },
+    {
+      "source": "arn:aws:sagemaker:us-east-1:173506956686:action/northstar-churn-models-3-PendingManualApproval-1793481436-aws-model-package",
+      "destination": "arn:aws:sagemaker:us-east-1:173506956686:artifact/c6903167f99935e24319681ea72366a6"
+    },
+    {
+      "source": "arn:aws:sagemaker:us-east-1:173506956686:action/northstar-churn-models-3-Rejected-1793481956-aws-model-package",
+      "destination": "arn:aws:sagemaker:us-east-1:173506956686:artifact/c6903167f99935e24319681ea72366a6"
+    },
+    {
+      "source": "arn:aws:sagemaker:us-east-1:173506956686:artifact/11f3d27cc637fbee5f4cb4cafee1b448",
+      "destination": "arn:aws:sagemaker:us-east-1:173506956686:artifact/fc69ff29192b920c92c5342f47cf0770"
+    },
+    {
+      "source": "arn:aws:sagemaker:us-east-1:173506956686:artifact/1c297d9a6b028eb4d3763cd4ce70e27c",
+      "destination": "arn:aws:sagemaker:us-east-1:173506956686:experiment-trial-component/pipelines-jf0pu6oysh0o-TrainChurnModel-VOJ9oNSM88-aws-training-job"
+    },
+    {
+      "source": "arn:aws:sagemaker:us-east-1:173506956686:artifact/1c297d9a6b028eb4d3763cd4ce70e27c",
+      "destination": "arn:aws:sagemaker:us-east-1:173506956686:experiment-trial-component/pipelines-ys96kk7yy2lb-TrainChurnModel-KJ7KHl1AxP-aws-training-job"
+    },
+    {
+      "source": "arn:aws:sagemaker:us-east-1:173506956686:artifact/34613965d4898b4636208b283770c92d",
+      "destination": "arn:aws:sagemaker:us-east-1:173506956686:artifact/c6903167f99935e24319681ea72366a6"
+    },
+    {
+      "source": "arn:aws:sagemaker:us-east-1:173506956686:artifact/34613965d4898b4636208b283770c92d",
+      "destination": "arn:aws:sagemaker:us-east-1:173506956686:artifact/fc69ff29192b920c92c5342f47cf0770"
+    },
+    {
+      "source": "arn:aws:sagemaker:us-east-1:173506956686:artifact/57de2d115b5947983176b5dcf6834fd2",
+      "destination": "arn:aws:sagemaker:us-east-1:173506956686:context/northstar-churn-models-1792292465-aws-model-package-group"
+    },
+    {
+      "source": "arn:aws:sagemaker:us-east-1:173506956686:artifact/9d7522c83447ffcca9ada42e3dbcd2cb",
+      "destination": "arn:aws:sagemaker:us-east-1:173506956686:experiment-trial-component/pipelines-jf0pu6oysh0o-TrainChurnModel-VOJ9oNSM88-aws-training-job"
+    },
+    {
+      "source": "arn:aws:sagemaker:us-east-1:173506956686:artifact/9d7522c83447ffcca9ada42e3dbcd2cb",
+      "destination": "arn:aws:sagemaker:us-east-1:173506956686:experiment-trial-component/pipelines-ys96kk7yy2lb-TrainChurnModel-KJ7KHl1AxP-aws-training-job"
+    },
+    {
+      "source": "arn:aws:sagemaker:us-east-1:173506956686:artifact/ba31c3e2f65e574474d88ba709435b65",
+      "destination": "arn:aws:sagemaker:us-east-1:173506956686:artifact/57de2d115b5947983176b5dcf6834fd2"
+    },
+    {
+      "source": "arn:aws:sagemaker:us-east-1:173506956686:artifact/c6903167f99935e24319681ea72366a6",
+      "destination": "arn:aws:sagemaker:us-east-1:173506956686:context/northstar-churn-models-1792292465-aws-model-package-group"
+    },
+    {
+      "source": "arn:aws:sagemaker:us-east-1:173506956686:artifact/cfc7ebb65927b711524141982e1bce67",
+      "destination": "arn:aws:sagemaker:us-east-1:173506956686:artifact/c6903167f99935e24319681ea72366a6"
+    },
+    {
+      "source": "arn:aws:sagemaker:us-east-1:173506956686:artifact/d96a3c41bf7918d0dc4da3e94eea2ada",
+      "destination": "arn:aws:sagemaker:us-east-1:173506956686:artifact/57de2d115b5947983176b5dcf6834fd2"
+    },
+    {
+      "source": "arn:aws:sagemaker:us-east-1:173506956686:artifact/fc69ff29192b920c92c5342f47cf0770",
+      "destination": "arn:aws:sagemaker:us-east-1:173506956686:context/northstar-churn-models-1792292465-aws-model-package-group"
+    },
+    {
+      "source": "arn:aws:sagemaker:us-east-1:173506956686:context/northstar-dev-customer-features-1792274088",
+      "destination": "arn:aws:sagemaker:us-east-1:173506956686:artifact/1c44c432f24ac93eafc6678f34e785af"
+    },
+    {
+      "source": "arn:aws:sagemaker:us-east-1:173506956686:context/northstar-dev-customer-features-1792274088",
+      "destination": "arn:aws:sagemaker:us-east-1:173506956686:context/northstar-dev-customer-features-1792274088-feature-group-pipeline"
+    },
+    {
+      "source": "arn:aws:sagemaker:us-east-1:173506956686:context/northstar-dev-customer-features-1792274088",
+      "destination": "arn:aws:sagemaker:us-east-1:173506956686:context/northstar-dev-customer-features-1792274088-feature-group-pipeline-version"
+    },
+    {
+      "source": "arn:aws:sagemaker:us-east-1:173506956686:experiment-trial-component/pipelines-jf0pu6oysh0o-TrainChurnModel-VOJ9oNSM88-aws-training-job",
+      "destination": "arn:aws:sagemaker:us-east-1:173506956686:artifact/11f3d27cc637fbee5f4cb4cafee1b448"
+    },
+    {
+      "source": "arn:aws:sagemaker:us-east-1:173506956686:experiment-trial-component/pipelines-ys96kk7yy2lb-TrainChurnModel-KJ7KHl1AxP-aws-training-job",
+      "destination": "arn:aws:sagemaker:us-east-1:173506956686:artifact/cfc7ebb65927b711524141982e1bce67"
+    }
+  ]
+}

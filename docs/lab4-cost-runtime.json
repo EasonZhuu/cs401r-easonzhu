@@ -1,0 +1,226 @@
+{
+  "captured_at_utc": "2026-10-31T21:34:49.391244+00:00",
+  "budget_target_usd": 5,
+  "actual_billing_status": "Delayed estimated account-wide snapshot; not isolated incremental Lab4 charges or final invoice",
+  "cost_explorer_excludes": [
+    "Credit",
+    "Refund"
+  ],
+  "cost_explorer": {
+    "GroupDefinitions": [
+      {
+        "Type": "DIMENSION",
+        "Key": "SERVICE"
+      }
+    ],
+    "ResultsByTime": [
+      {
+        "TimePeriod": {
+          "Start": "2026-10-30",
+          "End": "2026-10-31"
+        },
+        "Total": {},
+        "Groups": [
+          {
+            "Keys": [
+              "AWS Glue"
+            ],
+            "Metrics": {
+              "UnblendedCost": {
+                "Amount": "0",
+                "Unit": "USD"
+              }
+            }
+          },
+          {
+            "Keys": [
+              "Amazon Elastic File System"
+            ],
+            "Metrics": {
+              "UnblendedCost": {
+                "Amount": "0.0000000552",
+                "Unit": "USD"
+              }
+            }
+          },
+          {
+            "Keys": [
+              "Amazon SageMaker"
+            ],
+            "Metrics": {
+              "UnblendedCost": {
+                "Amount": "0.0000476766",
+                "Unit": "USD"
+              }
+            }
+          },
+          {
+            "Keys": [
+              "Amazon Simple Storage Service"
+            ],
+            "Metrics": {
+              "UnblendedCost": {
+                "Amount": "0.0000180924",
+                "Unit": "USD"
+              }
+            }
+          },
+          {
+            "Keys": [
+              "AmazonCloudWatch"
+            ],
+            "Metrics": {
+              "UnblendedCost": {
+                "Amount": "0",
+                "Unit": "USD"
+              }
+            }
+          }
+        ],
+        "Estimated": true
+      },
+      {
+        "TimePeriod": {
+          "Start": "2026-10-31",
+          "End": "2026-11-01"
+        },
+        "Total": {},
+        "Groups": [
+          {
+            "Keys": [
+              "AWS Glue"
+            ],
+            "Metrics": {
+              "UnblendedCost": {
+                "Amount": "0",
+                "Unit": "USD"
+              }
+            }
+          },
+          {
+            "Keys": [
+              "Amazon DynamoDB"
+            ],
+            "Metrics": {
+              "UnblendedCost": {
+                "Amount": "0.000005125",
+                "Unit": "USD"
+              }
+            }
+          },
+          {
+            "Keys": [
+              "Amazon Elastic File System"
+            ],
+            "Metrics": {
+              "UnblendedCost": {
+                "Amount": "0.0000000322",
+                "Unit": "USD"
+              }
+            }
+          },
+          {
+            "Keys": [
+              "Amazon SageMaker"
+            ],
+            "Metrics": {
+              "UnblendedCost": {
+                "Amount": "0.0000317844",
+                "Unit": "USD"
+              }
+            }
+          },
+          {
+            "Keys": [
+              "Amazon Simple Storage Service"
+            ],
+            "Metrics": {
+              "UnblendedCost": {
+                "Amount": "0.0000846",
+                "Unit": "USD"
+              }
+            }
+          },
+          {
+            "Keys": [
+              "AmazonCloudWatch"
+            ],
+            "Metrics": {
+              "UnblendedCost": {
+                "Amount": "0",
+                "Unit": "USD"
+              }
+            }
+          }
+        ],
+        "Estimated": true
+      }
+    ],
+    "DimensionValueAttributes": []
+  },
+  "measured": {
+    "glue_runs": [
+      {
+        "id": "jr_0e7f3e5dc84ef789a323946a19db23b4395376b53a4308d7603cc4e494171821",
+        "state": "SUCCEEDED",
+        "seconds": 205,
+        "workers": 2,
+        "worker_type": "G.1X"
+      },
+      {
+        "id": "jr_52a536920488fbdc251429dd38c834ea59eb67b595e5bcefe602389c3049afad",
+        "state": "FAILED",
+        "seconds": 118,
+        "workers": 2,
+        "worker_type": "G.1X"
+      },
+      {
+        "id": "jr_662205bd58c06c6d94ef11f7036c295d0eccfbfee0128b84eb3cb2d6c8076425",
+        "state": "STOPPED",
+        "seconds": 350,
+        "workers": 2,
+        "worker_type": "G.1X"
+      }
+    ],
+    "glue_dpu_seconds": 1346,
+    "nat_created_utc": "2026-10-31 20:10:33+00:00",
+    "nat_deleted_utc": "2026-10-31 20:41:03+00:00",
+    "nat_lifetime_seconds": 1830.0,
+    "codebuild": [
+      {
+        "id": "northstar-ci:d151aa6b-6eba-4d41-ba46-bc6d4ca39b76",
+        "seconds": 283.43
+      },
+      {
+        "id": "northstar-ci:54280ff4-cb20-4013-a80b-9c8787c415ea",
+        "seconds": 73.906
+      },
+      {
+        "id": "northstar-ci:7376b239-228d-4223-8d94-0cc5d73c83ac",
+        "seconds": 307.235
+      }
+    ],
+    "codebuild_rounded_build_minutes": 13,
+    "sagemaker_training_seconds": 279,
+    "sagemaker_billable_spot_seconds": 104
+  },
+  "planning_estimates_not_invoice": {
+    "glue_usd_at_0_44_per_dpu_hour": 0.1645,
+    "nat_plus_public_ipv4_one_billable_hour_allowance_usd": 0.05,
+    "codebuild_usd_assuming_0_01_per_minute": 0.13,
+    "training_upper_planning_allowance_usd": 0.05,
+    "codepipeline_v2_allowance_usd": 0.05,
+    "storage_logs_requests_efs_and_observation_allowance_usd": 0.5,
+    "total_planning_allowance_usd": 1.0,
+    "note": "Conservative working allowance around $1, not exact AWS charge; CodeBuild assumed rate shown explicitly. Credits/free tier not assumed. Cost Explorer may lag."
+  },
+  "sources": {
+    "glue": "https://aws.amazon.com/glue/pricing/",
+    "vpc": "https://aws.amazon.com/vpc/pricing/",
+    "codebuild": "https://aws.amazon.com/codebuild/pricing/",
+    "codepipeline": "https://aws.amazon.com/codepipeline/pricing/",
+    "sagemaker": "https://aws.amazon.com/sagemaker/ai/pricing/"
+  },
+  "codepipeline_correction": "Actual pipeline V2: $0.002/action-minute before free tier; manual approval excluded. Earlier V1 assumption is historical only.",
+  "cleanup": "See lab4-cleanup.json; checked compute, NAT, EIP, EFS and lab buckets absent."
+}

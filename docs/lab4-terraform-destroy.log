@@ -1,0 +1,92 @@
+
+Warning: Deprecated Parameter
+
+The parameter "dynamodb_table" is deprecated. Use parameter "use_lockfile"
+instead.
+module.glue.aws_glue_connection.legacy_private_network: Destroying... [id=173506956686:northstar-dev-private-network]
+module.glue.aws_glue_crawler.raw: Destroying... [id=northstar-dev-raw-crawler]
+module.glue.aws_glue_job.transform: Destroying... [id=northstar-dev-transform]
+module.glue.aws_glue_job.feature_engineer: Destroying... [id=northstar-dev-feature-engineer]
+module.sagemaker.aws_sagemaker_user_profile.ml_engineer: Destroying... [id=arn:aws:sagemaker:us-east-1:173506956686:user-profile/d-ktq3q2cj8hqe/MLEngineer]
+module.glue.aws_glue_crawler.raw: Destruction complete after 1s
+module.glue.aws_glue_job.feature_engineer: Destruction complete after 1s
+module.feature_store.aws_sagemaker_feature_group.customers: Destroying... [id=northstar-dev-customer-features]
+module.glue.aws_s3_object.feature_engineer_script: Destroying... [id=artifacts/glue/feature_engineer.py]
+module.glue.aws_s3_object.feature_logic: Destroying... [id=artifacts/glue/feature_engineering.py]
+module.glue.aws_glue_job.transform: Destruction complete after 1s
+module.glue.aws_glue_connection.vpc_network: Destroying... [id=173506956686:northstar-dev-vpc-connection]
+module.glue.aws_s3_object.transform_script: Destroying... [id=artifacts/glue/transform.py]
+module.glue.aws_glue_connection.legacy_private_network: Destruction complete after 1s
+module.glue.aws_glue_connection.vpc_network: Destruction complete after 0s
+module.glue.aws_s3_object.transform_script: Destruction complete after 0s
+module.glue.aws_s3_object.feature_logic: Destruction complete after 0s
+module.glue.aws_s3_object.feature_engineer_script: Destruction complete after 0s
+module.feature_store.aws_sagemaker_feature_group.customers: Destruction complete after 2s
+module.storage.aws_s3_bucket_public_access_block.data: Destroying... [id=northstar-dev-data-173506956686]
+module.storage.aws_s3_bucket_server_side_encryption_configuration.data: Destroying... [id=northstar-dev-data-173506956686]
+module.glue.aws_glue_catalog_database.this: Destroying... [id=173506956686:northstar_dev]
+module.storage.aws_s3_object.prefixes["processed/"]: Destroying... [id=processed/]
+module.storage.aws_s3_object.prefixes["features/"]: Destroying... [id=features/]
+module.storage.aws_s3_object.prefixes["raw/"]: Destroying... [id=raw/]
+module.storage.aws_s3_object.prefixes["artifacts/"]: Destroying... [id=artifacts/]
+module.storage.aws_s3_bucket_lifecycle_configuration.data[0]: Destroying... [id=northstar-dev-data-173506956686]
+module.glue.aws_glue_catalog_database.this: Destruction complete after 1s
+module.iam.aws_iam_role_policy_attachment.model_monitor: Destroying... [id=northstar-dev-ModelMonitor-20261017215254794000000002]
+module.iam.aws_iam_role_policy_attachment.ml_engineer: Destroying... [id=northstar-dev-MLEngineer-20261017215254795000000003]
+module.storage.aws_s3_object.prefixes["processed/"]: Destruction complete after 1s
+module.iam.aws_iam_role_policy_attachment.data_engineer: Destroying... [id=northstar-dev-DataEngineer-20261017215254750400000001]
+module.storage.aws_s3_bucket_public_access_block.data: Destruction complete after 1s
+module.vpc.aws_route_table_association.private: Destroying... [id=rtbassoc-0638b53a041d22927]
+module.storage.aws_s3_object.prefixes["raw/"]: Destruction complete after 1s
+module.vpc.aws_security_group.glue: Destroying... [id=sg-047419eb3ea2bf698]
+module.storage.aws_s3_object.prefixes["artifacts/"]: Destruction complete after 1s
+module.vpc.aws_route_table_association.public: Destroying... [id=rtbassoc-02dc6c8e2434af937]
+module.storage.aws_s3_object.prefixes["features/"]: Destruction complete after 1s
+module.storage.aws_s3_bucket_lifecycle_configuration.data[0]: Destruction complete after 1s
+module.storage.aws_s3_bucket_versioning.data: Destroying... [id=northstar-dev-data-173506956686]
+module.iam.aws_iam_role_policy_attachment.model_monitor: Destruction complete after 0s
+module.iam.aws_iam_role.model_monitor: Destroying... [id=northstar-dev-ModelMonitor]
+module.iam.aws_iam_policy.model_monitor: Destroying... [id=arn:aws:iam::173506956686:policy/northstar-dev-ModelMonitorPolicy]
+module.iam.aws_iam_role_policy_attachment.data_engineer: Destruction complete after 0s
+module.iam.aws_iam_policy.data_engineer: Destroying... [id=arn:aws:iam::173506956686:policy/northstar-dev-DataEngineerPolicy]
+module.iam.aws_iam_role_policy_attachment.ml_engineer: Destruction complete after 0s
+module.iam.aws_iam_role.data_engineer: Destroying... [id=northstar-dev-DataEngineer]
+module.storage.aws_s3_bucket_versioning.data: Destruction complete after 0s
+module.iam.aws_iam_policy.ml_engineer: Destroying... [id=arn:aws:iam::173506956686:policy/northstar-dev-MLEngineerPolicy]
+module.storage.aws_s3_bucket_server_side_encryption_configuration.data: Destruction complete after 1s
+module.storage.aws_s3_bucket.data: Destroying... [id=northstar-dev-data-173506956686]
+module.sagemaker.aws_sagemaker_user_profile.ml_engineer: Destruction complete after 4s
+module.sagemaker.aws_sagemaker_domain.this: Destroying... [id=d-ktq3q2cj8hqe]
+module.vpc.aws_route_table_association.public: Destruction complete after 0s
+module.vpc.aws_route_table_association.private: Destruction complete after 0s
+module.vpc.aws_subnet.public: Destroying... [id=subnet-09a3da9e0461b3354]
+module.vpc.aws_route_table.public: Destroying... [id=rtb-05c7b65c6bb09b3b5]
+module.iam.aws_iam_policy.model_monitor: Destruction complete after 0s
+module.vpc.aws_route_table.private: Destroying... [id=rtb-04e27bb9d62317502]
+module.iam.aws_iam_role.model_monitor: Destruction complete after 0s
+module.iam.aws_iam_role.data_engineer: Destruction complete after 0s
+module.storage.aws_s3_bucket.data: Destruction complete after 0s
+module.iam.aws_iam_policy.ml_engineer: Destruction complete after 1s
+module.iam.aws_iam_policy.data_engineer: Destruction complete after 1s
+module.vpc.aws_security_group.glue: Destruction complete after 1s
+module.vpc.aws_subnet.public: Destruction complete after 1s
+module.vpc.aws_route_table.public: Destruction complete after 1s
+module.vpc.aws_internet_gateway.this: Destroying... [id=igw-007e0ae71c9a6542b]
+module.vpc.aws_route_table.private: Destruction complete after 1s
+module.vpc.aws_internet_gateway.this: Destruction complete after 1s
+module.sagemaker.aws_sagemaker_domain.this: Still destroying... [id=d-ktq3q2cj8hqe, 00m10s elapsed]
+module.sagemaker.aws_sagemaker_domain.this: Still destroying... [id=d-ktq3q2cj8hqe, 00m20s elapsed]
+module.sagemaker.aws_sagemaker_domain.this: Still destroying... [id=d-ktq3q2cj8hqe, 00m30s elapsed]
+module.sagemaker.aws_sagemaker_domain.this: Still destroying... [id=d-ktq3q2cj8hqe, 00m40s elapsed]
+module.sagemaker.aws_sagemaker_domain.this: Still destroying... [id=d-ktq3q2cj8hqe, 00m50s elapsed]
+module.sagemaker.aws_sagemaker_domain.this: Destruction complete after 54s
+module.vpc.aws_subnet.private: Destroying... [id=subnet-0f40730d1e22a54aa]
+module.iam.aws_iam_role.ml_engineer: Destroying... [id=northstar-dev-MLEngineer]
+module.vpc.aws_security_group.sagemaker: Destroying... [id=sg-0d989ff4053977de2]
+module.iam.aws_iam_role.ml_engineer: Destruction complete after 1s
+module.vpc.aws_subnet.private: Destruction complete after 1s
+module.vpc.aws_security_group.sagemaker: Destruction complete after 1s
+module.vpc.aws_vpc.this: Destroying... [id=vpc-0425359ce62d1337b]
+module.vpc.aws_vpc.this: Destruction complete after 1s
+
+Apply complete! Resources: 0 added, 0 changed, 40 destroyed.

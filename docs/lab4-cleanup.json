@@ -1,0 +1,82 @@
+{
+  "verified_at_utc": "2026-10-31T21:34:21.133655+00:00",
+  "account": "173506956686",
+  "region": "us-east-1",
+  "all_checked_counts_zero": true,
+  "checks": {
+    "active_nat_gateways": 0,
+    "elastic_ips": 0,
+    "northstar_vpcs": 0,
+    "efs_filesystems": 0,
+    "sagemaker_domains": 0,
+    "sagemaker_apps": 0,
+    "feature_groups": 0,
+    "training_in_progress": 0,
+    "training_stopping": 0,
+    "endpoints": 0,
+    "glue_jobs": 0,
+    "glue_crawlers": 0,
+    "glue_databases": 0,
+    "lineage_contexts": 0,
+    "lineage_artifacts": 0,
+    "lineage_actions": 0,
+    "northstar_sagemaker_pipelines": 0,
+    "northstar_codebuild_projects": 0,
+    "northstar_codepipelines": 0,
+    "northstar_alarms": 0,
+    "northstar_topics": 0,
+    "course_log_groups": 0,
+    "northstar-dev-data-173506956686": 0,
+    "northstar-dev-cicd-artifacts-173506956686": 0,
+    "approved_packages_pointing_to_deleted_data": 0
+  },
+  "terraform_result": "0 added, 0 changed, 40 destroyed",
+  "ci_stack": "DELETE_COMPLETE",
+  "registry_after_cleanup": [
+    {
+      "version": 3,
+      "status": "Rejected"
+    },
+    {
+      "version": 2,
+      "status": "Rejected"
+    },
+    {
+      "version": 1,
+      "status": "PendingManualApproval"
+    }
+  ],
+  "retained": {
+    "terraform_backend": "northstar-tfstate-173506956686 and existing DynamoDB lock table; baseline state retained",
+    "codeconnection": "northstar-lab4-github AVAILABLE; no running compute",
+    "mlflow_app": "Existing serverless northstar-mlflow retained, no legacy tracking server created",
+    "registry_and_job_history": "Rejected/Pending records and completed training job metadata; no endpoints or active jobs"
+  },
+  "cleanup_actions": {
+    "started_at_utc": "2026-10-31T21:24:01.389862+00:00",
+    "ci_stack": "DELETE_COMPLETE",
+    "approved_versions_rejected_before_data_deletion": [
+      3,
+      2
+    ],
+    "buckets_emptied": {
+      "northstar-dev-cicd-artifacts-173506956686": 5,
+      "northstar-dev-data-173506956686": 204
+    },
+    "codebuild_log_group": "deleted after full export",
+    "sagemaker_pipeline": "deleted after history export; completed job records retained",
+    "prerequisites_completed_at_utc": "2026-10-31T21:25:56.059764+00:00"
+  },
+  "orphan_cleanup": {
+    "at_utc": "2026-10-31T21:28:10.285012+00:00",
+    "efs": "domain-owned filesystem deleted",
+    "nfs_security_groups_deleted": [],
+    "lineage_entities_deleted": {
+      "ContextSummaries": 4,
+      "ArtifactSummaries": 11,
+      "ActionSummaries": 10
+    },
+    "associations_deleted": 28,
+    "logs": "course Glue and SageMaker groups deleted after exports"
+  }
+}

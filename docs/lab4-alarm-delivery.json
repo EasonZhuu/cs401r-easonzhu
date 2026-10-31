@@ -1,0 +1,10 @@
+{
+  "subject": "ALARM: northstar-ci-build-failure in US East (N. Virginia)",
+  "sender": "no-reply@sns.amazonaws.com",
+  "gmail_message_id": "1a193cc3050a3e63",
+  "gmail_message_timestamp_utc": "2026-10-31T21:09:54+00:00",
+  "alarm_transition_utc": "2026-10-31T21:09:54.634Z",
+  "state_change": "OK -> ALARM",
+  "recipient": "Confirmed owner email subscription; address omitted",
+  "capture": "Original browser-visible email area; JPEG capture converted to PNG without changing decoded pixels"
+}

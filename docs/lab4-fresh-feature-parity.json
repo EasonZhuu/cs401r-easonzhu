@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "processed_rows": 157627,
+  "customers": 9999,
+  "features_compared": [
+    "days_since_last_purchase",
+    "customer_tenure_days",
+    "purchase_frequency_30d",
+    "purchase_frequency_90d",
+    "purchase_frequency_180d",
+    "avg_order_value",
+    "total_spend_90d",
+    "total_lifetime_value",
+    "avg_basket_size_6m",
+    "category_diversity_score",
+    "online_to_store_ratio"
+  ],
+  "absolute_tolerance": 0.0001,
+  "labels_match_holdout": true,
+  "feature_source_sha256": "2cf58a3127cff1bb143f9f33e0875c48062611dd19e8e3aff3dd2bdf8385917b",
+  "reference_path": "../.tools/lab4/fresh-data/features",
+  "note": "Feature equivalence only; historical data does not establish freshness or cloud CI success"
+}

@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "customers": 9999,
+  "columns": [
+    "customer_id",
+    "days_since_last_purchase",
+    "customer_tenure_days",
+    "purchase_frequency_30d",
+    "purchase_frequency_90d",
+    "purchase_frequency_180d",
+    "avg_order_value",
+    "total_spend_90d",
+    "total_lifetime_value",
+    "avg_basket_size_6m",
+    "category_diversity_score",
+    "online_to_store_ratio",
+    "loyalty_tier",
+    "churn_risk_score",
+    "churn_label"
+  ],
+  "old_event_time": 1792275535.0,
+  "fresh_event_time": 1793478476.0,
+  "note": "Direct old Spark output versus new batched shared-pandas Glue output; only real ingestion time should change"
+}

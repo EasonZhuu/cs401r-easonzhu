@@ -1,6 +1,6 @@
 # Lab4 execution runbook
 
-Status: local implementation ready; Spot quota is now ten and cloud validation is underway.
+Status: all three actual runs and cleanup completed; see lab4-completion.md and saved evidence.
 Do not label this runbook itself as proof that any step ran.
 
 ## Before creating hourly resources
