@@ -50,6 +50,7 @@ module "glue" {
   availability_zone             = var.availability_zone
   transform_script_path         = abspath("${path.root}/../../../glue-scripts/transform.py")
   feature_engineer_script_path  = abspath("${path.root}/../../../glue-scripts/feature_engineer.py")
+  feature_logic_path            = abspath("${path.root}/../../../data/feature_engineering.py")
   feature_group_name            = module.feature_store.feature_group_name
   aws_region                    = var.aws_region
 

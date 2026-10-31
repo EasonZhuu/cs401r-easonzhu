@@ -1,0 +1,153 @@
+{
+  "captured_at_utc": "2026-10-31T08:28:05.329200+00:00",
+  "scope": "Local validation; not CodeBuild or SageMaker cloud evidence",
+  "tests": {
+    "pure_features_registry": {
+      "tests": 33,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 33
+    },
+    "historical_data": {
+      "tests": 28,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 27
+    },
+    "model_fairness_cross_version": {
+      "tests": 20,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 20
+    },
+    "live_champion_lookup": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "passed": 0
+    }
+  },
+  "parity": {
+    "passed": true,
+    "processed_rows": 157627,
+    "customers": 9999,
+    "features_compared": [
+      "days_since_last_purchase",
+      "customer_tenure_days",
+      "purchase_frequency_30d",
+      "purchase_frequency_90d",
+      "purchase_frequency_180d",
+      "avg_order_value",
+      "total_spend_90d",
+      "total_lifetime_value",
+      "avg_basket_size_6m",
+      "category_diversity_score",
+      "online_to_store_ratio"
+    ],
+    "absolute_tolerance": 0.0001,
+    "labels_match_holdout": true,
+    "feature_source_sha256": "2cf58a3127cff1bb143f9f33e0875c48062611dd19e8e3aff3dd2bdf8385917b",
+    "note": "Feature equivalence only; historical data does not establish freshness or cloud CI success"
+  },
+  "xgboost17_metrics": {
+    "auc_roc": 0.7806,
+    "auc_vs_baseline": 0.0573,
+    "baseline_auc": 0.7233,
+    "baseline_auc_roc": 0.7233,
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 42,
+    "commit_sha": "local-uncommitted-lab4",
+    "confusion_threshold": 0.5,
+    "eval_timestamp": "2026-10-31T02:56:38.485302+00:00",
+    "lift_ci_high": 0.075,
+    "lift_ci_low": 0.0382,
+    "n_val_positives": 660,
+    "n_val_samples": 3000,
+    "positive_rate_val": 0.22,
+    "precision_top10": 0.6967,
+    "recall_top10": 0.3167,
+    "resolved_scale_pos_weight": 3.544805194805195,
+    "slices": {
+      "Bronze": {
+        "auc": 0.7527466739495143,
+        "n": 1071,
+        "negatives": 710,
+        "positives": 361,
+        "recall": 0.40443213296398894,
+        "recall_below_aggregate_10pp": false,
+        "selected": 184,
+        "tier": "Bronze",
+        "too_small": false,
+        "too_small_rule": "n < 100 or fewer than 30 examples in either class",
+        "true_positives": 146
+      },
+      "Gold": {
+        "auc": 0.7446457255041942,
+        "n": 483,
+        "negatives": 431,
+        "positives": 52,
+        "recall": 0.11538461538461539,
+        "recall_below_aggregate_10pp": true,
+        "selected": 10,
+        "tier": "Gold",
+        "too_small": false,
+        "too_small_rule": "n < 100 or fewer than 30 examples in either class",
+        "true_positives": 6
+      },
+      "Platinum": {
+        "auc": 0.8793706293706294,
+        "n": 307,
+        "negatives": 286,
+        "positives": 21,
+        "recall": 0.14285714285714285,
+        "recall_below_aggregate_10pp": true,
+        "selected": 3,
+        "tier": "Platinum",
+        "too_small": true,
+        "too_small_rule": "n < 100 or fewer than 30 examples in either class",
+        "true_positives": 3
+      },
+      "Silver": {
+        "auc": 0.7184498250443447,
+        "n": 1139,
+        "negatives": 913,
+        "positives": 226,
+        "recall": 0.23893805309734514,
+        "recall_below_aggregate_10pp": false,
+        "selected": 103,
+        "tier": "Silver",
+        "too_small": false,
+        "too_small_rule": "n < 100 or fewer than 30 examples in either class",
+        "true_positives": 54
+      }
+    },
+    "split_seed": 42,
+    "top10_selected_count": 300,
+    "top10_true_positives": 209,
+    "xgboost_version": "1.7.6"
+  },
+  "source_sha256": {
+    "data/feature_engineering.py": "2cf58a3127cff1bb143f9f33e0875c48062611dd19e8e3aff3dd2bdf8385917b",
+    "models/churn/churn_model.py": "422c4a2a4193236bb66c677cf4b20c757e4e05e12db6d1476dba61d14f0a0e00",
+    "models/churn/registry.py": "9e856c7adbee2c2ad92550532b5336149ba273e0d9afbbec0f5f84362ebb7d88",
+    "glue-scripts/feature_engineer.py": "8fd0e239b6d7d8b72f4ec608ad4f9c2175af685ceb598c1992c795555a215ebc",
+    "tests/test_data.py": "7f0458c6fe95757927cda49014129012512e4c5baafa061fbee6168447aa300c",
+    "tests/test_features.py": "c79b2187914238cf5ef72e60465318e44044022263a4eea64bc9e33653f668a5",
+    "tests/test_feature_boundaries.py": "d77b302f8364d00cbabb96d30f5d8e7b9b8b601b9ff75040300415b7455de21a",
+    "tests/test_model.py": "25b0b19c31c4d3083827dec20f967959889119a4c6410e384b779319be39b530",
+    "tests/test_fairness.py": "99609a93c6a64c78d243950d143a8e7dacd149286d26bf3696bfc71c7a8770cb",
+    "tests/test_registry_contract.py": "2ea6150264ab37c8331ad023c55d0f5a7f2592c95e2fa57e7b2463d3f81248b3",
+    "buildspec.yml": "fed09dc3f86d974bac16dd392c6efa96a7a2d8f3dba46d2a80cffc65841b90d4",
+    "pipeline.yaml": "c32ae7742218abf409fac28d27d6a2d2d9dfe9fb9c5ea48d8adeab0546c214a7"
+  },
+  "limitations": [
+    "Historical freshness failed as expected; refresh Glue output before CI",
+    "Live champion lookup found no Approved package; first comparison skipped",
+    "No Lab4 green/failure/revert cloud sequence or notification email yet",
+    "Windows XGBoost 1.7 training, 3.2 loading; cloud Linux image still pending"
+  ]
+}

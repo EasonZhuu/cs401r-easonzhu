@@ -14,3 +14,9 @@ __pycache__/
 artifacts/lab3-rag/cache/
 artifacts/lab3-rag/offer-cache/
 .notebook-runtime/
+.pytest_cache/
+data/processed/
+data/features/
+data/northstar-raw-sample.csv
+reports/
+artifacts/lab4/

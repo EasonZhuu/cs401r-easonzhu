@@ -80,84 +80,19 @@ def split_windows(df):
 
 
 def compute_rfm_features(history):
-    """One row per customer_id, every window measured backwards from T.
+    """Run the same pure pandas feature functions tested before every training run.
 
-    Produce these columns:
-      days_since_last_purchase   T minus the customer's last purchase
-      customer_tenure_days       T minus the customer's first purchase
-      purchase_frequency_30d     orders in the 30 days before T
-      purchase_frequency_90d     orders in the 90 days before T
-      purchase_frequency_180d    orders in the 180 days before T
-      avg_order_value            mean order_value across all history
-      total_spend_90d            sum of order_value in the 90 days before T
-      total_lifetime_value       sum of all order_value
-      avg_basket_size_6m         mean num_items per order, last 180 days
-      category_diversity_score   distinct product_category / N_CATEGORIES,
-                                 EXCLUDING 'unknown' - the transform imputes
-                                 that for missing categories, and counting it
-                                 as a real category pushes the score above 1.0
-      online_to_store_ratio      fraction of orders with channel == 'online'
-
-    Useful: F.datediff, F.date_sub, and conditional aggregates built with
-    F.sum(F.when(...).otherwise(0)). Cast everything to double - Feature
-    Store expects Fractional.
-
-    Watch the divide-by-zero in avg_basket_size_6m: a customer with no
-    orders in the last 180 days needs a guarded denominator.
-
-    Recent N-day windows use (T - N days, T], including the cutoff day.
+    Glue --extra-py-files distributes feature_engineering.py to all executors.
+    Grouped pandas execution keeps each customer's transactions together without
+    collecting the complete transaction dataset into the driver.
     """
-    cutoff = F.to_date(F.lit(FEATURE_CUTOFF))
-    purchase_date = F.col("purchase_date")
+    from feature_engineering import FEATURE_COLUMNS, compute_transaction_features
+    schema = "customer_id string, " + ", ".join(f"{name} double" for name in FEATURE_COLUMNS)
 
-    def in_last_days(days):
-        return (purchase_date > F.date_sub(cutoff, days)) & (
-            purchase_date <= cutoff
-        )
+    def compute_customer(pdf):
+        return compute_transaction_features(pdf, FEATURE_CUTOFF)
 
-    recent_30d = in_last_days(30)
-    recent_90d = in_last_days(90)
-    recent_180d = in_last_days(180)
-
-    aggregates = history.groupBy("customer_id").agg(
-        F.datediff(cutoff, F.max("purchase_date"))
-        .alias("days_since_last_purchase"),
-        F.datediff(cutoff, F.min("purchase_date"))
-        .alias("customer_tenure_days"),
-        F.sum(F.when(recent_30d, 1).otherwise(0))
-        .alias("purchase_frequency_30d"),
-        F.sum(F.when(recent_90d, 1).otherwise(0))
-        .alias("purchase_frequency_90d"),
-        F.sum(F.when(recent_180d, 1).otherwise(0))
-        .alias("purchase_frequency_180d"),
-        F.avg("order_value").alias("avg_order_value"),
-        F.sum(F.when(recent_90d, F.col("order_value")).otherwise(0.0))
-        .alias("total_spend_90d"),
-        F.sum("order_value").alias("total_lifetime_value"),
-        F.coalesce(
-            F.avg(F.when(recent_180d, F.col("num_items"))),
-            F.lit(0.0),
-        ).alias("avg_basket_size_6m"),
-        (
-            F.countDistinct(
-                F.when(
-                    F.col("product_category") != "unknown",
-                    F.col("product_category"),
-                )
-            ) / F.lit(N_CATEGORIES)
-        ).alias("category_diversity_score"),
-        F.avg(F.when(F.col("channel") == "online", 1.0).otherwise(0.0))
-        .alias("online_to_store_ratio"),
-    )
-
-    return aggregates.select(
-        "customer_id",
-        *[
-            F.col(name).cast("double").alias(name)
-            for name in aggregates.columns
-            if name != "customer_id"
-        ],
-    )
+    return history.groupBy("customer_id").applyInPandas(compute_customer, schema=schema)
 
 
 def assign_loyalty_tier(df):

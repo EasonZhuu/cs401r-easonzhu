@@ -100,6 +100,30 @@ resource "aws_iam_policy" "ml_engineer" {
         ]
       },
       {
+        Sid      = "PassOwnRoleToSageMaker"
+        Effect   = "Allow"
+        Action   = "iam:PassRole"
+        Resource = aws_iam_role.ml_engineer.arn
+        Condition = {
+          StringEquals = { "iam:PassedToService" = "sagemaker.amazonaws.com" }
+        }
+      },
+      {
+        Sid    = "Lab4PipelineAndModelRegistry"
+        Effect = "Allow"
+        Action = [
+          "sagemaker:CreateModelPackageGroup", "sagemaker:DescribeModelPackageGroup",
+          "sagemaker:CreateModelPackage", "sagemaker:UpdateModelPackage",
+          "sagemaker:AddTags", "sagemaker:ListTags"
+        ]
+        Resource = [
+          "arn:aws:sagemaker:${data.aws_region.current.name}:${data.aws_caller_identity.current.account_id}:model-package-group/northstar-churn-models",
+          "arn:aws:sagemaker:${data.aws_region.current.name}:${data.aws_caller_identity.current.account_id}:model-package/northstar-churn-models/*",
+          "arn:aws:sagemaker:${data.aws_region.current.name}:${data.aws_caller_identity.current.account_id}:training-job/*",
+          "arn:aws:sagemaker:${data.aws_region.current.name}:${data.aws_caller_identity.current.account_id}:pipeline/northstar-churn-pipeline"
+        ]
+      },
+      {
         Sid    = "S3ArtifactsAndFeatures"
         Effect = "Allow"
         Action = ["s3:GetObject", "s3:PutObject", "s3:DeleteObject"]

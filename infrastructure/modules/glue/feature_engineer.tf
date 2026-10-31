@@ -6,6 +6,14 @@ resource "aws_s3_object" "feature_engineer_script" {
   content_type = "text/x-python"
 }
 
+resource "aws_s3_object" "feature_logic" {
+  bucket       = var.bucket_name
+  key          = "artifacts/glue/feature_engineering.py"
+  source       = var.feature_logic_path
+  source_hash  = filemd5(var.feature_logic_path)
+  content_type = "text/x-python"
+}
+
 resource "aws_glue_job" "feature_engineer" {
   name              = "${local.name_prefix}-feature-engineer"
   description       = "Aggregate customer features and ingest labelled records into Feature Store"
@@ -24,6 +32,7 @@ resource "aws_glue_job" "feature_engineer" {
   }
 
   default_arguments = {
+    "--extra-py-files"      = "s3://${var.bucket_name}/${aws_s3_object.feature_logic.key}"
     "--job-language"        = "python"
     "--job-bookmark-option" = "job-bookmark-disable"
     "--input_path"          = "s3://${var.bucket_name}/processed/customers/"

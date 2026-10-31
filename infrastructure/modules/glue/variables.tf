@@ -53,6 +53,11 @@ variable "feature_group_name" {
   type        = string
 }
 
+variable "feature_logic_path" {
+  description = "Shared pandas computation module uploaded for Glue extra-py-files"
+  type        = string
+}
+
 variable "aws_region" {
   description = "AWS region of the Feature Store runtime endpoint"
   type        = string
