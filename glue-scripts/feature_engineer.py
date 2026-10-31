@@ -83,16 +83,22 @@ def compute_rfm_features(history):
     """Run the same pure pandas feature functions tested before every training run.
 
     Glue --extra-py-files distributes feature_engineering.py to all executors.
-    Grouped pandas execution keeps each customer's transactions together without
-    collecting the complete transaction dataset into the driver.
+    Hash partitioning keeps each customer's transactions together. Batch each
+    partition before invoking the vectorized functions, rather than doing four
+    pandas groupbys and merges separately for every single customer.
     """
     from feature_engineering import FEATURE_COLUMNS, compute_transaction_features
     schema = "customer_id string, " + ", ".join(f"{name} double" for name in FEATURE_COLUMNS)
 
-    def compute_customer(pdf):
-        return compute_transaction_features(pdf, FEATURE_CUTOFF)
+    def compute_partition(batches):
+        import pandas as pd
+        frames = list(batches)
+        if frames:
+            # An Arrow batch boundary may split one customer; concatenate only
+            # within this bounded Spark partition before computing windows.
+            yield compute_transaction_features(pd.concat(frames, ignore_index=True), FEATURE_CUTOFF)
 
-    return history.groupBy("customer_id").applyInPandas(compute_customer, schema=schema)
+    return history.repartition(16, "customer_id").mapInPandas(compute_partition, schema=schema)
 
 
 def assign_loyalty_tier(df):
@@ -245,6 +251,8 @@ def main():
                 "avg_basket_size_6m", "category_diversity_score", "online_to_store_ratio"]:
         features = features.withColumn(col, F.round(F.col(col), 4))
 
+    # All producer-side checks and writes must reuse the same computed features.
+    features = features.cache()
     n_customers = features.count()
     print(f"[features] computed features for {n_customers} customers")
 

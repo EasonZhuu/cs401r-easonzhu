@@ -253,6 +253,8 @@ Resources:
               - Effect: Allow
                 Action:
                   - s3:GetBucketVersioning
+                  - s3:GetBucketLocation
+                  - s3:GetBucketAcl
                 Resource: !Sub "arn:aws:s3:::${ArtifactsBucket}"
               - Effect: Allow
                 Action:
@@ -261,12 +263,18 @@ Resources:
                 Resource: !GetAtt CodeBuildProject.Arn
               - Effect: Allow
                 Action:
-                  - codestar-connections:UseConnection
                   - codeconnections:UseConnection
                 Resource: !Ref GitHubConnectionArn
                 Condition:
                   StringEquals:
                     codeconnections:FullRepositoryId: !Sub "${GitHubOwner}/${GitHubRepo}"
+              - Effect: Allow
+                Action:
+                  - codestar-connections:UseConnection
+                Resource: !Ref GitHubConnectionArn
+                Condition:
+                  StringEquals:
+                    codestar-connections:FullRepositoryId: !Sub "${GitHubOwner}/${GitHubRepo}"
               - Effect: Allow
                 Action:
                   - sns:Publish
