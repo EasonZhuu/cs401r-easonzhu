@@ -305,8 +305,3 @@ class TestFullFeatureSet:
             snapshot_date=SNAPSHOT_DATE,
         )
         assert "customer_id" in features.columns, "Output must include customer_id for joining"
-
-
-def test_deliberate_lab4_prebuild_failure():
-    """Temporary failure demonstration; revert this commit after capturing evidence."""
-    assert False, "Intentional Lab4 PRE_BUILD failure: training and registration must not run"
