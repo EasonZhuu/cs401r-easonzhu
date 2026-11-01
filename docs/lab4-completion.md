@@ -44,3 +44,8 @@ No grading tag or Canvas submission was performed. After owner review, create
 and push `lab4-submit` at the final docs commit, then submit the repository URL
 `https://github.com/EasonZhuu/cs401r-easonzhu` in Canvas. Never overwrite an
 existing grading tag automatically.
+
+Final review qualification: `lab4-evidence-addendum.md` discloses the AFTER REVERT
+snapshot timing difference and links the real CloudTrail registration/approval
+audit. Original snapshots are preserved. The grading tag has been created;
+Canvas submission is still pending.

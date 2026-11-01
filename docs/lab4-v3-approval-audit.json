@@ -1,0 +1,37 @@
+{
+  "source": "AWS CloudTrail LookupEvents, filtered to exact v3 package; only selected nonsecret fields exported",
+  "events": [
+    {
+      "event_id": "35e9ee5c-492c-447f-9f49-6deae970feb2",
+      "event_time_utc": "2026-10-31T21:17:16Z",
+      "event_name": "CreateModelPackage",
+      "package_arn": "arn:aws:sagemaker:us-east-1:173506956686:model-package/northstar-churn-models/3",
+      "requested_approval_status": "PendingManualApproval",
+      "error_code": null
+    },
+    {
+      "event_id": "064ec9b3-ec17-4fd5-966f-5ea5a8331bbe",
+      "event_time_utc": "2026-10-31T21:21:26Z",
+      "event_name": "UpdateModelPackage",
+      "package_arn": "arn:aws:sagemaker:us-east-1:173506956686:model-package/northstar-churn-models/3",
+      "requested_approval_status": "Approved",
+      "error_code": null
+    },
+    {
+      "event_id": "28beab7e-4e1d-4f86-8217-707069496795",
+      "event_time_utc": "2026-10-31T21:21:56Z",
+      "event_name": "UpdateModelPackage",
+      "package_arn": "arn:aws:sagemaker:us-east-1:173506956686:model-package/northstar-churn-models/3",
+      "requested_approval_status": null,
+      "error_code": null
+    },
+    {
+      "event_id": "9205dd8a-5c8d-4b52-a514-135c892737fb",
+      "event_time_utc": "2026-10-31T21:25:56Z",
+      "event_name": "UpdateModelPackage",
+      "package_arn": "arn:aws:sagemaker:us-east-1:173506956686:model-package/northstar-churn-models/3",
+      "requested_approval_status": "Rejected",
+      "error_code": null
+    }
+  ]
+}
